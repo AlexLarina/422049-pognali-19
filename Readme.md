@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александра Ларина](https://up.htmlacademy.ru/adaptive/19/user/422049).
-* Наставник: `Неизвестно`.
+* Наставник: [Денис Власов](https://htmlacademy.ru/profile/amaringo).
 
 ---
 
