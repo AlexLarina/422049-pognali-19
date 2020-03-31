@@ -11,7 +11,8 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint .",
-    "test": "npm run editorconfig"
+    "test": "npm run editorconfig",
+    "start": "gulp watch"
   },
   "editorconfig-cli": [
     "*.json",
@@ -19,5 +20,9 @@
   ],
   "engines": {
     "node": "8.16"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2"
   }
 }
