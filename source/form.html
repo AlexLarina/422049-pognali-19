@@ -42,6 +42,149 @@
     </header>
     <main class="form-main">
       <h1 class="form-main__title">Направления</h1>
+
+      <article class="form-main__profile profile">
+        <h2 class="profile__title visually__hidden">Анкета пользователя</h2>
+        <section class="profile__user user">
+          <h3 class="visually__hidden">Информация о пользователи</h3>
+          <div class="user__level">
+            <span>80</span>
+          </div>
+          <div class="user__avatar">
+            <img src="#" width="100" height="100" alt="Аватар пользователя">
+          </div>
+          <button class="user__change-avatar" type="button">Сменить фото</button>
+        </section>
+
+        <section class="profile__user-info user-info">
+          <h3 class="visually__hidden">Информация о пользователи</h3>
+          <div class="user-info__tags">
+            <p>#бургер #бар #футбол #концерт #крафт</p>
+          </div>
+          <div class="user-info__transport transport">
+            <ul class="transport__list">
+              <li class="transport__item transport__item--plane"></li>
+              <li class="transport__item transport__item--bus"></li>
+              <li class="transport__item transport__item--bike"></li>
+              <li class="transport__item transport__item--foot"></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="profile__plans plans">
+          <h3 class="plans__title">Мои планы:</h3>
+
+          <article class="plans__trip trip">
+            <h4 class="trip__title">1. Франция, Италия</h4>
+            <p class="trip__companions"><span class="trip__companions-count">3</span> попутчика</p>
+            <p class="trip__date date">
+              <span class="date__start">26 мар</span>
+              -
+              <span class="date__end">29 мар</span>
+            </p>
+            <button class="trip__change-button">Изменить</button>
+          </article>
+
+          <article class="plans__trip trip">
+            <h4 class="trip__title">2. Таиланд, Индонезия</h4>
+            <p class="trip__companions"><span class="trip__companions-count">1</span> попутчик</p>
+            <p class="trip__date date">
+              <span class="date__start">1 июл</span>
+              -
+              <span class="date__end">15 июл</span>
+            </p>
+            <button class="trip__change-button">Изменить</button>
+          </article>
+        </section>
+      </article>
+
+      <section class="form-main__new-plan new-plan">
+        <h2 class="new-plan__title">Добавить план:</h2>
+
+        <div class="new-plan__steps steps">
+          <ul class="steps__list">
+            <li class="steps__item">Даты</li>
+            <li class="steps__item">Маршрут</li>
+            <li class="steps__item">Развлечения</li>
+          </ul>
+        </div>
+
+        <form>
+          <div class="new-plan__form form">
+            <h3 class="form__title">Шаг 1. Даты пребывания</h3>
+            <p class="form__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+
+            <div class="form__item">
+              <label>Ищу попутчиков:</label>
+              <!-- button(-) output button(+) -->
+              <span>чел.</span>
+            </div>
+
+            <div class="form__item">
+              <label>Длительность:</label>
+              <!-- button(-) output button(+) -->
+              <span>дн.</span>
+            </div>
+
+            <div class="form__item">
+              <input type="checkbox" name="children-allowed" id="children-allowed" checked>
+              <label for="children-allowed">Можно с детьми</label>
+            </div>
+
+            <div class="form__item">
+              <!-- Календарь -->
+            </div>
+
+            <button class="form__submit">Следующий шаг</button>
+          </div>
+        </form>
+
+        <form>
+          <div class="new-plan__form form">
+            <h3 class="form__title">Шаг 2. Маршрут</h3>
+            <p class="form__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+
+            <div class="form__item">
+              <select>
+                <option selected>Босния и Герцеговина</option>
+              </select>
+              <select>
+                <option selected>Чехия</option>
+              </select>
+              <select>
+                <option selected>Выберите страну</option>
+              </select>
+              <button class="form__add-country">Добавить страну</button>
+            </div>
+
+            <button class="form__submit">Следующий шаг</button>
+            <button class="form__back">На шаг назад</button>
+          </div>
+        </form>
+
+        <form>
+          <div class="new-plan__form form">
+            <h3 class="form__title">Шаг 3. Развлечения</h3>
+            <p class="form__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+
+            <ul class="form__trips-list">
+              <li class="form__trips-item">
+                Босния и Герцеговина
+                <textarea placeholder="План действий"></textarea>
+              </li>
+              <li class="form__trips-item">
+                Чехия
+                <textarea placeholder="План действий">
+                  Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                </textarea>
+              </li>
+            </ul>
+
+            <button class="form__submit">Отправить</button>
+            <button class="form__back">На шаг назад</button>
+          </div>
+        </form>
+      </section>
     </main>
     <footer class="footer">
       <a href="#" class="footer__logo"><img src="#" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
