@@ -1,0 +1,19 @@
+.tariff {
+    background-color: $bg-grey;
+}
+
+.tariff__list {
+    list-style: none;
+}
+
+.tariff__item:first-child span {
+    background-color: $bg-mango-three;
+}
+
+.tariff__item:nth-child(2) span {
+    background-color: $bg-mango-two;
+}
+
+.tariff__item:last-child span {
+    background-color: $bg-light-gold;
+}
