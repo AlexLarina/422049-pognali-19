@@ -12,7 +12,7 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint .",
     "test": "npm run editorconfig",
-    "start": "gulp watch"
+    "start": "npm test && gulp watch"
   },
   "editorconfig-cli": [
     "*.json",

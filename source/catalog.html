@@ -11,7 +11,6 @@
       <div class="header__menu menu">
         <input id="menu__toggle" type="checkbox" class="menu__toggle">
         <label class="menu__hamburger-button" for="menu__toggle">
-          <span></span>
         </label>
 
         <div class="menu__wrapper">
@@ -26,8 +25,8 @@
           <div class="menu__navigation navigation navigation--user">
             <ul class="navigation__list">
               <li class="navigation__item"><a href="#">Авторизация</a></li>
-              <li class="navigation__item"><a href="#">8 800 555 86 28</a></li>
-              <li class="navigation__item"><a href="#">mail@htmlacademy.ru</a></li>
+              <li class="navigation__item"><a href="tel:88005558628">8 800 555 86 28</a></li>
+              <li class="navigation__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
             </ul>
           </div>
 
@@ -44,7 +43,179 @@
     <main class="catalog-main">
       <h1 class="catalog-main__title">Попутчики</h1>
 
-      <section class="catalog-main__filters"></section>
+      <section class="catalog-main__filters filters">
+        <h2 class="filters__title">Фильтрация по странам</h2>
+
+        <ul class="filters__continents continents">
+          <li class="continents__item"><button>Европа</button></li>
+          <li class="continents__item"><button>Азия</button></li>
+          <li class="continents__item"><button>Америка</button></li>
+          <li class="continents__item"><button>Острова</button></li>
+        </ul>
+
+        <ul class="filters__alphabet alphabet">
+          <li class="alphabet__letter">А</li>
+          <li class="alphabet__letter">Б</li>
+          <li class="alphabet__letter">В</li>
+          <li class="alphabet__letter">Г</li>
+          <li class="alphabet__letter">Д</li>
+
+          <li class="alphabet__letter">Е</li>
+          <li class="alphabet__letter">З</li>
+          <li class="alphabet__letter">И</li>
+          <li class="alphabet__letter">К</li>
+          <li class="alphabet__letter">Л</li>
+
+          <li class="alphabet__letter">М</li>
+          <li class="alphabet__letter">Н</li>
+          <li class="alphabet__letter">О</li>
+          <li class="alphabet__letter">П</li>
+          <li class="alphabet__letter">Р</li>
+
+          <li class="alphabet__letter">С</li>
+          <li class="alphabet__letter">Т</li>
+          <li class="alphabet__letter">У</li>
+          <li class="alphabet__letter">Ф</li>
+          <li class="alphabet__letter">Х</li>
+
+          <li class="alphabet__letter">Ч</li>
+          <li class="alphabet__letter">Ш</li>
+          <li class="alphabet__letter">Э</li>
+          <li class="alphabet__letter">Ю</li>
+          <li class="alphabet__letter">Я</li>
+        </ul>
+
+        <ul class="filters__letter letter letter--A">
+          <li class="letter__item">Австралия</li>
+          <li class="letter__item">Австрия</li>
+          <li class="letter__item">Азербайджан</li>
+          <li class="letter__item">Албания</li>
+          <li class="letter__item">Алжир</li>
+          <li class="letter__item">Ангола</li>
+          <li class="letter__item">Андорра</li>
+          <li class="letter__item">Антигуа и Барбуда</li>
+          <li class="letter__item">Аргентина</li>
+          <li class="letter__item">Армения</li>
+        </ul>
+
+        <button type="button" class="filters__close">Свернуть</button>
+      </section>
+
+      <section class="catalog-main__companion-search search">
+        <form>
+          <h3 class="search__title">Подберите идеального попутчика</h3>
+
+          <fieldset class="search__filter filter">
+            <legend>Хобби</legend>
+            <ul class="filter__list filter__list--checkbox">
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="interest--gym" value="gym" id="interest--gym" checked>
+                <label for="interest--gym" class="filter__checkbox">Спортзал</label>
+              </li>
+
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="interest--hookah" value="hookah" id="interest--hookah">
+                <label for="interest--hookah" class="filter__checkbox">Кальян</label>
+              </li>
+
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="interest--sofa" value="sofa" id="interest--sofa">
+                <label for="interest--sofa" class="filter__checkbox">Диван</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="search__filter filter">
+            <legend>Музыка</legend>
+            <ul class="filter__list filter__list--checkbox">
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="music--hard-rock" value="hard-rock" id="music--hard-rock" checked>
+                <label for="music--hard-rock" class="filter__checkbox">Тяжелый рок</label>
+              </li>
+
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="music--russian-rap" value="russian-rap" id="music--russian-rap" checked>
+                <label for="music--russian-rap" class="filter__checkbox">Русский рэп</label>
+              </li>
+
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="music--eurodance" value="eurodance" id="music--eurodance" checked>
+                <label for="music--eurodance" class="filter__checkbox">Евроденс</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="search__filter filter">
+            <legend>Еда</legend>
+            <ul class="filter__list filter__list--checkbox">
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="meal--meat" value="meat" id="meal--meat" checked>
+                <label for="meal--meat" class="filter__checkbox">Мясоед</label>
+              </li>
+
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="meal--healthy-food" value="healthy-food" id="meal--healthy-food">
+                <label for="meal--healthy-food" class="filter__checkbox">Сидит на ПП</label>
+              </li>
+
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="meal--vegan" value="vegan" id="meal--vegan">
+                <label for="meal--vegan" class="filter__checkbox">Веган-сыроед</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="search__filter filter">
+            <legend>Транспорт</legend>
+            <ul class="filter__list filter__list--checkbox">
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="transport--plane" value="plane" id="transport--plane" checked>
+                <label for="transport--plane" class="filter__checkbox"></label>
+              </li>
+
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="transport--bus" value="bus" id="transport--bus" checked>
+                <label for="transport--bus" class="filter__checkbox"></label>
+              </li>
+
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="transport--bike" value="bike" id="transport--bike">
+                <label for="transport--bike" class="filter__checkbox"></label>
+              </li>
+
+              <li class="filter__item">
+                <input class="visually-hidden" type="checkbox" name="transport--foot" value="foot" id="transport--foot" checked>
+                <label for="transport--foot" class="filter__checkbox"></label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="search__filter filter">
+            <legend>Левел</legend>
+            <div class="filter__range range">
+              <div class="range__price-controls">
+                <span class="range__item range__item--min">
+                  <label for="range__item--min"></label>
+                  <input type="number" value="0" name="range__item--min" id="range__item--min">
+                </span>
+                <span class="range__item range__item--max">
+                  <label for="range__item--max"></label>
+                  <input type="number" value="100" name="range__item--max" id="range__item--max">
+                </span>
+              </div>
+              <div class="range__controls">
+                <div class="range__scale">
+                  <div class="range__bar"></div>
+                </div>
+                <div class="range__toggle range__toggle--min" tabindex="0"></div>
+                <div class="range__toggle range__toggle--max" tabindex="0"></div>
+              </div>
+            </div>
+          </fieldset>
+
+          <button class="search__submit" type="submit">Показать</button>
+        </form>
+      </section>
 
       <section class="catalog-main__companions companions">
         <h2 class="companions__title visually__hidden">Список попутчиков</h2>
@@ -53,7 +224,14 @@
           <img src="#" width="77" height="77" alt="Аватар">
           <p class="companion__name">Татьяна Фирсова</p>
           <span class="companion__likes">1.5 M</span>
-          <p class="companion__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+          <ul class="companion__tags tags">
+            <li class="tags__item"><a href="#">#ЗОЖ</a></li>
+            <li class="tags__item"><a href="#">#ПП</a></li>
+            <li class="tags__item"><a href="#">#Фитнес</a></li>
+            <li class="tags__item"><a href="#">#пляж</a></li>
+            <li class="tags__item"><a href="#">#авокадо</a></li>
+            <li class="tags__item"><a href="#">#смузи</a></li>
+          </ul>
 
           <div class="companion__wish wish">
             <h4 class="wish__title">хочет посетить:</h4>
@@ -67,10 +245,10 @@
           <div class="companion__transport transport">
             <h4 class="transport__title">транспорт:</h4>
             <ul class="transport__list">
-              <li class="transport__item transport__item--plane"></li>
-              <li class="transport__item transport__item--bus"></li>
-              <li class="transport__item transport__item--bike"></li>
-              <li class="transport__item transport__item--foot"></li>
+              <li class="transport__item transport__item--plane">Самолет</li>
+              <li class="transport__item transport__item--bus">Автобус</li>
+              <li class="transport__item transport__item--bike">Велосипед</li>
+              <li class="transport__item transport__item--foot">Пешком</li>
             </ul>
           </div>
 
@@ -86,7 +264,13 @@
           <img src="#" width="77" height="77" alt="Аватар">
           <p class="companion__name">Петя Демин</p>
           <span class="companion__likes">1500</span>
-          <p class="companion__tags">#бургер #бар #футбол #концерт #крафт</p>
+          <ul class="companion__tags tags">
+            <li class="tags__item"><a href="#">#бургер</a></li>
+            <li class="tags__item"><a href="#">#бар</a></li>
+            <li class="tags__item"><a href="#">#футбол</a></li>
+            <li class="tags__item"><a href="#">#концерт</a></li>
+            <li class="tags__item"><a href="#">#крафт</a></li>
+          </ul>
 
           <div class="companion__wish wish">
             <h4 class="wish__title">хочет посетить:</h4>
@@ -99,10 +283,10 @@
           <div class="companion__transport transport">
             <h4 class="transport__title">транспорт:</h4>
             <ul class="transport__list">
-              <li class="transport__item transport__item--plane"></li>
-              <li class="transport__item transport__item--bus"></li>
-              <li class="transport__item transport__item--bike"></li>
-              <li class="transport__item transport__item--foot"></li>
+              <li class="transport__item transport__item--plane">Самолет</li>
+              <li class="transport__item transport__item--bus">Автобус</li>
+              <li class="transport__item transport__item--bike">Велосипед</li>
+              <li class="transport__item transport__item--foot">Пешком</li>
             </ul>
           </div>
 
@@ -118,7 +302,13 @@
           <img src="#" width="77" height="77" alt="Аватар">
           <p class="companion__name">Марк Смолов</p>
           <span class="companion__likes">170</span>
-          <p class="companion__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+          <ul class="companion__tags tags">
+            <li class="tags__item"><a href="#">#рэп</a></li>
+            <li class="tags__item"><a href="#">#тату</a></li>
+            <li class="tags__item"><a href="#">#хайпбист</a></li>
+            <li class="tags__item"><a href="#">#кроссовки</a></li>
+            <li class="tags__item"><a href="#">#суприм</a></li>
+          </ul>
 
           <div class="companion__wish wish">
             <h4 class="wish__title">хочет посетить:</h4>
@@ -132,10 +322,10 @@
           <div class="companion__transport transport">
             <h4 class="transport__title">транспорт:</h4>
             <ul class="transport__list">
-              <li class="transport__item transport__item--plane"></li>
-              <li class="transport__item transport__item--bus"></li>
-              <li class="transport__item transport__item--bike"></li>
-              <li class="transport__item transport__item--foot"></li>
+              <li class="transport__item transport__item--plane">Самолет</li>
+              <li class="transport__item transport__item--bus">Автобус</li>
+              <li class="transport__item transport__item--bike">Велосипед</li>
+              <li class="transport__item transport__item--foot">Пешком</li>
             </ul>
           </div>
 
@@ -151,7 +341,12 @@
           <img src="#" width="77" height="77" alt="Аватар">
           <p class="companion__name">Лариса Роговая</p>
           <span class="companion__likes">23</span>
-          <p class="companion__tags">#образование #карьера #учеба #линкедин </p>
+          <ul class="companion__tags tags">
+            <li class="tags__item"><a href="#">#образование</a></li>
+            <li class="tags__item"><a href="#">#карьера</a></li>
+            <li class="tags__item"><a href="#">#учеба</a></li>
+            <li class="tags__item"><a href="#">#линкедин</a></li>
+          </ul>
 
           <div class="companion__wish wish">
             <h4 class="wish__title">хочет посетить:</h4>
@@ -164,10 +359,10 @@
           <div class="companion__transport transport">
             <h4 class="transport__title">транспорт:</h4>
             <ul class="transport__list">
-              <li class="transport__item transport__item--plane"></li>
-              <li class="transport__item transport__item--bus"></li>
-              <li class="transport__item transport__item--bike"></li>
-              <li class="transport__item transport__item--foot"></li>
+              <li class="transport__item transport__item--plane">Самолет</li>
+              <li class="transport__item transport__item--bus">Автобус</li>
+              <li class="transport__item transport__item--bike">Велосипед</li>
+              <li class="transport__item transport__item--foot">Пешком</li>
             </ul>
           </div>
 

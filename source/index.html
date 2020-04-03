@@ -12,7 +12,6 @@
       <div class="header__menu menu">
         <input id="menu__toggle" type="checkbox" class="menu__toggle">
         <label class="menu__hamburger-button" for="menu__toggle">
-          <span></span>
         </label>
 
         <div class="menu__wrapper">
@@ -27,8 +26,8 @@
           <div class="menu__navigation navigation navigation--user">
             <ul class="navigation__list">
               <li class="navigation__item"><a href="#">Авторизация</a></li>
-              <li class="navigation__item"><a href="#">8 800 555 86 28</a></li>
-              <li class="navigation__item"><a href="#">mail@htmlacademy.ru</a></li>
+              <li class="navigation__item"><a href="tel:88005558628">8 800 555 86 28</a></li>
+              <li class="navigation__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
             </ul>
           </div>
 
@@ -51,8 +50,8 @@
         <div class="promo__navigation navigation navigation--user">
           <ul class="navigation__list">
             <li class="navigation__item"><a href="#">Авторизация</a></li>
-            <li class="navigation__item"><a href="#">8 800 555 86 28</a></li>
-            <li class="navigation__item"><a href="#">mail@htmlacademy.ru</a></li>
+            <li class="navigation__item"><a href="tel:88005558628">8 800 555 86 28</a></li>
+            <li class="navigation__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
           </ul>
         </div>
 
@@ -112,17 +111,24 @@
             <span class="companion__level">99</span>
             <img src="#" width="270" height="270" class="companion__avatar" alt="Аватар">
             <ul class="companion__countries countries">
-              <li class="countries__item"></li>
-              <li class="countries__item"></li>
-              <li class="countries__item"></li>
+              <li class="countries__item">Шри-Ланка</li>
+              <li class="countries__item">Таиланд</li>
+              <li class="countries__item">Сейшелы</li>
             </ul>
-            <p class="companion__name">Таня Фирсова</p>
-            <p class="companion__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <h3 class="companion__name">Таня Фирсова</h3>
+            <ul class="companion__tags tags">
+              <li class="tags__item"><a href="#">#ЗОЖ</a></li>
+              <li class="tags__item"><a href="#">#ПП</a></li>
+              <li class="tags__item"><a href="#">#Фитнес</a></li>
+              <li class="tags__item"><a href="#">#пляж</a></li>
+              <li class="tags__item"><a href="#">#авокадо</a></li>
+              <li class="tags__item"><a href="#">#смузи</a></li>
+            </ul>
             <ul class="companion__travel-means means">
-              <li class="means__item means__item--plane"></li>
-              <li class="means__item means__item--bus"></li>
-              <li class="means__item means__item--bike"></li>
-              <li class="means__item means__item--foot"></li>
+              <li class="means__item means__item--plane">Самолет</li>
+              <li class="means__item means__item--bus">Автобус</li>
+              <li class="means__item means__item--bike">Велосипед</li>
+              <li class="means__item means__item--foot">Пешком</li>
             </ul>
           </li>
 
@@ -130,17 +136,22 @@
             <span class="companion__level">80</span>
             <img src="#" width="270" height="270" class="companion__avatar" alt="Аватар">
             <ul class="companion__countries countries">
-              <li class="countries__item"></li>
-              <li class="countries__item"></li>
-              <li class="countries__item"></li>
+              <li class="countries__item">Германия</li>
+              <li class="countries__item">Чехия</li>
             </ul>
-            <p class="companion__name">Петя Демин</p>
-            <p class="companion__tags">#бургер #бар #футбол #концерт #крафт</p>
+            <h3 class="companion__name">Петя Демин</h3>
+            <ul class="companion__tags tags">
+              <li class="tags__item"><a href="#">#бургер</a></li>
+              <li class="tags__item"><a href="#">#бар</a></li>
+              <li class="tags__item"><a href="#">#футбол</a></li>
+              <li class="tags__item"><a href="#">#концерт</a></li>
+              <li class="tags__item"><a href="#">#крафт</a></li>
+            </ul>
             <ul class="companion__travel-means means">
-              <li class="means__item means__item--plane"></li>
-              <li class="means__item means__item--bus"></li>
-              <li class="means__item means__item--bike"></li>
-              <li class="means__item means__item--foot"></li>
+              <li class="means__item means__item--plane">Самолет</li>
+              <li class="means__item means__item--bus">Автобус</li>
+              <li class="means__item means__item--bike">Велосипед</li>
+              <li class="means__item means__item--foot">Пешком</li>
             </ul>
           </li>
         </ul>
@@ -175,19 +186,50 @@
         <h2 class="contacts__title">Заинтересовались?</h2>
         <p class="contacts__description">Зарегистрируйтесь, это быстро и бесплатно!</p>
         <p class="contacts__description">Уже зарегистрированы? Тогда скорее <a href="#">авторизуйтесь</a>.</p>
-        <input type="email" class="contacts__user-email">
-        <button class="contacts__submit"></button>
+        <form method="post" action="https://echo.htmlacademy.ru">
+          <label class="visually__hidden" for="user-email">Поле отправки электронной почты</label>
+          <input type="email" class="contacts__user-email" id="user-email">
+          <button class="contacts__submit"></button>
+        </form>
         <p class="contacts__description">Остались вопросы? Мы с радостью на них ответим!</p>
-        <a href="#" class="contacts__phone">8 800 555 86 28</a>
-        <a href="#" class="contacts__email">mail@htmlacademy.ru</a>
+        <a href="tel:88005558628" class="contacts__phone">8 800 555 86 28</a>
+        <a href="mailto:mail@htmlacademy.ru" class="contacts__email">mail@htmlacademy.ru</a>
       </section>
       <section class="main__map map">
         <h2 class="visually-hidden">Как к нам добраться?</h2>
         <p class="map__address">ул. Большая Конюшенная, 19/8</p>
         <a href="#" class="map__route">Проложить маршрут</a>
-        <a href="map__interactive">
+        <a href="#" class="map__interactive">
           <img src="#" width="320" height="546" alt="Карта местонахождения офиса сервиса Погнали?">
         </a>
+      </section>
+
+      <section class="main__popup popup popup--tariff">
+        <div class="popup__wrapper">
+          <h2 class="popup__title">Бизнес-тарифы</h2>
+          <ul class="popup__tariff tariff">
+            <li class="tariff__item">
+              <p class="tariff__commercial">Реклама у блогера</p>
+              <p class="tariff__rate">300 000 руб./пост</p>
+            </li>
+
+            <li class="tariff__item">
+              <p class="tariff__commercial">Накрутка подписчиков</p>
+              <p class="tariff__rate">от 1руб./шт</p>
+            </li>
+
+            <li class="tariff__item">
+              <p class="tariff__commercial">Лайки от ботов</p>
+              <p class="tariff__rate">от 20 коп./лайк</p>
+            </li>
+
+            <li class="tariff__item">
+              <p class="tariff__commercial">Ваш продакт-плейсмент</p>
+              <p class="tariff__rate">Индивидуально</p>
+            </li>
+          </ul>
+          <button type="button" class="popup__close">Закрыть окно</button>
+        </div>
       </section>
     </main>
     <footer class="footer">
