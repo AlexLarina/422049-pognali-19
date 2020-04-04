@@ -23,3 +23,12 @@
     @include font("BloggerSans", bold, $font-white);
     @include font-size(18px, 1em);
 }
+
+.promo .navigation__item:not(.navigation__item--auth) {
+    font-size: 0px;
+}
+
+.navigation__item--auth a { 
+    @include font("BloggerSans", bold, $font-dark-blue);
+    @include font-size(17px, 1.76em);
+}

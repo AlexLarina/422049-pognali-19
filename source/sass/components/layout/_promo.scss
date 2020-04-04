@@ -3,7 +3,8 @@
     background-color: $bg-blue;
 }
 
-.promo__steps-list {
+.promo__steps-list, 
+.promo .navigation__list {
     list-style: none;
 }
 
@@ -20,5 +21,9 @@
 }
 
 .promo__steps-list li:last-child {
+    background-color: $bg-light-gold;
+}
+
+.navigation__item--auth a {
     background-color: $bg-light-gold;
 }
