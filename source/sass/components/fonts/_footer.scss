@@ -1,8 +1,8 @@
 .footer {
-    @include font("BloggerSans", bold, $font-white);
+  @include font("BloggerSans", bold, $font-white);
 }
 
 .footer__copyright a {
-    @include font-size(16px, 1.38em);
-    color: $font-greyish-brown;
+  @include font-size(16px, 1.38em);
+  color: $font-greyish-brown;
 }

@@ -1,22 +1,22 @@
 .tariff {
-    @include font("BloggerSans", bold, $font-white);
+  @include font("BloggerSans", bold, $font-white);
 }
 
 .tariff__title {
-    @include font-size(24px, 1em);
-    color: $font-orange;
-} 
+  @include font-size(24px, 1em);
+  color: $font-orange;
+}
 
 .tariff__show-all {
-    @include font-size(16px, 1em);
-    color: $font-blue-grey;
+  @include font-size(16px, 1em);
+  color: $font-blue-grey;
 }
 
 .tariff__list {
-    @include font-size(16px, 1.38em);
-    color: $font-greyish-brown;
+  @include font-size(16px, 1.38em);
+  color: $font-greyish-brown;
 }
 
 .tariff__list span {
-    color: $font-white;
+  color: $font-white;
 }
