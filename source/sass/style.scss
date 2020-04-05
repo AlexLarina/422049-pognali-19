@@ -1,0 +1,29 @@
+@import "_common.scss";
+@import "_variables.scss";
+@import "_fonts.scss";
+
+// fonts
+
+// index page
+@import "./components/fonts/_about.scss";
+@import "./components/fonts/_companions.scss";
+@import "./components/fonts/_contacts.scss";
+@import "./components/fonts/_footer.scss";
+@import "./components/fonts/_header.scss";
+@import "./components/fonts/_map.scss";
+@import "./components/fonts/_promo.scss";
+@import "./components/fonts/_tariff.scss";
+@import "./components/fonts/_ways.scss";
+
+// layout
+
+// index page
+@import "./components/layout/_about.scss";
+@import "./components/layout/_companions.scss";
+@import "./components/layout/_contacts.scss";
+@import "./components/layout/_footer.scss";
+@import "./components/layout/_header.scss";
+@import "./components/layout/_map.scss";
+@import "./components/layout/_promo.scss";
+@import "./components/layout/_tariff.scss";
+@import "./components/layout/_ways.scss";

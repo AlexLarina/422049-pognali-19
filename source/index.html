@@ -7,9 +7,9 @@
   </head>
   <body>
     <header class="header">
-      <a href="#" class="header__logo"><img src="#" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+      <a href="#" class="header__logo"><img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
 
-      <div class="header__menu menu">
+      <div class="header__menu menu visually-hidden">
         <input id="menu__toggle" type="checkbox" class="menu__toggle">
         <label class="menu__hamburger-button" for="menu__toggle">
         </label>
@@ -49,7 +49,7 @@
 
         <div class="promo__navigation navigation navigation--user">
           <ul class="navigation__list">
-            <li class="navigation__item"><a href="#">Авторизация</a></li>
+            <li class="navigation__item navigation__item--auth"><a href="#">Авторизация</a></li>
             <li class="navigation__item"><a href="tel:88005558628">8 800 555 86 28</a></li>
             <li class="navigation__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
           </ul>
@@ -61,10 +61,10 @@
         </blockquote>
 
         <ul class="promo__steps-list steps">
-          <li class="steps__item">Выберите направление</li>
-          <li class="steps__item">Изучите идеи путешественников</li>
-          <li class="steps__item">Находите тех, кто похож на вас</li>
-          <li class="steps__item">Путешествуйте вместе!</li>
+          <li class="steps__item">Выберите направление<span>1</span></li>
+          <li class="steps__item">Изучите идеи путешественников<span>2</span></li>
+          <li class="steps__item">Находите тех, кто похож на вас<span>3</span></li>
+          <li class="steps__item">Путешествуйте вместе!<span>4</span></li>
         </ul>
 
       </section>
@@ -75,27 +75,27 @@
       </section>
       <section class="main__travel-ways ways">
         <h2 class="ways__title">Направления</h2>
-        <p class="ways__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        <p class="way__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
         <ul class="ways__list">
           <li class="ways_item way">
-            <img src="#" width="270" height="110" alt="Виды Таиланда">
+            <img src="./img/thailand-mobile@1x.jpg" width="270" height="110" alt="Виды Таиланда">
             <h3 class="way__title">Таиланд</h3>
-            <p class="ways__description">Джунгли зовут!</p>
-            <span class="ways__seen">18321</span>
+            <p class="way__description">Джунгли зовут!</p>
+            <span class="way__seen">18321</span>
           </li>
 
           <li class="ways_item way">
-            <img src="#" width="270" height="110" alt="Виды Франции">
+            <img src="./img/france-mobile@1x.jpg" width="270" height="110" alt="Виды Франции">
             <h3 class="way__title">Франция</h3>
-            <p class="ways__description">Трэ бьен, манифик!</p>
-            <span class="ways__seen">12518</span>
+            <p class="way__description">Трэ бьен, манифик!</p>
+            <span class="way__seen">12518</span>
           </li>
 
           <li class="ways_item way">
-            <img src="#" width="270" height="110" alt="Виды Европы">
+            <img src="./img/czech-mobile@1x.jpg" width="270" height="110" alt="Виды Европы">
             <h3 class="way__title">Чехия</h3>
-            <p class="ways__description">Закоулки старой Европы</p>
-            <span class="ways__seen">5326</span>
+            <p class="way__description">Закоулки старой Европы</p>
+            <span class="way__seen">5326</span>
           </li>
         </ul>
 
@@ -109,7 +109,7 @@
         <ul class="companions__list">
           <li class="companions__item companion">
             <span class="companion__level">99</span>
-            <img src="#" width="270" height="270" class="companion__avatar" alt="Аватар">
+            <img src="./img/firsova-desktop@1x.jpg" width="270" height="270" class="companion__avatar" alt="Аватар">
             <ul class="companion__countries countries">
               <li class="countries__item">Шри-Ланка</li>
               <li class="countries__item">Таиланд</li>
@@ -134,7 +134,7 @@
 
           <li class="companions__item companion">
             <span class="companion__level">80</span>
-            <img src="#" width="270" height="270" class="companion__avatar" alt="Аватар">
+            <img src="./img/demin-desktop@1x.jpg" width="270" height="270" class="companion__avatar" alt="Аватар">
             <ul class="companion__countries countries">
               <li class="countries__item">Германия</li>
               <li class="countries__item">Чехия</li>
@@ -187,8 +187,8 @@
         <p class="contacts__description">Зарегистрируйтесь, это быстро и бесплатно!</p>
         <p class="contacts__description">Уже зарегистрированы? Тогда скорее <a href="#">авторизуйтесь</a>.</p>
         <form method="post" action="https://echo.htmlacademy.ru">
-          <label class="visually__hidden" for="user-email">Поле отправки электронной почты</label>
-          <input type="email" class="contacts__user-email" id="user-email">
+          <label class="visually-hidden" for="user-email">Поле отправки электронной почты</label>
+          <input type="email" class="contacts__user-email" id="user-email" placeholder="E-mail">
           <button class="contacts__submit"></button>
         </form>
         <p class="contacts__description">Остались вопросы? Мы с радостью на них ответим!</p>
@@ -204,7 +204,7 @@
         </a>
       </section>
 
-      <section class="main__popup popup popup--tariff">
+      <section class="main__popup popup popup--tariff" style="display: none;">
         <div class="popup__wrapper">
           <h2 class="popup__title">Бизнес-тарифы</h2>
           <ul class="popup__tariff tariff">
@@ -233,7 +233,9 @@
       </section>
     </main>
     <footer class="footer">
-      <a href="#" class="footer__logo"><img src="#" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+      <a href="#" class="footer__logo">
+        <img src="./img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?">
+      </a>
       <div class="footer__social social">
         <a href="#" title="Facebook страница сервиса Погнали" class="social__facebook"></a>
         <a href="#" title="Страница ВКонтакте сервиса Погнали" class="social__vk"></a>

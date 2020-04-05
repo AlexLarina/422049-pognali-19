@@ -1,0 +1,25 @@
+.contacts {
+  @include font("BloggerSans", bold, $font-white);
+}
+
+.contacts__title {
+  @include font-size(24px, 1em);
+  color: $font-orange;
+}
+
+.contacts__description {
+  @include font-size(16px, 1.38em);
+  color: white;
+  font-weight: normal;
+}
+
+.contacts__description a {
+  color: $font-light-gold;
+}
+
+.contacts__phone,
+.contacts__email {
+  @include font-size(16px, 1.38em);
+  color: $font-light-gold;
+  text-transform: uppercase;
+}

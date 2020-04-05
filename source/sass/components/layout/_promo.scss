@@ -1,0 +1,29 @@
+.promo {
+  background: url("../../../img/globe-back-mobile@1x.jpg") no-repeat 0% 0%;
+  background-color: $bg-blue;
+}
+
+.promo__steps-list,
+.promo .navigation__list {
+  list-style: none;
+}
+
+.promo__steps-list li:first-child {
+  background-color: $bg-orange;
+}
+
+.promo__steps-list li:nth-child(2) {
+  background-color: $bg-mango-three;
+}
+
+.promo__steps-list li:nth-child(3) {
+  background-color: $bg-mango-two;
+}
+
+.promo__steps-list li:last-child {
+  background-color: $bg-light-gold;
+}
+
+.navigation__item--auth a {
+  background-color: $bg-light-gold;
+}

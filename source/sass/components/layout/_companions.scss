@@ -1,0 +1,22 @@
+.companions {
+  background-color: $bg-blue;
+}
+
+.companions__list {
+  list-style: none;
+}
+
+.companion {
+  background-color: $bg-white;
+}
+
+.companion__tags {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.companions__show-all {
+  background-color: $bg-light-gold;
+}
