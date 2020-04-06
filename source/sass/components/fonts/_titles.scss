@@ -1,0 +1,5 @@
+.catalog-main__title,
+.form-main__title {
+  @include font(bold, $font-white);
+  @include font-size(36px, 1.11em);
+}

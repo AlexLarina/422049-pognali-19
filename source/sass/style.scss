@@ -1,6 +1,8 @@
-@import "_common.scss";
 @import "_variables.scss";
 @import "_fonts.scss";
+@import "_common.scss";
+@import "./components/fonts/_titles.scss";
+@import "./components/layout/_titles.scss";
 
 // fonts
 
@@ -15,6 +17,9 @@
 @import "./components/fonts/_tariff.scss";
 @import "./components/fonts/_ways.scss";
 
+// catalog page
+@import "./components/fonts/_search-form.scss";
+
 // layout
 
 // index page
@@ -27,3 +32,6 @@
 @import "./components/layout/_promo.scss";
 @import "./components/layout/_tariff.scss";
 @import "./components/layout/_ways.scss";
+
+// catalog page
+@import "./components/layout/_search-form.scss";

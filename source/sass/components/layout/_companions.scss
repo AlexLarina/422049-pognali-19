@@ -2,6 +2,10 @@
   background-color: $bg-blue;
 }
 
+.catalog-main .companions {
+  background-color: $bg-grey;
+}
+
 .companions__list {
   list-style: none;
 }
@@ -19,4 +23,18 @@
 
 .companions__show-all {
   background-color: $bg-light-gold;
+}
+
+.catalog-main .wish__list {
+  list-style: none;
+}
+
+.catalog-main .companion__accept {
+  border: none;
+  background-color: $bg-light-gold;
+}
+
+.catalog-main .companions__show-more {
+  border: none;
+  background-color: $bg-grey;
 }
