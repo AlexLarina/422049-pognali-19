@@ -1,0 +1,51 @@
+.new-plan__title {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(24px, 1em);
+}
+
+.form__title {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(20px, 1em);
+}
+
+.form__description {
+  @include font(normal, $font-greyish-brown);
+  @include font-size(16px, 1.38em);
+}
+
+.form__item label,
+.form__item span {
+  @include font(normal, $font-dark-slate-blue);
+  @include font-size(16px, 1.6em);
+  text-transform: uppercase;
+}
+
+.form__item span {
+  color: $dark-slate-blue-30;
+}
+
+.form__item label[for="children-allowed"] {
+  @include font(normal, $font-greyish-brown);
+  @include font-size(15px, 1em);
+  text-transform: unset;
+}
+
+.form__submit,
+.form__back {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(17px, 1.76em);
+  text-transform: uppercase;
+}
+
+.trip select,
+.form__add-country {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(14px, 1.4em);
+  text-transform: uppercase;
+}
+
+.trip__title {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(18px, 1em);
+  text-transform: uppercase;
+}

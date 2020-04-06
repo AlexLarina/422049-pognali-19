@@ -1,0 +1,17 @@
+.plans .trip__title {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(16px, 1em);
+}
+
+.trip__companions,
+.trip__date {
+  @include font(normal, $font-dark-slate-blue);
+  @include font-size(14px, 1.4em);
+  text-transform: uppercase;
+}
+
+.trip__change-button {
+  @include font(normal, $font-black-30);
+  @include font-size(14px, 1.4em);
+  text-transform: uppercase;
+}
