@@ -1,4 +1,11 @@
 .about {
   background: url("../../../img/about-mobile@1x.png") no-repeat 0% 0%;
   background-color: $bg-blue;
+
+  padding: 33px 50px 84px 50px;
+  border-radius: 0 0 30px 30px;
+}
+
+.about__title {
+  margin: 0;
 }

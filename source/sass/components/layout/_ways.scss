@@ -1,11 +1,65 @@
 .ways {
   background-color: $bg-grey;
+
+  padding-top: 72px;
+  padding-bottom: 30px;
+  //padding: 72px 50px 30px 50px;
+  border-radius: 0 0 30px 30px;
+}
+
+.ways__title,
+.ways__description {
+  padding: 0 25px 0 25px;
+}
+
+.ways__title {
+  margin: 0;
+  padding-bottom: 23px;
 }
 
 .ways__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 66px;
 }
 
 .ways__show-all {
   background-color: $bg-light-gold;
+}
+
+.way {
+  background-color: $bg-white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  //padding: 25px;
+}
+
+.way img {
+  border-radius: 10px 10px 0 0;
+}
+
+.way__info {
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.way__title,
+.way__description {
+  margin: 0;
+  padding: 0;
+}
+
+.way__seen::before {
+  content: url("../../../img/user.svg");
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+}
+
+.ways__show-all {
+  display: inline-block;
+  width: 100%;
+  padding: 24px;
+  border-radius: 10px;
 }
