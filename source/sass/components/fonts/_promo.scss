@@ -1,6 +1,7 @@
 .promo__title {
   @include font(bold, $font-white);
   @include font-size(36px, 1.11em);
+  text-align: center;
 }
 
 .promo__quote p {

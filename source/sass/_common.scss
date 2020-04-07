@@ -29,6 +29,12 @@ html {
   overflow: hidden;
 }
 
+.container {
+  margin: 0 auto;
+  width: 320px;
+  padding: 0 25px;
+}
+
 .catalog-main,
 .form-main {
   background-color: $bg-grey;

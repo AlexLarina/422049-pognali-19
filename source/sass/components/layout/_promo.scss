@@ -1,11 +1,89 @@
 .promo {
   background: url("../../../img/globe-back-mobile@1x.jpg") no-repeat 0% 0%;
   background-color: $bg-blue;
+
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.promo__title {
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.promo__navigation {
+  background: url("../../../img/traveller-illustration-mobile@1x.png") no-repeat;
+  background-position-x: 50%;
+  background-position-y: 30%;
 }
 
 .promo__steps-list,
-.promo .navigation__list {
+.navigation__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__list {
+  padding-top: 250px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navigation__item--auth a {
+  padding: 13px 37px;
+  border-radius: 20px;
+}
+
+.navigation__item--tel a,
+.navigation__item--mail a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: inline-block;
+}
+
+.navigation__item--tel a {
+  background: url("../../../img/topmenu-phone.svg") no-repeat 50% 50%;
+  background-color: $bg-orange;
+  background-size: 18px;
+}
+
+.navigation__item--mail a {
+  background: url("../../../img/topmenu-mail.svg") no-repeat 50% 50%;
+  background-color: $bg-mango-two;
+  background-size: 18px;
+}
+
+.promo__quote {
+  margin: 0;
+  background-color: $bg-dark-blue;
+  padding: 30px 25px;
+}
+
+.promo__steps-list {
+  //position: relative;
+}
+
+.promo__steps-list .steps__item {
+  //position: absolute;
+  padding: 25px;
+  border-radius: 10px 10px 0px 0px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.steps__item span {
+  margin-left: 70px;
+}
+
+.promo__steps-list .steps__item:last-child {
+  border-radius: 10px;
 }
 
 .promo__steps-list li:first-child {
