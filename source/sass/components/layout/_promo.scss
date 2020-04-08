@@ -4,6 +4,10 @@
 
   padding-top: 50px;
   padding-bottom: 40px;
+
+  // хак для скругленных углов у элементов списка
+  position: relative;
+  z-index: -2;
 }
 
 .promo__title {
@@ -64,10 +68,6 @@
   padding: 30px 25px;
 }
 
-.promo__steps-list {
-  //position: relative;
-}
-
 .promo__steps-list .steps__item {
   //position: absolute;
   padding: 25px;
@@ -92,14 +92,31 @@
 
 .promo__steps-list li:nth-child(2) {
   background-color: $bg-mango-three;
+  position: relative;
 }
+
+.promo__steps-list li:nth-child(2)::before {
+  @include bg-round-corvers($bg-orange);
+}
+
 
 .promo__steps-list li:nth-child(3) {
   background-color: $bg-mango-two;
+  position: relative;
+}
+
+.promo__steps-list li:nth-child(3)::before {
+  @include bg-round-corvers($bg-mango-three);
 }
 
 .promo__steps-list li:last-child {
   background-color: $bg-light-gold;
+  position: relative;
+}
+
+.promo__steps-list li:last-child::before {
+  @include bg-round-corvers($bg-mango-two);
+  border-radius: 0 0 10px 10px;
 }
 
 .navigation__item--auth a {

@@ -9,7 +9,7 @@
 }
 
 .contacts__description a {
-  color: $font-light-gold;
+  @include font(bold, $font-light-gold);
 }
 
 .contacts__phone,

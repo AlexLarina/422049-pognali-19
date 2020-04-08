@@ -13,8 +13,8 @@
 }
 
 .tariff__list {
+  @include font(normal, $font-greyish-brown);
   @include font-size(16px, 1.38em);
-  color: $font-greyish-brown;
 }
 
 .tariff__list span {

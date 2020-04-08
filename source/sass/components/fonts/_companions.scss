@@ -36,8 +36,8 @@
 }
 
 .companions__show-all {
+  @include font(bold, $font-dark-slate-blue);
   @include font-size(18px, 1em);
-  color: $font-dark-slate-blue;
 }
 
 .catalog-main .companion__name {
@@ -84,4 +84,9 @@
 .catalog-main .companions__show-more {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(17px, 1.76em);
+}
+
+.companion__level {
+  @include font(bold, $font-white);
+  @include font-size(24px, 1em);
 }

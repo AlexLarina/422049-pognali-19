@@ -1,3 +1,35 @@
 .map {
   background-color: $bg-light-gold;
+
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  border-radius: 0 0 30px 30px;
+}
+
+.map__address {
+  margin: 0;
+  padding-left: 50px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.map__address::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: inline-block;
+  margin-right: 15px;
+
+  background: url("../../../img/contacts-location.svg") no-repeat 50% 50%;
+  background-size: 18px 18px;
+  background-color: $bg-dark-blue-grey-two;
+
+  position: absolute;
+  left: 0;
 }

@@ -4,6 +4,12 @@
 
   padding: 33px 50px 84px 50px;
   border-radius: 0 0 30px 30px;
+
+  position: relative;
+}
+
+.about::before {
+  @include bg-round-corvers($bg-grey);
 }
 
 .about__title {

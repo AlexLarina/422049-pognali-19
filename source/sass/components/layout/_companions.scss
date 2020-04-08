@@ -1,24 +1,52 @@
 .companions {
   background-color: $bg-blue;
+
+  padding-top: 72px;
+  padding-bottom: 30px;
+  border-radius: 0 0 30px 30px;
+
+  position: relative;
+}
+
+.companions::before {
+  @include bg-round-corvers($bg-grey);
 }
 
 .catalog-main .companions {
   background-color: $bg-grey;
 }
 
+.companions__title,
+.companions__description {
+  padding: 0 25px 0 25px;
+}
+
 .companions__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .companion {
   background-color: $bg-white;
+  position: relative;
+
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.companion:last-of-type {
+  margin-bottom: 0;
 }
 
 .companion__tags {
   list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 15px 47px;
 }
 
 .companions__show-all {
@@ -37,4 +65,37 @@
 .catalog-main .companions__show-more {
   border: none;
   background-color: $bg-grey;
+}
+
+.companion__avatar {
+  border-radius: 10px;
+}
+
+.companion__level {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+
+  text-align: center;
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 3px solid $bg-orange;
+}
+
+.companion__name {
+  margin: 27px 0px 15px 0px;
+  text-align: center;
+}
+
+.companions__show-all {
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 10px;
 }
