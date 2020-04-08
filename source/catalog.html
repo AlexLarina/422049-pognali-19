@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <a href="#" class="header__logo"><img src="#" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+    <header class="header container">
+      <a href="#" class="header__logo"><img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
 
-      <div class="header__menu menu">
+      <div class="header__menu menu visually-hidden">
         <input id="menu__toggle" type="checkbox" class="menu__toggle">
         <label class="menu__hamburger-button" for="menu__toggle">
         </label>
@@ -43,7 +43,7 @@
 
     </header>
     <main class="catalog-main">
-      <h1 class="catalog-main__title">Попутчики</h1>
+      <h1 class="catalog-main__title container"><a href="#">Попутчики</a></h1>
 
       <section class="catalog-main__filters filters" style="display: none;">
         <h2 class="filters__title">Фильтрация по странам</h2>
@@ -103,7 +103,7 @@
         <button type="button" class="filters__close">Свернуть</button>
       </section>
 
-      <section class="catalog-main__companion-search search">
+      <section class="catalog-main__companion-search search container">
         <form>
           <h3 class="search__title">Подберите идеального попутчика</h3>
 

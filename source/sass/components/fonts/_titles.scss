@@ -1,4 +1,4 @@
-.catalog-main__title,
+.catalog-main__title a,
 .form-main__title {
   @include font(bold, $font-white);
   @include font-size(36px, 1.11em);

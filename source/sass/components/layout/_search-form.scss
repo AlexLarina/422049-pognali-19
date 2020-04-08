@@ -1,16 +1,82 @@
 .search {
   background-color: $bg-light-gold;
+
+  max-width: 270px;
+  border-radius: 20px;
+
+  margin-top: 25px;
+  padding: 25px;
+}
+
+.search__title {
+  margin: 0;
+  margin-bottom: 21px;
 }
 
 .catalog-main__companion-search fieldset {
   border: 0;
+  margin: 13px 0;
+}
+
+.catalog-main__companion-search legend {
+  width: 100%;
+  padding-top: 13px;
+  border-top: 2px solid $bg-macaroni-and-cheese;
 }
 
 .filter__list {
   list-style: none;
+  padding: 0;
+}
+
+.filter__item {
+  margin-bottom: 12px;
+}
+
+.filter__checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.filter__checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: $bg-white;
+  border-radius: 4px;
+
+  margin-right: 9px;
 }
 
 .search__submit {
   border: none;
   background-color: $bg-white;
+
+  width: 100%;
+  border-radius: 20px;
+  padding: 5px 0;
+}
+
+.range__price-controls {
+  display: flex;
+}
+
+.range__item input[type="number"] {
+  width: 100%;
+  box-sizing: content-box;
+  border: none;
+  
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+.range__item input[name="range__item--min"] {
+  border-radius: 5px 0 0 5px;
+}
+
+.range__item input[name="range__item--max"] {
+  border-radius: 0 5px 5px 0;
 }
