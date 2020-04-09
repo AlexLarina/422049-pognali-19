@@ -10,7 +10,7 @@
 }
 
 .tariff::before {
-  @include bg-round-corvers($bg-blue);
+  @include bg-round-corvers($bg-dark-blue-grey);
 }
 
 .tariff__title {

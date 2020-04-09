@@ -30,10 +30,6 @@
   margin-top: 66px;
 }
 
-.ways__show-all {
-  background-color: $bg-light-gold;
-}
-
 .way {
   background-color: $bg-white;
   margin-bottom: 10px;
@@ -63,8 +59,10 @@
 }
 
 .ways__show-all {
-  display: inline-block;
-  width: 100%;
-  padding: 24px;
-  border-radius: 10px;
+  @include gold-button();
+}
+
+.ways__show-all:hover,
+.ways__show-all:active {
+  @include gold-button-hover();
 }

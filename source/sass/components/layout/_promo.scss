@@ -7,7 +7,7 @@
 
   // хак для скругленных углов у элементов списка
   position: relative;
-  z-index: -2;
+  //z-index: -2;
 }
 
 .promo__title {
@@ -36,9 +36,35 @@
   align-items: center;
 }
 
+.promo .navigation__item {
+  cursor: pointer;
+}
+
 .navigation__item--auth a {
   padding: 13px 37px;
   border-radius: 20px;
+  background-color: $bg-light-gold;
+}
+
+.navigation__item--auth a:hover,
+.navigation__item--auth a:active {
+  background-color: $bg-mango-two;
+}
+
+.navigation__item--tel a:hover,
+.navigation__item--tel a:active {
+  background-color: $bg-dusty-orange;
+}
+
+.navigation__item--mail a:hover,
+.navigation__item--mail a:active {
+  background-color: $bg-orange;
+}
+
+.navigation__item--tel a:active,
+.navigation__item--mail a:active {
+  // переделать только для svg
+  opacity: 0.3;
 }
 
 .navigation__item--tel a,
@@ -71,7 +97,7 @@
 .promo__steps-list .steps__item {
   //position: absolute;
   padding: 25px;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0 0;
 
   display: flex;
   flex-direction: row;
@@ -117,8 +143,4 @@
 .promo__steps-list li:last-child::before {
   @include bg-round-corvers($bg-mango-two);
   border-radius: 0 0 10px 10px;
-}
-
-.navigation__item--auth a {
-  background-color: $bg-light-gold;
 }

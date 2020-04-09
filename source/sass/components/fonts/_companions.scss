@@ -4,7 +4,7 @@
 }
 
 .companions__description {
-  @include font(normal, $font-white);
+  @include font(300, $font-white);
   @include font-size(16px, 1.38em);
 }
 
@@ -29,6 +29,7 @@
 
 .companion__level {
   @include font-size(24px, 1em);
+  @include font(bold, $font-white);
 }
 
 .companion__travel-means {
@@ -43,6 +44,7 @@
 .catalog-main .companion__name {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(20px, 1em);
+  text-align: left;
 }
 
 .catalog-main .companion__likes {
@@ -68,10 +70,11 @@
 .catalog-main .companion__accept {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(17px, 1.76em);
+  text-transform: uppercase;
 }
 
 .catalog-main .wish__item {
-  @include font(bold, $font-dark-slate-blue);
+  @include font(500, $font-dark-slate-blue);
   @include font-size(15px, 1.2em);
   text-transform: uppercase;
 }
@@ -86,7 +89,6 @@
   @include font-size(17px, 1.76em);
 }
 
-.companion__level {
-  @include font(bold, $font-white);
-  @include font-size(24px, 1em);
+.companion__transport .transport__title {
+  text-transform: unset;
 }

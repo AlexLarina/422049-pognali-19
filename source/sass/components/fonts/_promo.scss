@@ -5,7 +5,7 @@
 }
 
 .promo__quote p {
-  @include font(normal, $font-white);
+  @include font(300, $font-white);
   @include font-size(16px, 1.38em);
 }
 
@@ -32,4 +32,9 @@
 .navigation__item--auth a {
   @include font(bold, $font-dark-blue);
   @include font-size(17px, 1.76em);
+  text-transform: uppercase;
+}
+
+.navigation__item--auth a:active {
+  color: $font-dark-two-30;
 }

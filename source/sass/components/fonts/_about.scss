@@ -4,7 +4,7 @@
 }
 
 .about__description {
-  @include font(normal, $font-white);
+  @include font(300, $font-white);
   @include font-size(16px, 1.38em);
 }
 

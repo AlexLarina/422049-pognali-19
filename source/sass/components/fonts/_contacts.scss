@@ -5,7 +5,7 @@
 
 .contacts__description {
   @include font-size(16px, 1.38em);
-  @include font(normal, $font-white);
+  @include font(300, $font-white);
 }
 
 .contacts__description a {
@@ -15,6 +15,6 @@
 .contacts__phone,
 .contacts__email {
   @include font-size(16px, 1.38em);
-  color: $font-light-gold;
+  @include font(bold, $font-light-gold);
   text-transform: uppercase;
 }
