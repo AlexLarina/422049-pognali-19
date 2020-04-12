@@ -11,6 +11,7 @@
 .user__change-avatar {
   @include font(bold, $font-dark-blue);
   @include font-size(17px, 1.76em);
+  text-transform: uppercase;
 }
 
 .tags__title,
@@ -23,4 +24,8 @@
 .tags textarea {
   @include font(normal, $font-greyish-brown);
   @include font-size(16px, 1.38em);
+}
+
+.transport__item {
+  font-size: 0;
 }

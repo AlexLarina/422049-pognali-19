@@ -3,6 +3,7 @@
   background-color: $font-dark-blue;
 }
 
-.catalog-main__title a {
+.catalog-main__title a,
+.form-main__title a {
   border-bottom: 5px solid $bg-orange;
 }

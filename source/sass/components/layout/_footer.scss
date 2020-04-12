@@ -12,7 +12,7 @@
   position: relative;
 }
 
-.footer::before {
+.footer--catalog::before {
   @include bg-round-corvers($bg-grey);
 }
 
