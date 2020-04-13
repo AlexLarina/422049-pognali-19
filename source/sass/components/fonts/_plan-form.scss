@@ -49,3 +49,36 @@
   @include font-size(18px, 1em);
   text-transform: uppercase;
 }
+
+.steps__list {
+  font-size: 0;
+}
+
+.month__current {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(20px, 1em);
+}
+
+.weekdays__item {
+  @include font(normal, $font-greyish-brown);
+  @include font-size(14px, 1.29em);
+}
+
+.weekdays__item--weekend {
+  @include font(normal, $font-orange-red);
+  @include font-size(14px, 1.29em);
+}
+
+.days__item {
+  @include font(normal, $font-greyish-brown-30);
+  @include font-size(14px, 1.29em);
+  line-height: 30px;
+}
+
+.days__item--selected {
+  color: $font-white;
+}
+
+.days__item--following {
+  color: $font-greyish-brown;
+}

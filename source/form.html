@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="header container">
-      <a href="#" class="header__logo"><img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+      <a href="index.html" class="header__logo"><img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
 
       <div class="header__menu menu visually-hidden">
         <input id="menu__toggle" type="checkbox" class="menu__toggle">
@@ -120,7 +120,7 @@
         </section>
       </article>
 
-      <section class="form-main__new-plan new-plan">
+      <section class="form-main__new-plan new-plan container">
         <h2 class="new-plan__title">Добавить план:</h2>
 
         <div class="new-plan__steps steps">
@@ -142,26 +142,26 @@
 
         <form>
           <div class="new-plan__form form">
-            <h3 class="form__title">Шаг 1. Даты пребывания</h3>
+            <h3 class="form__title"><span>Шаг 1.</span> Даты пребывания</h3>
             <p class="form__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
 
-            <div class="form__item">
+            <div class="form__item form__item--amount">
               <label for="companions">Ищу попутчиков:</label>
+              <span>чел.</span>
               <button type="button" class="button button--decrease">-</button>
               <input type="number" min="0" max="100" value="2" id="companions">
               <button type="button" class="button button--increase">+</button>
-              <span>чел.</span>
             </div>
 
-            <div class="form__item">
+            <div class="form__item form__item--amount">
               <label for="duration">Длительность:</label>
+              <span>дн.</span>
               <button type="button" class="button button--decrease">-</button>
               <input type="number" min="0" max="100" value="2" id="duration">
               <button type="button" class="button button--increase">+</button>
-              <span>дн.</span>
             </div>
 
-            <div class="form__item">
+            <div class="form__item form__item--children">
               <input type="checkbox" name="children-allowed" id="children-allowed" checked>
               <label for="children-allowed">Можно с детьми</label>
             </div>
@@ -169,68 +169,68 @@
             <div class="form__item calendar">
               <ul class="calendar__month month">
                 <li class="month__prev"><button>&#10094;</button></li>
+                <li class="month__current">Март 2019</li>
                 <li class="month__next"><button>&#10095;</button></li>
-                <li>Март 2019</li>
               </ul>
 
-              <ul class="calendar__weekdays">
-                <li>П</li>
-                <li>В</li>
-                <li>С</li>
-                <li>Ч</li>
-                <li>П</li>
-                <li>С</li>
-                <li>В</li>
+              <ul class="calendar__weekdays weekdays">
+                <li class="weekdays__item">П</li>
+                <li class="weekdays__item">В</li>
+                <li class="weekdays__item">С</li>
+                <li class="weekdays__item">Ч</li>
+                <li class="weekdays__item">П</li>
+                <li class="weekdays__item weekdays__item--weekend">С</li>
+                <li class="weekdays__item weekdays__item--weekend">В</li>
               </ul>
 
-              <ul class="calendar__days">
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>1</li>
+              <ul class="calendar__days days">
+                <li class="days__item">23</li>
+                <li class="days__item">24</li>
+                <li class="days__item">25</li>
+                <li class="days__item">26</li>
+                <li class="days__item">27</li>
+                <li class="days__item">28</li>
+                <li class="days__item">1</li>
 
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
+                <li class="days__item">2</li>
+                <li class="days__item">3</li>
+                <li class="days__item">4</li>
+                <li class="days__item">5</li>
+                <li class="days__item">6</li>
+                <li class="days__item">7</li>
+                <li class="days__item">8</li>
 
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
+                <li class="days__item">9</li>
+                <li class="days__item">10</li>
+                <li class="days__item">11</li>
+                <li class="days__item">12</li>
+                <li class="days__item">13</li>
+                <li class="days__item">14</li>
+                <li class="days__item">15</li>
 
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22</li>
+                <li class="days__item" >16</li>
+                <li class="days__item">17</li>
+                <li class="days__item">18</li>
+                <li class="days__item">19</li>
+                <li class="days__item">20</li>
+                <li class="days__item">21</li>
+                <li class="days__item">22</li>
 
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29</li>
+                <li class="days__item">23</li>
+                <li class="days__item">24</li>
+                <li class="days__item">25</li>
+                <li class="days__item days__item--selected days__item--current">26</li>
+                <li class="days__item days__item--selected">27</li>
+                <li class="days__item days__item--selected">28</li>
+                <li class="days__item days__item--following">29</li>
 
-                <li>30</li>
-                <li>31</li>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
+                <li class="days__item days__item--following">30</li>
+                <li class="days__item days__item--following">31</li>
+                <li class="days__item days__item--following">1</li>
+                <li class="days__item days__item--following">2</li>
+                <li class="days__item days__item--following">3</li>
+                <li class="days__item days__item--following">4</li>
+                <li class="days__item days__item--following">5</li>
               </ul>
             </div>
 
@@ -240,7 +240,7 @@
 
         <form>
           <div class="new-plan__form form">
-            <h3 class="form__title">Шаг 2. Маршрут</h3>
+            <h3 class="form__title"><span>Шаг 2.</span> Маршрут</h3>
             <p class="form__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
 
             <div class="form__item">
@@ -320,7 +320,7 @@
 
         <form>
           <div class="new-plan__form form">
-            <h3 class="form__title">Шаг 3. Развлечения</h3>
+            <h3 class="form__title"><span>Шаг 3.</span> Развлечения</h3>
             <p class="form__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
 
             <ul class="form__trips-list">
