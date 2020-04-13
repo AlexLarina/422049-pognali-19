@@ -16,6 +16,10 @@
   @include bg-round-corvers($bg-grey);
 }
 
+.footer--form::before {
+  @include bg-round-corvers($bg-light-blue-grey-five);
+}
+
 .footer__logo {
   display: inline-block;
 }

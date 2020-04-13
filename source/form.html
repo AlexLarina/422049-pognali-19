@@ -258,10 +258,11 @@
                 </li>
 
                 <li class="form__trips-item trip">
-                  <input type="checkbox" id="add-country">
-                  <label for="add-country">Выберите страну</label>
+                  <select>
+                    <option selected>Выберите страну</option>
+                  </select>
 
-                  <div class="trip__drowdown drowdown">
+                  <div class="trip__drowdown drowdown" style="display: none;">
                     <ul class="drowdown__alphabet alphabet">
                       <li class="alphabet__letter">А</li>
                       <li class="alphabet__letter">Б</li>
@@ -330,8 +331,7 @@
               </li>
               <li class="form__trips-item trip">
                 <h4 class="trip__title">Чехия</h4>
-                <textarea placeholder="План действий">
-                  Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                <textarea placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
                 </textarea>
               </li>
             </ul>
@@ -342,8 +342,8 @@
         </form>
       </section>
     </main>
-    <footer class="footer">
-      <a href="#" class="footer__logo"><img src="#" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+    <footer class="footer footer--form">
+      <a href="#" class="footer__logo"><img src="./img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
       <div class="footer__social social">
         <a href="#" title="Facebook страница сервиса Погнали" class="social__facebook"></a>
         <a href="#" title="Страница ВКонтакте сервиса Погнали" class="social__vk"></a>

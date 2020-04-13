@@ -108,6 +108,7 @@
 }
 
 .form__trips-list {
+  padding: 0;
   list-style: none;
 }
 
@@ -122,11 +123,17 @@
 .form__back {
   background-color: inherit;
   border: none;
+  width: 100%;
+  margin-top: 15px;
 }
 
 .form__add-country {
   background-color: $bg-grey;
   border: none;
+  width: 100%;
+  padding: 15px 12px;
+  text-align: left;
+  border-radius: 4px;
 }
 
 .steps__list {
@@ -198,4 +205,25 @@
 
 .days__item--following {
   background-color: $bg-pale-grey;
+}
+
+.form__trips-item {
+  padding: 0;
+}
+
+.form__trips-item select {
+  width: 100%;
+  padding: 13px 0 13px 12px;
+  border: 1px solid $bg-cloudy-blue;
+  border-radius: 4px;
+}
+
+.form__trips-item textarea {
+  width: 100%;
+  resize: none;
+  border: 1px solid $bg-cloudy-blue;
+  border-radius: 4px;
+  padding: 13px 15px;
+  text-align: left;
+  min-height: 220px;
 }
