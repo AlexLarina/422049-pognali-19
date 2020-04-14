@@ -2,9 +2,22 @@
   background-color: $bg-light-gold;
 
   padding-top: 35px;
-  padding-bottom: 35px;
+  //padding-bottom: 300px;
 
   border-radius: 0 0 30px 30px;
+  position: relative;
+}
+
+.map__wrapper {
+  margin-bottom: 320px;
+  padding-bottom: 35px;
+}
+
+.map__interactive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .map__address {
@@ -32,4 +45,10 @@
 
   position: absolute;
   left: 0;
+}
+
+.map__route {
+  @include gold-button();
+  border: 3px solid $bg-dark-blue-grey;
+  margin-top: 32px;
 }
