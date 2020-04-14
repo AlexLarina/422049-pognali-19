@@ -1,3 +1,22 @@
-.header {
-  //
+.navigation--service .navigation__item {
+  @include font(normal, $font-blue-grey);
+  @include font-size(30px, 1.2em);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.navigation__item a {
+  color: inherit;
+}
+
+.navigation__item--authentication,
+.navigation__item--phone,
+.navigation__item--email {
+  @include font(bold, $font-dark-blue);
+  @include font-size(17px, 1.76em);
+  text-transform: uppercase;
+}
+
+.navigation__item--authentication {
+  text-align: center;
 }

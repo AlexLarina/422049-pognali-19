@@ -2,4 +2,107 @@
   background-color: $bg-dark-blue;
 
   padding-top: 27px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  position: relative;
+}
+
+input[type="checkbox"].menu__toggle {
+  width: 0;
+  height: 0;
+}
+
+.menu__hamburger-button {
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 25 11' style='enable-background:new 0 0 25 11;' xml:space='preserve' fill='white'%3E%3Cg%3E%3Cpath d='M1.5,3h22C24.3,3,25,2.3,25,1.5S24.3,0,23.5,0h-22C0.7,0,0,0.7,0,1.5S0.7,3,1.5,3z'/%3E%3Cpath d='M23.5,8h-22C0.7,8,0,8.7,0,9.5S0.7,11,1.5,11h22c0.8,0,1.5-0.7,1.5-1.5S24.3,8,23.5,8z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 11px;
+}
+
+.menu__wrapper {
+  display: none;
+}
+
+input[type="checkbox"].menu__toggle:checked ~ .menu__wrapper {
+  display: block;
+
+  background: $bg-white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border: 1px solid red;
+
+  padding: 27px;
+  width: 100%;
+}
+
+input[type="checkbox"].menu__toggle:checked + .menu__hamburger-button {
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18.6 18.6' style='enable-background:new 0 0 18.6 18.6;' xml:space='preserve' fill='%23cccccc'%3E%3Cpath d='M11.4,9.3l6.7-6.7c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L9.3,7.2L2.6,0.4C2-0.1,1-0.1,0.4,0.4C-0.1,1-0.1,2,0.4,2.6l6.7,6.7 L0.4,16c-0.6,0.6-0.6,1.5,0,2.1s1.5,0.6,2.1,0l6.7-6.7l6.7,6.7c0.6,0.6,1.5,0.6,2.1,0s0.6-1.5,0-2.1L11.4,9.3z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 19px;
+
+  z-index: 2;
+  position: absolute;
+  right: 27px;
+}
+
+.menu__navigation.navigation--service {
+  margin-top: 80px;
+  margin-bottom: 58px;
+}
+
+.navigation__item--authentication {
+  margin-bottom: 50px;
+}
+
+.navigation__item--authentication a {
+  display: block;
+  width: 100%;
+  background-color: $bg-light-gold;
+  padding: 12px 0 10px 0;
+  border-radius: 25px;
+}
+
+.menu__social {
+  text-align: center;
+}
+
+.menu__social a {
+  background-color: $bg-white;
+}
+
+.navigation__item--phone,
+.navigation__item--email {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__item--phone::before,
+.navigation__item--email::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.navigation__item--phone::before {
+  background: url("../../../img/contacts-phone.svg") no-repeat 50% 50%;
+  background-size: 18px 18px;
+  background-color: $bg-dark-blue-grey-two;
+}
+
+.navigation__item--email::before {
+  background: url("../../../img/contacts-mail.svg") no-repeat 50% 50%;
+  background-size: 18px 18px;
+  background-color: $bg-dark-blue-grey-two;
 }
