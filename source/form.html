@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Направления</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <a href="#" class="header__logo"><img src="#" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+    <header class="header container">
+      <a href="index.html" class="header__logo"><img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
 
-      <div class="header__menu menu">
+      <div class="header__menu menu visually-hidden">
         <input id="menu__toggle" type="checkbox" class="menu__toggle">
         <label class="menu__hamburger-button" for="menu__toggle">
         </label>
@@ -42,29 +43,34 @@
 
     </header>
     <main class="form-main">
-      <h1 class="form-main__title">Направления</h1>
+      <h1 class="form-main__title container"><a href="#">Направления</a></h1>
 
       <article class="form-main__profile profile">
-        <h2 class="profile__title visually__hidden">Анкета пользователя</h2>
+        <h2 class="profile__title visually-hidden">Анкета пользователя</h2>
 
         <form>
-          <section class="profile__user user">
-            <h3 class="visually__hidden">Информация о пользователи</h3>
+          <div class="container">
+            <section class="profile__user user">
+            <h3 class="visually-hidden">Информация о пользователи</h3>
             <div class="user__level">
-              <span>80</span>
+              <p>
+                <span>80</span>level
+              </p>
             </div>
             <div class="user__avatar">
-              <img src="#" width="100" height="100" alt="Аватар пользователя">
+              <img src="./img/demin-mobile@1x.jpg" width="100" height="100" alt="Аватар пользователя">
             </div>
             <button class="user__change-avatar" type="button">Сменить фото</button>
-          </section>
+            </section>
 
-          <section class="profile__user-info user-info">
-            <h3 class="visually__hidden">Информация о пользователи</h3>
+            <section class="profile__user-info user-info">
+            <h3 class="visually-hidden">Информация о пользователи</h3>
             <div class="user-info__tags tags">
+              <h4 class="tags__title">Тэги</h4>
               <textarea>#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
             <div class="user-info__transport transport">
+              <h4 class="transport__title">Транспорт</h4>
               <ul class="transport__list">
                 <li class="transport__item transport__item--plane">
                   <input class="visually-hidden" type="checkbox" name="transport--plane" value="plane" id="transport--plane">
@@ -84,9 +90,10 @@
                 </li>
               </ul>
             </div>
-          </section>
+            </section>
+          </div>
         </form>
-        <section class="profile__plans plans">
+        <section class="profile__plans plans container">
           <h3 class="plans__title">Мои планы:</h3>
 
           <article class="plans__trip trip">
@@ -113,7 +120,7 @@
         </section>
       </article>
 
-      <section class="form-main__new-plan new-plan">
+      <section class="form-main__new-plan new-plan container">
         <h2 class="new-plan__title">Добавить план:</h2>
 
         <div class="new-plan__steps steps">
@@ -135,26 +142,26 @@
 
         <form>
           <div class="new-plan__form form">
-            <h3 class="form__title">Шаг 1. Даты пребывания</h3>
+            <h3 class="form__title"><span>Шаг 1.</span> Даты пребывания</h3>
             <p class="form__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
 
-            <div class="form__item">
+            <div class="form__item form__item--amount">
               <label for="companions">Ищу попутчиков:</label>
+              <span>чел.</span>
               <button type="button" class="button button--decrease">-</button>
               <input type="number" min="0" max="100" value="2" id="companions">
               <button type="button" class="button button--increase">+</button>
-              <span>чел.</span>
             </div>
 
-            <div class="form__item">
+            <div class="form__item form__item--amount">
               <label for="duration">Длительность:</label>
+              <span>дн.</span>
               <button type="button" class="button button--decrease">-</button>
               <input type="number" min="0" max="100" value="2" id="duration">
               <button type="button" class="button button--increase">+</button>
-              <span>дн.</span>
             </div>
 
-            <div class="form__item">
+            <div class="form__item form__item--children">
               <input type="checkbox" name="children-allowed" id="children-allowed" checked>
               <label for="children-allowed">Можно с детьми</label>
             </div>
@@ -162,68 +169,68 @@
             <div class="form__item calendar">
               <ul class="calendar__month month">
                 <li class="month__prev"><button>&#10094;</button></li>
+                <li class="month__current">Март 2019</li>
                 <li class="month__next"><button>&#10095;</button></li>
-                <li>Март 2019</li>
               </ul>
 
-              <ul class="calendar__weekdays">
-                <li>П</li>
-                <li>В</li>
-                <li>С</li>
-                <li>Ч</li>
-                <li>П</li>
-                <li>С</li>
-                <li>В</li>
+              <ul class="calendar__weekdays weekdays">
+                <li class="weekdays__item">П</li>
+                <li class="weekdays__item">В</li>
+                <li class="weekdays__item">С</li>
+                <li class="weekdays__item">Ч</li>
+                <li class="weekdays__item">П</li>
+                <li class="weekdays__item weekdays__item--weekend">С</li>
+                <li class="weekdays__item weekdays__item--weekend">В</li>
               </ul>
 
-              <ul class="calendar__days">
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>1</li>
+              <ul class="calendar__days days">
+                <li class="days__item">23</li>
+                <li class="days__item">24</li>
+                <li class="days__item">25</li>
+                <li class="days__item">26</li>
+                <li class="days__item">27</li>
+                <li class="days__item">28</li>
+                <li class="days__item">1</li>
 
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
+                <li class="days__item">2</li>
+                <li class="days__item">3</li>
+                <li class="days__item">4</li>
+                <li class="days__item">5</li>
+                <li class="days__item">6</li>
+                <li class="days__item">7</li>
+                <li class="days__item">8</li>
 
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
+                <li class="days__item">9</li>
+                <li class="days__item">10</li>
+                <li class="days__item">11</li>
+                <li class="days__item">12</li>
+                <li class="days__item">13</li>
+                <li class="days__item">14</li>
+                <li class="days__item">15</li>
 
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22</li>
+                <li class="days__item" >16</li>
+                <li class="days__item">17</li>
+                <li class="days__item">18</li>
+                <li class="days__item">19</li>
+                <li class="days__item">20</li>
+                <li class="days__item">21</li>
+                <li class="days__item">22</li>
 
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29</li>
+                <li class="days__item">23</li>
+                <li class="days__item">24</li>
+                <li class="days__item">25</li>
+                <li class="days__item days__item--selected days__item--current">26</li>
+                <li class="days__item days__item--selected">27</li>
+                <li class="days__item days__item--selected">28</li>
+                <li class="days__item days__item--following">29</li>
 
-                <li>30</li>
-                <li>31</li>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
+                <li class="days__item days__item--following">30</li>
+                <li class="days__item days__item--following">31</li>
+                <li class="days__item days__item--following">1</li>
+                <li class="days__item days__item--following">2</li>
+                <li class="days__item days__item--following">3</li>
+                <li class="days__item days__item--following">4</li>
+                <li class="days__item days__item--following">5</li>
               </ul>
             </div>
 
@@ -233,7 +240,7 @@
 
         <form>
           <div class="new-plan__form form">
-            <h3 class="form__title">Шаг 2. Маршрут</h3>
+            <h3 class="form__title"><span>Шаг 2.</span> Маршрут</h3>
             <p class="form__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
 
             <div class="form__item">
@@ -251,10 +258,11 @@
                 </li>
 
                 <li class="form__trips-item trip">
-                  <input type="checkbox" id="add-country">
-                  <label for="add-country">Выберите страну</label>
+                  <select>
+                    <option selected>Выберите страну</option>
+                  </select>
 
-                  <div class="trip__drowdown drowdown">
+                  <div class="trip__drowdown drowdown" style="display: none;">
                     <ul class="drowdown__alphabet alphabet">
                       <li class="alphabet__letter">А</li>
                       <li class="alphabet__letter">Б</li>
@@ -313,7 +321,7 @@
 
         <form>
           <div class="new-plan__form form">
-            <h3 class="form__title">Шаг 3. Развлечения</h3>
+            <h3 class="form__title"><span>Шаг 3.</span> Развлечения</h3>
             <p class="form__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
 
             <ul class="form__trips-list">
@@ -323,8 +331,7 @@
               </li>
               <li class="form__trips-item trip">
                 <h4 class="trip__title">Чехия</h4>
-                <textarea placeholder="План действий">
-                  Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                <textarea placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
                 </textarea>
               </li>
             </ul>
@@ -335,8 +342,8 @@
         </form>
       </section>
     </main>
-    <footer class="footer">
-      <a href="#" class="footer__logo"><img src="#" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+    <footer class="footer footer--form">
+      <a href="#" class="footer__logo"><img src="./img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
       <div class="footer__social social">
         <a href="#" title="Facebook страница сервиса Погнали" class="social__facebook"></a>
         <a href="#" title="Страница ВКонтакте сервиса Погнали" class="social__vk"></a>

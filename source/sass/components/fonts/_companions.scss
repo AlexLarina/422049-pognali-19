@@ -1,15 +1,11 @@
-.companions {
-  @include font("BloggerSans", bold, $font-white);
-}
-
 .companions__title {
+  @include font(bold, $font-orange);
   @include font-size(24px, 1em);
-  color: $font-orange;
 }
 
 .companions__description {
+  @include font(300, $font-white);
   @include font-size(16px, 1.38em);
-  font-weight: normal;
 }
 
 .companions__description:last-of-type {
@@ -21,8 +17,8 @@
 }
 
 .companion__name {
+  @include font(bold, $font-dark-slate-blue);
   @include font-size(21px, 1em);
-  color: $font-dark-slate-blue;
 }
 
 .tags__item a {
@@ -33,6 +29,7 @@
 
 .companion__level {
   @include font-size(24px, 1em);
+  @include font(bold, $font-white);
 }
 
 .companion__travel-means {
@@ -40,6 +37,58 @@
 }
 
 .companions__show-all {
+  @include font(bold, $font-dark-slate-blue);
   @include font-size(18px, 1em);
-  color: $font-dark-slate-blue;
+}
+
+.catalog-main .companion__name {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(20px, 1em);
+  text-align: left;
+}
+
+.catalog-main .companion__likes {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(14px, 1.5em);
+}
+
+.catalog-main .tags__item {
+  font-size: 15px;
+}
+
+.catalog-main a {
+  font-size: inherit;
+}
+
+.catalog-main .wish__title,
+.catalog-main .transport__title,
+.catalog-main .level__title {
+  @include font(normal, $font-greyish-brown);
+  @include font-size(15px, 1.2em);
+}
+
+.catalog-main .companion__accept {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(17px, 1.76em);
+  text-transform: uppercase;
+}
+
+.catalog-main .wish__item {
+  @include font(500, $font-dark-slate-blue);
+  @include font-size(15px, 1.2em);
+  text-transform: uppercase;
+}
+
+.catalog-main .level__value {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(24px, 0.75em);
+}
+
+.catalog-main .companions__show-more {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(17px, 1.76em);
+}
+
+.companion__transport .transport__title {
+  text-transform: unset;
 }

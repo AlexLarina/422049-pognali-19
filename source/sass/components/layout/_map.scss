@@ -1,3 +1,54 @@
 .map {
   background-color: $bg-light-gold;
+
+  padding-top: 35px;
+  //padding-bottom: 300px;
+
+  border-radius: 0 0 30px 30px;
+  position: relative;
+}
+
+.map__wrapper {
+  margin-bottom: 320px;
+  padding-bottom: 35px;
+}
+
+.map__interactive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.map__address {
+  margin: 0;
+  padding-left: 50px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.map__address::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: inline-block;
+  margin-right: 15px;
+
+  background: url("../../../img/contacts-location.svg") no-repeat 50% 50%;
+  background-size: 18px 18px;
+  background-color: $bg-dark-blue-grey-two;
+
+  position: absolute;
+  left: 0;
+}
+
+.map__route {
+  @include gold-button();
+  border: 3px solid $bg-dark-blue-grey;
+  margin-top: 32px;
 }

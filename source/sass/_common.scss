@@ -28,3 +28,13 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.container {
+  margin: 0 auto;
+  width: 320px;
+  padding: 0 25px;
+}
+
+.form-main {
+  background-color: $bg-grey;
+}

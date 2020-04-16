@@ -14,8 +14,8 @@
   font-style: normal;
 }
 
-@mixin font($family, $weight, $color) {
-  font-family: $family, "Arial", sans-serif;
+@mixin font($weight, $color) {
+  font-family: "BloggerSans", "Arial", sans-serif;
   font-weight: $weight;
   color: $color;
 }

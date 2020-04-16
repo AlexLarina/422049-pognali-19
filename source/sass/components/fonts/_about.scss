@@ -1,10 +1,10 @@
 .about__title {
-  @include font("BloggerSans", bold, $font-orange);
+  @include font(bold, $font-orange);
   @include font-size(24px, 1em);
 }
 
 .about__description {
-  @include font("BloggerSans", normal, $font-white);
+  @include font(300, $font-white);
   @include font-size(16px, 1.38em);
 }
 

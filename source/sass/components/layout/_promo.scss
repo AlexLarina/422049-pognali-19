@@ -1,11 +1,115 @@
 .promo {
   background: url("../../../img/globe-back-mobile@1x.jpg") no-repeat 0% 0%;
   background-color: $bg-blue;
+
+  padding-top: 50px;
+  padding-bottom: 40px;
+
+  // хак для скругленных углов у элементов списка
+  position: relative;
+  //z-index: -2;
+}
+
+.promo__title {
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.promo__navigation {
+  background: url("../../../img/traveller-illustration-mobile@1x.png") no-repeat;
+  background-position-x: 50%;
+  background-position-y: 30%;
 }
 
 .promo__steps-list,
-.promo .navigation__list {
+.navigation__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.promo .navigation__list {
+  padding-top: 250px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.promo .navigation__item {
+  cursor: pointer;
+}
+
+.navigation__item--auth a {
+  padding: 13px 37px;
+  border-radius: 20px;
+  background-color: $bg-light-gold;
+}
+
+.navigation__item--auth a:hover,
+.navigation__item--auth a:active {
+  background-color: $bg-mango-two;
+}
+
+.navigation__item--tel a:hover,
+.navigation__item--tel a:active {
+  background-color: $bg-dusty-orange;
+}
+
+.navigation__item--mail a:hover,
+.navigation__item--mail a:active {
+  background-color: $bg-orange;
+}
+
+.navigation__item--tel a:active,
+.navigation__item--mail a:active {
+  // переделать только для svg
+  opacity: 0.3;
+}
+
+.navigation__item--tel a,
+.navigation__item--mail a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: inline-block;
+}
+
+.navigation__item--tel a {
+  background: url("../../../img/topmenu-phone.svg") no-repeat 50% 50%;
+  background-color: $bg-orange;
+  background-size: 18px;
+}
+
+.navigation__item--mail a {
+  background: url("../../../img/topmenu-mail.svg") no-repeat 50% 50%;
+  background-color: $bg-mango-two;
+  background-size: 18px;
+}
+
+.promo__quote {
+  margin: 0;
+  background-color: $bg-dark-blue;
+  padding: 30px 25px;
+}
+
+.promo__steps-list .steps__item {
+  //position: absolute;
+  padding: 25px;
+  border-radius: 10px 10px 0 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.steps__item span {
+  margin-left: 70px;
+}
+
+.promo__steps-list .steps__item:last-child {
+  border-radius: 10px;
 }
 
 .promo__steps-list li:first-child {
@@ -14,16 +118,29 @@
 
 .promo__steps-list li:nth-child(2) {
   background-color: $bg-mango-three;
+  position: relative;
 }
+
+.promo__steps-list li:nth-child(2)::before {
+  @include bg-round-corvers($bg-orange);
+}
+
 
 .promo__steps-list li:nth-child(3) {
   background-color: $bg-mango-two;
+  position: relative;
+}
+
+.promo__steps-list li:nth-child(3)::before {
+  @include bg-round-corvers($bg-mango-three);
 }
 
 .promo__steps-list li:last-child {
   background-color: $bg-light-gold;
+  position: relative;
 }
 
-.navigation__item--auth a {
-  background-color: $bg-light-gold;
+.promo__steps-list li:last-child::before {
+  @include bg-round-corvers($bg-mango-two);
+  border-radius: 0 0 10px 10px;
 }

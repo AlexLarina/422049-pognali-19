@@ -3,31 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <a href="#" class="header__logo"><img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+    <header class="header container">
+      <a href="index.html" class="header__logo"><img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
 
-      <div class="header__menu menu visually-hidden">
+      <div class="header__menu menu">
         <input id="menu__toggle" type="checkbox" class="menu__toggle">
         <label class="menu__hamburger-button" for="menu__toggle">
         </label>
 
         <div class="menu__wrapper">
+          <a href="index.html" class="menu__logo"><img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
           <nav class="menu__navigation navigation navigation--service">
             <ul class="navigation__list">
-              <li class="navigation__item"><a href="#">О сервисе</a></li>
-              <li class="navigation__item"><a href="#">Направления</a></li>
-              <li class="navigation__item"><a href="#">Попутчики</a></li>
+              <li class="navigation__item"><a href="index.html">О сервисе</a></li>
+              <li class="navigation__item"><a href="form.html">Направления</a></li>
+              <li class="navigation__item"><a href="catalog.html">Попутчики</a></li>
             </ul>
           </nav>
 
           <div class="menu__navigation navigation navigation--user">
             <ul class="navigation__list">
-              <li class="navigation__item"><a href="#">Авторизация</a></li>
-              <li class="navigation__item"><a href="tel:88005558628">8 800 555 86 28</a></li>
-              <li class="navigation__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+              <li class="navigation__item navigation__item--authentication"><a href="#">Авторизация</a></li>
+              <li class="navigation__item navigation__item--phone"><a href="tel:88005558628">8 800 555 86 28</a></li>
+              <li class="navigation__item navigation__item--email"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
             </ul>
           </div>
 
@@ -44,14 +46,14 @@
     <main class="main">
       <h1 class="visually-hidden">Сайт сервиса для поиска попутчиков Погнали?</h1>
 
-      <section class="main__promo promo">
+      <section class="main__promo promo container">
         <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
 
         <div class="promo__navigation navigation navigation--user">
           <ul class="navigation__list">
+            <li class="navigation__item navigation__item--tel"><a href="tel:88005558628">8 800 555 86 28</a></li>
+            <li class="navigation__item navigation__item--mail"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
             <li class="navigation__item navigation__item--auth"><a href="#">Авторизация</a></li>
-            <li class="navigation__item"><a href="tel:88005558628">8 800 555 86 28</a></li>
-            <li class="navigation__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
           </ul>
         </div>
 
@@ -68,40 +70,46 @@
         </ul>
 
       </section>
-      <section class="main__about about">
+      <section class="main__about about container">
         <h2 class="about__title">О сервисе</h2>
         <p class="about__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих. </p>
         <p class="about__description">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
       </section>
-      <section class="main__travel-ways ways">
+      <section class="main__travel-ways ways container">
         <h2 class="ways__title">Направления</h2>
-        <p class="way__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        <p class="ways__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
         <ul class="ways__list">
           <li class="ways_item way">
             <img src="./img/thailand-mobile@1x.jpg" width="270" height="110" alt="Виды Таиланда">
-            <h3 class="way__title">Таиланд</h3>
-            <p class="way__description">Джунгли зовут!</p>
-            <span class="way__seen">18321</span>
+            <div class="way__info">
+              <h3 class="way__title">Таиланд</h3>
+              <p class="way__description">Джунгли зовут!</p>
+              <span class="way__seen">18321</span>
+            </div>
           </li>
 
           <li class="ways_item way">
             <img src="./img/france-mobile@1x.jpg" width="270" height="110" alt="Виды Франции">
-            <h3 class="way__title">Франция</h3>
-            <p class="way__description">Трэ бьен, манифик!</p>
-            <span class="way__seen">12518</span>
-          </li>
+            <div class="way__info">
+              <h3 class="way__title">Франция</h3>
+              <p class="way__description">Трэ бьен, манифик!</p>
+              <span class="way__seen">12518</span>
+            </div>
+            </li>
 
           <li class="ways_item way">
             <img src="./img/czech-mobile@1x.jpg" width="270" height="110" alt="Виды Европы">
-            <h3 class="way__title">Чехия</h3>
-            <p class="way__description">Закоулки старой Европы</p>
-            <span class="way__seen">5326</span>
+            <div class="way__info">
+              <h3 class="way__title">Чехия</h3>
+              <p class="way__description">Закоулки старой Европы</p>
+              <span class="way__seen">5326</span>
+            </div>
           </li>
         </ul>
 
         <a href="form.html" class="ways__show-all">Показать все</a>
       </section>
-      <section class="main__companions companions">
+      <section class="main__companions companions container">
         <h2 class="companions__title">Попутчики</h2>
         <p class="companions__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
         <p class="companions__description">Теперь можно легко найти единомышленников!</p>
@@ -158,7 +166,7 @@
 
         <a href="catalog.html" class="companions__show-all">Показать всех</a>
       </section>
-      <section class="main__tariff tariff">
+      <section class="main__tariff tariff container">
         <h2 class="tariff__title">Добавьте свой профиль</h2>
 
         <ul class="tariff__list">
@@ -182,7 +190,7 @@
         </ul>
         <a href="#" class="tariff__show-all">Показать тарифы для бизнеса</a>
       </section>
-      <section class="main__contacts contacts">
+      <section class="main__contacts contacts container">
         <h2 class="contacts__title">Заинтересовались?</h2>
         <p class="contacts__description">Зарегистрируйтесь, это быстро и бесплатно!</p>
         <p class="contacts__description">Уже зарегистрированы? Тогда скорее <a href="#">авторизуйтесь</a>.</p>
@@ -192,15 +200,19 @@
           <button class="contacts__submit"></button>
         </form>
         <p class="contacts__description">Остались вопросы? Мы с радостью на них ответим!</p>
-        <a href="tel:88005558628" class="contacts__phone">8 800 555 86 28</a>
+        <a href="tel:88005558628" class="contacts__phone">8 800 555-86-28</a>
         <a href="mailto:mail@htmlacademy.ru" class="contacts__email">mail@htmlacademy.ru</a>
       </section>
-      <section class="main__map map">
-        <h2 class="visually-hidden">Как к нам добраться?</h2>
-        <p class="map__address">ул. Большая Конюшенная, 19/8</p>
-        <a href="#" class="map__route">Проложить маршрут</a>
+      <section class="main__map map container">
+        <div class="map__wrapper">
+          <h2 class="visually-hidden">Как к нам добраться?</h2>
+          <p class="map__address">ул. Большая Конюшенная, 19/8</p>
+          <a href="#" class="map__route">Проложить маршрут</a>
+        </div>
         <a href="#" class="map__interactive">
-          <img src="#" width="320" height="546" alt="Карта местонахождения офиса сервиса Погнали?">
+          <!-- <img src="#" width="320" height="546" alt="Карта местонахождения офиса сервиса Погнали?"> -->
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5c5fa949869efec2bad23d97c7681e24807d35db59666f2beb01a37f272ec333&amp;source=constructor" width="320" height="546" frameborder="0">
+          </iframe>
         </a>
       </section>
 
@@ -232,7 +244,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer container">
       <a href="#" class="footer__logo">
         <img src="./img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?">
       </a>

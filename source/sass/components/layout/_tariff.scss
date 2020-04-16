@@ -1,9 +1,55 @@
 .tariff {
   background-color: $bg-grey;
+
+  padding-top: 55px;
+  padding-bottom: 30px;
+
+  border-radius: 0 0 30px 30px;
+
+  position: relative;
+}
+
+.tariff::before {
+  @include bg-round-corvers($bg-dark-blue-grey);
+}
+
+.tariff__title {
+  margin: 0;
+  padding: 15px 100px 15px 25px;
+
+  //max-width: 100px;
+  //position: relative;
+
+  background: url("../../../img/rates@1x.png") no-repeat 100% 100%;
+  background-size: 99px 99px;
 }
 
 .tariff__list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 25px;
+}
+
+.tariff__item {
+  position: relative;
+  margin: 14px 0;
+}
+
+.tariff__item span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 34px;
+  vertical-align: middle;
+}
+
+.tariff__item p {
+  margin: 0;
 }
 
 .tariff__item:first-child span {
@@ -16,4 +62,12 @@
 
 .tariff__item:last-child span {
   background-color: $bg-light-gold;
+}
+
+.tariff__show-all {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+
+  margin-top: 30px;
 }

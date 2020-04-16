@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <a href="#" class="header__logo"><img src="#" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+    <header class="header container">
+      <a href="index.html" class="header__logo"><img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
 
-      <div class="header__menu menu">
+      <div class="header__menu menu visually-hidden">
         <input id="menu__toggle" type="checkbox" class="menu__toggle">
         <label class="menu__hamburger-button" for="menu__toggle">
         </label>
@@ -42,9 +43,9 @@
 
     </header>
     <main class="catalog-main">
-      <h1 class="catalog-main__title">Попутчики</h1>
+      <h1 class="catalog-main__title container"><a href="#">Попутчики</a></h1>
 
-      <section class="catalog-main__filters filters">
+      <section class="catalog-main__filters filters" style="display: none;">
         <h2 class="filters__title">Фильтрация по странам</h2>
 
         <ul class="filters__continents continents">
@@ -102,7 +103,7 @@
         <button type="button" class="filters__close">Свернуть</button>
       </section>
 
-      <section class="catalog-main__companion-search search">
+      <section class="catalog-main__companion-search search container">
         <form>
           <h3 class="search__title">Подберите идеального попутчика</h3>
 
@@ -197,7 +198,7 @@
               <div class="range__price-controls">
                 <span class="range__item range__item--min">
                   <label for="range__item--min"></label>
-                  <input type="number" value="0" name="range__item--min" id="range__item--min">
+                  <input type="number" value="30" name="range__item--min" id="range__item--min">
                 </span>
                 <span class="range__item range__item--max">
                   <label for="range__item--max"></label>
@@ -218,11 +219,11 @@
         </form>
       </section>
 
-      <section class="catalog-main__companions companions">
+      <section class="catalog-main__companions companions container">
         <h2 class="companions__title visually__hidden">Список попутчиков</h2>
 
         <article class="companions__item companion">
-          <img src="#" width="77" height="77" alt="Аватар">
+          <img src="./img/firsova-mobile@1x.jpg" class="companion__avatar" width="77" height="77" alt="Аватар">
           <p class="companion__name">Татьяна Фирсова</p>
           <span class="companion__likes">1.5 M</span>
           <ul class="companion__tags tags">
@@ -237,7 +238,7 @@
           <div class="companion__wish wish">
             <h4 class="wish__title">хочет посетить:</h4>
             <ul class="wish__list">
-              <li class="wish__item">Шри Ланка</li>
+              <li class="wish__item">Шри-Ланка</li>
               <li class="wish__item">Таиланд</li>
               <li class="wish__item">Сейшелы</li>
             </ul>
@@ -255,14 +256,14 @@
 
           <div class="companion__level level">
             <h4 class="level__title">левел:</h4>
-            <span>99</span>
+            <span class="level__value">99</span>
           </div>
 
           <button class="companion__accept">Позвать</button>
         </article>
 
         <article class="companions__item companion">
-          <img src="#" width="77" height="77" alt="Аватар">
+          <img src="./img/demin-mobile@1x.jpg" class="companion__avatar" width="77" height="77" alt="Аватар">
           <p class="companion__name">Петя Демин</p>
           <span class="companion__likes">1500</span>
           <ul class="companion__tags tags">
@@ -293,14 +294,14 @@
 
           <div class="companion__level level">
             <h4 class="level__title">левел:</h4>
-            <span>80</span>
+            <span class="level__value">80</span>
           </div>
 
           <button class="companion__accept">Позвать</button>
         </article>
 
         <article class="companions__item companion">
-          <img src="#" width="77" height="77" alt="Аватар">
+          <img src="./img/smolov-mobile@1x.jpg" class="companion__avatar" width="77" height="77" alt="Аватар">
           <p class="companion__name">Марк Смолов</p>
           <span class="companion__likes">170</span>
           <ul class="companion__tags tags">
@@ -332,14 +333,14 @@
 
           <div class="companion__level level">
             <h4 class="level__title">левел:</h4>
-            <span>25</span>
+            <span class="level__value">25</span>
           </div>
 
           <button class="companion__accept">Позвать</button>
         </article>
 
         <article class="companions__item companion">
-          <img src="#" width="77" height="77" alt="Аватар">
+          <img src="./img/rogovaya-mobile@1x.jpg" class="companion__avatar" width="77" height="77" alt="Аватар">
           <p class="companion__name">Лариса Роговая</p>
           <span class="companion__likes">23</span>
           <ul class="companion__tags tags">
@@ -369,7 +370,7 @@
 
           <div class="companion__level level">
             <h4 class="level__title">левел:</h4>
-            <span>50</span>
+            <span class="level__value">50</span>
           </div>
 
           <button class="companion__accept">Позвать</button>
@@ -377,14 +378,14 @@
 
         <button class="companions__show-more">Показать еще</button>
         <div class="companions__pagination pagination">
-          <a href="#" title="back" class="pagination__item"></a>
-          <a href="#" title="forward" class="pagination__item"></a>
+          <a href="#" title="back" class="pagination__item pagination__item--back"></a>
+          <a href="#" title="forward" class="pagination__item pagination__item--forward"></a>
         </div>
       </section>
 
     </main>
-    <footer class="footer">
-      <a href="#" class="footer__logo"><img src="#" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+    <footer class="footer footer--catalog container">
+      <a href="#" class="footer__logo"><img src="./img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
       <div class="footer__social social">
         <a href="#" title="Facebook страница сервиса Погнали" class="social__facebook"></a>
         <a href="#" title="Страница ВКонтакте сервиса Погнали" class="social__vk"></a>

@@ -1,6 +1,9 @@
-@import "_common.scss";
 @import "_variables.scss";
 @import "_fonts.scss";
+@import "_mixins.scss";
+@import "_common.scss";
+@import "./components/fonts/_titles.scss";
+@import "./components/layout/_titles.scss";
 
 // fonts
 
@@ -15,6 +18,13 @@
 @import "./components/fonts/_tariff.scss";
 @import "./components/fonts/_ways.scss";
 
+// catalog page
+@import "./components/fonts/_search-form.scss";
+// form page
+@import "./components/fonts/_user-profile.scss";
+@import "./components/fonts/_plans.scss";
+@import "./components/fonts/_plan-form.scss";
+
 // layout
 
 // index page
@@ -27,3 +37,13 @@
 @import "./components/layout/_promo.scss";
 @import "./components/layout/_tariff.scss";
 @import "./components/layout/_ways.scss";
+
+// catalog page
+@import "./components/layout/_search-form.scss";
+@import "./components/layout/_catalog.scss";
+@import "./components/layout/_pagination.scss";
+// form page
+@import "./components/layout/_user-profile.scss";
+@import "./components/layout/_plans.scss";
+@import "./components/layout/_plan-form.scss";
+@import "./components/layout/_form.scss";

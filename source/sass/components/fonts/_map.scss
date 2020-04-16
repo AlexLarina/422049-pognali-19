@@ -1,5 +1,5 @@
 .map {
-  @include font("BloggerSans", bold, $font-blue-grey);
+  @include font(bold, $font-blue-grey);
 }
 
 .map__address {

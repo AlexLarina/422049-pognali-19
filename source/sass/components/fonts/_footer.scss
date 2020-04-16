@@ -1,5 +1,5 @@
 .footer {
-  @include font("BloggerSans", bold, $font-white);
+  @include font(bold, $font-white);
 }
 
 .footer__copyright a {

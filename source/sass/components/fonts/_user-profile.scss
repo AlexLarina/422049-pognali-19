@@ -1,0 +1,31 @@
+.user__level {
+  @include font(normal, $font-greyish-brown);
+  @include font-size(18px, 1.22em);
+}
+
+.user__level span {
+  @include font(bold, $font-dark-blue);
+  @include font-size(38px, 1em);
+}
+
+.user__change-avatar {
+  @include font(bold, $font-dark-blue);
+  @include font-size(17px, 1.76em);
+  text-transform: uppercase;
+}
+
+.tags__title,
+.transport__title {
+  @include font(bold, $font-dark-blue);
+  @include font-size(16px, 1.13em);
+  text-transform: uppercase;
+}
+
+.tags textarea {
+  @include font(normal, $font-greyish-brown);
+  @include font-size(16px, 1.38em);
+}
+
+.transport__item {
+  font-size: 0;
+}
