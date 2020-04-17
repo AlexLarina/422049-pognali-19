@@ -28,7 +28,7 @@
   padding: 0;
 }
 
-.promo .navigation__list {
+.navigation__list--promo {
   padding-top: 250px;
 
   display: flex;
@@ -36,7 +36,7 @@
   align-items: center;
 }
 
-.promo .navigation__item {
+.navigation__list--promo .navigation__item {
   cursor: pointer;
 }
 
@@ -95,7 +95,6 @@
 }
 
 .promo__steps-list .steps__item {
-  //position: absolute;
   padding: 25px;
   border-radius: 10px 10px 0 0;
 
@@ -124,7 +123,6 @@
 .promo__steps-list li:nth-child(2)::before {
   @include bg-round-corvers($bg-orange);
 }
-
 
 .promo__steps-list li:nth-child(3) {
   background-color: $bg-mango-two;

@@ -12,7 +12,7 @@
   font-weight: bold;
 }
 
-.main .countries__item {
+.countries__item {
   font-size: 0;
 }
 
@@ -41,54 +41,54 @@
   @include font-size(18px, 1em);
 }
 
-.catalog-main .companion__name {
+.companion__name--catalog {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(20px, 1em);
   text-align: left;
 }
 
-.catalog-main .companion__likes {
+.companion__likes--catalog {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(14px, 1.5em);
 }
 
-.catalog-main .tags__item {
+.tags__item--catalog {
   font-size: 15px;
 }
 
-.catalog-main a {
+.tags__item--catalog a {
   font-size: inherit;
 }
 
-.catalog-main .wish__title,
-.catalog-main .transport__title,
-.catalog-main .level__title {
+.wish__title,
+.transport__title,
+.level__title {
   @include font(normal, $font-greyish-brown);
   @include font-size(15px, 1.2em);
 }
 
-.catalog-main .companion__accept {
+.companion__accept {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(17px, 1.76em);
   text-transform: uppercase;
 }
 
-.catalog-main .wish__item {
+.wish__item {
   @include font(500, $font-dark-slate-blue);
   @include font-size(15px, 1.2em);
   text-transform: uppercase;
 }
 
-.catalog-main .level__value {
+.level__value {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(24px, 0.75em);
 }
 
-.catalog-main .companions__show-more {
+.companions__show-more {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(17px, 1.76em);
 }
 
-.companion__transport .transport__title {
+.transport__title {
   text-transform: unset;
 }

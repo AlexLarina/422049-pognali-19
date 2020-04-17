@@ -12,7 +12,7 @@
   @include bg-round-corvers($bg-grey);
 }
 
-.catalog-main .companions {
+.companions--catalog {
   background-color: $bg-grey;
 }
 
@@ -35,7 +35,15 @@
   margin-bottom: 10px;
 }
 
-.catalog-main .companion__avatar {
+.companion:last-of-type {
+  margin-bottom: 0;
+}
+
+.companion--catalog {
+  max-width: 270px;
+}
+
+.companion__avatar--catalog {
   position: absolute;
   width: 70px;
   height: 70px;
@@ -45,12 +53,8 @@
   left: 18px;
 }
 
-.catalog-main .companion {
-  max-width: 270px;
-}
-
-.companion:last-of-type {
-  margin-bottom: 0;
+.companion__avatar--main {
+  border-radius: 10px;
 }
 
 .companion__tags {
@@ -62,26 +66,30 @@
   padding: 0;
 }
 
-.main .companion__tags {
+.companion__tags--main {
   margin: 15px 47px;
 }
 
-.catalog-main .companion__tags {
+.companion__tags--catalog {
   margin-left: 25px;
   justify-content: flex-start;
   max-width: 60%;
 }
 
-.catalog-main .wish__list {
+.wish__list {
   list-style: none;
 }
 
-.catalog-main .companion__accept {
+.companion__accept {
   border: none;
   background-color: $bg-light-gold;
+  margin: 20px;
+  padding: 8px 0;
+  border-radius: 20px;
+  width: 230px;
 }
 
-.catalog-main .companions__show-more {
+.companions__show-more {
   border: none;
   background-color: $bg-grey;
   width: 100%;
@@ -93,11 +101,7 @@
   background-position: 20% 40%;
 }
 
-.main .companion__avatar {
-  border-radius: 10px;
-}
-
-.main .companion__level {
+.companion__level--main {
   position: absolute;
   top: 16px;
   left: 16px;
@@ -118,8 +122,8 @@
   text-align: center;
 }
 
-.catalog-main .companion__name,
-.catalog-main .companion__likes {
+.companion__name--catalog,
+.companion__likes--catalog {
   margin: 0;
   padding-top: 16px;
   margin-left: 104px;
@@ -137,20 +141,13 @@
   @include gold-button-hover();
 }
 
-.catalog-main .wish__title,
-.catalog-main .transport__title {
+.wish__title,
+.transport__title {
   padding-left: 25px;
   display: inline;
   margin: 0;
 }
 
-.catalog-main .wish__title {
+.wish__title {
   position: relative;
-}
-
-.companion__accept {
-  margin: 20px;
-  padding: 8px 0;
-  border-radius: 20px;
-  width: 230px;
 }
