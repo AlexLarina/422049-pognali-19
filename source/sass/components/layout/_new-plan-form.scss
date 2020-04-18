@@ -8,8 +8,7 @@
 }
 
 .new-plan::before {
-  // чекнуть, почему не работает
-  @include bg-round-corvers(red);
+  @include bg-round-corvers($bg-pale-grey);
 }
 
 .new-plan__title {

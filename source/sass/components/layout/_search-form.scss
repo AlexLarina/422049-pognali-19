@@ -1,10 +1,13 @@
+.catalog-main__companion-search {
+  margin-top: 25px;
+}
+
 .search {
   background-color: $bg-light-gold;
 
   max-width: 270px;
   border-radius: 20px;
 
-  margin-top: 25px;
   padding: 25px;
 }
 
@@ -13,12 +16,12 @@
   margin-bottom: 21px;
 }
 
-.catalog-main__companion-search fieldset {
+.search__filter {
   border: 0;
   margin: 13px 0;
 }
 
-.catalog-main__companion-search legend {
+.search__filter legend {
   width: 100%;
   padding-top: 13px;
   border-top: 2px solid $bg-macaroni-and-cheese;

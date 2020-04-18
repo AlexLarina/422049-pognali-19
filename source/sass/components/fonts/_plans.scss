@@ -1,11 +1,11 @@
-.plans .trip__title {
-  @include font(bold, $font-dark-slate-blue);
-  @include font-size(16px, 1em);
-}
-
 .plans__title {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(24px, 1em);
+}
+
+.trip__title {
+  @include font(bold, $font-dark-slate-blue);
+  @include font-size(16px, 1em);
 }
 
 .trip__companions,
