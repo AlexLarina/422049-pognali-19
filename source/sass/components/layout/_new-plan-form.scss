@@ -210,11 +210,61 @@
   padding: 0;
 }
 
-.form__trips-item select {
+.form__trips-item select,
+label[for="trips__toggle"] {
   width: 100%;
   padding: 13px 0 13px 12px;
   border: 1px solid $bg-cloudy-blue;
   border-radius: 4px;
+}
+
+.form__trips-item input[id="trips__toggle"] {
+  width: 0;
+  height: 0;
+}
+
+label[for="trips__toggle"] {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.trip__dropdown {
+  display: none;
+}
+
+.form__trips-item input[id="trips__toggle"]:checked ~ .trip__dropdown {
+  display: block;
+  box-shadow: 0 20px 50px 0 $bg-dark-slate-blue-10;
+  border: 1px solid $bg-cloudy-blue;
+  border-top: none;
+}
+
+.form__trips-item input[id="trips__toggle"]:checked + label[for="trips__toggle"] {
+  background-color: $bg-dark-slate-blue;
+  border-radius: 4px 4px 0 0;
+}
+
+.dropdown__alphabet {
+  padding-left: 0;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.dropdown__alphabet .alphabet__letter:nth-child(-n + 5) {
+  border-top: none;
+}
+
+.dropdown__alphabet .alphabet__letter:nth-child(5n + 1) {
+  border-left: none;
+}
+
+.dropdown__alphabet .alphabet__letter:nth-child(5n + 5) {
+  border-right: none;
+}
+
+.dropdown__letter {
+  list-style: none;
+  padding: 17px 0 17px 20px;
 }
 
 .form__trips-item textarea {

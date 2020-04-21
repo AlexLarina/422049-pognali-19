@@ -38,7 +38,8 @@
 }
 
 .trip select,
-.form__add-country {
+.form__add-country,
+label[for="trips__toggle"] {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(14px, 1.4em);
   text-transform: uppercase;
@@ -81,4 +82,8 @@
 
 .days__item--following {
   color: $font-greyish-brown;
+}
+
+.form__trips-item input[id="trips__toggle"]:checked + label[for="trips__toggle"] {
+  color: $font-white;
 }
