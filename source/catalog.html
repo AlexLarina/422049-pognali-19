@@ -46,62 +46,67 @@
     <main class="catalog-main">
       <h1 class="catalog-main__title container"><a href="#">Попутчики</a></h1>
 
-      <section class="catalog-main__filters filters" style="display: none;">
+      <section class="catalog-main__filters filters container">
         <h2 class="filters__title">Фильтрация по странам</h2>
 
-        <ul class="filters__continents continents">
-          <li class="continents__item"><button>Европа</button></li>
-          <li class="continents__item"><button>Азия</button></li>
-          <li class="continents__item"><button>Америка</button></li>
-          <li class="continents__item"><button>Острова</button></li>
-        </ul>
+        <input id="filters__toggle" type="checkbox" class="filters__toggle">
+        <label class="filters__points-button" for="filters__toggle">
+        </label>
 
-        <ul class="filters__alphabet alphabet">
-          <li class="alphabet__letter">А</li>
-          <li class="alphabet__letter">Б</li>
-          <li class="alphabet__letter">В</li>
-          <li class="alphabet__letter">Г</li>
-          <li class="alphabet__letter">Д</li>
+        <div class="filters__wrapper">
+          <ul class="filters__continents continents">
+            <li class="continents__item continents__item--active"><button>Европа</button></li>
+            <li class="continents__item"><button>Азия</button></li>
+            <li class="continents__item"><button>Америка</button></li>
+            <li class="continents__item"><button>Острова</button></li>
+          </ul>
 
-          <li class="alphabet__letter">Е</li>
-          <li class="alphabet__letter">З</li>
-          <li class="alphabet__letter">И</li>
-          <li class="alphabet__letter">К</li>
-          <li class="alphabet__letter">Л</li>
+          <ul class="filters__alphabet alphabet">
+            <li class="alphabet__letter alphabet__letter--active">А</li>
+            <li class="alphabet__letter">Б</li>
+            <li class="alphabet__letter">В</li>
+            <li class="alphabet__letter">Г</li>
+            <li class="alphabet__letter">Д</li>
 
-          <li class="alphabet__letter">М</li>
-          <li class="alphabet__letter">Н</li>
-          <li class="alphabet__letter">О</li>
-          <li class="alphabet__letter">П</li>
-          <li class="alphabet__letter">Р</li>
+            <li class="alphabet__letter">Е</li>
+            <li class="alphabet__letter">З</li>
+            <li class="alphabet__letter">И</li>
+            <li class="alphabet__letter">К</li>
+            <li class="alphabet__letter">Л</li>
 
-          <li class="alphabet__letter">С</li>
-          <li class="alphabet__letter">Т</li>
-          <li class="alphabet__letter">У</li>
-          <li class="alphabet__letter">Ф</li>
-          <li class="alphabet__letter">Х</li>
+            <li class="alphabet__letter">М</li>
+            <li class="alphabet__letter">Н</li>
+            <li class="alphabet__letter">О</li>
+            <li class="alphabet__letter">П</li>
+            <li class="alphabet__letter">Р</li>
 
-          <li class="alphabet__letter">Ч</li>
-          <li class="alphabet__letter">Ш</li>
-          <li class="alphabet__letter">Э</li>
-          <li class="alphabet__letter">Ю</li>
-          <li class="alphabet__letter">Я</li>
-        </ul>
+            <li class="alphabet__letter">С</li>
+            <li class="alphabet__letter">Т</li>
+            <li class="alphabet__letter">У</li>
+            <li class="alphabet__letter">Ф</li>
+            <li class="alphabet__letter">Х</li>
 
-        <ul class="filters__letter letter letter--A">
-          <li class="letter__item">Австралия</li>
-          <li class="letter__item">Австрия</li>
-          <li class="letter__item">Азербайджан</li>
-          <li class="letter__item">Албания</li>
-          <li class="letter__item">Алжир</li>
-          <li class="letter__item">Ангола</li>
-          <li class="letter__item">Андорра</li>
-          <li class="letter__item">Антигуа и Барбуда</li>
-          <li class="letter__item">Аргентина</li>
-          <li class="letter__item">Армения</li>
-        </ul>
+            <li class="alphabet__letter">Ч</li>
+            <li class="alphabet__letter">Ш</li>
+            <li class="alphabet__letter">Э</li>
+            <li class="alphabet__letter">Ю</li>
+            <li class="alphabet__letter">Я</li>
+          </ul>
 
-        <button type="button" class="filters__close">Свернуть</button>
+          <ul class="filters__letter letter letter--A">
+            <li class="letter__item">Австралия</li>
+            <li class="letter__item">Австрия</li>
+            <li class="letter__item">Азербайджан</li>
+            <li class="letter__item">Албания</li>
+            <li class="letter__item">Алжир</li>
+            <li class="letter__item">Ангола</li>
+            <li class="letter__item">Андорра</li>
+            <li class="letter__item">Антигуа и Барбуда</li>
+            <li class="letter__item">Аргентина</li>
+            <li class="letter__item">Армения</li>
+          </ul>
+          <button type="button" class="filters__close">Свернуть</button>
+        </div>
       </section>
 
       <section class="catalog-main__companion-search search container">

@@ -7,4 +7,9 @@
 
   padding-top: 50px;
   border-radius: 0 0 30px 30px;
+  position: relative;
+}
+
+.catalog-main__title::before {
+  @include bg-round-corvers($bg-pale-grey-four);
 }

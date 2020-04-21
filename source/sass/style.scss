@@ -21,6 +21,7 @@
 
 // catalog page
 @import "./components/fonts/_search-form.scss";
+@import "./components/fonts/_filters.scss";
 // form page
 @import "./components/fonts/_user-profile.scss";
 @import "./components/fonts/_plans.scss";
@@ -44,6 +45,7 @@
 @import "./components/layout/_search-form.scss";
 @import "./components/layout/_catalog.scss";
 @import "./components/layout/_pagination.scss";
+@import "./components/layout/_filters.scss";
 // form page
 @import "./components/layout/_user-profile.scss";
 @import "./components/layout/_plans.scss";
