@@ -19,6 +19,7 @@
 .companion__name {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(21px, 1em);
+  text-align: center;
 }
 
 .tags__item a {
@@ -61,10 +62,11 @@
 }
 
 .wish__title,
-.transport__title,
+.transport--catalog .transport__title,
 .level__title {
   @include font(normal, $font-greyish-brown);
   @include font-size(15px, 1.2em);
+  text-transform: unset;
 }
 
 .companion__accept {

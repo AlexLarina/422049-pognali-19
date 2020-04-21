@@ -119,7 +119,6 @@
 
 .companion__name {
   margin: 27px 0 15px 0;
-  text-align: center;
 }
 
 .companion__name--catalog,
@@ -141,13 +140,50 @@
   @include gold-button-hover();
 }
 
+.companion__details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 23px 0 26px;
+}
+
+.wish {
+  width: 100%;
+}
+
+.transport--catalog {
+  flex-grow: 1;
+}
+
+.level {
+  width: 65px;
+  display: flex;
+  flex-direction: column;
+}
+
+
 .wish__title,
-.transport__title {
-  padding-left: 25px;
+.transport__title,
+.level__title {
   display: inline;
   margin: 0;
 }
 
 .wish__title {
   position: relative;
+}
+
+.transport--catalog .transport__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.transport--catalog .transport__item {
+  display: inline-block;
+  width: 33px;
+  height: 32px;
+  background-color: $bg-pale-grey;
+  border-radius: 50%;
 }
