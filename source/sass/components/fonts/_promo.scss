@@ -24,17 +24,3 @@
   @include font(bold, $font-white);
   @include font-size(18px, 1em);
 }
-
-.promo .navigation__item:not(.navigation__item--auth) {
-  font-size: 0;
-}
-
-.navigation__item--auth a {
-  @include font(bold, $font-dark-blue);
-  @include font-size(17px, 1.76em);
-  text-transform: uppercase;
-}
-
-.navigation__item--auth a:active {
-  color: $font-dark-two-30;
-}

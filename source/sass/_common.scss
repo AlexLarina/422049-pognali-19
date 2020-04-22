@@ -1,6 +1,7 @@
 body {
   font-family: "BloggerSans", "Arial", sans-serif;
-  max-width: 320px;
+  min-width: 320px;
+  //max-width: 320px;
   margin: 0 auto;
 }
 
@@ -33,4 +34,14 @@ html {
   margin: 0 auto;
   width: 320px;
   padding: 0 25px;
+
+  @include tablet {
+    width: $tablet-width;
+    padding: 0 40px;
+  }
+
+  @include desktop {
+    width: $desktop-width;
+    padding: 0 60px;
+  }
 }

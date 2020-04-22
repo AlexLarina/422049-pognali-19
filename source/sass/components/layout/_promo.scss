@@ -15,7 +15,11 @@
   margin: 0 auto;
 }
 
-.promo__navigation {
+.promo__title::after {
+  content: "";
+  display: inline-block;
+  width: 192px;
+  height: 255px;
   background: url("../../../img/traveller-illustration-mobile@1x.png") no-repeat;
   background-position-x: 50%;
   background-position-y: 30%;
@@ -26,66 +30,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.navigation__list--promo {
-  padding-top: 250px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.navigation__list--promo .navigation__item {
-  cursor: pointer;
-}
-
-.navigation__item--auth a {
-  padding: 13px 37px;
-  border-radius: 20px;
-  background-color: $bg-light-gold;
-}
-
-.navigation__item--auth a:hover,
-.navigation__item--auth a:active {
-  background-color: $bg-mango-two;
-}
-
-.navigation__item--tel a:hover,
-.navigation__item--tel a:active {
-  background-color: $bg-dusty-orange;
-}
-
-.navigation__item--mail a:hover,
-.navigation__item--mail a:active {
-  background-color: $bg-orange;
-}
-
-.navigation__item--tel a:active,
-.navigation__item--mail a:active {
-  // переделать только для svg
-  opacity: 0.3;
-}
-
-.navigation__item--tel a,
-.navigation__item--mail a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-
-  display: inline-block;
-}
-
-.navigation__item--tel a {
-  background: url("../../../img/topmenu-phone.svg") no-repeat 50% 50%;
-  background-color: $bg-orange;
-  background-size: 18px;
-}
-
-.navigation__item--mail a {
-  background: url("../../../img/topmenu-mail.svg") no-repeat 50% 50%;
-  background-color: $bg-mango-two;
-  background-size: 18px;
 }
 
 .promo__quote {
