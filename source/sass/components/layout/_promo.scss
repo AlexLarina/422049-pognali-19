@@ -1,6 +1,6 @@
 .promo {
   background: url("../../../img/globe-back-mobile@1x.jpg") no-repeat 0% 0%;
-  background-color: $bg-blue;
+  background-color: $bg-dark-blue;
 
   padding-top: 50px;
   padding-bottom: 40px;
@@ -8,11 +8,37 @@
   // хак для скругленных углов у элементов списка
   position: relative;
   //z-index: -2;
+
+  @include tablet {
+    background: url("../../../img/globe-back-tablet@1x.jpg") no-repeat 0% 0%;
+    background-color: $bg-dark-blue;
+  }
+
+  @include desktop {
+    background: url("../../../img/globe-back-desktop@1x.jpg") no-repeat 0% 0%;
+    background-color: $bg-dark-blue;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .promo__title {
+  position: relative;
   max-width: 240px;
   margin: 0 auto;
+
+  @include tablet {
+    max-width: 400px;
+  }
+
+  @include desktop {
+    max-width: 400px;
+    margin: 0;
+    margin-bottom: 107px;
+  }
 }
 
 .promo__title::after {
@@ -23,6 +49,32 @@
   background: url("../../../img/traveller-illustration-mobile@1x.png") no-repeat;
   background-position-x: 50%;
   background-position-y: 30%;
+
+  @include tablet {
+    background: url("../../../img/traveller-illustration-tablet@1x.png") no-repeat;
+    background-position-x: 50%;
+    background-position-y: 30%;
+    width: 285px;
+    height: 340px;
+    background-size: 285px 340px;
+
+    position: absolute;
+    top: 250px;
+    right: 0;
+  }
+
+  @include desktop {
+    background: url("../../../img/traveller-illustration-desktop@1x.png") no-repeat;
+    background-position-x: 50%;
+    background-position-y: 30%;
+    width: 431px;
+    height: 640px;
+    background-size: 431px 640px;
+
+    position: absolute;
+    top: 0;
+    right: -500px;
+  }
 }
 
 .promo__steps-list,
@@ -32,10 +84,37 @@
   padding: 0;
 }
 
+.promo__steps-list {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 .promo__quote {
   margin: 0;
   background-color: $bg-dark-blue;
   padding: 30px 25px;
+
+  @include tablet {
+    background-color: transparent;
+    width: 50%;
+    margin-bottom: 160px;
+  }
+
+  @include desktop {
+    background-color: transparent;
+    width: 25%;
+  }
 }
 
 .promo__steps-list .steps__item {
@@ -45,10 +124,28 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include tablet {
+    width: 50%;
+    padding: 30px;
+    padding-right: 130px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    width: 25%;
+  }
 }
 
 .steps__item span {
   margin-left: 70px;
+
+  @include tablet {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
 
 .promo__steps-list .steps__item:last-child {

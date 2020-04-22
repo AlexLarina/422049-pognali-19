@@ -2,25 +2,58 @@
   @include font(bold, $font-white);
   @include font-size(36px, 1.11em);
   text-align: center;
+
+  @include tablet {
+    @include font-size(60px, 1.17em);
+  }
+
+  @include desktop {
+    @include font-size(60px, 1.17em);
+    text-align: left;
+  }
 }
 
 .promo__quote p {
   @include font(300, $font-white);
   @include font-size(16px, 1.38em);
+
+  @include tablet {
+    @include font-size(28px, 1.18em);
+  }
+
+  @include desktop {
+    @include font-size(28px, 1.18em);
+  }
 }
 
 .promo__quote cite {
   @include font(bold, $font-white);
   @include font-size(16px, 1.38em);
   font-style: normal;
+
+  @include tablet {
+    @include font-size(21px, 1.19em);
+  }
+
+  @include desktop {
+    @include font-size(21px, 1.19em);
+  }
 }
 
 .promo__steps-list {
   @include font(bold, $font-dark-blue);
   @include font-size(18px, 1em);
+
+  @include tablet {
+    @include font-size(24px, 1em);
+  }
 }
 
 .promo__steps-list span {
   @include font(bold, $font-white);
   @include font-size(18px, 1em);
+
+  @include tablet {
+    @include font-size(30px, 1em);
+  }
 }
