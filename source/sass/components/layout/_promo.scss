@@ -10,14 +10,19 @@
   //z-index: -2;
 
   @include tablet {
-    background: url("../../../img/globe-back-tablet@1x.jpg") no-repeat 0% 0%;
-    background-color: $bg-dark-blue;
+    background: url("../../../img/globe-back-tablet1x_768.jpg") no-repeat 50% 50%;
+    background-color: $bg-globe-tablet-blue;
+    // background-size: cover;
+    // width: 768px;
+    // height: 591px;
   }
 
   @include desktop {
     background: url("../../../img/globe-back-desktop@1x.jpg") no-repeat 0% 0%;
     background-color: $bg-dark-blue;
+    background-size: cover;
 
+    padding-top: 118px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -72,7 +77,7 @@
     background-size: 431px 640px;
 
     position: absolute;
-    top: 0;
+    top: -75px;
     right: -500px;
   }
 }
@@ -97,6 +102,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    margin-bottom: 123px;
   }
 }
 
@@ -124,7 +131,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
 
   @include tablet {
     width: 50%;
