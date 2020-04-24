@@ -1,9 +1,10 @@
 .promo {
   background: url("../../../img/globe-back-mobile@1x.jpg") no-repeat 0% 0%;
   background-color: $bg-dark-blue;
+  background-size: 320px 430px;
 
   padding-top: 50px;
-  padding-bottom: 40px;
+  padding-bottom: 90px;
 
   // хак для скругленных углов у элементов списка
   position: relative;
@@ -12,16 +13,13 @@
   @include tablet {
     background: url("../../../img/globe-back-tablet1x_768.jpg") no-repeat 50% 50%;
     background-color: $bg-globe-tablet-blue;
-    // background-size: cover;
-    // width: 768px;
-    // height: 591px;
   }
 
   @include desktop {
     background: url("../../../img/globe-back-desktop@1x.jpg") no-repeat 0% 0%;
     background-color: $bg-dark-blue;
     background-size: cover;
-
+    min-height: 680px;
     padding-top: 118px;
     display: flex;
     flex-direction: row;
@@ -34,6 +32,7 @@
   position: relative;
   max-width: 240px;
   margin: 0 auto;
+  //margin-bottom: 250px;
 
   @include tablet {
     max-width: 400px;
@@ -54,6 +53,10 @@
   background: url("../../../img/traveller-illustration-mobile@1x.png") no-repeat;
   background-position-x: 50%;
   background-position-y: 30%;
+
+  // position: absolute;
+  // top: 10px;
+  // right: 0;
 
   @include tablet {
     background: url("../../../img/traveller-illustration-tablet@1x.png") no-repeat;
@@ -90,20 +93,30 @@
 }
 
 .promo__steps-list {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
   @include tablet {
+    // отладочное
+    width: 688px;
+
+    bottom: -65px;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   @include desktop {
-    width: 100%;
+    width: 1290px;
     z-index: 1;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    margin-bottom: 123px;
+    bottom: 123px;
+    //margin-bottom: 123px;
   }
 }
 

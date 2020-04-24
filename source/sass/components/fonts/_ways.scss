@@ -1,25 +1,65 @@
 .ways__title {
   @include font(bold, $font-orange);
   @include font-size(24px, 1em);
+
+  @include tablet {
+    @include font-size(45px, 1em);
+  }
+
+  @include desktop {
+    @include font-size(45px, 1em);
+  }
 }
 
 .ways__description {
   @include font(normal, $font-greyish-brown);
   @include font-size(16px, 1.38em);
+
+  @include tablet {
+    @include font-size(28px, 1.18em);
+  }
+
+  @include desktop {
+    @include font-size(28px, 1.18em);
+  }
 }
 
 .way__title {
-  @include font(300, $font-dark-blue);
+  @include font(bold, $font-dark-blue);
   @include font-size(21px, 1em);
+
+  @include tablet {
+    @include font-size(24px, 1em);
+  }
+
+  @include desktop {
+    @include font-size(24px, 1em);
+  }
 }
 
 .way__description,
 .way__seen {
   @include font(500, $font-greyish-brown-30);
   @include font-size(16px, 1.13em);
+
+  @include tablet {
+    @include font-size(20px, 1.5em);
+  }
+
+  @include desktop {
+    @include font-size(20px, 1.5em);
+  }
 }
 
 .ways__show-all {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(18px, 1em);
+
+  @include tablet {
+    @include font-size(24px, 1em);
+  }
+
+  @include desktop {
+    @include font-size(24px, 1em);
+  }
 }
