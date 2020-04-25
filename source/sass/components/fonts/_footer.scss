@@ -1,8 +1,16 @@
 .footer {
-  @include font(bold, $font-white);
+  @include font(normal, $font-white);
 }
 
 .footer__copyright a {
   @include font-size(16px, 1.38em);
   color: $font-greyish-brown;
+
+  @include tablet {
+    @include font-size(20px, 1.2em);
+  }
+
+  @include desktop {
+    @include font-size(20px, 1.2em);
+  }
 }

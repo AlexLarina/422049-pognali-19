@@ -1,15 +1,39 @@
 .companions__title {
   @include font(bold, $font-orange);
   @include font-size(24px, 1em);
+
+  @include tablet {
+    @include font-size(45px, 1em);
+  }
+
+  @include desktop {
+    @include font-size(45px, 1em);
+  }
 }
 
 .companions__description {
   @include font(300, $font-white);
   @include font-size(16px, 1.38em);
+
+  @include tablet {
+    @include font-size(28px, 1em);
+  }
+
+  @include desktop {
+    @include font-size(28px, 1em);
+  }
 }
 
 .companions__description:last-of-type {
   font-weight: bold;
+
+  @include tablet {
+    @include font-size(21px, 1.19em);
+  }
+
+  @include desktop {
+    @include font-size(21px, 1.19em);
+  }
 }
 
 .countries__item {
@@ -20,12 +44,20 @@
   @include font(bold, $font-dark-slate-blue);
   @include font-size(21px, 1em);
   text-align: center;
+
+  @include tablet {
+    @include font-size(24px, 1em);
+  }
 }
 
 .tags__item a {
   @include font-size(16px, 1em);
   color: $font-greyish-brown;
   font-weight: normal;
+
+  @include tablet {
+    @include font-size(20px, 1em);
+  }
 }
 
 .companion__level {
@@ -40,6 +72,14 @@
 .companions__show-all {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(18px, 1em);
+
+  @include tablet {
+    @include font-size(24px, 1em);
+  }
+
+  @include desktop {
+    @include font-size(24px, 1em);
+  }
 }
 
 .companion__name--catalog {

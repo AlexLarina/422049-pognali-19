@@ -6,10 +6,15 @@
   border-radius: 0 0 30px 30px;
 
   position: relative;
+
+  @include tablet {
+    padding: 80px 75px;
+  }
 }
 
 .companions::before {
   @include bg-round-corvers($bg-grey);
+  z-index: -2;
 }
 
 .companions--catalog {
@@ -19,12 +24,63 @@
 .companions__title,
 .companions__description {
   padding: 0 25px 0 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.companions__title::before {
+  content: "";
+  display: inline-block;
+  width: 113px;
+  height: 132px;
+  border-radius: 0 20px 20px 0;
+  background-color: $bg-dark-blue-grey-four;
+  position: absolute;
+  left: -25px;
+  top: -30px;
+  z-index: -1;
+
+  @include tablet {
+    width: 213px;
+    height: 213px;
+    border-radius: 20px;
+  }
+
+  @include desktop {
+    width: 213px;
+    height: 213px;
+    border-radius: 20px;
+  }
+}
+
+.companions__description {
+  @include tablet {
+    max-width: 490px;
+  }
+
+  @include desktop {
+    max-width: 490px;
+  }
 }
 
 .companions__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 50%;
+  }
 }
 
 .companion {
@@ -33,6 +89,16 @@
 
   border-radius: 10px;
   margin-bottom: 10px;
+
+  @include tablet {
+    max-width: 285px;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    max-width: 285px;
+    margin-bottom: 0;
+  }
 }
 
 .companion:last-of-type {
@@ -55,6 +121,16 @@
 
 .companion__avatar--main {
   border-radius: 10px;
+
+  @include tablet {
+    width: 285px;
+    height: 285px;
+  }
+
+  @include desktop {
+    width: 285px;
+    height: 285px;
+  }
 }
 
 .companion__tags {
@@ -133,6 +209,10 @@
 .companions__show-all {
   @include gold-button();
   margin-top: 20px;
+
+  @include desktop {
+    max-width: 280px;
+  }
 }
 
 .companions__show-all:hover,

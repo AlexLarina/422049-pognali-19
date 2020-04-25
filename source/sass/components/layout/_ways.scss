@@ -20,14 +20,16 @@
     justify-content: flex-start;
 
     // вот это проблема
-    height: 800px;
+    height: 550px;
+
+    background: url("../../../img/flags-back@1x.png") no-repeat 90% 72px;
+    background-color: $bg-grey;
   }
 }
 
 .ways > * {
   @include desktop {
-    //flex-basis: 50px;
-    flex-basis: 100%;
+    flex-basis: 80px;
   }
 }
 
