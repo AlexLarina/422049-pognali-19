@@ -2,10 +2,14 @@
   // -- for test
   position: fixed;
   top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
   //--
   z-index: 1;
-  width: 100%;
-  max-width: 320px;
+  //width: 100%;
+  //max-width: 320px;
+
+  display: none;
 }
 
 .popup__wrapper {
@@ -16,6 +20,16 @@
   box-shadow: 0 20px 50px 0 $bg-dark-slate-blue-10;
 
   position: relative;
+
+  @include tablet {
+    width: 688px;
+    border-radius: 30px;
+  }
+
+  @include desktop {
+    width: 750px;
+    border-radius: 30px;
+  }
 }
 
 .popup__title {
@@ -29,6 +43,14 @@
   margin-bottom: 30px;
   padding: 0 25px;
   background-color: inherit;
+
+  @include tablet {
+    padding: 0 92px;
+  }
+
+  @include desktop {
+    padding: 0 59px;
+  }
 }
 
 .popup__tariff .tariff__item {
