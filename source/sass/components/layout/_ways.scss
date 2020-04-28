@@ -15,21 +15,18 @@
 
   @include desktop {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-
-    // вот это проблема
-    height: 550px;
 
     background: url("../../../img/flags-back@1x.png") no-repeat 90% 72px;
     background-color: $bg-grey;
   }
 }
 
-.ways > * {
+.ways__info-wrapper {
   @include desktop {
-    flex-basis: 80px;
+    width: 50%;
   }
 }
 
@@ -49,8 +46,6 @@
 
   @include desktop {
     width: 560px;
-    height: 100%;
-    padding-bottom: 62px;
   }
 }
 
@@ -63,6 +58,7 @@
     max-width: 350px;
     height: 100%;
     flex-grow: 1;
+    margin: 0;
   }
 }
 
@@ -80,7 +76,7 @@
 
   @include desktop {
     order: -1;
-    width: 560px;
+    width: 50%;
     margin-top: 0;
   }
 }
@@ -193,8 +189,9 @@
   }
 
   @include desktop {
-    max-width: 275px;
+    width: 275px;
     height: 100%;
+    margin: -83px 360px 0 auto;
   }
 }
 

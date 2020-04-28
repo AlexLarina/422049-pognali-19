@@ -10,11 +10,23 @@
   @include tablet {
     padding: 80px 75px;
   }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .companions::before {
   @include bg-round-corvers($bg-grey);
   z-index: -2;
+}
+
+.companions__info-wrapper {
+  @include desktop {
+    width: 50%;
+  }
 }
 
 .companions--catalog {
@@ -212,6 +224,8 @@
 
   @include desktop {
     max-width: 280px;
+    height: 100%;
+    margin: -83px 360px auto 0;
   }
 }
 
