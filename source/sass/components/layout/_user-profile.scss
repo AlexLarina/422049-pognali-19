@@ -7,6 +7,15 @@
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: $bg-grey;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include desktop {
+    padding-top: 0;
+  }
 }
 
 .user {
@@ -19,6 +28,25 @@
 .user__avatar {
   width: 50%;
   margin-bottom: 20px;
+
+  @include common-tablet-desktop {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+.user__level {
+  @include tablet {
+    order: -2;
+  }
+
+  @include desktop {
+    position: relative;
+    margin-top: -190px;
+    margin-left: auto;
+    margin-right: 45px;
+    padding-top: 43px;
+  }
 }
 
 .user__level p {
@@ -38,6 +66,15 @@
   display: block;
   margin: auto;
   border-radius: 50%;
+
+  @include desktop {
+    width: 190px;
+    height: 190px;
+    position: relative;
+    margin-top: -190px;
+    margin-right: 155px;
+    border-radius: unset;
+  }
 }
 
 .user__change-avatar {
@@ -54,6 +91,7 @@
   position: relative;
   border: 1px solid $bg-cloudy-blue;
   border-radius: 10px;
+  width: 100%;
 }
 
 .tags--form .tags__title,
@@ -73,6 +111,24 @@
   width: 100%;
   resize: none;
   border: none;
+}
+
+.tags--form {
+  @include desktop {
+    max-width: 730px;
+  }
+}
+
+.transport--form {
+  @include tablet {
+    order: -1;
+    max-width: 308px;
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    max-width: 384px;
+  }
 }
 
 .transport--form .transport__list {
