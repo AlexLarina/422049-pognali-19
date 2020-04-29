@@ -1,13 +1,34 @@
 .pagination {
   display: flex;
   justify-content: flex-start;
+  background-color: $bg-white;
+  border-radius: 20px;
+
+  @include desktop {
+    max-width: 950px;
+  }
+}
+
+.pagination__item--back,
+.pagination__item--forward {
+  width: 50%;
+
+  @include common-tablet-desktop {
+    max-width: 25px;
+  }
 }
 
 .pagination__item {
   display: inline-block;
-  background-color: $bg-white;
-  width: 50%;
   padding: 25px 0;
+}
+
+.pagination__item:not(.pagination__item--back):not(.pagination__item--forward) {
+  display: none;
+
+  @include common-tablet-desktop {
+    display: inline-block;
+  }
 }
 
 .pagination__item--back {
@@ -17,6 +38,11 @@
   background-size: 10px 20px;
 
   border-radius: 20px 0 0 20px;
+
+  @include common-tablet-desktop {
+    order: 1;
+    margin-left: auto;
+  }
 }
 
 .pagination__item--forward {
@@ -26,4 +52,8 @@
   background-size: 10px 20px;
 
   border-radius: 0 20px 20px 0;
+
+  @include common-tablet-desktop {
+    order: 2;
+  }
 }
