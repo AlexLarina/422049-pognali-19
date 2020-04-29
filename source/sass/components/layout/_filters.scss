@@ -13,7 +13,7 @@
 }
 
 .filters::before {
-  @include bg-round-corvers($bg-pale-grey);
+  @include bg-round-corvers($bg-grey);
 }
 
 .filters__title {
