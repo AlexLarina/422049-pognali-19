@@ -1,5 +1,9 @@
 .profile__plans {
-  //margin-top: 33px;
+  position: relative;
+}
+
+.profile__plans::before {
+  @include  bg-round-corvers($bg-grey);
 }
 
 .plans {

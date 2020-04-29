@@ -15,7 +15,6 @@
     flex-wrap: nowrap;
     padding-top: 40px;
     align-items: center;
-    //background-color: $bg-globe-tablet-blue;
   }
 
   @include tablet {
@@ -30,8 +29,13 @@
   }
 }
 
-.header--catalog .header__navigation {
+.header--catalog .header__navigation,
+.header--form .header__navigation {
   display: none;
+
+  @include common-tablet-desktop {
+    display: block;
+  }
 }
 
 input[type="checkbox"].menu__toggle {
