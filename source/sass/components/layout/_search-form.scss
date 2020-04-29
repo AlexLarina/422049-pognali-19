@@ -1,14 +1,20 @@
 .catalog-main__companion-search {
-  margin-top: 25px;
+  padding-top: 25px;
 }
 
 .search {
+  background-color: $bg-grey;
+}
+
+.search__wrapper {
   background-color: $bg-light-gold;
 
   max-width: 270px;
   border-radius: 20px;
 
   padding: 25px;
+
+  margin: 0 auto;
 }
 
 .search__title {
