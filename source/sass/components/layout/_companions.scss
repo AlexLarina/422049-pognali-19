@@ -8,7 +8,7 @@
   position: relative;
 
   @include tablet {
-    padding: 80px 75px;
+    //padding: 80px 75px;
   }
 
   @include desktop {
@@ -19,9 +19,12 @@
 }
 
 .catalog-main__companions {
+  background-color: $bg-grey;
+
   @include desktop {
     display: flex;
     flex-direction: column;
+    padding-top: 0;
   }
 }
 
@@ -34,10 +37,6 @@
   @include desktop {
     width: 50%;
   }
-}
-
-.catalog-main__companions {
-  background-color: $bg-grey;
 }
 
 .companions__title,
@@ -220,7 +219,7 @@
   @include tablet {
     margin: 0;
     margin-top: 20px;
-    max-width: 250px;
+    max-width: 222px;
   }
 }
 
@@ -241,12 +240,15 @@
   @include tablet {
     margin-top: -45px;
     margin-left: 190px;
+    max-width: 148px;
   }
 
   @include desktop {
     margin: 0;
     margin-left: 285px;
     margin-top: -45px;
+    max-height: 45px;
+    max-width: 148px;
   }
 }
 

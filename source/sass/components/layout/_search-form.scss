@@ -1,5 +1,21 @@
+.catalog-main__search-result {
+  background-color: $bg-grey;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    padding-top: 77px;
+  }
+}
+
 .catalog-main__companion-search {
   padding-top: 25px;
+
+  @include desktop {
+    padding-top: 0;
+  }
 }
 
 .search {
@@ -15,6 +31,10 @@
   padding: 25px;
 
   margin: 0 auto;
+
+  @include tablet {
+    max-width: 688px;
+  }
 }
 
 .search__title {
