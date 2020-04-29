@@ -10,6 +10,12 @@
   }
 }
 
+@mixin common-tablet-desktop {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
 @mixin bg-round-corvers($color) {
   content: "";
   position: absolute;

@@ -15,12 +15,18 @@
     flex-wrap: nowrap;
     padding-top: 40px;
     align-items: center;
-    background-color: $bg-globe-tablet-blue;
+    //background-color: $bg-globe-tablet-blue;
   }
 
   @include tablet {
     flex-wrap: nowrap;
     align-items: center;
+  }
+}
+
+.header--main {
+  @include tablet {
+    background-color: $bg-globe-tablet-blue;
   }
 }
 
