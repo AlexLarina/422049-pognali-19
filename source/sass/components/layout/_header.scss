@@ -30,6 +30,10 @@
   }
 }
 
+.header--catalog .header__navigation {
+  display: none;
+}
+
 input[type="checkbox"].menu__toggle {
   width: 0;
   height: 0;
