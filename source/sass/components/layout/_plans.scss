@@ -1,9 +1,17 @@
 .profile__plans {
   position: relative;
+
+  @include tablet {
+    padding: 0 75px;
+  }
+
+  @include desktop {
+    padding: 0 124px;
+  }
 }
 
 .profile__plans::before {
-  @include  bg-round-corvers($bg-grey);
+  @include bg-round-corvers($bg-grey);
 }
 
 .plans {
@@ -22,6 +30,13 @@
   background-color: $bg-white;
   border-radius: 10px;
   padding: 24px;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .trip:not(:last-of-type) {
@@ -31,6 +46,21 @@
 .trip__title {
   margin: 0;
   margin-bottom: 20px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.trip__details {
+  @include common-tablet-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .trip__companions,
@@ -43,4 +73,8 @@
   padding: 0;
   background-color: inherit;
   margin-top: 27px;
+
+  @include common-tablet-desktop {
+    margin-top: 0;
+  }
 }
