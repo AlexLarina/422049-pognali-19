@@ -163,27 +163,28 @@
             <h3 class="form__title"><span>Шаг 1.</span> Даты пребывания</h3>
             <p class="form__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
 
-            <div class="form__item form__item--amount">
-              <label for="companions">Ищу попутчиков:</label>
-              <span>чел.</span>
-              <button type="button" class="button button--decrease">-</button>
-              <input type="number" min="0" max="100" value="2" id="companions">
-              <button type="button" class="button button--increase">+</button>
-            </div>
+            <div class="form__params">
+              <div class="form__item form__item--amount">
+                <label for="companions">Ищу попутчиков:</label>
+                <span>чел.</span>
+                <button type="button" class="button button--decrease">-</button>
+                <input type="number" min="0" max="100" value="2" id="companions">
+                <button type="button" class="button button--increase">+</button>
+              </div>
 
-            <div class="form__item form__item--amount">
-              <label for="duration">Длительность:</label>
-              <span>дн.</span>
-              <button type="button" class="button button--decrease">-</button>
-              <input type="number" min="0" max="100" value="2" id="duration">
-              <button type="button" class="button button--increase">+</button>
-            </div>
+              <div class="form__item form__item--amount form__item--duration">
+                <label for="duration">Длительность:</label>
+                <span>дн.</span>
+                <button type="button" class="button button--decrease">-</button>
+                <input type="number" min="0" max="100" value="2" id="duration">
+                <button type="button" class="button button--increase">+</button>
+              </div>
 
-            <div class="form__item form__item--children">
-              <input type="checkbox" name="children-allowed" id="children-allowed" checked>
-              <label for="children-allowed">Можно с детьми</label>
+              <div class="form__item form__item--children">
+                <input type="checkbox" name="children-allowed" id="children-allowed" checked>
+                <label for="children-allowed">Можно с детьми</label>
+              </div>
             </div>
-
             <div class="form__item calendar">
               <ul class="calendar__month month">
                 <li class="month__prev"><button>&#10094;</button></li>

@@ -1,16 +1,28 @@
 .new-plan__title {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(24px, 1em);
+
+  @include common-tablet-desktop {
+    @include font-size(36px, 1.39em);
+  }
 }
 
 .form__title {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(20px, 1em);
+
+  @include common-tablet-desktop {
+    @include font-size(36px, 1em);
+  }
 }
 
 .form__description {
   @include font(normal, $font-greyish-brown);
   @include font-size(16px, 1.38em);
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 1.2em);
+  }
 }
 
 .form__item label,
@@ -18,6 +30,10 @@
   @include font(normal, $font-dark-slate-blue);
   @include font-size(16px, 1.6em);
   text-transform: uppercase;
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 1.2em);
+  }
 }
 
 .form__item span {
@@ -28,6 +44,10 @@
   @include font(normal, $font-greyish-brown);
   @include font-size(15px, 1em);
   text-transform: unset;
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 0.9em);
+  }
 }
 
 .form__submit,
@@ -35,6 +55,10 @@
   @include font(bold, $font-dark-slate-blue);
   @include font-size(17px, 1.76em);
   text-transform: uppercase;
+
+  @include common-tablet-desktop {
+    @include font-size(24px, 1em);
+  }
 }
 
 .trip select,
@@ -58,22 +82,39 @@ label[for="trips__toggle"] {
 .month__current {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(20px, 1em);
+
+  @include common-tablet-desktop {
+    @include font-size(36px, 1em);
+  }
 }
 
 .weekdays__item {
   @include font(normal, $font-greyish-brown);
   @include font-size(14px, 1.29em);
+
+  @include common-tablet-desktop {
+    @include font-size(18px, 1.67em);
+  }
 }
 
 .weekdays__item--weekend {
   @include font(normal, $font-orange-red);
   @include font-size(14px, 1.29em);
+
+  @include common-tablet-desktop {
+    @include font-size(18px, 1.67em);
+  }
 }
 
 .days__item {
-  @include font(normal, $font-greyish-brown-30);
+  @include font(500, $font-greyish-brown-30);
   @include font-size(14px, 1.29em);
   line-height: 30px;
+
+  @include common-tablet-desktop {
+    @include font-size(18px, 1.67em);
+    line-height: 70px;
+  }
 }
 
 .days__item--selected {
@@ -82,6 +123,10 @@ label[for="trips__toggle"] {
 
 .days__item--following {
   color: $font-greyish-brown;
+
+  @include tablet {
+    color: $font-dark-slate-blue;
+  }
 }
 
 .form__trips-item input[id="trips__toggle"]:checked + label[for="trips__toggle"] {
