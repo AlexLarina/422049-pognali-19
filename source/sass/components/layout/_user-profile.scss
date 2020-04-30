@@ -103,6 +103,17 @@
   margin: 0;
   padding: 0 17px;
   background-color: $bg-grey;
+
+  @include common-tablet-desktop {
+    top: unset;
+    bottom: -8px;
+  }
+}
+
+.tags--form .tags__title {
+  @include desktop {
+    left: 50px;
+  }
 }
 
 .tags textarea {
