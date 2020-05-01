@@ -30,15 +30,25 @@
 
   @include tablet {
     padding: 50px 43px;
+    border-radius: 30px;
   }
 
   @include desktop {
     padding: 100px 162px;
+    border-radius: 60px;
   }
 }
 
 .new-plan form:not(:last-of-type) {
   margin-bottom: 10px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    margin-bottom: 44px;
+  }
 }
 
 .form__title {
@@ -189,6 +199,24 @@
   list-style: none;
 }
 
+.form__trips-item {
+  padding: 0;
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.form__button-wrapper {
+  @include common-tablet-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .form__submit {
   width: 100%;
   background-color: $bg-light-gold;
@@ -207,6 +235,11 @@
   border: none;
   width: 100%;
   margin-top: 15px;
+
+  @include common-tablet-desktop {
+    max-width: 200px;
+    margin-left: auto;
+  }
 }
 
 .form__add-country {
@@ -216,6 +249,14 @@
   padding: 15px 12px;
   text-align: left;
   border-radius: 4px;
+
+  @include tablet {
+    max-width: 369px;
+  }
+
+  @include desktop {
+    max-width: 730px;
+  }
 }
 
 .steps__list {
@@ -303,10 +344,6 @@
   background-color: $bg-pale-grey;
 }
 
-.form__trips-item {
-  padding: 0;
-}
-
 .form__trips-item select,
 label[for="trips__toggle"] {
   width: 100%;
@@ -315,14 +352,31 @@ label[for="trips__toggle"] {
   border-radius: 4px;
 }
 
+.form__trips-item select {
+  @include tablet {
+    max-width: 369px;
+  }
+
+  @include desktop {
+    max-width: 730px;
+  }
+}
+
 .form__trips-item input[id="trips__toggle"] {
-  width: 0;
-  height: 0;
+  display: none;
 }
 
 label[for="trips__toggle"] {
   display: inline-block;
   cursor: pointer;
+
+  @include tablet {
+    max-width: 369px;
+  }
+
+  @include desktop {
+    max-width: 730px;
+  }
 }
 
 .trip__dropdown {
@@ -372,4 +426,8 @@ label[for="trips__toggle"] {
   padding: 13px 15px;
   text-align: left;
   min-height: 220px;
+
+  @include desktop {
+    max-width: 730px;
+  }
 }

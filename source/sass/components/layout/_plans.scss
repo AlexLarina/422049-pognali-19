@@ -46,7 +46,9 @@
 .trip__title {
   margin: 0;
   margin-bottom: 20px;
+}
 
+.plans__trip .trip__title {
   @include tablet {
     display: flex;
     flex-direction: row-reverse;
