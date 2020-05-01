@@ -18,9 +18,22 @@
   @include bg-round-corvers($bg-pale-grey);
 }
 
+.new-plan__title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 31px;
+
+  @include tablet {
+    margin-bottom: 60px;
+  }
+}
+
 .new-plan__title {
   margin: 0;
-  margin-bottom: 31px;
+  //margin-bottom: 31px;
 }
 
 .new-plan form {
@@ -259,9 +272,59 @@
   }
 }
 
-.steps__list {
+.form__introduction {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.form__steps {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.form__steps .steps__item:not(:last-of-type) {
+  margin-bottom: 26px;
+}
+
+.new-plan__steps .steps__list {
   margin: 0;
   padding: 0;
+
+  width: 45px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include tablet {
+    width: 70px;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.new-plan__steps label {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: $bg-steel-grey;
+}
+
+.steps__item--current label {
+  background-color: $bg-dark-slate-blue;
+}
+
+.form__steps label {
+  background-color: inherit;
 }
 
 .month {

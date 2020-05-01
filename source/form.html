@@ -139,29 +139,52 @@
       </article>
 
       <section class="form-main__new-plan new-plan container">
-        <h2 class="new-plan__title">Добавить план:</h2>
+        <div class="new-plan__title-wrapper">
+          <h2 class="new-plan__title">Добавить план:</h2>
 
-        <div class="new-plan__steps steps">
-          <ul class="steps__list">
-            <li class="steps__item">
-              <input class="visually-hidden" type="radio" name="step" value="step-days" id="step-days" checked>
-              <label for="step-days">Даты</label>
-            </li>
-            <li class="steps__item">
-              <input class="visually-hidden" type="radio" name="step" value="step-path" id="step-path" checked>
-              <label for="step-path">Маршрут</label>
-            </li>
-            <li class="steps__item">
-              <input class="visually-hidden" type="radio" name="step" value="step-entertainment" id="step-entertainment" checked>
-              <label for="step-entertainment">Развлечения</label>
-            </li>
-          </ul>
+          <div class="new-plan__steps steps">
+            <ul class="steps__list">
+              <li class="steps__item steps__item--current">
+                <input class="visually-hidden" type="radio" name="step" value="step-days" id="step-days" checked>
+                <label for="step-days">Даты</label>
+              </li>
+              <li class="steps__item">
+                <input class="visually-hidden" type="radio" name="step" value="step-path" id="step-path" checked>
+                <label for="step-path">Маршрут</label>
+              </li>
+              <li class="steps__item">
+                <input class="visually-hidden" type="radio" name="step" value="step-entertainment" id="step-entertainment" checked>
+                <label for="step-entertainment">Развлечения</label>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <form>
           <div class="new-plan__form form">
-            <h3 class="form__title"><span>Шаг 1.</span> Даты пребывания</h3>
-            <p class="form__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <div class="form__introduction">
+              <div class="form__title-wrapper">
+                <h3 class="form__title"><span>Шаг 1.</span> Даты пребывания</h3>
+                <p class="form__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              </div>
+
+              <div class="form__steps steps">
+                <ul class="steps__list">
+                  <li class="steps__item steps__item--current">
+                    <input class="visually-hidden" type="radio" name="step" value="step-days" id="step-days" checked>
+                    <label for="step-days">Даты</label>
+                  </li>
+                  <li class="steps__item">
+                    <input class="visually-hidden" type="radio" name="step" value="step-path" id="step-path" checked>
+                    <label for="step-path">Маршрут</label>
+                  </li>
+                  <li class="steps__item">
+                    <input class="visually-hidden" type="radio" name="step" value="step-entertainment" id="step-entertainment" checked>
+                    <label for="step-entertainment">Развлечения</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
 
             <div class="form__params">
               <div class="form__item form__item--amount">
@@ -259,9 +282,30 @@
 
         <form>
           <div class="new-plan__form form">
-            <h3 class="form__title"><span>Шаг 2.</span> Маршрут</h3>
-            <p class="form__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
 
+            <div class="form__introduction">
+              <div class="form__title-wrapper">
+                <h3 class="form__title"><span>Шаг 2.</span> Маршрут</h3>
+                <p class="form__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+              </div>
+
+              <div class="form__steps steps">
+                <ul class="steps__list">
+                  <li class="steps__item">
+                    <input class="visually-hidden" type="radio" name="step" value="step-days" id="step-days" checked>
+                    <label for="step-days">Даты</label>
+                  </li>
+                  <li class="steps__item steps__item--current">
+                    <input class="visually-hidden" type="radio" name="step" value="step-path" id="step-path" checked>
+                    <label for="step-path">Маршрут</label>
+                  </li>
+                  <li class="steps__item">
+                    <input class="visually-hidden" type="radio" name="step" value="step-entertainment" id="step-entertainment" checked>
+                    <label for="step-entertainment">Развлечения</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div class="form__item">
               <ul class="form__trips-list">
                 <li class="form__trips-item trip">
@@ -341,9 +385,29 @@
 
         <form>
           <div class="new-plan__form form">
-            <h3 class="form__title"><span>Шаг 3.</span> Развлечения</h3>
-            <p class="form__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <div class="form__introduction">
+              <div class="form__title-wrapper">
+                <h3 class="form__title"><span>Шаг 3.</span> Развлечения</h3>
+                <p class="form__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              </div>
 
+              <div class="form__steps steps">
+                <ul class="steps__list">
+                  <li class="steps__item">
+                    <input class="visually-hidden" type="radio" name="step" value="step-days" id="step-days" checked>
+                    <label for="step-days">Даты</label>
+                  </li>
+                  <li class="steps__item">
+                    <input class="visually-hidden" type="radio" name="step" value="step-path" id="step-path" checked>
+                    <label for="step-path">Маршрут</label>
+                  </li>
+                  <li class="steps__item steps__item--current">
+                    <input class="visually-hidden" type="radio" name="step" value="step-entertainment" id="step-entertainment" checked>
+                    <label for="step-entertainment">Развлечения</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <ul class="form__trips-list">
               <li class="form__trips-item trip">
                 <h4 class="trip__title">Босния и Герцеговина</h4>

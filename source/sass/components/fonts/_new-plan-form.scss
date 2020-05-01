@@ -75,8 +75,22 @@ label[for="trips__toggle"] {
   text-transform: uppercase;
 }
 
-.steps__list {
+.new-plan__steps .steps__list {
   font-size: 0;
+}
+
+.form__steps .steps__list {
+  @include desktop {
+    @include font(normal, $font-black-60);
+    @include font-size(20px, 0.69em);
+    text-transform: uppercase;
+  }
+}
+
+.form__steps .steps__item--current {
+  @include desktop {
+    color: $font-dark-slate-blue;
+  }
 }
 
 .month__current {
