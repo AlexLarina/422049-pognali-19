@@ -1,17 +1,151 @@
 .about {
-  background: url("../../../img/about-mobile@1x.png") no-repeat 0% 0%;
-  background-color: $bg-blue;
+  background: url("../../../img/about-mobile@1x.png") no-repeat 0% 100%;
+  background-size: 292px 352px;
 
-  padding: 33px 50px 84px 50px;
+  background-color: $bg-dark-blue-grey;
+
+  padding: 312px 50px 70px 50px;
   border-radius: 0 0 30px 30px;
 
   position: relative;
+
+  @include tablet {
+    background: none;
+    background-color: $bg-dark-blue-grey;
+    padding-top: 152px;
+  }
+
+  @include desktop {
+    background: none;
+    background-color: $bg-dark-blue-grey;
+    padding-top: 133px;
+    padding-bottom: 163px;
+  }
 }
 
 .about::before {
   @include bg-round-corvers($bg-grey);
+  z-index: -2;
+}
+
+.about::after {
+  content: "";
+  display: inline-block;
+
+  @include tablet {
+    background: url("../../../img/about-tablet@1x.png") no-repeat 100% 75%;
+    background-color: transparent;
+    width: 376px;
+    height: 548px;
+
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    z-index: 1;
+  }
+
+  @include desktop {
+    background: url("../../../img/about-desktop@1x.png") no-repeat 100% 75%;
+    background-color: transparent;
+    width: 630px;
+    height: 665px;
+
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+    z-index: 1;
+  }
 }
 
 .about__title {
   margin: 0;
+  position: relative;
+  z-index: 1;
+
+  @include tablet {
+    padding-left: 36px;
+  }
+
+  @include desktop {
+    padding-left: 72px;
+    margin-bottom: 61px;
+  }
+}
+
+.about__title::before {
+  content: "";
+  display: inline-block;
+
+  @include tablet {
+    width: 688px;
+    height: 213px;
+    border-radius: 20px;
+    background-color: $bg-dark-blue-grey-four;
+
+    position: absolute;
+    z-index: -1;
+    top: -43px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include desktop {
+    width: 213px;
+    height: 213px;
+    border-radius: 20px;
+    background-color: $bg-dark-blue-grey-four;
+
+    position: absolute;
+    z-index: -1;
+    top: -62px;
+    left: 0;
+  }
+}
+
+.about__description {
+  @include tablet {
+    max-width: 337px;
+    padding-left: 36px;
+    z-index: 1;
+    position: relative;
+  }
+
+  @include desktop {
+    max-width: 610px;
+    padding-left: 72px;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 44px;
+  }
+}
+
+.about__description:last-of-type {
+  @include tablet {
+    max-width: 275px;
+  }
+
+  @include desktop {
+    max-width: 440px;
+    margin-bottom: 86px;
+  }
+}
+
+.about__more {
+  display: none;
+
+  @include tablet {
+    @include gold-button();
+    border: none;
+    max-width: 275px;
+    margin-top: 53px;
+    margin-left: 36px;
+  }
+
+  @include desktop {
+    @include gold-button();
+    border: none;
+    max-width: 275px;
+    margin-top: 53px;
+    margin-left: 72px;
+  }
 }

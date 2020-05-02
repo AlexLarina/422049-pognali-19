@@ -1,0 +1,5 @@
+.pagination__item {
+  @include font(bold, $font-dark-blue);
+  @include font-size(20px, 1.5em);
+  vertical-align: middle;
+}

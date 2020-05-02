@@ -1,11 +1,40 @@
+.catalog-main__search-result {
+  background-color: $bg-grey;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    padding-top: 77px;
+  }
+}
+
+.catalog-main__companion-search {
+  padding-top: 25px;
+
+  @include desktop {
+    padding-top: 0;
+  }
+}
+
 .search {
+  background-color: $bg-grey;
+}
+
+.search__wrapper {
   background-color: $bg-light-gold;
 
   max-width: 270px;
   border-radius: 20px;
 
-  margin-top: 25px;
   padding: 25px;
+
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: 688px;
+  }
 }
 
 .search__title {
@@ -13,12 +42,12 @@
   margin-bottom: 21px;
 }
 
-.catalog-main__companion-search fieldset {
+.search__filter {
   border: 0;
   margin: 13px 0;
 }
 
-.catalog-main__companion-search legend {
+.search__filter legend {
   width: 100%;
   padding-top: 13px;
   border-top: 2px solid $bg-macaroni-and-cheese;

@@ -3,32 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>Направления</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header container">
-      <a href="index.html" class="header__logo"><img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+    <header class="header header--form container">
+      <a href="index.html" class="header__logo">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
+          <img src="img/logo-mobile-white@1x.png" width="100%" height="auto" alt="Логотип сервиса Погнали?">
+        </picture>
+      </a>
 
-      <div class="header__menu menu visually-hidden">
+      <div class="header__menu menu">
         <input id="menu__toggle" type="checkbox" class="menu__toggle">
         <label class="menu__hamburger-button" for="menu__toggle">
         </label>
 
         <div class="menu__wrapper">
+          <a href="index.html" class="menu__logo"><img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
           <nav class="menu__navigation navigation navigation--service">
             <ul class="navigation__list">
-              <li class="navigation__item"><a href="#">О сервисе</a></li>
-              <li class="navigation__item"><a href="#">Направления</a></li>
-              <li class="navigation__item"><a href="#">Попутчики</a></li>
+              <li class="navigation__item"><a href="index.html">О сервисе</a></li>
+              <li class="navigation__item"><a href="form.html">Направления</a></li>
+              <li class="navigation__item"><a href="catalog.html">Попутчики</a></li>
             </ul>
           </nav>
 
           <div class="menu__navigation navigation navigation--user">
             <ul class="navigation__list">
-              <li class="navigation__item"><a href="#">Авторизация</a></li>
-              <li class="navigation__item"><a href="tel:88005558628">8 800 555 86 28</a></li>
-              <li class="navigation__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+              <li class="navigation__item navigation__item--authentication"><a href="#">Авторизация</a></li>
+              <li class="navigation__item navigation__item--phone"><a href="tel:88005558628">8 800 555 86 28</a></li>
+              <li class="navigation__item navigation__item--email"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
             </ul>
           </div>
 
@@ -41,6 +50,13 @@
 
       </div>
 
+      <div class="header__navigation navigation navigation--user">
+        <ul class="navigation__list">
+          <li class="navigation__item navigation__item--tel"><a href="tel:88005558628">8 800 555 86 28</a></li>
+          <li class="navigation__item navigation__item--mail"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+          <li class="navigation__item navigation__item--auth"><a href="#">Авторизация</a></li>
+        </ul>
+      </div>
     </header>
     <main class="form-main">
       <h1 class="form-main__title container"><a href="#">Направления</a></h1>
@@ -49,9 +65,8 @@
         <h2 class="profile__title visually-hidden">Анкета пользователя</h2>
 
         <form>
-          <div class="container">
-            <section class="profile__user user">
-            <h3 class="visually-hidden">Информация о пользователи</h3>
+          <div class="profile__container user container">
+            <h3 class="visually-hidden">Информация о пользователе</h3>
             <div class="user__level">
               <p>
                 <span>80</span>level
@@ -61,16 +76,12 @@
               <img src="./img/demin-mobile@1x.jpg" width="100" height="100" alt="Аватар пользователя">
             </div>
             <button class="user__change-avatar" type="button">Сменить фото</button>
-            </section>
-
-            <section class="profile__user-info user-info">
-            <h3 class="visually-hidden">Информация о пользователи</h3>
-            <div class="user-info__tags tags">
+            <div class="user__tags tags tags--form">
               <h4 class="tags__title">Тэги</h4>
               <textarea>#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
-            <div class="user-info__transport transport">
-              <h4 class="transport__title">Транспорт</h4>
+            <div class="user__transport transport transport--form">
+              <h4 class="transport__title transport__title--form">Транспорт</h4>
               <ul class="transport__list">
                 <li class="transport__item transport__item--plane">
                   <input class="visually-hidden" type="checkbox" name="transport--plane" value="plane" id="transport--plane">
@@ -90,82 +101,113 @@
                 </li>
               </ul>
             </div>
-            </section>
           </div>
         </form>
         <section class="profile__plans plans container">
           <h3 class="plans__title">Мои планы:</h3>
 
           <article class="plans__trip trip">
-            <h4 class="trip__title">1. Франция, Италия</h4>
-            <p class="trip__companions"><span class="trip__companions-count">3</span> попутчика</p>
-            <p class="trip__date date">
-              <span class="date__start">26 мар</span>
-              -
-              <span class="date__end">29 мар</span>
-            </p>
-            <button class="trip__change-button">Изменить</button>
+            <h4 class="trip__title">
+              <span>1.</span> Франция, Италия
+            </h4>
+            <div class="trip__details">
+              <p class="trip__companions"><span class="trip__companions-count">3</span> попутчика</p>
+              <p class="trip__date date">
+                <span class="date__start">26 мар</span>
+                -
+                <span class="date__end">29 мар</span>
+              </p>
+              <button class="trip__change-button">Изменить</button>
+            </div>
           </article>
 
           <article class="plans__trip trip">
-            <h4 class="trip__title">2. Таиланд, Индонезия</h4>
-            <p class="trip__companions"><span class="trip__companions-count">1</span> попутчик</p>
-            <p class="trip__date date">
-              <span class="date__start">1 июл</span>
-              -
-              <span class="date__end">15 июл</span>
-            </p>
-            <button class="trip__change-button">Изменить</button>
+            <h4 class="trip__title">
+              <span>2.</span> Таиланд, Индонезия
+            </h4>
+            <div class="trip__details">
+              <p class="trip__companions"><span class="trip__companions-count">1</span> попутчик</p>
+              <p class="trip__date date">
+                <span class="date__start">1 июл</span>
+                -
+                <span class="date__end">15 июл</span>
+              </p>
+              <button class="trip__change-button">Изменить</button>
+            </div>
           </article>
         </section>
       </article>
 
       <section class="form-main__new-plan new-plan container">
-        <h2 class="new-plan__title">Добавить план:</h2>
+        <div class="new-plan__title-wrapper">
+          <h2 class="new-plan__title">Добавить план:</h2>
 
-        <div class="new-plan__steps steps">
-          <ul class="steps__list">
-            <li class="steps__item">
-              <input class="visually-hidden" type="radio" name="step" value="step-days" id="step-days" checked>
-              <label for="step-days">Даты</label>
-            </li>
-            <li class="steps__item">
-              <input class="visually-hidden" type="radio" name="step" value="step-path" id="step-path" checked>
-              <label for="step-path">Маршрут</label>
-            </li>
-            <li class="steps__item">
-              <input class="visually-hidden" type="radio" name="step" value="step-entertainment" id="step-entertainment" checked>
-              <label for="step-entertainment">Развлечения</label>
-            </li>
-          </ul>
+          <div class="new-plan__steps steps">
+            <ul class="steps__list">
+              <li class="steps__item steps__item--current">
+                <input class="visually-hidden" type="radio" name="step" value="step-days" id="step-days" checked>
+                <label for="step-days">Даты</label>
+              </li>
+              <li class="steps__item">
+                <input class="visually-hidden" type="radio" name="step" value="step-path" id="step-path" checked>
+                <label for="step-path">Маршрут</label>
+              </li>
+              <li class="steps__item">
+                <input class="visually-hidden" type="radio" name="step" value="step-entertainment" id="step-entertainment" checked>
+                <label for="step-entertainment">Развлечения</label>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <form>
           <div class="new-plan__form form">
-            <h3 class="form__title"><span>Шаг 1.</span> Даты пребывания</h3>
-            <p class="form__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <div class="form__introduction">
+              <div class="form__title-wrapper">
+                <h3 class="form__title"><span>Шаг 1.</span> Даты пребывания</h3>
+                <p class="form__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              </div>
 
-            <div class="form__item form__item--amount">
-              <label for="companions">Ищу попутчиков:</label>
-              <span>чел.</span>
-              <button type="button" class="button button--decrease">-</button>
-              <input type="number" min="0" max="100" value="2" id="companions">
-              <button type="button" class="button button--increase">+</button>
+              <div class="form__steps steps">
+                <ul class="steps__list">
+                  <li class="steps__item steps__item--current">
+                    <input class="visually-hidden" type="radio" name="step" value="step-days" id="step-days" checked>
+                    <label for="step-days">Даты</label>
+                  </li>
+                  <li class="steps__item">
+                    <input class="visually-hidden" type="radio" name="step" value="step-path" id="step-path" checked>
+                    <label for="step-path">Маршрут</label>
+                  </li>
+                  <li class="steps__item">
+                    <input class="visually-hidden" type="radio" name="step" value="step-entertainment" id="step-entertainment" checked>
+                    <label for="step-entertainment">Развлечения</label>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="form__item form__item--amount">
-              <label for="duration">Длительность:</label>
-              <span>дн.</span>
-              <button type="button" class="button button--decrease">-</button>
-              <input type="number" min="0" max="100" value="2" id="duration">
-              <button type="button" class="button button--increase">+</button>
-            </div>
+            <div class="form__params">
+              <div class="form__item form__item--amount">
+                <label for="companions">Ищу попутчиков:</label>
+                <span>чел.</span>
+                <button type="button" class="button button--decrease">-</button>
+                <input type="number" min="0" max="100" value="2" id="companions">
+                <button type="button" class="button button--increase">+</button>
+              </div>
 
-            <div class="form__item form__item--children">
-              <input type="checkbox" name="children-allowed" id="children-allowed" checked>
-              <label for="children-allowed">Можно с детьми</label>
-            </div>
+              <div class="form__item form__item--amount form__item--duration">
+                <label for="duration">Длительность:</label>
+                <span>дн.</span>
+                <button type="button" class="button button--decrease">-</button>
+                <input type="number" min="0" max="100" value="2" id="duration">
+                <button type="button" class="button button--increase">+</button>
+              </div>
 
+              <div class="form__item form__item--children">
+                <input type="checkbox" name="children-allowed" id="children-allowed" checked>
+                <label for="children-allowed">Можно с детьми</label>
+              </div>
+            </div>
             <div class="form__item calendar">
               <ul class="calendar__month month">
                 <li class="month__prev"><button>&#10094;</button></li>
@@ -240,9 +282,30 @@
 
         <form>
           <div class="new-plan__form form">
-            <h3 class="form__title"><span>Шаг 2.</span> Маршрут</h3>
-            <p class="form__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
 
+            <div class="form__introduction">
+              <div class="form__title-wrapper">
+                <h3 class="form__title"><span>Шаг 2.</span> Маршрут</h3>
+                <p class="form__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+              </div>
+
+              <div class="form__steps steps">
+                <ul class="steps__list">
+                  <li class="steps__item">
+                    <input class="visually-hidden" type="radio" name="step" value="step-days" id="step-days" checked>
+                    <label for="step-days">Даты</label>
+                  </li>
+                  <li class="steps__item steps__item--current">
+                    <input class="visually-hidden" type="radio" name="step" value="step-path" id="step-path" checked>
+                    <label for="step-path">Маршрут</label>
+                  </li>
+                  <li class="steps__item">
+                    <input class="visually-hidden" type="radio" name="step" value="step-entertainment" id="step-entertainment" checked>
+                    <label for="step-entertainment">Развлечения</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div class="form__item">
               <ul class="form__trips-list">
                 <li class="form__trips-item trip">
@@ -258,12 +321,11 @@
                 </li>
 
                 <li class="form__trips-item trip">
-                  <select>
-                    <option selected>Выберите страну</option>
-                  </select>
+                  <input id="trips__toggle" type="checkbox" class="trips__toggle">
+                  <label class="trips__toggle-button" for="trips__toggle">Выберите страну</label>
 
-                  <div class="trip__drowdown drowdown" style="display: none;">
-                    <ul class="drowdown__alphabet alphabet">
+                  <div class="trip__dropdown dropdown">
+                    <ul class="dropdown__alphabet alphabet">
                       <li class="alphabet__letter">А</li>
                       <li class="alphabet__letter">Б</li>
                       <li class="alphabet__letter">В</li>
@@ -295,7 +357,7 @@
                       <li class="alphabet__letter">Я</li>
                     </ul>
 
-                    <ul class="drowdown__letter letter letter--A">
+                    <ul class="dropdown__letter letter letter--A">
                       <li class="letter__item">Австралия</li>
                       <li class="letter__item">Австрия</li>
                       <li class="letter__item">Азербайджан</li>
@@ -314,16 +376,38 @@
               <button class="form__add-country">Добавить страну</button>
             </div>
 
-            <button class="form__submit">Следующий шаг</button>
-            <button class="form__back">На шаг назад</button>
+            <div class="form__button-wrapper">
+              <button class="form__submit">Следующий шаг</button>
+              <button class="form__back">На шаг назад</button>
+            </div>
           </div>
         </form>
 
         <form>
           <div class="new-plan__form form">
-            <h3 class="form__title"><span>Шаг 3.</span> Развлечения</h3>
-            <p class="form__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <div class="form__introduction">
+              <div class="form__title-wrapper">
+                <h3 class="form__title"><span>Шаг 3.</span> Развлечения</h3>
+                <p class="form__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              </div>
 
+              <div class="form__steps steps">
+                <ul class="steps__list">
+                  <li class="steps__item">
+                    <input class="visually-hidden" type="radio" name="step" value="step-days" id="step-days" checked>
+                    <label for="step-days">Даты</label>
+                  </li>
+                  <li class="steps__item">
+                    <input class="visually-hidden" type="radio" name="step" value="step-path" id="step-path" checked>
+                    <label for="step-path">Маршрут</label>
+                  </li>
+                  <li class="steps__item steps__item--current">
+                    <input class="visually-hidden" type="radio" name="step" value="step-entertainment" id="step-entertainment" checked>
+                    <label for="step-entertainment">Развлечения</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <ul class="form__trips-list">
               <li class="form__trips-item trip">
                 <h4 class="trip__title">Босния и Герцеговина</h4>
@@ -336,14 +420,23 @@
               </li>
             </ul>
 
-            <button class="form__submit">Отправить</button>
-            <button class="form__back">На шаг назад</button>
+            <div class="form__button-wrapper">
+              <button class="form__submit">Отправить</button>
+              <button class="form__back">На шаг назад</button>
+            </div>
           </div>
         </form>
       </section>
     </main>
-    <footer class="footer footer--form">
-      <a href="#" class="footer__logo"><img src="./img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+
+    <footer class="footer footer--form container">
+      <a href="#" class="footer__logo">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/logo-tablet-blue@1x.png">
+          <source media="(min-width: 1440px)" srcset="./img/logo-desktop-blue@1x.png">
+          <img src="./img/logo-mobile-blue@1x.png" width="100%" height="auto" alt="Логотип сервиса Погнали?">
+        </picture>
+      </a>
       <div class="footer__social social">
         <a href="#" title="Facebook страница сервиса Погнали" class="social__facebook"></a>
         <a href="#" title="Страница ВКонтакте сервиса Погнали" class="social__vk"></a>

@@ -1,0 +1,38 @@
+.filters__title {
+  @include font-size(16px, 1.38em);
+  @include font(bold, $font-blue-grey);
+  text-transform: uppercase;
+}
+
+.continents__item button {
+  @include font-size(16px, 1.38em);
+  @include font(bold, $font-dark-blue-grey-30);
+  text-transform: uppercase;
+}
+
+.continents__item--active button {
+  color: $font-blue-grey;
+}
+
+.alphabet__letter {
+  @include font-size(14px, 1.4em);
+  @include font(500, $font-dark-slate-blue);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 42px;
+}
+
+.alphabet__letter--active {
+  color: $font-white;
+}
+
+.letter__item {
+  @include font-size(16px, 1.38em);
+  @include font(normal, $font-greyish-brown);
+}
+
+.filters__close {
+  @include font-size(16.5px, 1.79em);
+  @include font(bold, $font-dark-blue);
+  text-transform: uppercase;
+}

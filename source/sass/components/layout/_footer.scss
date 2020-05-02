@@ -10,6 +10,24 @@
   align-items: center;
 
   position: relative;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 48px;
+    padding-bottom: 46px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 51px;
+    padding-bottom: 51px;
+  }
 }
 
 .footer--catalog::before {
@@ -27,6 +45,14 @@
 .social {
   margin-top: 40px;
   margin-bottom: 37px;
+
+  @include tablet {
+    margin: 0;
+  }
+
+  @include desktop {
+    margin: 0;
+  }
 }
 
 .social a {
@@ -35,6 +61,11 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
+
+  @include tablet {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .social__facebook {
@@ -63,6 +94,20 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @include tablet {
+    max-width: 30%;
+    border-top: none;
+    padding-top: 0;
+    align-self: center;
+  }
+
+  @include desktop {
+    max-width: 200px;
+    border-top: none;
+    padding-top: 0;
+    align-self: center;
+  }
 }
 
 .footer__copyright::after {

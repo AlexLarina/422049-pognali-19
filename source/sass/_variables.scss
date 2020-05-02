@@ -1,3 +1,7 @@
+// breakpoints
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
 // fonts color variables
 $font-white: #ffffff;
 $font-dark-blue: #161c35;
@@ -8,13 +12,17 @@ $font-dark-slate-blue: #1d2e5b;
 $font-blue-grey: #192144;
 $font-light-gold: #ffd74b;
 $font-black-30: rgba(0, 0, 0, 0.3);
+$font-black-60: rgba(0, 0, 0, 0.6);
 $font-dark-slate-blue-30: rgba(29, 46, 91, 0.3);
 $font-dark-two-30: rgba(22, 28, 53, 0.3);
 $font-orange-red: #ff5c23;
+$font-dark-blue-grey-30: rgba(25, 33, 68, 0.3);
+$font-black: #000000;
 
 // background color variables
 $bg-dark-blue: #161c36;
 $bg-dark-blue-grey: #192144;
+$bg-globe-tablet-blue: 	#182044;
 $bg-blue: rgba(25, 33, 68, 0.9);
 $bg-grey: #edeff6;
 $bg-light-gold: #ffd74b;
@@ -29,3 +37,9 @@ $bg-dusty-orange: #f26926;
 $bg-cloudy-blue: #cbced9;
 $bg-light-blue-grey-five: #d4d9eb;
 $bg-orange-red: #ff5c23;
+$bg-dark-slate-blue-10: rgba(29, 46, 91, 0.1);
+$bg-pale-grey-four: #e2e5f2;
+$bg-dark-slate-blue: #1d2e5b;
+$bg-light-periwinkle: #d6daed;
+$bg-dark-blue-grey-four: #141b3b;
+$bg-steel-grey: #808285;

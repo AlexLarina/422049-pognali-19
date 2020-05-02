@@ -3,6 +3,11 @@
   @include font-size(30px, 1.2em);
   text-transform: uppercase;
   text-align: center;
+
+  @include desktop {
+    @include font(500, $font-white);
+    @include font-size(16px, 1.5em);
+  }
 }
 
 .navigation__item a {
@@ -19,4 +24,18 @@
 
 .navigation__item--authentication {
   text-align: center;
+}
+
+.header__navigation .navigation__item:not(.navigation__item--auth) {
+  font-size: 0;
+}
+
+.navigation__item--auth a {
+  @include font(bold, $font-dark-blue);
+  @include font-size(17px, 1.76em);
+  text-transform: uppercase;
+}
+
+.navigation__item--auth a:active {
+  color: $font-dark-two-30;
 }

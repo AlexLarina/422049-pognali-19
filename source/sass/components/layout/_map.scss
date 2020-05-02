@@ -2,7 +2,6 @@
   background-color: $bg-light-gold;
 
   padding-top: 35px;
-  //padding-bottom: 300px;
 
   border-radius: 0 0 30px 30px;
   position: relative;
@@ -11,6 +10,12 @@
 .map__wrapper {
   margin-bottom: 320px;
   padding-bottom: 35px;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 .map__interactive {
@@ -28,6 +33,10 @@
   align-items: center;
 
   position: relative;
+
+  @include tablet {
+    padding-left: 93px;
+  }
 }
 
 .map__address::before {
@@ -45,10 +54,36 @@
 
   position: absolute;
   left: 0;
+
+  @include tablet {
+    width: 67px;
+    height: 67px;
+  }
+
+  @include desktop {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .map__route {
   @include gold-button();
   border: 3px solid $bg-dark-blue-grey;
   margin-top: 32px;
+
+  @include desktop {
+    max-width: 324px;
+  }
+}
+
+.map__interactive iframe {
+  @include tablet {
+    width: 768px;
+    height: 680px;
+  }
+
+  @include desktop {
+    width: 1439px;
+    height: 640px;
+  }
 }

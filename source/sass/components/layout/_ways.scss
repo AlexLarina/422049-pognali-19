@@ -7,10 +7,32 @@
   border-radius: 0 0 30px 30px;
 
   position: relative;
+
+  @include tablet {
+    background: url("../../../img/flags-back@1x.png") no-repeat 90% 72px;
+    background-color: $bg-grey;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    background: url("../../../img/flags-back@1x.png") no-repeat 90% 72px;
+    background-color: $bg-grey;
+  }
+}
+
+.ways__info-wrapper {
+  @include desktop {
+    width: 50%;
+  }
 }
 
 .ways::before {
   @include bg-round-corvers($bg-blue);
+  z-index: -2;
 }
 
 .ways__title,
@@ -21,6 +43,23 @@
 .ways__title {
   margin: 0;
   padding-bottom: 23px;
+
+  @include desktop {
+    width: 560px;
+  }
+}
+
+.ways__description {
+  @include tablet {
+    max-width: 390px;
+  }
+
+  @include desktop {
+    max-width: 350px;
+    height: 100%;
+    flex-grow: 1;
+    margin: 0;
+  }
 }
 
 .ways__list {
@@ -28,27 +67,111 @@
   margin: 0;
   padding: 0;
   margin-top: 66px;
+
+  @include tablet {
+    margin-top: 113px;
+    position: relative;
+    z-index: 1;
+  }
+
+  @include desktop {
+    order: -1;
+    width: 50%;
+    margin-top: 0;
+  }
+}
+
+.ways__list::before {
+  @include tablet {
+    content: "";
+    display: inline-block;
+    width: 141px;
+    height: 141px;
+    border-radius: 20px;
+    background-color: $bg-pale-grey-four;
+    position: absolute;
+    left: -30px;
+    top: -30px;
+    z-index: -1;
+  }
 }
 
 .way {
   background-color: $bg-white;
   margin-bottom: 10px;
   border-radius: 10px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
 
 .way img {
   border-radius: 10px 10px 0 0;
+
+  @include tablet {
+    width: 186px;
+    height: auto;
+
+    border-radius: 0 10px 10px 0;
+  }
+
+  @include desktop {
+    width: 186px;
+    height: auto;
+
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 .way__info {
   padding: 25px;
   border-radius: 10px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .way__title,
 .way__description {
   margin: 0;
   padding: 0;
+}
+
+.way__title {
+  order: 1;
+  width: 70%;
+
+  @include tablet {
+    order: unset;
+  }
+}
+
+.way__description {
+  order: 3;
+  width: 100%;
+
+  @include tablet {
+    order: unset;
+  }
+}
+
+.way__seen {
+  order: 2;
+
+  @include tablet {
+    order: unset;
+  }
 }
 
 .way__seen::before {
@@ -60,6 +183,16 @@
 
 .ways__show-all {
   @include gold-button();
+
+  @include tablet {
+    margin-top: 47px;
+  }
+
+  @include desktop {
+    width: 275px;
+    height: 100%;
+    margin: -83px 360px 0 auto;
+  }
 }
 
 .ways__show-all:hover,

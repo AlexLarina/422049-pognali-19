@@ -7,3 +7,15 @@
 .form-main__title a {
   border-bottom: 5px solid $bg-orange;
 }
+
+.form-main__title a {
+  @include desktop {
+    display: inline-block;
+    padding-bottom: 60px;
+    padding-top: 70px;
+  }
+}
+
+.catalog-main__title .title__back {
+  border-bottom: none;
+}

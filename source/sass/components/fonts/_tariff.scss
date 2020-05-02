@@ -5,16 +5,42 @@
 .tariff__title {
   @include font-size(24px, 1em);
   color: $font-orange;
+
+  @include tablet {
+    @include font-size(45px, 1em);
+    text-align: center;
+  }
+
+  @include desktop {
+    @include font-size(45px, 1em);
+    text-align: center;
+  }
 }
 
 .tariff__show-all {
   @include font-size(16px, 1em);
   color: $font-blue-grey;
+
+  @include tablet {
+    @include font-size(20px, 1em);
+  }
+
+  @include desktop {
+    @include font-size(20px, 1em);
+  }
 }
 
 .tariff__list {
   @include font(300, $font-greyish-brown);
   @include font-size(16px, 1.38em);
+
+  @include tablet {
+    @include font-size(28px, 1.18em);
+  }
+
+  @include desktop {
+    @include font-size(28px, 1.18em);
+  }
 }
 
 .tariff__list span {

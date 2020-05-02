@@ -1,11 +1,19 @@
 .user__level {
   @include font(normal, $font-greyish-brown);
   @include font-size(18px, 1.22em);
+
+  @include desktop {
+    color: $font-white;
+  }
 }
 
 .user__level span {
   @include font(bold, $font-dark-blue);
   @include font-size(38px, 1em);
+
+  @include desktop {
+    color: $font-white;
+  }
 }
 
 .user__change-avatar {

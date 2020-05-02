@@ -4,15 +4,47 @@
   padding-top: 27px;
 
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
 
   position: relative;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    padding-top: 40px;
+    align-items: center;
+  }
+
+  @include tablet {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+
+.header--main {
+  @include tablet {
+    background-color: $bg-globe-tablet-blue;
+  }
+}
+
+.header--catalog .header__navigation,
+.header--form .header__navigation {
+  display: none;
+
+  @include common-tablet-desktop {
+    display: block;
+  }
 }
 
 input[type="checkbox"].menu__toggle {
   width: 0;
   height: 0;
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .menu__hamburger-button {
@@ -21,10 +53,41 @@ input[type="checkbox"].menu__toggle {
   background-repeat: no-repeat;
   width: 25px;
   height: 11px;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.header__menu {
+  @include desktop {
+    margin-left: 40px;
+    flex-grow: 1;
+
+    min-height: 43px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.header__menu::before {
+  @include desktop {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    background-color: $bg-white;
+    margin-right: 45px;
+  }
 }
 
 .menu__wrapper {
   display: none;
+
+  @include desktop {
+    display: block;
+  }
 }
 
 input[type="checkbox"].menu__toggle:checked ~ .menu__wrapper {
@@ -34,8 +97,7 @@ input[type="checkbox"].menu__toggle:checked ~ .menu__wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
-  border: 1px solid red;
+  z-index: 2;
 
   padding: 27px;
   width: 100%;
@@ -48,7 +110,7 @@ input[type="checkbox"].menu__toggle:checked + .menu__hamburger-button {
   width: 19px;
   height: 19px;
 
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   right: 27px;
 }
@@ -56,6 +118,29 @@ input[type="checkbox"].menu__toggle:checked + .menu__hamburger-button {
 .menu__navigation.navigation--service {
   margin-top: 80px;
   margin-bottom: 58px;
+
+  @include desktop {
+    margin: 0;
+  }
+}
+
+.navigation--service .navigation__list {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.navigation--service .navigation__item:not(:last-of-type) {
+  @include desktop {
+    margin-right: 35px;
+  }
+}
+
+.menu__navigation.navigation--user {
+  @include desktop {
+    display: none;
+  }
 }
 
 .navigation__item--authentication {
@@ -70,8 +155,18 @@ input[type="checkbox"].menu__toggle:checked + .menu__hamburger-button {
   border-radius: 25px;
 }
 
+.menu__logo {
+  @include desktop {
+    display: none;
+  }
+}
+
 .menu__social {
   text-align: center;
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .menu__social a {
@@ -105,4 +200,86 @@ input[type="checkbox"].menu__toggle:checked + .menu__hamburger-button {
   background: url("../../../img/contacts-mail.svg") no-repeat 50% 50%;
   background-size: 18px 18px;
   background-color: $bg-dark-blue-grey-two;
+}
+
+.header__navigation {
+  position: absolute;
+  z-index: 1;
+  top: 460px;
+
+  @include tablet {
+    position: static;
+  }
+
+  @include desktop {
+    position: static;
+  }
+}
+
+.header__navigation .navigation__list {
+  //padding-top: 250px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  // уточнить тут
+  min-height: 43px;
+}
+
+.header__navigation .navigation__item {
+  cursor: pointer;
+}
+
+.navigation__item--auth a {
+  padding: 13px 37px;
+  border-radius: 20px;
+  background-color: $bg-light-gold;
+}
+
+.navigation__item--auth a:hover,
+.navigation__item--auth a:active {
+  background-color: $bg-mango-two;
+}
+
+.navigation__item--tel a:hover,
+.navigation__item--tel a:active {
+  background-color: $bg-dusty-orange;
+}
+
+.navigation__item--mail a:hover,
+.navigation__item--mail a:active {
+  background-color: $bg-orange;
+}
+
+.navigation__item--tel a:active,
+.navigation__item--mail a:active {
+  // переделать только для svg
+  opacity: 0.3;
+}
+
+.navigation__item--tel a,
+.navigation__item--mail a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: inline-block;
+
+  @include tablet {
+    width: 0;
+    height: 0;
+  }
+}
+
+.navigation__item--tel a {
+  background: url("../../../img/topmenu-phone.svg") no-repeat 50% 50%;
+  background-color: $bg-orange;
+  background-size: 18px;
+}
+
+.navigation__item--mail a {
+  background: url("../../../img/topmenu-mail.svg") no-repeat 50% 50%;
+  background-color: $bg-mango-two;
+  background-size: 18px;
 }

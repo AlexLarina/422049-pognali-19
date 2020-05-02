@@ -17,13 +17,16 @@
 @import "./components/fonts/_promo.scss";
 @import "./components/fonts/_tariff.scss";
 @import "./components/fonts/_ways.scss";
+@import "./components/fonts/_popup.scss";
 
 // catalog page
 @import "./components/fonts/_search-form.scss";
+@import "./components/fonts/_filters.scss";
+@import "./components/fonts/_pagination.scss";
 // form page
 @import "./components/fonts/_user-profile.scss";
 @import "./components/fonts/_plans.scss";
-@import "./components/fonts/_plan-form.scss";
+@import "./components/fonts/_new-plan-form.scss";
 
 // layout
 
@@ -37,13 +40,15 @@
 @import "./components/layout/_promo.scss";
 @import "./components/layout/_tariff.scss";
 @import "./components/layout/_ways.scss";
+@import "./components/layout/_popup.scss";
 
 // catalog page
 @import "./components/layout/_search-form.scss";
 @import "./components/layout/_catalog.scss";
 @import "./components/layout/_pagination.scss";
+@import "./components/layout/_filters.scss";
 // form page
 @import "./components/layout/_user-profile.scss";
 @import "./components/layout/_plans.scss";
-@import "./components/layout/_plan-form.scss";
+@import "./components/layout/_new-plan-form.scss";
 @import "./components/layout/_form.scss";

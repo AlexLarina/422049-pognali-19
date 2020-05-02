@@ -3,3 +3,12 @@
   @include font(bold, $font-white);
   @include font-size(36px, 1.11em);
 }
+
+.catalog-main__title .title__back {
+  font-size: 0;
+
+  @include common-tablet-desktop {
+    @include font(bold, $font-white);
+    @include font-size(20px, 1.2em);
+  }
+}
