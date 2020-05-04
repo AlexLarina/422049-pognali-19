@@ -97,6 +97,16 @@
 
   background-color: $bg-white;
   cursor: pointer;
+
+  @include tablet {
+    width: 54px;
+    height: 70px;
+  }
+
+  @include desktop {
+    width: 60px;
+    height: 70px;
+  }
 }
 
 .alphabet__letter--active {

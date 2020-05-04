@@ -443,7 +443,7 @@ label[for="trips__toggle"] {
 }
 
 .trip__dropdown {
-  display: none;
+  //display: none;
 }
 
 .form__trips-item input[id="trips__toggle"]:checked ~ .trip__dropdown {
@@ -451,6 +451,19 @@ label[for="trips__toggle"] {
   box-shadow: 0 20px 50px 0 $bg-dark-slate-blue-10;
   border: 1px solid $bg-cloudy-blue;
   border-top: none;
+
+  @include common-tablet-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    padding: 0 25px 0 25px;
+    min-height: 476px;
+  }
+
+  @include desktop {
+    width: 730px;
+  }
 }
 
 .form__trips-item input[id="trips__toggle"]:checked + label[for="trips__toggle"] {
@@ -460,25 +473,62 @@ label[for="trips__toggle"] {
 
 .dropdown__alphabet {
   padding-left: 0;
+  padding-top: 35px;
   width: 100%;
+  height: 100%;
   justify-content: space-around;
+
+  @include tablet {
+    max-width: 270px;
+  }
+
+  @include desktop {
+    max-width: 360px;
+    justify-content: flex-start;
+  }
+}
+
+.dropdown__alphabet .alphabet__letter {
+  @include desktop {
+    margin-right: 12px;
+    margin-bottom: 12px;
+    border-right: 1px solid $bg-cloudy-blue;
+    border-bottom: 1px solid $bg-cloudy-blue;
+  }
 }
 
 .dropdown__alphabet .alphabet__letter:nth-child(-n + 5) {
   border-top: none;
+
+  @include common-tablet-desktop {
+    border-top: 1px solid $bg-cloudy-blue;
+  }
 }
 
 .dropdown__alphabet .alphabet__letter:nth-child(5n + 1) {
   border-left: none;
+
+  @include common-tablet-desktop {
+    border-left: 1px solid $bg-cloudy-blue;
+  }
 }
 
 .dropdown__alphabet .alphabet__letter:nth-child(5n + 5) {
   border-right: none;
+
+  @include common-tablet-desktop {
+    border-right: 1px solid $bg-cloudy-blue;
+  }
 }
 
 .dropdown__letter {
   list-style: none;
   padding: 17px 0 17px 20px;
+
+  @include common-tablet-desktop {
+    padding-top: 35px;
+    border-left: 1px solid $bg-cloudy-blue;
+  }
 }
 
 .form__trips-item textarea {
