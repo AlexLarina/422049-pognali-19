@@ -2,12 +2,20 @@
   @include font-size(16px, 1.38em);
   @include font(bold, $font-blue-grey);
   text-transform: uppercase;
+
+  @include desktop {
+    @include font-size(20px, 1.2em);
+  }
 }
 
 .continents__item button {
   @include font-size(16px, 1.38em);
   @include font(bold, $font-dark-blue-grey-30);
   text-transform: uppercase;
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 1.2em);
+  }
 }
 
 .continents__item--active button {
@@ -27,11 +35,30 @@
   }
 }
 
+.filters__alphabet .alphabet__letter {
+  @include common-tablet-desktop {
+    @include font-size(60px, 1em);
+    @include font(bold, $font-dark-blue-grey-20);
+  }
+
+  @include desktop {
+    text-align: left;
+    color: $font-blue-grey;
+  }
+}
+
+.filters__alphabet .letter__title--active {
+  @include tablet {
+    color: $font-blue-grey;
+  }
+}
+
 .alphabet__letter--active {
   color: $font-white;
 }
 
-.letter__item {
+.letter__item,
+.letter__country {
   @include font-size(16px, 1.38em);
   @include font(normal, $font-greyish-brown);
 
@@ -44,4 +71,8 @@
   @include font-size(16.5px, 1.79em);
   @include font(bold, $font-dark-blue);
   text-transform: uppercase;
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 1.5em);
+  }
 }

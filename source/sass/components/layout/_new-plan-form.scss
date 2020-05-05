@@ -443,7 +443,7 @@ label[for="trips__toggle"] {
 }
 
 .trip__dropdown {
-  //display: none;
+  display: none;
 }
 
 .form__trips-item input[id="trips__toggle"]:checked ~ .trip__dropdown {
