@@ -4,6 +4,12 @@
   text-transform: uppercase;
   text-align: center;
 
+  @include tablet {
+    @include font(500, $font-blue-grey);
+    @include font-size(60px, 1.18em);
+    text-align: left;
+  }
+
   @include desktop {
     @include font(500, $font-white);
     @include font-size(16px, 1.5em);
@@ -22,8 +28,19 @@
   text-transform: uppercase;
 }
 
+.navigation__item--phone,
+.navigation__item--email {
+  @include tablet {
+    @include font-size(28px, 1em);
+  }
+}
+
 .navigation__item--authentication {
   text-align: center;
+
+  @include tablet {
+    @include font-size(20px, 1.5em);
+  }
 }
 
 .header__navigation .navigation__item:not(.navigation__item--auth) {
