@@ -35,6 +35,11 @@
   }
 }
 
+.navigation__item--phone:active,
+.navigation__item--email:active {
+  opacity: 0.3;
+}
+
 .navigation__item--authentication {
   text-align: center;
 
