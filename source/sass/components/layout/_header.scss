@@ -113,6 +113,13 @@ input[type="checkbox"].menu__toggle:checked + .menu__hamburger-button {
   z-index: 3;
   position: absolute;
   right: 27px;
+
+  @include tablet {
+    top: 35px;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .menu__navigation.navigation--service {
@@ -153,6 +160,14 @@ input[type="checkbox"].menu__toggle:checked + .menu__hamburger-button {
   background-color: $bg-light-gold;
   padding: 12px 0 10px 0;
   border-radius: 25px;
+
+  @include tablet {
+    display: inline-block;
+    width: 189px;
+    position: absolute;
+    top: 25px;
+    right: 40px;
+  }
 }
 
 .menu__logo {
@@ -161,8 +176,24 @@ input[type="checkbox"].menu__toggle:checked + .menu__hamburger-button {
   }
 }
 
+.menu__logo img {
+  width: 96px;
+  height: 20px;
+
+  @include tablet {
+    width: 165px;
+    height: 40px;
+  }
+}
+
 .menu__social {
   text-align: center;
+
+  @include tablet {
+    padding-left: 70px;
+    text-align: left;
+    margin-top: 100px;
+  }
 
   @include desktop {
     display: none;
@@ -225,6 +256,12 @@ input[type="checkbox"].menu__toggle:checked + .menu__hamburger-button {
 
   // уточнить тут
   min-height: 43px;
+}
+
+.menu__navigation .navigation__list {
+  @include tablet {
+    padding-left: 70px;
+  }
 }
 
 .header__navigation .navigation__item {

@@ -53,6 +53,10 @@
   display: block;
   width: 100%;
   margin-top: 35px;
+
+  @include common-tablet-desktop {
+    margin-top: 0;
+  }
 }
 
 .filters input[type="checkbox"]:checked + .filters__points-button {
@@ -67,6 +71,16 @@
   list-style: none;
   padding-left: 25px;
   margin: 0;
+
+  @include common-tablet-desktop {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include desktop {
+    margin-left: 250px;
+    margin-top: -25px;
+  }
 }
 
 .continents__item button {
@@ -77,6 +91,24 @@
 
 .continents__item:not(:last-of-type) {
   margin-bottom: 10px;
+}
+
+.letter__title {
+  margin: 0;
+
+  @include desktop {
+    margin-bottom: 30px;
+  }
+}
+
+.letter__list {
+  display: none;
+  padding: 0;
+
+  @include desktop {
+    display: block;
+    list-style: none;
+  }
 }
 
 .alphabet {
@@ -99,6 +131,36 @@
   cursor: pointer;
 }
 
+.filters__alphabet-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+}
+
+.filters__alphabet {
+  @include tablet {
+    max-width: 345px;
+  }
+}
+
+.dropdown__alphabet .alphabet__letter {
+  @include tablet {
+    width: 54px;
+    height: 70px;
+  }
+
+  @include desktop {
+    width: 60px;
+    height: 70px;
+  }
+}
+
 .alphabet__letter--active {
   background-color: $bg-dark-slate-blue;
 }
@@ -111,10 +173,32 @@
   border-bottom: 1px solid $bg-cloudy-blue;
 }
 
+.filters__alphabet .alphabet__letter {
+  @include common-tablet-desktop {
+    background-color: inherit;
+    border: none;
+  }
+
+  @include tablet {
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    min-width: 250px;
+    height: 100%;
+    margin-bottom: 50px;
+  }
+}
+
 .filters__letter {
   list-style: none;
   padding-left: 25px;
   cursor: pointer;
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .filters__close {
@@ -130,4 +214,17 @@
   background-position-x: 30%;
   background-position-y: 45%;
   cursor: pointer;
+
+  @include tablet {
+    display: block;
+    max-width: 618px;
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  @include desktop {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
 }

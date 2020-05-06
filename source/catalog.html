@@ -24,7 +24,12 @@
         </label>
 
         <div class="menu__wrapper">
-          <a href="index.html" class="menu__logo"><img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?"></a>
+          <a href="index.html" class="menu__logo">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
+              <img src="img/logo-mobile-blue@1x.png" width="100%" height="auto" alt="Логотип сервиса Погнали?">
+            </picture>
+          </a>
           <nav class="menu__navigation navigation navigation--service">
             <ul class="navigation__list">
               <li class="navigation__item"><a href="index.html">О сервисе</a></li>
@@ -65,7 +70,7 @@
       </h1>
 
       <section class="catalog-main__filters filters container">
-        <h2 class="filters__title">Фильтрация по странам</h2>
+        <h2 class="filters__title">Фильтрация по странам:</h2>
 
         <input id="filters__toggle" type="checkbox" class="filters__toggle">
         <label class="filters__points-button" for="filters__toggle">
@@ -79,50 +84,314 @@
             <li class="continents__item"><button>Острова</button></li>
           </ul>
 
-          <ul class="filters__alphabet alphabet">
-            <li class="alphabet__letter alphabet__letter--active">А</li>
-            <li class="alphabet__letter">Б</li>
-            <li class="alphabet__letter">В</li>
-            <li class="alphabet__letter">Г</li>
-            <li class="alphabet__letter">Д</li>
+          <div class="filters__alphabet-wrapper">
+            <ul class="filters__alphabet alphabet">
+              <li class="alphabet__letter alphabet__letter--active letter">
+                <h3 class="letter__title letter__title--active">А</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Австралия</li>
+                  <li class="letter__country">Австрия</li>
+                  <li class="letter__country">Азербайджан</li>
+                  <li class="letter__country">Албания</li>
+                  <li class="letter__country">Алжир</li>
+                  <li class="letter__country">Ангола</li>
+                  <li class="letter__country">Андорра</li>
+                  <li class="letter__country">Антигуа и Барбуда</li>
+                  <li class="letter__country">Аргентина</li>
+                  <li class="letter__country">Армения</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Б</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Багамские острова</li>
+                  <li class="letter__country">Бангладеш</li>
+                  <li class="letter__country">Барбадос</li>
+                  <li class="letter__country">Бахрейн</li>
+                  <li class="letter__country">Белоруссия</li>
+                  <li class="letter__country">Белиз</li>
+                  <li class="letter__country">Бельгия</li>
+                  <li class="letter__country">Бенин</li>
+                  <li class="letter__country">Болгания</li>
+                  <li class="letter__country">Боливия</li>
+                  <li class="letter__country">Босния и Герцеговина</li>
+                  <li class="letter__country">Ботсвана</li>
+                  <li class="letter__country">Бразилия</li>
+                  <li class="letter__country">Бруней</li>
+                  <li class="letter__country">Буркина-Фасо</li>
+                  <li class="letter__country">Бугунди</li>
+                  <li class="letter__country">Бутан</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">B</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Вануату</li>
+                  <li class="letter__country">Великобритания</li>
+                  <li class="letter__country">Венгрия</li>
+                  <li class="letter__country">Венесуэла</li>
+                  <li class="letter__country">Восточный Тимор</li>
+                  <li class="letter__country">Вьетнам</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Г</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Габон</li>
+                  <li class="letter__country">Гаити</li>
+                  <li class="letter__country">Гайана</li>
+                  <li class="letter__country">Гамбия</li>
+                  <li class="letter__country">Гана</li>
+                  <li class="letter__country">Гватемала</li>
+                  <li class="letter__country">Гвинея</li>
+                  <li class="letter__country">Гвинея-Бисау</li>
+                  <li class="letter__country">Германия</li>
+                  <li class="letter__country">Гондурас</li>
+                  <li class="letter__country">Гренада</li>
+                  <li class="letter__country">Греция</li>
+                  <li class="letter__country">Грузия</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Д</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Дания</li>
+                  <li class="letter__country">Джибути</li>
+                  <li class="letter__country">Доминика</li>
+                  <li class="letter__country">Доминикана</li>
+                </ul>
+              </li>
 
-            <li class="alphabet__letter">Е</li>
-            <li class="alphabet__letter">З</li>
-            <li class="alphabet__letter">И</li>
-            <li class="alphabet__letter">К</li>
-            <li class="alphabet__letter">Л</li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Е</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Египет</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">З</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Замбия</li>
+                  <li class="letter__country">Зимбабве</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">И</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Израиль</li>
+                  <li class="letter__country">Индия</li>
+                  <li class="letter__country">Индонезия</li>
+                  <li class="letter__country">Иордания</li>
+                  <li class="letter__country">Ирак</li>
+                  <li class="letter__country">Иран</li>
+                  <li class="letter__country">Ирландия</li>
+                  <li class="letter__country">Исландия</li>
+                  <li class="letter__country">Испания</li>
+                  <li class="letter__country">Италия</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">К</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Кабо-Верде</li>
+                  <li class="letter__country">Казахстан</li>
+                  <li class="letter__country">Камбоджа</li>
+                  <li class="letter__country">Камерун</li>
+                  <li class="letter__country">Канада</li>
+                  <li class="letter__country">Катар</li>
+                  <li class="letter__country">Кения</li>
+                  <li class="letter__country">Кипр</li>
+                  <li class="letter__country">Киргизия</li>
+                  <li class="letter__country">Кирибати</li>
+                  <li class="letter__country">Китай</li>
+                  <li class="letter__country">Колумбия</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Л</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Лаос</li>
+                  <li class="letter__country">Латвия</li>
+                  <li class="letter__country">Лесото</li>
+                  <li class="letter__country">Либерия</li>
+                  <li class="letter__country">Ливан</li>
+                  <li class="letter__country">Ливия</li>
+                  <li class="letter__country">Литва</li>
+                  <li class="letter__country">Лихтенштейн</li>
+                  <li class="letter__country">Люксембург</li>
+                </ul>
+              </li>
 
-            <li class="alphabet__letter">М</li>
-            <li class="alphabet__letter">Н</li>
-            <li class="alphabet__letter">О</li>
-            <li class="alphabet__letter">П</li>
-            <li class="alphabet__letter">Р</li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">М</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Маврикий</li>
+                  <li class="letter__country">Мавритания</li>
+                  <li class="letter__country">Мадагаскар</li>
+                  <li class="letter__country">Малави</li>
+                  <li class="letter__country">Малайзия</li>
+                  <li class="letter__country">Мали</li>
+                  <li class="letter__country">Мальдивы</li>
+                  <li class="letter__country">Мальта</li>
+                  <li class="letter__country">Марокко</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Н</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Намибия</li>
+                  <li class="letter__country">Науру</li>
+                  <li class="letter__country">Негал</li>
+                  <li class="letter__country">Нигер</li>
+                  <li class="letter__country">Нигерия</li>
+                  <li class="letter__country">Нидерланды</li>
+                  <li class="letter__country">Никарагуа</li>
+                  <li class="letter__country">Новая Зеландия</li>
+                  <li class="letter__country">Норвегия</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">О</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">ОАЭ</li>
+                  <li class="letter__country">Оман</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">П</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Пакистан</li>
+                  <li class="letter__country">Палау</li>
+                  <li class="letter__country">Панама</li>
+                  <li class="letter__country">Папуа - Новая Гвинея</li>
+                  <li class="letter__country">Парагвай</li>
+                  <li class="letter__country">Перу</li>
+                  <li class="letter__country">Польша</li>
+                  <li class="letter__country">Португалия</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Р</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Руанда</li>
+                  <li class="letter__country">Румыния</li>
+                  <li class="letter__country">Россия</li>
+                </ul>
+              </li>
 
-            <li class="alphabet__letter">С</li>
-            <li class="alphabet__letter">Т</li>
-            <li class="alphabet__letter">У</li>
-            <li class="alphabet__letter">Ф</li>
-            <li class="alphabet__letter">Х</li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">С</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Сальвадор</li>
+                  <li class="letter__country">Самоа</li>
+                  <li class="letter__country">Сан-Марино</li>
+                  <li class="letter__country">Саудовская Аравия</li>
+                  <li class="letter__country">Сейшелы</li>
+                  <li class="letter__country">Сенегал</li>
+                  <li class="letter__country">Сербия</li>
+                  <li class="letter__country">Сингапур</li>
+                  <li class="letter__country">Сирия</li>
+                  <li class="letter__country">Словакия</li>
+                  <li class="letter__country">Словения</li>
+                  <li class="letter__country">США</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Т</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Таджикистан</li>
+                  <li class="letter__country">Таиланд</li>
+                  <li class="letter__country">Танзания</li>
+                  <li class="letter__country">Того</li>
+                  <li class="letter__country">Тонга</li>
+                  <li class="letter__country">Тринидад и Тобаго</li>
+                  <li class="letter__country">Тувалу</li>
+                  <li class="letter__country">Тунис</li>
+                  <li class="letter__country">Туркмения</li>
+                  <li class="letter__country">Турция</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">У</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Уганда</li>
+                  <li class="letter__country">Узбекистан</li>
+                  <li class="letter__country">Украина</li>
+                  <li class="letter__country">Уругвай</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Ф</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Фиджи</li>
+                  <li class="letter__country">Филиппины</li>
+                  <li class="letter__country">Финляндия</li>
+                  <li class="letter__country">Франция</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Х</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Хорватия</li>
+                </ul>
+              </li>
 
-            <li class="alphabet__letter">Ч</li>
-            <li class="alphabet__letter">Ш</li>
-            <li class="alphabet__letter">Э</li>
-            <li class="alphabet__letter">Ю</li>
-            <li class="alphabet__letter">Я</li>
-          </ul>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Ч</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Чад</li>
+                  <li class="letter__country">Черногория</li>
+                  <li class="letter__country">Чехия</li>
+                  <li class="letter__country">Чили</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Ш</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Швейцария</li>
+                  <li class="letter__country">Швеция</li>
+                  <li class="letter__country">Шри-Ланка</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Э</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Эквадор</li>
+                  <li class="letter__country">Эритрея</li>
+                  <li class="letter__country">Эсватини</li>
+                  <li class="letter__country">Эстония</li>
+                  <li class="letter__country">Эфиопия</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Ю</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">ЮАР</li>
+                  <li class="letter__country">Южный Судан</li>
+                </ul>
+              </li>
+              <li class="alphabet__letter">
+                <h3 class="letter__title">Я</h3>
+                <ul class="letter__list">
+                  <li class="letter__country">Ямайка</li>
+                  <li class="letter__country">Япония</li>
+                </ul>
+              </li>
+            </ul>
 
-          <ul class="filters__letter letter letter--A">
-            <li class="letter__item">Австралия</li>
-            <li class="letter__item">Австрия</li>
-            <li class="letter__item">Азербайджан</li>
-            <li class="letter__item">Албания</li>
-            <li class="letter__item">Алжир</li>
-            <li class="letter__item">Ангола</li>
-            <li class="letter__item">Андорра</li>
-            <li class="letter__item">Антигуа и Барбуда</li>
-            <li class="letter__item">Аргентина</li>
-            <li class="letter__item">Армения</li>
-          </ul>
+            <ul class="filters__letter letter letter--A">
+              <li class="letter__item">Австралия</li>
+              <li class="letter__item">Австрия</li>
+              <li class="letter__item">Азербайджан</li>
+              <li class="letter__item">Албания</li>
+              <li class="letter__item">Алжир</li>
+              <li class="letter__item">Ангола</li>
+              <li class="letter__item">Андорра</li>
+              <li class="letter__item">Антигуа и Барбуда</li>
+              <li class="letter__item">Аргентина</li>
+              <li class="letter__item">Армения</li>
+            </ul>
+          </div>
           <button type="button" class="filters__close">Свернуть</button>
         </div>
       </section>
