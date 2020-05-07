@@ -16,6 +16,19 @@
   }
 }
 
+.navigation--service .navigation__item:hover {
+  @include desktop {
+    color: $font-light-gold;
+  }
+}
+
+.navigation--service .navigation__item:active {
+  @include desktop {
+    color: $font-light-gold;
+    opacity: 0.3;
+  }
+}
+
 .navigation__item a {
   color: inherit;
 }

@@ -167,38 +167,75 @@
   }
 }
 
-.promo__steps-list .steps__item:last-child {
-  border-radius: 10px;
-}
-
 .promo__steps-list li:first-child {
   background-color: $bg-orange;
+
+  @include tablet {
+    border-radius: 10px 0 0 0;
+  }
+
+  @include desktop {
+    border-radius: 10px 0 0 10px;
+  }
 }
 
 .promo__steps-list li:nth-child(2) {
   background-color: $bg-mango-three;
   position: relative;
+
+  @include desktop {
+    border-radius: 10px 0 0 10px;
+  }
 }
 
 .promo__steps-list li:nth-child(2)::before {
   @include bg-round-corvers($bg-orange);
+
+  @include tablet {
+    border-radius: 0 10px 0 0;
+  }
 }
 
 .promo__steps-list li:nth-child(3) {
   background-color: $bg-mango-two;
   position: relative;
+
+  @include tablet {
+    border-radius: 0 0 0 10px;
+  }
+
+  @include desktop {
+    border-radius: 10px 0 0 10px;
+  }
 }
 
 .promo__steps-list li:nth-child(3)::before {
   @include bg-round-corvers($bg-mango-three);
+
+  @include tablet {
+    border-radius: 0 0 0 10px;
+  }
 }
 
 .promo__steps-list li:last-child {
   background-color: $bg-light-gold;
   position: relative;
+  border-radius: 10px;
+
+  @include tablet {
+    border-radius: 0 0 10px 10px;
+  }
 }
 
 .promo__steps-list li:last-child::before {
   @include bg-round-corvers($bg-mango-two);
   border-radius: 0 0 10px 10px;
+
+  @include tablet {
+    border-radius: 0 0 10px 0;
+  }
+
+  @include desktop {
+    border-radius: 0 10px 10px 0;
+  }
 }
