@@ -28,6 +28,36 @@
   @include font(bold, $font-light-gold);
 }
 
+.contacts__description a:hover {
+  color: $font-orange;
+}
+
+.contacts__description a:active {
+  color: $font-orange;
+  opacity: 0.3;
+}
+
+.contacts__user-email::placeholder {
+  @include font-size(18px, 1em);
+  @include font(bold, $font-greyish-brown-30);
+
+  @include common-tablet-desktop {
+    @include font-size(24px, 1em);
+  }
+}
+
+.contacts__user-email:hover::placeholder {
+  color: $font-greyish-brown-50;
+}
+
+.contacts__user-email:active {
+  color: $font-white;
+}
+
+.contacts__user-email--error {
+  color: $font-red;
+}
+
 .contacts__phone,
 .contacts__email {
   @include font-size(16px, 1.38em);
@@ -41,6 +71,11 @@
   @include desktop {
     @include font-size(28px, 1em);
   }
+}
+
+.contacts__phone:hover,
+.contacts__email:hover {
+  color: $font-mango-two;
 }
 
 .contacts__submit {
