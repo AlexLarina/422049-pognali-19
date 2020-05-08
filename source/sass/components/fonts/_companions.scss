@@ -36,8 +36,46 @@
   }
 }
 
+.countries {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+
+  position: absolute;
+  top: 258px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .countries__item {
   font-size: 0;
+
+  width: 35px;
+  height: 24px;
+}
+
+.countries__item:not(:last-of-type) {
+  margin-right: 19px;
+}
+
+.countries__item--sri-lanka {
+  background: url("../../../img/flags/Sri-Lanka_mobile.png") no-repeat 0% 0%;
+}
+
+.countries__item--thai {
+  background: url("../../../img/flags/Thailand_mobile.png") no-repeat 0% 0%;
+}
+
+.countries__item--seychelles {
+  background: url("../../../img/flags/Seychelles_mobile.png") no-repeat 0% 0%;
+}
+
+.countries__item--belgium {
+  background: url("../../../img/flags/Belgium_mobile.png") no-repeat 0% 0%;
+}
+
+.countries__item--czech {
+  background: url("../../../img/flags/Czech_mobile.png") no-repeat 0% 0%;
 }
 
 .companion__name {
