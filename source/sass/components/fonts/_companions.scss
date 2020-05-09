@@ -185,3 +185,9 @@
 .transport__title {
   text-transform: unset;
 }
+
+.means__item-tooltip,
+.countries__item-tooltip {
+  @include font(normal, $font-white);
+  @include font-size(20px, 1.2em);
+}
