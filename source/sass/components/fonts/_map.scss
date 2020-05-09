@@ -27,3 +27,11 @@
     @include font-size(24px, 1em);
   }
 }
+
+.map__route:hover {
+  color: $font-white;
+}
+
+.map__route:active {
+  color: $font-white-30;
+}

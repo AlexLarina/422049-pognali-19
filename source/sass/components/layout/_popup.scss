@@ -69,4 +69,10 @@
   padding: 20px 0;
   border-radius: 0 0 20px 20px;
   cursor: pointer;
+  background-color: $bg-pale-grey-five;
+}
+
+.popup__close:hover,
+.popup__close_active {
+  background-color: $bg-grey;
 }
