@@ -124,6 +124,10 @@
   text-transform: uppercase;
 }
 
+.companion__accept:active {
+  color: $font-dark-two-30;
+}
+
 .wish__item {
   @include font(500, $font-dark-slate-blue);
   @include font-size(15px, 1.2em);
