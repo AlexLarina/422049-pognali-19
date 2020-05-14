@@ -48,7 +48,9 @@
   display: inline-block;
   margin-right: 15px;
 
-  background: url("../../../img/contacts-location.svg") no-repeat 50% 50%;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 28 43' style='enable-background:new 0 0 28 43;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23ffd74b%7D%0A%3C/style%3E%3Cpath class='st0' d='M11.7,13.9c0-1.2,1-2.2,2.3-2.2s2.3,1,2.3,2.2c0,1.2-1,2.2-2.3,2.2C12.8,16.1,11.7,15.1,11.7,13.9z M14,8.1 c-3.2,0-5.9,2.6-5.9,5.8s2.6,5.8,5.9,5.8c3.2,0,5.9-2.6,5.9-5.8C19.9,10.7,17.2,8.1,14,8.1z M0,13.6c0,9.1,10.9,16.2,11.7,26.7v0.4 c0,1.2,1,2.2,2.3,2.2s2.3-1,2.3-2.2v-0.4C17.2,29.8,28,22.8,28,13.6C28,6.1,21.7,0,14,0C6.3,0,0,6.1,0,13.6z M14,4.5 c5.2,0,9.5,4.2,9.5,9.4c0,5.2-4.2,9.4-9.5,9.4s-9.5-4.2-9.5-9.4C4.5,8.7,8.8,4.5,14,4.5z'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-size: 18px 18px;
   background-color: $bg-dark-blue-grey-two;
 
@@ -58,11 +60,15 @@
   @include tablet {
     width: 67px;
     height: 67px;
+
+    background-size: 21px 31px;
   }
 
   @include desktop {
     width: 90px;
     height: 90px;
+
+    background-size: 28px 43px;
   }
 }
 
@@ -74,6 +80,16 @@
   @include desktop {
     max-width: 324px;
   }
+}
+
+.map__route:hover {
+  background-color: $bg-dark-blue-grey;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 14' style='enable-background:new 0 0 10 14;' xml:space='preserve' fill='%23ffffff'%3E%3Cpolygon points='0,14 0,0.1 10,7.1 '/%3E%3C/svg%3E%0A");
+}
+
+.map__route:active {
+  background-color: $bg-dark-blue-grey;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 14' style='enable-background:new 0 0 10 14;' xml:space='preserve' fill='%23ffffff' opacity='0.3'%3E%3Cpolygon points='0,14 0,0.1 10,7.1 '/%3E%3C/svg%3E%0A");
 }
 
 .map__interactive iframe {

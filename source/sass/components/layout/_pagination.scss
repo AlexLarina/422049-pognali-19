@@ -1,11 +1,26 @@
+.companions__pagination {
+  margin-top: 50px;
+}
+
 .pagination {
   display: flex;
   justify-content: flex-start;
   background-color: $bg-white;
   border-radius: 20px;
 
+  @include common-tablet-desktop {
+    padding: 25px 35px 25px 28px;
+  }
+
   @include desktop {
     max-width: 950px;
+  }
+}
+
+.pagination__item--active {
+  @include common-tablet-desktop {
+    background-color: $bg-light-gold;
+    border-radius: 50%;
   }
 }
 
@@ -18,9 +33,24 @@
   }
 }
 
+.pagination__item--back:hover,
+.pagination__item--forward:hover {
+  opacity: 0.6;
+}
+
+.pagination__item--back:active,
+.pagination__item--forward:active {
+  opacity: 0.3;
+}
+
 .pagination__item {
   display: inline-block;
-  padding: 25px 0;
+  //padding: 25px 0;
+
+  @include common-tablet-desktop {
+    min-width: 50px;
+    height: 50px;
+  }
 }
 
 .pagination__item:not(.pagination__item--back):not(.pagination__item--forward) {

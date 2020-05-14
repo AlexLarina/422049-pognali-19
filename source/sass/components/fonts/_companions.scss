@@ -36,10 +36,6 @@
   }
 }
 
-.countries__item {
-  font-size: 0;
-}
-
 .companion__name {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(21px, 1em);
@@ -48,6 +44,14 @@
   @include tablet {
     @include font-size(24px, 1em);
   }
+}
+
+.companion__name:hover {
+  opacity: 0.7;
+}
+
+.companion__name:active {
+  opacity: 0.3;
 }
 
 .tags__item a {
@@ -63,6 +67,11 @@
 .companion__level {
   @include font-size(24px, 1em);
   @include font(bold, $font-white);
+}
+
+.companion__level-title {
+  @include font-size(14px, 1em);
+  @include font(normal, $font-white);
 }
 
 .companion__travel-means {
@@ -115,6 +124,10 @@
   text-transform: uppercase;
 }
 
+.companion__accept:active {
+  color: $font-dark-two-30;
+}
+
 .wish__item {
   @include font(500, $font-dark-slate-blue);
   @include font-size(15px, 1.2em);
@@ -129,8 +142,19 @@
 .companions__show-more {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(17px, 1.76em);
+  text-transform: uppercase;
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 1.5em);
+  }
 }
 
 .transport__title {
   text-transform: unset;
+}
+
+.countries__item-tooltip,
+.transport__item-tooltip {
+  @include font(normal, $font-white);
+  @include font-size(20px, 1.2em);
 }

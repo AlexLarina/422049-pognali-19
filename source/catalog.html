@@ -404,7 +404,11 @@
             <h3 class="search__title">Подберите идеального попутчика</h3>
 
             <fieldset class="search__filter filter">
-              <legend>Хобби</legend>
+              <legend class="visually-hidden">Хобби</legend>
+
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-hobby">
+              <label for="open-fieldset-hobby" class="filter__open-fieldset">Хобби</label>
+
               <ul class="filter__list filter__list--checkbox">
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="interest--gym" value="gym" id="interest--gym" checked>
@@ -424,7 +428,11 @@
             </fieldset>
 
             <fieldset class="search__filter filter">
-              <legend>Музыка</legend>
+              <legend class="visually-hidden">Музыка</legend>
+
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-music" checked>
+              <label for="open-fieldset-music" class="filter__open-fieldset">Музыка</label>
+
               <ul class="filter__list filter__list--checkbox">
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="music--hard-rock" value="hard-rock" id="music--hard-rock" checked>
@@ -444,7 +452,11 @@
             </fieldset>
 
             <fieldset class="search__filter filter">
-              <legend>Еда</legend>
+              <legend class="visually-hidden">Еда</legend>
+
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-food">
+              <label for="open-fieldset-food" class="filter__open-fieldset">Еда</label>
+
               <ul class="filter__list filter__list--checkbox">
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="meal--meat" value="meat" id="meal--meat" checked>
@@ -463,33 +475,41 @@
               </ul>
             </fieldset>
 
-            <fieldset class="search__filter filter">
-              <legend>Транспорт</legend>
-              <ul class="filter__list filter__list--checkbox">
+            <fieldset class="search__filter filter filter--transport">
+              <legend class="visually-hidden">Транспорт</legend>
+
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-transport" checked>
+              <label for="open-fieldset-transport" class="filter__open-fieldset">Транспорт</label>
+
+              <ul class="filter__list filter__list--checkbox filter__list--transport">
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="transport--plane" value="plane" id="transport--plane" checked>
-                  <label for="transport--plane" class="filter__checkbox"></label>
+                  <label for="transport--plane" class="filter__transport-label filter__transport-label--plane"></label>
                 </li>
 
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="transport--bus" value="bus" id="transport--bus" checked>
-                  <label for="transport--bus" class="filter__checkbox"></label>
+                  <label for="transport--bus" class="filter__transport-label filter__transport-label--bus"></label>
                 </li>
 
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="transport--bike" value="bike" id="transport--bike">
-                  <label for="transport--bike" class="filter__checkbox"></label>
+                  <label for="transport--bike" class="filter__transport-label filter__transport-label--bike"></label>
                 </li>
 
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="transport--foot" value="foot" id="transport--foot" checked>
-                  <label for="transport--foot" class="filter__checkbox"></label>
+                  <label for="transport--foot" class="filter__transport-label filter__transport-label--foot"></label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset class="search__filter filter">
-              <legend>Левел</legend>
+              <legend class="visually-hidden">Левел</legend>
+
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-level" checked>
+              <label for="open-fieldset-level" class="filter__open-fieldset">Левел</label>
+
               <div class="filter__range range">
                 <div class="range__price-controls">
                   <span class="range__item range__item--min">
@@ -521,9 +541,12 @@
 
           <article class="companions__item companion companion--catalog">
             <img src="./img/firsova-mobile@1x.jpg" class="companion__avatar companion__avatar--catalog" width="77" height="77" alt="Аватар">
-            <span class="companion__likes companion__likes--catalog">1.5 M</span>
+            <span class="companion__likes companion__likes--catalog companion__likes--active">1.5 M</span>
             <div class="companion__personal-wrapper">
-              <p class="companion__name companion__name--catalog">Татьяна Фирсова</p>
+              <p class="companion__name companion__name--catalog">
+                <span class="companion__status companion__status--offline"></span>
+                <span>Таня Фирсова</span>
+              </p>
               <ul class="companion__tags companion__tags--catalog tags">
               <li class="tags__item tags__item--catalog"><a href="#">#ЗОЖ</a></li>
               <li class="tags__item tags__item--catalog"><a href="#">#ПП</a></li>
@@ -536,9 +559,9 @@
             <div class="companion__wish wish">
               <h4 class="wish__title">хочет посетить:</h4>
               <ul class="wish__list">
-                <li class="wish__item">Шри-Ланка</li>
-                <li class="wish__item">Таиланд</li>
-                <li class="wish__item">Сейшелы</li>
+                <li class="wish__item wish__item--sri-lanka">Шри-Ланка</li>
+                <li class="wish__item wish__item--thai">Таиланд</li>
+                <li class="wish__item wish__item--seychelles">Сейшелы</li>
               </ul>
             </div>
 
@@ -546,10 +569,18 @@
               <div class="companion__transport transport transport--catalog">
                 <h4 class="transport__title">транспорт:</h4>
                 <ul class="transport__list">
-                  <li class="transport__item transport__item--plane">Самолет</li>
-                  <li class="transport__item transport__item--bus">Автобус</li>
-                  <li class="transport__item transport__item--bike">Велосипед</li>
-                  <li class="transport__item transport__item--foot">Пешком</li>
+                  <li class="transport__item transport__item--plane transport__item--plane-on">
+                    <div class="transport__item-tooltip">Авиаперелет</div>
+                  </li>
+                  <li class="transport__item transport__item--bus">
+                    <div class="transport__item-tooltip">Автотранспорт</div>
+                  </li>
+                  <li class="transport__item transport__item--bike">
+                    <div class="transport__item-tooltip">Велосипед</div>
+                  </li>
+                  <li class="transport__item transport__item--foot">
+                    <div class="transport__item-tooltip">Пешком</div>
+                  </li>
                 </ul>
               </div>
 
@@ -566,7 +597,10 @@
             <img src="./img/demin-mobile@1x.jpg" class="companion__avatar companion__avatar--catalog" width="77" height="77" alt="Аватар">
             <span class="companion__likes companion__likes--catalog">1500</span>
             <div class="companion__personal-wrapper">
-              <p class="companion__name companion__name--catalog">Петя Демин</p>
+              <p class="companion__name companion__name--catalog">
+                <span class="companion__status companion__status--offline"></span>
+                <span>Петя Демин</span>
+              </p>
               <ul class="companion__tags companion__tags--catalog tags">
               <li class="tags__item tags__item--catalog"><a href="#">#бургер</a></li>
               <li class="tags__item tags__item--catalog"><a href="#">#бар</a></li>
@@ -579,8 +613,8 @@
             <div class="companion__wish wish">
               <h4 class="wish__title">хочет посетить:</h4>
               <ul class="wish__list">
-                <li class="wish__item">Бельгия</li>
-                <li class="wish__item">Чехия</li>
+                <li class="wish__item wish__item--belgium">Бельгия</li>
+                <li class="wish__item wish__item--czech">Чехия</li>
               </ul>
             </div>
 
@@ -588,10 +622,17 @@
               <div class="companion__transport transport transport--catalog">
                 <h4 class="transport__title">транспорт:</h4>
                 <ul class="transport__list">
-                  <li class="transport__item transport__item--plane">Самолет</li>
-                  <li class="transport__item transport__item--bus">Автобус</li>
-                  <li class="transport__item transport__item--bike">Велосипед</li>
-                  <li class="transport__item transport__item--foot">Пешком</li>
+                  <li class="transport__item transport__item--plane transport__item--plane-on">
+                    <div class="transport__item-tooltip">Авиаперелет</div>
+                  </li>
+                  <li class="transport__item transport__item--bus transport__item--bus-on">
+                    <div class="transport__item-tooltip">Автотранспорт</div>
+                  </li>
+                  <li class="transport__item transport__item--bike">
+                    <div class="transport__item-tooltip">Велосипед</div>
+                  </li>
+                  <li class="transport__item transport__item--foot transport__item--foot-on">
+                    <div class="transport__item-tooltip">Пешком</div>
                 </ul>
               </div>
 
@@ -608,7 +649,10 @@
             <img src="./img/smolov-mobile@1x.jpg" class="companion__avatar companion__avatar--catalog" width="77" height="77" alt="Аватар">
             <span class="companion__likes companion__likes--catalog">170</span>
             <div class="companion__personal-wrapper">
-              <p class="companion__name companion__name--catalog">Марк Смолов</p>
+              <p class="companion__name companion__name--catalog">
+                <span class="companion__status companion__status--offline"></span>
+                <span>Марк Смолов</span>
+              </p>
               <ul class="companion__tags companion__tags--catalog tags">
               <li class="tags__item tags__item--catalog"><a href="#">#рэп</a></li>
               <li class="tags__item tags__item--catalog"><a href="#">#тату</a></li>
@@ -620,9 +664,9 @@
             <div class="companion__wish wish">
               <h4 class="wish__title">хочет посетить:</h4>
               <ul class="wish__list">
-                <li class="wish__item">США</li>
-                <li class="wish__item">Австралия</li>
-                <li class="wish__item">Доминикана</li>
+                <li class="wish__item wish__item--usa">США</li>
+                <li class="wish__item wish__item--australia">Австралия</li>
+                <li class="wish__item wish__item--dominica">Доминикана</li>
               </ul>
             </div>
 
@@ -630,10 +674,17 @@
               <div class="companion__transport transport transport--catalog">
                 <h4 class="transport__title">транспорт:</h4>
                 <ul class="transport__list">
-                  <li class="transport__item transport__item--plane">Самолет</li>
-                  <li class="transport__item transport__item--bus">Автобус</li>
-                  <li class="transport__item transport__item--bike">Велосипед</li>
-                  <li class="transport__item transport__item--foot">Пешком</li>
+                  <li class="transport__item transport__item--plane transport__item--plane-on">
+                    <div class="transport__item-tooltip">Авиаперелет</div>
+                  </li>
+                  <li class="transport__item transport__item--bus">
+                    <div class="transport__item-tooltip">Автотранспорт</div>
+                  </li>
+                  <li class="transport__item transport__item--bike transport__item--bike-on">
+                    <div class="transport__item-tooltip">Велосипед</div>
+                  </li>
+                  <li class="transport__item transport__item--foot">
+                    <div class="transport__item-tooltip">Пешком</div>
                 </ul>
               </div>
 
@@ -650,7 +701,10 @@
             <img src="./img/rogovaya-mobile@1x.jpg" class="companion__avatar companion__avatar--catalog" width="77" height="77" alt="Аватар">
             <span class="companion__likes companion__likes--catalog">23</span>
             <div class="companion__personal-wrapper">
-              <p class="companion__name companion__name--catalog">Марк Смолов</p>
+              <p class="companion__name companion__name--catalog">
+                <span class="companion__status companion__status--online"></span>
+                <span>Лариса Роговая</span>
+              </p>
               <ul class="companion__tags companion__tags--catalog tags">
               <li class="tags__item tags__item--catalog"><a href="#">#образование</a></li>
               <li class="tags__item tags__item--catalog"><a href="#">#карьера</a></li>
@@ -661,8 +715,8 @@
             <div class="companion__wish wish">
               <h4 class="wish__title">хочет посетить:</h4>
               <ul class="wish__list">
-                <li class="wish__item">Великобритания</li>
-                <li class="wish__item">Германия</li>
+                <li class="wish__item wish__item--uk">Великобритания</li>
+                <li class="wish__item wish__item--germany">Германия</li>
               </ul>
             </div>
 
@@ -670,10 +724,17 @@
               <div class="companion__transport transport transport--catalog">
                 <h4 class="transport__title">транспорт:</h4>
                 <ul class="transport__list">
-                  <li class="transport__item transport__item--plane">Самолет</li>
-                  <li class="transport__item transport__item--bus">Автобус</li>
-                  <li class="transport__item transport__item--bike">Велосипед</li>
-                  <li class="transport__item transport__item--foot">Пешком</li>
+                  <li class="transport__item transport__item--plane transport__item--plane-on">
+                    <div class="transport__item-tooltip">Авиаперелет</div>
+                  </li>
+                  <li class="transport__item transport__item--bus transport__item--bus-on">
+                    <div class="transport__item-tooltip">Автотранспорт</div>
+                  </li>
+                  <li class="transport__item transport__item--bike">
+                    <div class="transport__item-tooltip">Велосипед</div>
+                  </li>
+                  <li class="transport__item transport__item--foot">
+                    <div class="transport__item-tooltip">Пешком</div>
                 </ul>
               </div>
 

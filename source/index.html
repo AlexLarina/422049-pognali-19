@@ -93,7 +93,7 @@
           <p class="ways__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
         </div>
           <ul class="ways__list">
-          <li class="ways_item way">
+          <li class="ways_item way way--thai">
             <img src="./img/thailand-mobile@1x.jpg" width="270" height="110" alt="Виды Таиланда">
             <div class="way__info">
               <h3 class="way__title">Таиланд</h3>
@@ -102,7 +102,7 @@
             </div>
           </li>
 
-          <li class="ways_item way">
+          <li class="ways_item way way--france">
             <img src="./img/france-mobile@1x.jpg" width="270" height="110" alt="Виды Франции">
             <div class="way__info">
               <h3 class="way__title">Франция</h3>
@@ -111,7 +111,7 @@
             </div>
             </li>
 
-          <li class="ways_item way">
+          <li class="ways_item way way--czech">
             <img src="./img/czech-mobile@1x.jpg" width="270" height="110" alt="Виды Европы">
             <div class="way__info">
               <h3 class="way__title">Чехия</h3>
@@ -124,62 +124,102 @@
         <a href="form.html" class="ways__show-all">Показать все</a>
       </section>
       <section class="main__companions companions container">
-        <div class="companions__info-wrapper">
-          <h2 class="companions__title">Попутчики</h2>
-          <p class="companions__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <p class="companions__description">Теперь можно легко найти единомышленников!</p>
+        <div class="companions__wrapper">
+          <div class="companions__info-wrapper">
+            <h2 class="companions__title">Попутчики</h2>
+            <p class="companions__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+            <p class="companions__description">Теперь можно легко найти единомышленников!</p>
+          </div>
+          <ul class="companions__list">
+            <li class="companions__item companion">
+              <span class="companion__level companion__level--main">
+                99
+                <span class="companion__level-title">level</span>
+              </span>
+              <img src="./img/firsova-desktop@1x.jpg" width="270" height="270" class="companion__avatar companion__avatar--main" alt="Аватар">
+              <ul class="companion__countries countries">
+                <li class="countries__item countries__item--sri-lanka">
+                  <div class="countries__item-tooltip">Шри&#8209;Ланка</div>
+                </li>
+                <li class="countries__item countries__item--thai">
+                  <div class="countries__item-tooltip">Таиланд</div>
+                </li>
+                <li class="countries__item countries__item--seychelles">
+                  <div class="countries__item-tooltip">Сейшелы</div>
+                </li>
+              </ul>
+              <h3 class="companion__name companion__name--main">
+                <span class="companion__status companion__status--offline"></span>
+                Таня Фирсова
+              </h3>
+              <ul class="companion__tags companion__tags--main tags">
+                <li class="tags__item"><a href="#">#ЗОЖ</a></li>
+                <li class="tags__item"><a href="#">#ПП</a></li>
+                <li class="tags__item"><a href="#">#Фитнес</a></li>
+                <li class="tags__item"><a href="#">#пляж</a></li>
+                <li class="tags__item"><a href="#">#авокадо</a></li>
+                <li class="tags__item"><a href="#">#смузи</a></li>
+              </ul>
+              <ul class="companion__travel-means transport">
+                <li class="transport__item transport__item--plane transport__item--plane-on">
+                  <div class="transport__item-tooltip">Авиаперелет</div>
+                </li>
+                <li class="transport__item transport__item--bus">
+                  <div class="transport__item-tooltip">Автотранспорт</div>
+                </li>
+                <li class="transport__item transport__item--bike">
+                  <div class="transport__item-tooltip">Велосипед</div>
+                </li>
+                <li class="transport__item transport__item--foot">
+                  <div class="transport__item-tooltip">Пешком</div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="companions__item companion">
+              <span class="companion__level companion__level--main">
+                80
+                <span class="companion__level-title">level</span>
+              </span>
+              <img src="./img/demin-desktop@1x.jpg" width="270" height="270" class="companion__avatar companion__avatar--main" alt="Аватар">
+              <ul class="companion__countries countries">
+                <li class="countries__item countries__item--belgium">
+                  <div class="countries__item-tooltip">Бельгия</div>
+                </li>
+                <li class="countries__item countries__item--czech">
+                  <div class="countries__item-tooltip">Чехия</div>
+                </li>
+              </ul>
+              <h3 class="companion__name companion__name--main">
+                <span class="companion__status companion__status--online"></span>
+                Петя Демин
+              </h3>
+              <ul class="companion__tags companion__tags--main tags">
+                <li class="tags__item"><a href="#">#бургер</a></li>
+                <li class="tags__item"><a href="#">#бар</a></li>
+                <li class="tags__item"><a href="#">#футбол</a></li>
+                <li class="tags__item"><a href="#">#концерт</a></li>
+                <li class="tags__item"><a href="#">#крафт</a></li>
+              </ul>
+              <ul class="companion__travel-means transport">
+                <li class="transport__item transport__item--plane transport__item--plane-on">
+                  <div class="transport__item-tooltip">Авиаперелет</div>
+                </li>
+                <li class="transport__item transport__item--bus transport__item--bus-on">
+                  <div class="transport__item-tooltip">Автотранспорт</div>
+                </li>
+                <li class="transport__item transport__item--bike">
+                  <div class="transport__item-tooltip">Велосипед</div>
+                </li>
+                <li class="transport__item transport__item--foot transport__item--foot-on">
+                  <div class="transport__item-tooltip">Пешком</div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <a href="catalog.html" class="companions__show-all">Показать всех</a>
         </div>
-        <ul class="companions__list">
-          <li class="companions__item companion">
-            <span class="companion__level companion__level--main">99</span>
-            <img src="./img/firsova-desktop@1x.jpg" width="270" height="270" class="companion__avatar companion__avatar--main" alt="Аватар">
-            <ul class="companion__countries countries">
-              <li class="countries__item">Шри-Ланка</li>
-              <li class="countries__item">Таиланд</li>
-              <li class="countries__item">Сейшелы</li>
-            </ul>
-            <h3 class="companion__name companion__name--main">Таня Фирсова</h3>
-            <ul class="companion__tags companion__tags--main tags">
-              <li class="tags__item"><a href="#">#ЗОЖ</a></li>
-              <li class="tags__item"><a href="#">#ПП</a></li>
-              <li class="tags__item"><a href="#">#Фитнес</a></li>
-              <li class="tags__item"><a href="#">#пляж</a></li>
-              <li class="tags__item"><a href="#">#авокадо</a></li>
-              <li class="tags__item"><a href="#">#смузи</a></li>
-            </ul>
-            <ul class="companion__travel-means means">
-              <li class="means__item means__item--plane">Самолет</li>
-              <li class="means__item means__item--bus">Автобус</li>
-              <li class="means__item means__item--bike">Велосипед</li>
-              <li class="means__item means__item--foot">Пешком</li>
-            </ul>
-          </li>
-
-          <li class="companions__item companion">
-            <span class="companion__level companion__level--main">80</span>
-            <img src="./img/demin-desktop@1x.jpg" width="270" height="270" class="companion__avatar companion__avatar--main" alt="Аватар">
-            <ul class="companion__countries countries">
-              <li class="countries__item">Германия</li>
-              <li class="countries__item">Чехия</li>
-            </ul>
-            <h3 class="companion__name companion__name--main">Петя Демин</h3>
-            <ul class="companion__tags companion__tags--main tags">
-              <li class="tags__item"><a href="#">#бургер</a></li>
-              <li class="tags__item"><a href="#">#бар</a></li>
-              <li class="tags__item"><a href="#">#футбол</a></li>
-              <li class="tags__item"><a href="#">#концерт</a></li>
-              <li class="tags__item"><a href="#">#крафт</a></li>
-            </ul>
-            <ul class="companion__travel-means means">
-              <li class="means__item means__item--plane">Самолет</li>
-              <li class="means__item means__item--bus">Автобус</li>
-              <li class="means__item means__item--bike">Велосипед</li>
-              <li class="means__item means__item--foot">Пешком</li>
-            </ul>
-          </li>
-        </ul>
-
-        <a href="catalog.html" class="companions__show-all">Показать всех</a>
       </section>
       <section class="main__tariff tariff container">
         <h2 class="tariff__title">Добавьте свой профиль</h2>
@@ -225,7 +265,6 @@
           <a href="#" class="map__route">Проложить маршрут</a>
         </div>
         <a href="#" class="map__interactive">
-          <!-- <img src="#" width="320" height="546" alt="Карта местонахождения офиса сервиса Погнали?"> -->
           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5c5fa949869efec2bad23d97c7681e24807d35db59666f2beb01a37f272ec333&amp;source=constructor" width="320" height="546" frameborder="0">
           </iframe>
         </a>
