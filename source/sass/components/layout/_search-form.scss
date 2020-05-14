@@ -34,38 +34,78 @@
 
   @include tablet {
     max-width: 688px;
+    padding: 35px;
   }
 }
 
 .search__title {
   margin: 0;
   margin-bottom: 21px;
+
+  @include tablet {
+    padding-bottom: 35px;
+    border-bottom: 1px solid $bg-macaroni-and-cheese;
+  }
 }
 
 .search__filter {
   border: 0;
   margin: 13px 0;
+  padding: 0;
+
+  border-top: 2px solid $bg-macaroni-and-cheese;
+
+  @include tablet {
+    border-top: none;
+  }
+}
+
+.search__filter:last-of-type {
+  @include tablet {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $bg-macaroni-and-cheese;
+  }
 }
 
 .search__filter legend {
-  width: 100%;
-  padding-top: 13px;
-  border-top: 2px solid $bg-macaroni-and-cheese;
+  display: none;
 }
 
 .filter__list {
+  display: none;
   list-style: none;
   padding: 0;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: 115px;
+  }
 }
 
 .filter__item {
   margin-bottom: 12px;
+
+  @include tablet {
+    width: 30%;
+  }
+}
+
+.filter__list--transport .filter__item {
+  @include tablet {
+    width: auto;
+  }
 }
 
 .filter__checkbox {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+
+  position: relative;
 }
 
 .filter__checkbox::before {
@@ -77,6 +117,55 @@
   border-radius: 4px;
 
   margin-right: 9px;
+
+  @include common-tablet-desktop {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.filter__checkbox:hover::before {
+  opacity: 0.6;
+}
+
+.filter__checkbox:active::before {
+  opacity: 0.3;
+}
+
+.search input[type="checkbox"]:checked + .filter__checkbox::after {
+  content: "";
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 12 12' style='enable-background:new 0 0 12 12;' xml:space='preserve' fill='%23192144'%3E%3Cpolygon points='12,0 3.8,8 0,4.3 0,8.3 3.8,12 12,4 '/%3E%3C/svg%3E");
+  width: 9px;
+  height: 9px;
+
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include common-tablet-desktop {
+    width: 12px;
+    height: 12px;
+    left: 6px;
+  }
+}
+
+.filter--transport input[type="checkbox"] {
+  display: none;
+}
+
+.filter__transport-label {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  background-color: $bg-white;
+  border-radius: 50%;
+
+  @include common-tablet-desktop {
+    width: 43px;
+    height: 43px;
+  }
 }
 
 .search__submit {
@@ -86,20 +175,80 @@
   width: 100%;
   border-radius: 20px;
   padding: 5px 0;
+  cursor: pointer;
+}
+
+.search__submit:hover {
+  box-shadow: 0 2px 10px 0 $bg-card-hover;
+}
+
+.search__submit:active {
+  background-color: $bg-macaroni-and-cheese;
 }
 
 .range__price-controls {
   display: flex;
+
+  @include tablet {
+    order: 1;
+    margin-left: 60px;
+  }
+}
+
+.filter__range {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: -30px;
+  }
+}
+
+.range__item:last-of-type {
+  border-left: none;
+  position: relative;
+}
+
+.range__item {
+  @include tablet {
+    max-width: 75px;
+  }
+}
+
+.range__item:last-of-type::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 11px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 2' style='enable-background:new 0 0 20 2;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23cbced9;%7D%0A%3C/style%3E%3Crect class='st0' width='20' height='2'/%3E%3Crect class='st0' width='20' height='2'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: 16px 1px;
+  background-position: 50% 50%;
+  background-color: $bg-white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -8px;
 }
 
 .range__item input[type="number"] {
   width: 100%;
   box-sizing: content-box;
-  border: none;
+  border: 1px solid $bg-cloudy-blue;
 
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
+}
+
+.range__item:hover input[type="number"] {
+  border-color: $bg-bluey-grey;
+}
+
+.range__item:active input[type="number"] {
+  border-color: $bg-dark-two;
 }
 
 .range__item input[name="range__item--min"] {
@@ -108,4 +257,143 @@
 
 .range__item input[name="range__item--max"] {
   border-radius: 0 5px 5px 0;
+}
+
+.range__controls {
+  position: relative;
+  margin-top: 25px;
+
+  @include tablet {
+    width: 280px;
+  }
+}
+
+.range__scale {
+  height: 2px;
+  background-color: $bg-macaroni-and-cheese;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.range__bar {
+  height: 2px;
+  background-color: $bg-dark-slate-blue;
+  width: 55%;
+}
+
+.range__toggle {
+  box-sizing: content-box;
+  position: absolute;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  background: $bg-dark-slate-blue;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range__toggle:hover,
+.range__toggle:active {
+  top: -9px;
+  width: 19px;
+  height: 19px;
+}
+
+.range__toggle:active {
+  box-shadow: 0 3px 7px 0 $bg-dark-slate-blue-35;
+}
+
+.range__toggle--min {
+  left: 90px;
+
+  @include tablet {
+    left: 120px;
+  }
+}
+
+.range__toggle--min:hover,
+.range__toggle--min:active {
+  left: 85px;
+
+  @include tablet {
+    left: 115px;
+  }
+}
+
+.range__toggle--max {
+  right: -5px;
+}
+
+.range__toggle--max:hover,
+.range__toggle--max:active {
+  right: -10px;
+}
+
+.filter__open-fieldset {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 13px;
+  // border-top: 2px solid $bg-macaroni-and-cheese;
+
+  @include tablet {
+    display: inline-block;
+    width: 125px;
+  }
+}
+
+.filter__open-fieldset::after {
+  content: "";
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 14' style='enable-background:new 0 0 10 14;' xml:space='preserve' fill='%23192144'%3E%3Cpolygon points='0,7.1 10,0.1 10,14 '/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  width: 8px;
+  height: 8px;
+  transform: rotate(-90deg);
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.filter__open-fieldset:hover::after {
+  opacity: 0.6;
+}
+
+.filter__open-fieldset:active::after {
+  opacity: 0.3;
+}
+
+input[name="open-fieldset"]:checked ~ .filter__list,
+input[name="open-fieldset"]:checked ~ .filter__range {
+  display: block;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -30px;
+  }
+}
+
+input[name="open-fieldset"]:checked ~ .filter__range {
+  @include tablet {
+    justify-content: flex-end;
+  }
+}
+
+input[name="open-fieldset"]:checked ~ .filter__list--transport {
+  display: flex;
+  flex-direction: row;
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+}
+
+input[name="open-fieldset"]:checked + .filter__open-fieldset::after {
+  transform: rotate(90deg);
 }

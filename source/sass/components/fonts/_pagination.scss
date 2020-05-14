@@ -2,4 +2,13 @@
   @include font(bold, $font-dark-blue);
   @include font-size(20px, 1.5em);
   vertical-align: middle;
+  text-align: center;
+
+  @include common-tablet-desktop {
+    line-height: 50px;
+  }
+}
+
+.pagination__item:hover {
+  color: $font-dark-two-60;
 }

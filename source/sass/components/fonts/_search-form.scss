@@ -1,26 +1,69 @@
 .search__title {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(22.5px, 1em);
+
+  @include common-tablet-desktop {
+    @include font-size(30px, 1em);
+  }
 }
 
-.search legend {
+.search legend,
+.search .filter__open-fieldset {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(16px, 1.13em);
   text-transform: uppercase;
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 1.13em);
+    font-weight: 500;
+  }
 }
 
 .filter__item {
   @include font(normal, $font-greyish-brown);
   @include font-size(15px, 1em);
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 1em);
+  }
+}
+
+.filter__item:hover {
+  color: $font-greyish-brown-60;
+}
+
+.filter__item:active {
+  color: $font-greyish-brown-30;
+}
+
+.filter__open-fieldset:hover {
+  color: $font-dark-slate-blue-60;
+}
+
+.filter__open-fieldset:active {
+  color: $font-dark-slate-blue-30;
 }
 
 .search input[name="range__item--min"],
 .search input[name="range__item--max"] {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(15px, 0.9em);
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 0.9em);
+    font-weight: 500;
+  }
 }
 
 .search__submit {
   @include font(bold, $font-dark-blue);
   @include font-size(17px, 1.76em);
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 1.76em);
+  }
+}
+
+.search__submit:active {
+  color: $font-dark-two-30;
 }

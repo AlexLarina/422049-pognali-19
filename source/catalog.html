@@ -404,7 +404,11 @@
             <h3 class="search__title">Подберите идеального попутчика</h3>
 
             <fieldset class="search__filter filter">
-              <legend>Хобби</legend>
+              <legend class="visually-hidden">Хобби</legend>
+
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-hobby">
+              <label for="open-fieldset-hobby" class="filter__open-fieldset">Хобби</label>
+
               <ul class="filter__list filter__list--checkbox">
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="interest--gym" value="gym" id="interest--gym" checked>
@@ -424,7 +428,11 @@
             </fieldset>
 
             <fieldset class="search__filter filter">
-              <legend>Музыка</legend>
+              <legend class="visually-hidden">Музыка</legend>
+
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-music" checked>
+              <label for="open-fieldset-music" class="filter__open-fieldset">Музыка</label>
+
               <ul class="filter__list filter__list--checkbox">
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="music--hard-rock" value="hard-rock" id="music--hard-rock" checked>
@@ -444,7 +452,11 @@
             </fieldset>
 
             <fieldset class="search__filter filter">
-              <legend>Еда</legend>
+              <legend class="visually-hidden">Еда</legend>
+
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-food">
+              <label for="open-fieldset-food" class="filter__open-fieldset">Еда</label>
+
               <ul class="filter__list filter__list--checkbox">
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="meal--meat" value="meat" id="meal--meat" checked>
@@ -463,33 +475,41 @@
               </ul>
             </fieldset>
 
-            <fieldset class="search__filter filter">
-              <legend>Транспорт</legend>
-              <ul class="filter__list filter__list--checkbox">
+            <fieldset class="search__filter filter filter--transport">
+              <legend class="visually-hidden">Транспорт</legend>
+
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-transport" checked>
+              <label for="open-fieldset-transport" class="filter__open-fieldset">Транспорт</label>
+
+              <ul class="filter__list filter__list--checkbox filter__list--transport">
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="transport--plane" value="plane" id="transport--plane" checked>
-                  <label for="transport--plane" class="filter__checkbox"></label>
+                  <label for="transport--plane" class="filter__transport-label filter__transport-label--plane"></label>
                 </li>
 
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="transport--bus" value="bus" id="transport--bus" checked>
-                  <label for="transport--bus" class="filter__checkbox"></label>
+                  <label for="transport--bus" class="filter__transport-label filter__transport-label--bus"></label>
                 </li>
 
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="transport--bike" value="bike" id="transport--bike">
-                  <label for="transport--bike" class="filter__checkbox"></label>
+                  <label for="transport--bike" class="filter__transport-label filter__transport-label--bike"></label>
                 </li>
 
                 <li class="filter__item">
                   <input class="visually-hidden" type="checkbox" name="transport--foot" value="foot" id="transport--foot" checked>
-                  <label for="transport--foot" class="filter__checkbox"></label>
+                  <label for="transport--foot" class="filter__transport-label filter__transport-label--foot"></label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset class="search__filter filter">
-              <legend>Левел</legend>
+              <legend class="visually-hidden">Левел</legend>
+
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-level" checked>
+              <label for="open-fieldset-level" class="filter__open-fieldset">Левел</label>
+
               <div class="filter__range range">
                 <div class="range__price-controls">
                   <span class="range__item range__item--min">

@@ -142,6 +142,11 @@
 .companions__show-more {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(17px, 1.76em);
+  text-transform: uppercase;
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 1.5em);
+  }
 }
 
 .transport__title {
