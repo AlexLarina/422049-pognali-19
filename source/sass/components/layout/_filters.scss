@@ -18,6 +18,14 @@
 
 .filters__title {
   margin: 0;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    margin-right: 15px;
+  }
 }
 
 .filters__title::before {
@@ -32,11 +40,33 @@
 
 .filters__wrapper {
   display: none;
+
+  @include common-tablet-desktop {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
-.filters input[type="checkbox"] {
+.filters__toggle {
   width: 0;
   height: 0;
+
+  @include common-tablet-desktop {
+    display: none;
+  }
+}
+
+input[id="filters__alphabet-toggle"] {
+  display: none;
+
+  @include common-tablet-desktop {
+    width: 0;
+    height: 0;
+  }
 }
 
 .filters__points-button {
@@ -45,11 +75,18 @@
   height: 17px;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 27 5' style='enable-background:new 0 0 27 5;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23192144;%7D%0A%3C/style%3E%3Ccircle class='st0' cx='2.5' cy='2.5' r='2.5'/%3E%3Ccircle class='st0' cx='13.5' cy='2.5' r='2.5'/%3E%3Ccircle class='st0' cx='24.5' cy='2.5' r='2.5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position-y: 50%;
+  background-position: 100% 50%;
+  background-size: 17px 17px;
   cursor: pointer;
+
+  @include common-tablet-desktop {
+    display: none;
+    width: auto;
+    height: auto;
+  }
 }
 
-.filters input[type="checkbox"]:checked ~ .filters__wrapper {
+.filters input[id="filters__toggle"]:checked ~ .filters__wrapper {
   display: block;
   width: 100%;
   margin-top: 35px;
@@ -59,12 +96,81 @@
   }
 }
 
+.filters input[id="filters__alphabet-toggle"]:checked ~ .filters__alphabet-wrapper {
+  @include common-tablet-desktop {
+    display: block;
+  }
+}
+
+.filters input[id="filters__alphabet-toggle"]:checked ~ .filters__close {
+  @include common-tablet-desktop {
+    display: block;
+  }
+}
+
+.filters__show-button:hover {
+  opacity: 0.6;
+}
+
+.filters__show-button:active {
+  opacity: 0.3;
+}
+
+
+.filters__show-button .filters__collapse {
+  display: none;
+}
+
+.filters input[id="filters__alphabet-toggle"]:checked ~ .filters__show-button .filters__show-all-filters {
+  display: none;
+}
+
+.filters input[id="filters__alphabet-toggle"]:checked ~ .filters__show-button .filters__collapse {
+  display: block;
+}
+
 .filters input[type="checkbox"]:checked + .filters__points-button {
   display: inline-block;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18.6 18.6' style='enable-background:new 0 0 18.6 18.6;' xml:space='preserve' fill='%23192144'%3E%3Cpath d='M11.4,9.3l6.7-6.7c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L9.3,7.2L2.6,0.4C2-0.1,1-0.1,0.4,0.4C-0.1,1-0.1,2,0.4,2.6l6.7,6.7 L0.4,16c-0.6,0.6-0.6,1.5,0,2.1s1.5,0.6,2.1,0l6.7-6.7l6.7,6.7c0.6,0.6,1.5,0.6,2.1,0s0.6-1.5,0-2.1L11.4,9.3z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   width: 12px;
   height: 12px;
+  background-size: 12px 12px;
+
+  @include common-tablet-desktop {
+    display: none;
+  }
+}
+
+.filters__show-button {
+  display: none;
+  cursor: pointer;
+
+  @include common-tablet-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 27px;
+    max-width: 160px;
+
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 27 5' style='enable-background:new 0 0 27 5;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23192144;%7D%0A%3C/style%3E%3Ccircle class='st0' cx='2.5' cy='2.5' r='2.5'/%3E%3Ccircle class='st0' cx='13.5' cy='2.5' r='2.5'/%3E%3Ccircle class='st0' cx='24.5' cy='2.5' r='2.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 17px 17px;
+  }
+
+  @include desktop {
+    margin-left: auto;
+    margin-top: -25px;
+  }
+}
+
+.filters input[type="checkbox"]:checked + .filters__show-button {
+  @include common-tablet-desktop {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18.6 18.6' style='enable-background:new 0 0 18.6 18.6;' xml:space='preserve' fill='%23192144'%3E%3Cpath d='M11.4,9.3l6.7-6.7c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L9.3,7.2L2.6,0.4C2-0.1,1-0.1,0.4,0.4C-0.1,1-0.1,2,0.4,2.6l6.7,6.7 L0.4,16c-0.6,0.6-0.6,1.5,0,2.1s1.5,0.6,2.1,0l6.7-6.7l6.7,6.7c0.6,0.6,1.5,0.6,2.1,0s0.6-1.5,0-2.1L11.4,9.3z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+  }
 }
 
 .continents {
@@ -75,10 +181,16 @@
   @include common-tablet-desktop {
     display: flex;
     flex-direction: row;
+
+    padding: 0;
+  }
+
+  @include tablet {
+    max-width: 80%;
   }
 
   @include desktop {
-    margin-left: 250px;
+    margin-left: 280px;
     margin-top: -25px;
   }
 }
@@ -135,7 +247,13 @@
   display: flex;
   flex-direction: column;
 
-  @include tablet {
+  @include common-tablet-desktop {
+    display: none;
+  }
+}
+
+input[id="filters__alphabet-toggle"]:checked + .filters__alphabet-wrapper {
+  @include common-tablet-desktop {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -227,4 +345,13 @@
     padding-top: 35px;
     padding-bottom: 35px;
   }
+
+  @include common-tablet-desktop {
+    display: none;
+  }
+}
+
+.filters__close:hover,
+.filters__close:active {
+  background-color: $bg-light-blue-grey-four;
 }

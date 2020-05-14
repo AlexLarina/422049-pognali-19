@@ -18,8 +18,22 @@
   }
 }
 
+.continents__item:hover button {
+  color: $font-dark-blue-grey-60;
+}
+
+.continents__item:active button {
+  color: $font-blue-grey;
+}
+
 .continents__item--active button {
   color: $font-blue-grey;
+}
+
+label[for="filters__alphabet-toggle"] {
+  @include font-size(20px, 1.2em);
+  @include font(bold, $font-blue-grey);
+  text-transform: uppercase;
 }
 
 .alphabet__letter {
@@ -75,4 +89,8 @@
   @include common-tablet-desktop {
     @include font-size(20px, 1.5em);
   }
+}
+
+.filters__close:active {
+  color: $font-dark-slate-blue-30;
 }
