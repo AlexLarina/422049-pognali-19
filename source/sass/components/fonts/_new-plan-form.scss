@@ -67,6 +67,11 @@ label[for="trips__toggle"] {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(14px, 1.4em);
   text-transform: uppercase;
+
+  @include common-tablet-desktop {
+    @include font(500, $font-dark-slate-blue);
+    @include font-size(20px, 0.9em);
+  }
 }
 
 .trip__title {

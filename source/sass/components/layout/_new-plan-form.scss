@@ -214,11 +214,165 @@
 
 .form__trips-item {
   padding: 0;
+  position: relative;
 
   @include desktop {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+.form--route .form__trips-item::after {
+  content: "";
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 5 10' style='enable-background:new 0 0 5 10;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23cbced9;%7D%0A%3C/style%3E%3Cpolygon class='st0' points='3,8.1 3,0 2,0 2,8.1 0,6.1 0,7.5 2.5,10 5,7.5 5,6.1 '/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 10px;
+  position: absolute;
+  right: 51px;
+  bottom: -15px;
+
+  @include common-tablet-desktop {
+    display: none;
+  }
+}
+
+.form--route .form__item {
+  @include common-tablet-desktop {
+    padding-top: 40px;
+    border-top: 1px solid $bg-cloudy-blue;
+
+    position: relative;
+  }
+}
+
+.form--route .form__item::before {
+  @include common-tablet-desktop {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    background-color: $bg-cloudy-blue;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 139px;
+    z-index: 1;
+  }
+
+  @include desktop {
+    right: 211px;
+  }
+}
+
+.form--route .trip {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  @include common-tablet-desktop {
+    // проверить
+    height: 70px;
+  }
+
+  @include desktop {
+    align-items: stretch;
+  }
+}
+
+.trip__country-flag {
+  width: 53px;
+  border: 1px solid $bg-cloudy-blue;
+  border-radius: 4px;
+  border-left: none;
+  position: relative;
+
+  @include tablet {
+    margin-left: 20px;
+    padding-left: 20px;
+
+    width: 100%;
+    max-width: 130px;
+    border: none;
+  }
+
+  @include desktop {
+    margin-left: 35px;
+    padding-left: 35px;
+
+    width: 100%;
+    max-width: 215px;
+    border: none;
+  }
+}
+
+.trip__country-flag::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: $bg-dark-slate-blue;
+  border-radius: 50%;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include common-tablet-desktop {
+    width: 15px;
+    height: 15px;
+    z-index: 2;
+  }
+}
+
+.trip__country-flag--bosnia {
+  background-image: url("../../../img/flags/Bosnia_mobile.png");
+  background-repeat: no-repeat;
+  background-size: 35px 24px;
+  background-position: 50% 50%;
+
+  @include common-tablet-desktop {
+    background-image: url("../../../img/flags/Bosnia_tablet.png");
+    background-size: 70px 47px;
+  }
+}
+
+.trip__country-flag--czech {
+  background-image: url("../../../img/flags/Czech_mobile.png");
+  background-repeat: no-repeat;
+  background-size: 35px 24px;
+  background-position: 50% 50%;
+
+  @include common-tablet-desktop {
+    background-image: url("../../../img/flags/Czech_desktop.png");
+    background-size: 70px 47px;
+  }
+}
+
+.trip__delete {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: $bg-grey;
+  border: none;
+
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 1;
+
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18.6 18.6' style='enable-background:new 0 0 18.6 18.6;' xml:space='preserve' fill='%23cbced9'%3E%3Cpath d='M11.4,9.3l6.7-6.7c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L9.3,7.2L2.6,0.4C2-0.1,1-0.1,0.4,0.4C-0.1,1-0.1,2,0.4,2.6l6.7,6.7 L0.4,16c-0.6,0.6-0.6,1.5,0,2.1s1.5,0.6,2.1,0l6.7-6.7l6.7,6.7c0.6,0.6,1.5,0.6,2.1,0s0.6-1.5,0-2.1L11.4,9.3z'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  background-position: 50% 50%;
+
+  @include common-tablet-desktop {
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: 17px 17px;
+    background-color: inherit;
   }
 }
 
@@ -263,12 +417,55 @@
   text-align: left;
   border-radius: 4px;
 
+  position: relative;
+
   @include tablet {
     max-width: 369px;
+    // check
+    height: 70px;
   }
 
   @include desktop {
     max-width: 730px;
+    // check
+    height: 70px;
+  }
+}
+
+.form__add-country::before,
+.form__add-country::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
+
+.form__add-country::before {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 14 14' style='enable-background:new 0 0 14 14;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23d4d9eb;%7D%0A%3C/style%3E%3Cpolygon class='st0' points='8,6 8,0 6,0 6,6 0,6 0,8 6,8 6,14 8,14 8,8 14,8 14,6 '/%3E%3C/svg%3E%0A");
+  width: 14px;
+  height: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 14px;
+}
+
+.form__add-country::after {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid $bg-cloudy-blue;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 47px;
+
+  @include common-tablet-desktop {
+    width: 15px;
+    height: 15px;
+    right: -32px;
+    background-color: $bg-cloudy-blue;
+  }
+
+  @include desktop {
+    right: -63px;
   }
 }
 
@@ -416,6 +613,14 @@ label[for="trips__toggle"] {
 }
 
 .form__trips-item select {
+  padding-right: 9px;
+  max-width: 168px;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 17 9' style='enable-background:new 0 0 17 9;' xml:space='preserve' fill='%23cbced9'%3E%3Cpath d='M8.5,7.2l-7.2-7C1-0.1,0.5-0.1,0.2,0.2c-0.3,0.3-0.3,0.8,0,1L8,8.8c0.3,0.3,0.8,0.3,1.1,0l7.7-7.5C16.9,1.1,17,0.9,17,0.7 s-0.1-0.4-0.2-0.5c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.2z'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: 12px 7px;
+  background-position: 90% 50%;
+
   @include tablet {
     max-width: 369px;
   }
@@ -488,6 +693,62 @@ label[for="trips__toggle"] {
   }
 }
 
+.form__trips-item .dropdown__alphabet {
+  padding-top: 0;
+}
+
+.form__trips-item--add-country {
+  position: relative;
+}
+
+.form__trips-item .trips__toggle-button {
+  position: relative;
+
+  @include common-tablet-desktop {
+    // check it
+    height: 70px;
+  }
+}
+
+.form__trips-item .trips__toggle-button::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 17 9' style='enable-background:new 0 0 17 9;' xml:space='preserve' fill='%23cbced9'%3E%3Cpath d='M8.5,7.2l-7.2-7C1-0.1,0.5-0.1,0.2,0.2c-0.3,0.3-0.3,0.8,0,1L8,8.8c0.3,0.3,0.8,0.3,1.1,0l7.7-7.5C16.9,1.1,17,0.9,17,0.7 s-0.1-0.4-0.2-0.5c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.2z'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 7px;
+}
+
+.form__trips-item .trips__toggle-button::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid $bg-cloudy-blue;
+
+  top: 50%;
+  transform: translateY(-50%);
+  right: 47px;
+
+  @include common-tablet-desktop {
+    width: 15px;
+    height: 15px;
+    right: -32px;
+    background-color: $bg-white;
+    z-index: 2;
+  }
+
+  @include desktop {
+    right: -62px;
+  }
+}
+
 .dropdown__alphabet .alphabet__letter {
   @include desktop {
     margin-right: 12px;
@@ -542,5 +803,115 @@ label[for="trips__toggle"] {
 
   @include desktop {
     max-width: 730px;
+  }
+}
+
+.form--entertainment .trip__title {
+  position: relative;
+  padding-left: 15px;
+  width: 100%;
+}
+
+.form--entertainment .trip__title::before,
+.form--entertainment .trip__title::after {
+  content: "";
+  display: inline-block;
+}
+
+.form--entertainment .trip__title::before {
+  width: 6px;
+  height: 6px;
+  background-color: $bg-dark-slate-blue;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include common-tablet-desktop {
+    width: 15px;
+    height: 15px;
+    left: unset;
+    right: -20px;
+  }
+}
+
+.form--entertainment .trip__title::after {
+  width: 35px;
+  height: 24px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include common-tablet-desktop {
+    width: 70px;
+    height: 47px;
+  }
+
+  @include desktop {
+    right: -100px;
+  }
+}
+
+.form--entertainment .trip__title--bosnia::after {
+  background-image: url("../../../img/flags/Bosnia_mobile.png");
+
+  @include common-tablet-desktop {
+    background-image: url("../../../img/flags/Bosnia_tablet.png");
+  }
+}
+
+.form--entertainment .trip__title--czech::after {
+  background-image: url("../../../img/flags/Czech_mobile.png");
+
+  @include common-tablet-desktop {
+    background-image: url("../../../img/flags/Czech_desktop.png");
+  }
+}
+
+.form--entertainment .form__trips-item {
+  position: relative;
+}
+
+.form--entertainment .form__trips-item::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 2px;
+  background-color: $bg-dark-slate-blue;
+  position: absolute;
+  top: 8px;
+  left: -10px;
+
+  @include common-tablet-desktop {
+    display: none;
+  }
+}
+
+.form--entertainment .form__trips-list {
+  position: relative;
+}
+
+.form--entertainment .form__trips-list::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: $bg-dark-slate-blue;
+  left: -10px;
+  top: 8px;
+  max-height: 285px;
+
+  @include tablet {
+    left: unset;
+    width: 3px;
+    right: -14px;
+  }
+
+  @include desktop {
+    left: unset;
+    width: 3px;
+    right: -14px;
   }
 }

@@ -286,7 +286,7 @@
         </form>
 
         <form>
-          <div class="new-plan__form form">
+          <div class="new-plan__form form form--route">
 
             <div class="form__introduction">
               <div class="form__title-wrapper">
@@ -317,15 +317,22 @@
                   <select>
                     <option selected>Босния и Герцеговина</option>
                   </select>
+                  <div class="trip__country-flag trip__country-flag--bosnia">
+                    <button class="trip__delete"></button>
+                  </div>
                 </li>
 
                 <li class="form__trips-item trip">
                   <select>
                     <option selected>Чехия</option>
                   </select>
+                  <div class="trip__country-flag trip__country-flag--czech">
+                    <button class="trip__delete"></button>
+                  </div>
                 </li>
 
-                <li class="form__trips-item trip">
+                <li class="form__trips-item form__trips-item--add-country">
+                  <button class="trip__delete"></button>
                   <input id="trips__toggle" type="checkbox" class="trips__toggle">
                   <label class="trips__toggle-button" for="trips__toggle">Выберите страну</label>
 
@@ -389,7 +396,7 @@
         </form>
 
         <form>
-          <div class="new-plan__form form">
+          <div class="new-plan__form form form--entertainment">
             <div class="form__introduction">
               <div class="form__title-wrapper">
                 <h3 class="form__title"><span>Шаг 3.</span> Развлечения</h3>
@@ -415,11 +422,11 @@
             </div>
             <ul class="form__trips-list">
               <li class="form__trips-item trip">
-                <h4 class="trip__title">Босния и Герцеговина</h4>
+                <h4 class="trip__title trip__title--bosnia">Босния и Герцеговина</h4>
                 <textarea placeholder="План действий"></textarea>
               </li>
               <li class="form__trips-item trip">
-                <h4 class="trip__title">Чехия</h4>
+                <h4 class="trip__title trip__title--czech">Чехия</h4>
                 <textarea placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
                 </textarea>
               </li>
