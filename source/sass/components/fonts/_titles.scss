@@ -10,5 +10,6 @@
   @include common-tablet-desktop {
     @include font(bold, $font-white);
     @include font-size(20px, 1.2em);
+    text-transform: uppercase;
   }
 }
