@@ -115,6 +115,16 @@
   }
 }
 
+.transport--form .transport__item {
+  height: auto;
+  width: 33px;
+  margin-right: 0;
+
+  @include common-tablet-desktop {
+    width: 43px;
+  }
+}
+
 .tags--form .tags__title {
   @include desktop {
     left: 50px;
