@@ -279,6 +279,10 @@ input[id="filters__alphabet-toggle"]:checked + .filters__alphabet-wrapper {
   }
 }
 
+.dropdown__alphabet .alphabet__letter:active {
+  color: $font-white;
+}
+
 .alphabet__letter--active {
   background-color: $bg-dark-slate-blue;
 }

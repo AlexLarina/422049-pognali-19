@@ -131,25 +131,63 @@
   border-radius: 4px;
   background-color: inherit;
 
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 14px 2px;
+
   @include desktop {
     top: unset;
   }
 }
 
 .form__item .button--decrease {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 14px 2px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 2' style='enable-background:new 0 0 20 2;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%0A%23cbced9;%7D%0A%3C/style%3E%3Crect class='st0' width='20' height='2'/%3E%3Crect class='st0' width='20' height='2'/%3E%3C/svg%3E ");
+
   left: 1px;
+
+  @include common-tablet-desktop {
+    background-size: 20px 2px;
+  }
 
   @include desktop {
     left: 219px;
   }
 }
 
+.form__item .button--decrease:hover {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 2' style='enable-background:new 0 0 20 2;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23959bb2;%7D%0A%3C/style%3E%3Crect class='st0' width='20' height='2'/%3E%3Crect class='st0' width='20' height='2'/%3E%3C/svg%3E ");
+}
+
+.form__item .button--decrease:active {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 2' style='enable-background:new 0 0 20 2;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23161c35;%7D%0A%3C/style%3E%3Crect class='st0' width='20' height='2'/%3E%3Crect class='st0' width='20' height='2'/%3E%3C/svg%3E ");
+}
+
 .form__item .button--increase {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 14px 14px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 20' style='enable-background:new 0 0 20 20;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%0A%23cbced9;%7D%0A%3C/style%3E%3Cpolygon class='st0' points='20,9 11,9 11,0 9,0 9,9 0,9 0,11 9,11 9,20 11,20 11,11 20,11 '/%3E%3C/svg%3E ");
+
   right: 1px;
+
+  @include common-tablet-desktop {
+    background-size: 20px 20px;
+  }
 
   @include desktop {
     right: 100px;
   }
+}
+
+.form__item .button--increase:hover {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 20' style='enable-background:new 0 0 20 20;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%0A%23959bb2;%7D%0A%3C/style%3E%3Cpolygon class='st0' points='20,9 11,9 11,0 9,0 9,9 0,9 0,11 9,11 9,20 11,20 11,11 20,11 '/%3E%3C/svg%3E ");
+}
+
+.form__item .button--increase:active {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 20' style='enable-background:new 0 0 20 20;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%0A%23161c35;%7D%0A%3C/style%3E%3Cpolygon class='st0' points='20,9 11,9 11,0 9,0 9,9 0,9 0,11 9,11 9,20 11,20 11,11 20,11 '/%3E%3C/svg%3E ");
 }
 
 .form__item input[type="number"] {
@@ -162,6 +200,14 @@
   @include desktop {
     max-width: 181px;
   }
+}
+
+.form__item input[type="number"]:hover {
+  border-color: $bg-bluey-grey;
+}
+
+.form__item input[type="number"]:active {
+  border-color: $bg-dark-two;
 }
 
 .form__item--children {
@@ -195,16 +241,33 @@
   left: 0;
 }
 
+.form__item--children label:hover::before {
+  border-color: $bg-bluey-grey;
+}
+
+.form__item--children label:active::before {
+  border-color: $bg-pale-grey-three;
+  background-color: $bg-pale-grey-three;
+}
+
 .form__item--children label::after {
   content: "";
-  display: inline-block;
+  display: none;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 12 12' style='enable-background:new 0 0 12 12;' xml:space='preserve' fill='%23192144'%3E%3Cpolygon points='12,0 3.8,8 0,4.3 0,8.3 3.8,12 12,4 '/%3E%3C/svg%3E%0A");
   width: 9px;
   height: 9px;
 
   position: absolute;
   left: 9px;
-  top: 2px;
+  top: 4px;
+}
+
+.form__item--children label:active::after {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 12 12' style='enable-background:new 0 0 12 12;' xml:space='preserve' fill='%23192144' opacity='0.3'%3E%3Cpolygon points='12,0 3.8,8 0,4.3 0,8.3 3.8,12 12,4 '/%3E%3C/svg%3E ");
+}
+
+input[name="children-allowed"]:checked + label::after {
+  display: inline-block;
 }
 
 .form__trips-list {
@@ -390,11 +453,23 @@
   border: none;
   padding: 5px 0;
   border-radius: 20px;
+  cursor: pointer;
 
   @include common-tablet-desktop {
+    @include gold-button();
+    border: none;
     max-width: 285px;
-    padding: 28px 0;
+    padding: 28px 34px;
   }
+}
+
+.form__submit:hover,
+.form__submit:active {
+  @include gold-button-hover();
+}
+
+.form__submit:active {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 14' style='enable-background:new 0 0 10 14;' xml:space='preserve' fill='%231d2e5b' opacity='0.3'%3E%3Cpolygon points='0,14 0,0.1 10,7.1 '/%3E%3C/svg%3E%0A");
 }
 
 .form__back {
@@ -404,9 +479,24 @@
   margin-top: 15px;
 
   @include common-tablet-desktop {
+    margin-top: 0;
     max-width: 200px;
     margin-left: auto;
+    padding-left: 24px;
+
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 14' style='enable-background:new 0 0 10 14;' xml:space='preserve' fill='%231d2e5b'%3E%3Cpolygon points='0,7.1 10,0.1 10,14 '/%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: 10px 14px;
   }
+}
+
+.form__back:hover {
+  opacity: 0.7;
+}
+
+.form__back:active {
+  opacity: 0.3;
 }
 
 .form__add-country {
@@ -432,6 +522,15 @@
   }
 }
 
+.form__add-country:hover,
+.form__add-country:active {
+  background-color: $bg-cloudy-blue;
+}
+
+.form__add-country:active {
+  opacity: 0.3;
+}
+
 .form__add-country::before,
 .form__add-country::after {
   content: "";
@@ -446,6 +545,12 @@
   top: 50%;
   transform: translateY(-50%);
   right: 14px;
+
+  @include common-tablet-desktop {
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .form__add-country::after {
@@ -533,13 +638,59 @@
   align-items: center;
   justify-content: space-between;
 
-  border-top: 1px solid $bg-cloudy-blue;
-  border-bottom: 1px solid $bg-cloudy-blue;
+  border-top: 1px solid $bg-light-blue-grey-two;
+  border-bottom: 1px solid $bg-light-blue-grey-two;
 }
 
 .month button {
   border: 0;
   background-color: inherit;
+}
+
+.month__prev button,
+.month__next button {
+  padding: 0;
+  background-size: 9px 17px;
+  width: 9px;
+  height: 17px;
+
+  @include tablet {
+    background-size: 15px 28px;
+    width: 15px;
+    height: 28px;
+  }
+
+  @include desktop {
+    background-size: 18px 34px;
+    width: 18px;
+    height: 34px;
+  }
+}
+
+.month__prev button {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18 34' style='enable-background:new 0 0 18 34;' xml:space='preserve' fill='%23bebcbd'%3E%3Cpath d='M3.6,17l14-14.4c0.6-0.6,0.6-1.6,0-2.1c-0.6-0.6-1.5-0.6-2.1,0L0.4,15.9c-0.6,0.6-0.6,1.6,0,2.1l15.1,15.5 c0.3,0.3,0.7,0.4,1,0.4s0.8-0.1,1-0.4c0.6-0.6,0.6-1.6,0-2.1L3.6,17z'/%3E%3C/svg%3E ");
+  background-repeat: no-repeat;
+}
+
+.month__next button {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18 34' style='enable-background:new 0 0 18 34;' xml:space='preserve' fill='%23bebcbd'%3E%3Cpath d='M14.4,17L0.4,2.6C-0.1,2-0.1,1,0.4,0.4c0.6-0.6,1.5-0.6,2.1,0l15.1,15.5c0.6,0.6,0.6,1.6,0,2.1L2.5,33.6 c-0.3,0.3-0.7,0.4-1,0.4s-0.8-0.1-1-0.4c-0.6-0.6-0.6-1.6,0-2.1L14.4,17z'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+}
+
+.month__prev button:hover {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18 34' style='enable-background:new 0 0 18 34;' xml:space='preserve' fill='%23949292'%3E%3Cpath d='M3.6,17l14-14.4c0.6-0.6,0.6-1.6,0-2.1c-0.6-0.6-1.5-0.6-2.1,0L0.4,15.9c-0.6,0.6-0.6,1.6,0,2.1l15.1,15.5 c0.3,0.3,0.7,0.4,1,0.4s0.8-0.1,1-0.4c0.6-0.6,0.6-1.6,0-2.1L3.6,17z'/%3E%3C/svg%3E ");
+}
+
+.month__next button:hover {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18 34' style='enable-background:new 0 0 18 34;' xml:space='preserve' fill='%23949292'%3E%3Cpath d='M14.4,17L0.4,2.6C-0.1,2-0.1,1,0.4,0.4c0.6-0.6,1.5-0.6,2.1,0l15.1,15.5c0.6,0.6,0.6,1.6,0,2.1L2.5,33.6 c-0.3,0.3-0.7,0.4-1,0.4s-0.8-0.1-1-0.4c-0.6-0.6-0.6-1.6,0-2.1L14.4,17z'/%3E%3C/svg%3E%0A");
+}
+
+.month__prev button:active {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18 34' style='enable-background:new 0 0 18 34;' xml:space='preserve' fill='%23eeeded'%3E%3Cpath d='M3.6,17l14-14.4c0.6-0.6,0.6-1.6,0-2.1c-0.6-0.6-1.5-0.6-2.1,0L0.4,15.9c-0.6,0.6-0.6,1.6,0,2.1l15.1,15.5 c0.3,0.3,0.7,0.4,1,0.4s0.8-0.1,1-0.4c0.6-0.6,0.6-1.6,0-2.1L3.6,17z'/%3E%3C/svg%3E ");
+}
+
+.month__next button:active {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18 34' style='enable-background:new 0 0 18 34;' xml:space='preserve' fill='%23eeeded'%3E%3Cpath d='M14.4,17L0.4,2.6C-0.1,2-0.1,1,0.4,0.4c0.6-0.6,1.5-0.6,2.1,0l15.1,15.5c0.6,0.6,0.6,1.6,0,2.1L2.5,33.6 c-0.3,0.3-0.7,0.4-1,0.4s-0.8-0.1-1-0.4c-0.6-0.6-0.6-1.6,0-2.1L14.4,17z'/%3E%3C/svg%3E%0A");
 }
 
 .calendar__weekdays {
@@ -591,17 +742,56 @@
   border-bottom: 1px solid $bg-cloudy-blue;
 }
 
-.days__item--selected {
+.days__item button {
+  width: 100%;
+  height: 100%;
+  background-color: $bg-pale-grey;
+  border: none;
+  color: inherit;
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.days__item button:disabled {
+  background-color: inherit;
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.days__event-date,
+.days__event {
+  margin: 0;
+}
+
+.days__event-date {
+  margin-bottom: auto;
+}
+
+.days__event {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.days__item--selected button {
   background-color: $font-dark-slate-blue;
 }
 
-.days__item--current {
+.days__item button:not(:disabled):hover {
   border: 2px solid $bg-orange-red;
   border-right: 2px solid $bg-orange-red;
-}
-
-.days__item--following {
-  background-color: $bg-pale-grey;
 }
 
 .form__trips-item select,
@@ -621,6 +811,10 @@ label[for="trips__toggle"] {
   background-size: 12px 7px;
   background-position: 90% 50%;
 
+  @include common-tablet-desktop {
+    background-size: 17px 9px;
+  }
+
   @include tablet {
     max-width: 369px;
   }
@@ -628,6 +822,11 @@ label[for="trips__toggle"] {
   @include desktop {
     max-width: 730px;
   }
+}
+
+.form__trips-item select:hover,
+label[for="trips__toggle"]:hover {
+  border-color: $bg-bluey-grey;
 }
 
 .form__trips-item input[id="trips__toggle"] {
@@ -656,14 +855,26 @@ label[for="trips__toggle"] {
   box-shadow: 0 20px 50px 0 $bg-dark-slate-blue-10;
   border: 1px solid $bg-cloudy-blue;
   border-top: none;
+  background-color: $bg-white;
+  border-radius: 0 0 10px 10px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: -465px;
+  left: 0;
 
   @include common-tablet-desktop {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 
-    padding: 0 25px 0 25px;
+    padding: 35px 25px 0 25px;
     min-height: 476px;
+    bottom: -476px;
+  }
+
+  @include tablet {
+    width: 575px;
   }
 
   @include desktop {
@@ -674,6 +885,27 @@ label[for="trips__toggle"] {
 .form__trips-item input[id="trips__toggle"]:checked + label[for="trips__toggle"] {
   background-color: $bg-dark-slate-blue;
   border-radius: 4px 4px 0 0;
+}
+
+input[id="trips__toggle"]:checked + label[for="trips__toggle"]::before {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18.6 18.6' style='enable-background:new 0 0 18.6 18.6;' xml:space='preserve' fill='%23cbced9'%3E%3Cpath d='M11.4,9.3l6.7-6.7c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L9.3,7.2L2.6,0.4C2-0.1,1-0.1,0.4,0.4C-0.1,1-0.1,2,0.4,2.6l6.7,6.7 L0.4,16c-0.6,0.6-0.6,1.5,0,2.1s1.5,0.6,2.1,0l6.7-6.7l6.7,6.7c0.6,0.6,1.5,0.6,2.1,0s0.6-1.5,0-2.1L11.4,9.3z'/%3E%3C/svg%3E%0A");
+  background-size: 9px 9px;
+  width: 9px;
+  height: 9px;
+
+  @include common-tablet-desktop {
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+input[id="trips__toggle"]:checked + label[for="trips__toggle"]:hover::before {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18.6 18.6' style='enable-background:new 0 0 18.6 18.6;' xml:space='preserve' fill='white'%3E%3Cpath d='M11.4,9.3l6.7-6.7c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L9.3,7.2L2.6,0.4C2-0.1,1-0.1,0.4,0.4C-0.1,1-0.1,2,0.4,2.6l6.7,6.7 L0.4,16c-0.6,0.6-0.6,1.5,0,2.1s1.5,0.6,2.1,0l6.7-6.7l6.7,6.7c0.6,0.6,1.5,0.6,2.1,0s0.6-1.5,0-2.1L11.4,9.3z'/%3E%3C/svg%3E%0A");
+}
+
+input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18.6 18.6' style='enable-background:new 0 0 18.6 18.6;' xml:space='preserve' fill='white' opacity='10%25'%3E%3Cpath d='M11.4,9.3l6.7-6.7c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L9.3,7.2L2.6,0.4C2-0.1,1-0.1,0.4,0.4C-0.1,1-0.1,2,0.4,2.6l6.7,6.7 L0.4,16c-0.6,0.6-0.6,1.5,0,2.1s1.5,0.6,2.1,0l6.7-6.7l6.7,6.7c0.6,0.6,1.5,0.6,2.1,0s0.6-1.5,0-2.1L11.4,9.3z'/%3E%3C/svg%3E%0A");
 }
 
 .dropdown__alphabet {
@@ -721,6 +953,12 @@ label[for="trips__toggle"] {
   background-repeat: no-repeat;
   width: 12px;
   height: 7px;
+
+  @include common-tablet-desktop {
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .form__trips-item .trips__toggle-button::after {
@@ -755,7 +993,12 @@ label[for="trips__toggle"] {
     margin-bottom: 12px;
     border-right: 1px solid $bg-cloudy-blue;
     border-bottom: 1px solid $bg-cloudy-blue;
+    border-radius: 4px;
   }
+}
+
+.dropdown__alphabet .alphabet__letter:active {
+  background-color: $bg-dark-slate-blue;
 }
 
 .dropdown__alphabet .alphabet__letter:nth-child(-n + 5) {
@@ -782,6 +1025,10 @@ label[for="trips__toggle"] {
   }
 }
 
+.dropdown__alphabet .alphabet__letter:hover {
+  border-color: $bg-bluey-grey;
+}
+
 .dropdown__letter {
   list-style: none;
   padding: 17px 0 17px 20px;
@@ -790,6 +1037,10 @@ label[for="trips__toggle"] {
     padding-top: 35px;
     border-left: 1px solid $bg-cloudy-blue;
   }
+}
+
+.dropdown__letter .letter__item {
+  cursor: pointer;
 }
 
 .form__trips-item textarea {
@@ -804,6 +1055,14 @@ label[for="trips__toggle"] {
   @include desktop {
     max-width: 730px;
   }
+}
+
+.form__trips-item textarea:hover {
+  border-color: $bg-bluey-grey;
+}
+
+.form__trips-item textarea:active {
+  border-color: $bg-dark-two;
 }
 
 .form--entertainment .trip__title {

@@ -81,6 +81,14 @@ label[for="filters__alphabet-toggle"] {
   }
 }
 
+.letter__item:hover {
+  color: $bg-dark-slate-blue;
+}
+
+.letter__item:active {
+  color: $bg-dark-slate-blue-30;
+}
+
 .filters__close {
   @include font-size(16.5px, 1.79em);
   @include font(bold, $font-dark-blue);

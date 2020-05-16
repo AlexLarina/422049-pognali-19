@@ -22,6 +22,10 @@
   text-transform: uppercase;
 }
 
+.user__change-avatar:active {
+  color: $font-dark-slate-blue-30;
+}
+
 .tags__title,
 .transport__title {
   @include font(bold, $font-dark-blue);
@@ -32,6 +36,11 @@
 .tags textarea {
   @include font(normal, $font-greyish-brown);
   @include font-size(16px, 1.38em);
+}
+
+.tags textarea::placeholder,
+.tags textarea:hover::placeholder {
+  color: $font-greyish-brown-60;
 }
 
 .transport__item {
