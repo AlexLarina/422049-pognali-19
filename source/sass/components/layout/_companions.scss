@@ -381,6 +381,20 @@
 
   display: flex;
   align-items: center;
+
+  @include tablet {
+    position: static;
+    order: 1;
+    margin-top: -40px;
+    width: auto;
+    margin-left: 0;
+  }
+
+  @include desktop {
+    position: static;
+    width: auto;
+    margin-left: 0;
+  }
 }
 
 .companion__likes--catalog::before {
@@ -471,22 +485,6 @@
 
 .companion__status--online {
   background-color: $bg-green-apple;
-}
-
-.companion__likes--catalog {
-  @include tablet {
-    position: static;
-    order: 1;
-    margin-top: -40px;
-    width: auto;
-    margin-left: 0;
-  }
-
-  @include desktop {
-    position: static;
-    width: auto;
-    margin-left: 0;
-  }
 }
 
 .companions__show-all {
