@@ -58,7 +58,12 @@
 
   @include common-tablet-desktop {
     @include font-size(24px, 1em);
+    text-align: left;
   }
+}
+
+.form__submit:active {
+  color: $font-dark-slate-blue-30;
 }
 
 .trip select,
@@ -67,6 +72,11 @@ label[for="trips__toggle"] {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(14px, 1.4em);
   text-transform: uppercase;
+
+  @include common-tablet-desktop {
+    @include font(500, $font-dark-slate-blue);
+    @include font-size(20px, 0.9em);
+  }
 }
 
 .trip__title {
@@ -120,7 +130,7 @@ label[for="trips__toggle"] {
   }
 }
 
-.days__item {
+.days__item button:disabled {
   @include font(500, $font-greyish-brown-30);
   @include font-size(14px, 1.29em);
   line-height: 30px;

@@ -80,29 +80,31 @@
             <div class="user__avatar">
               <img src="./img/demin-mobile@1x.jpg" width="100" height="100" alt="Аватар пользователя">
             </div>
-            <button class="user__change-avatar" type="button">Сменить фото</button>
+            <button class="user__change-avatar" type="button">
+              <span>Сменить</span> фото
+            </button>
             <div class="user__tags tags tags--form">
               <h4 class="tags__title">Тэги</h4>
-              <textarea>#бургер #бар #футбол #концерт #крафт</textarea>
+              <textarea placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
             <div class="user__transport transport transport--form">
               <h4 class="transport__title transport__title--form">Транспорт</h4>
               <ul class="transport__list">
-                <li class="transport__item transport__item--plane">
-                  <input class="visually-hidden" type="checkbox" name="transport--plane" value="plane" id="transport--plane">
-                  <label for="transport--plane">Самолет</label>
+                <li class="transport__item">
+                  <input class="visually-hidden" type="checkbox" name="transport--plane" value="plane" id="transport--plane" checked>
+                  <label for="transport--plane" class="transport__label transport__label--plane">Самолет</label>
                 </li>
-                <li class="transport__item transport__item--bus">
-                  <input class="visually-hidden" type="checkbox" name="transport--bus" value="bus" id="transport--bus">
-                  <label for="transport--bus">Автобус</label>
+                <li class="transport__item">
+                  <input class="visually-hidden" type="checkbox" name="transport--bus" value="bus" id="transport--bus" checked>
+                  <label for="transport--bus" class="transport__label transport__label--bus">Автобус</label>
                 </li>
-                <li class="transport__item transport__item--bike">
+                <li class="transport__item">
                   <input class="visually-hidden" type="checkbox" name="transport--bike" value="bike" id="transport--bike">
-                  <label for="transport--bus">Велосипед</label>
+                  <label for="transport--bike" class="transport__label transport__label--bike">Велосипед</label>
                 </li>
-                <li class="transport__item transport__item--foot">
-                  <input class="visually-hidden" type="checkbox" name="transport--foot" value="foot" id="transport--foot">
-                  <label for="transport--bus">Пешком</label>
+                <li class="transport__item">
+                  <input class="visually-hidden" type="checkbox" name="transport--foot" value="foot" id="transport--foot" checked>
+                  <label for="transport--foot" class="transport__label transport__label--foot">Пешком</label>
                 </li>
               </ul>
             </div>
@@ -195,17 +197,17 @@
               <div class="form__item form__item--amount">
                 <label for="companions">Ищу попутчиков:</label>
                 <span>чел.</span>
-                <button type="button" class="button button--decrease">-</button>
+                <button type="button" class="button button--decrease"></button>
                 <input type="number" min="0" max="100" value="2" id="companions">
-                <button type="button" class="button button--increase">+</button>
+                <button type="button" class="button button--increase"></button>
               </div>
 
               <div class="form__item form__item--amount form__item--duration">
                 <label for="duration">Длительность:</label>
                 <span>дн.</span>
-                <button type="button" class="button button--decrease">-</button>
+                <button type="button" class="button button--decrease"></button>
                 <input type="number" min="0" max="100" value="2" id="duration">
-                <button type="button" class="button button--increase">+</button>
+                <button type="button" class="button button--increase"></button>
               </div>
 
               <div class="form__item form__item--children">
@@ -215,9 +217,9 @@
             </div>
             <div class="form__item calendar">
               <ul class="calendar__month month">
-                <li class="month__prev"><button>&#10094;</button></li>
+                <li class="month__prev"><button></button></li>
                 <li class="month__current">Март 2019</li>
-                <li class="month__next"><button>&#10095;</button></li>
+                <li class="month__next"><button></button></li>
               </ul>
 
               <ul class="calendar__weekdays weekdays">
@@ -231,53 +233,143 @@
               </ul>
 
               <ul class="calendar__days days">
-                <li class="days__item">23</li>
-                <li class="days__item">24</li>
-                <li class="days__item">25</li>
-                <li class="days__item">26</li>
-                <li class="days__item">27</li>
-                <li class="days__item">28</li>
-                <li class="days__item">1</li>
+                <li class="days__item">
+                  <button disabled>23</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>24</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>25</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>26</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>27</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>28</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>1</button>
+                </li>
 
-                <li class="days__item">2</li>
-                <li class="days__item">3</li>
-                <li class="days__item">4</li>
-                <li class="days__item">5</li>
-                <li class="days__item">6</li>
-                <li class="days__item">7</li>
-                <li class="days__item">8</li>
+                <li class="days__item">
+                  <button disabled>2</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>3</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>4</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>5</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>6</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>7</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>8</button>
+                </li>
 
-                <li class="days__item">9</li>
-                <li class="days__item">10</li>
-                <li class="days__item">11</li>
-                <li class="days__item">12</li>
-                <li class="days__item">13</li>
-                <li class="days__item">14</li>
-                <li class="days__item">15</li>
+                <li class="days__item">
+                  <button disabled>9</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>10</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>11</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>12</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>13</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>14</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>15</button>
+                </li>
 
-                <li class="days__item" >16</li>
-                <li class="days__item">17</li>
-                <li class="days__item">18</li>
-                <li class="days__item">19</li>
-                <li class="days__item">20</li>
-                <li class="days__item">21</li>
-                <li class="days__item">22</li>
+                <li class="days__item">
+                  <button disabled>16</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>17</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>18</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>19</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>20</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>21</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>22</button>
+                </li>
 
-                <li class="days__item">23</li>
-                <li class="days__item">24</li>
-                <li class="days__item">25</li>
-                <li class="days__item days__item--selected days__item--current">26</li>
-                <li class="days__item days__item--selected">27</li>
-                <li class="days__item days__item--selected">28</li>
-                <li class="days__item days__item--following">29</li>
+                <li class="days__item">
+                  <button disabled>23</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>24</button>
+                </li>
+                <li class="days__item">
+                  <button disabled>25</button>
+                </li>
+                <li class="days__item days__item--selected">
+                  <button>
+                    <p class="days__event-date">26</p>
+                    <p class="days__event">Заезд</p>
+                  </button>
+                </li>
+                <li class="days__item days__item--selected">
+                  <button>27</button>
+                </li>
+                <li class="days__item days__item--selected">
+                  <button>
+                    <p class="days__event-date">28</p>
+                    <p class="days__event">Выезд</p>
+                  </button>
+                </li>
+                <li class="days__item">
+                  <button>29</button>
+                </li>
 
-                <li class="days__item days__item--following">30</li>
-                <li class="days__item days__item--following">31</li>
-                <li class="days__item days__item--following">1</li>
-                <li class="days__item days__item--following">2</li>
-                <li class="days__item days__item--following">3</li>
-                <li class="days__item days__item--following">4</li>
-                <li class="days__item days__item--following">5</li>
+                <li class="days__item">
+                  <button>30</button>
+                </li>
+                <li class="days__item">
+                  <button>31</button>
+                </li>
+                <li class="days__item">
+                  <button>1</button>
+                </li>
+                <li class="days__item">
+                  <button>2</button>
+                </li>
+                <li class="days__item">
+                  <button>3</button>
+                </li>
+                <li class="days__item">
+                  <button>4</button>
+                </li>
+                <li class="days__item">
+                  <button>5</button>
+                </li>
               </ul>
             </div>
 
@@ -286,7 +378,7 @@
         </form>
 
         <form>
-          <div class="new-plan__form form">
+          <div class="new-plan__form form form--route">
 
             <div class="form__introduction">
               <div class="form__title-wrapper">
@@ -317,15 +409,22 @@
                   <select>
                     <option selected>Босния и Герцеговина</option>
                   </select>
+                  <div class="trip__country-flag trip__country-flag--bosnia">
+                    <button class="trip__delete"></button>
+                  </div>
                 </li>
 
                 <li class="form__trips-item trip">
                   <select>
                     <option selected>Чехия</option>
                   </select>
+                  <div class="trip__country-flag trip__country-flag--czech">
+                    <button class="trip__delete"></button>
+                  </div>
                 </li>
 
-                <li class="form__trips-item trip">
+                <li class="form__trips-item form__trips-item--add-country">
+                  <button class="trip__delete"></button>
                   <input id="trips__toggle" type="checkbox" class="trips__toggle">
                   <label class="trips__toggle-button" for="trips__toggle">Выберите страну</label>
 
@@ -389,7 +488,7 @@
         </form>
 
         <form>
-          <div class="new-plan__form form">
+          <div class="new-plan__form form form--entertainment">
             <div class="form__introduction">
               <div class="form__title-wrapper">
                 <h3 class="form__title"><span>Шаг 3.</span> Развлечения</h3>
@@ -415,11 +514,11 @@
             </div>
             <ul class="form__trips-list">
               <li class="form__trips-item trip">
-                <h4 class="trip__title">Босния и Герцеговина</h4>
+                <h4 class="trip__title trip__title--bosnia">Босния и Герцеговина</h4>
                 <textarea placeholder="План действий"></textarea>
               </li>
               <li class="form__trips-item trip">
-                <h4 class="trip__title">Чехия</h4>
+                <h4 class="trip__title trip__title--czech">Чехия</h4>
                 <textarea placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
                 </textarea>
               </li>

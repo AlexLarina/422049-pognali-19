@@ -42,3 +42,11 @@
     @include font-size(20px, 0.9em);
   }
 }
+
+.trip__change-button:hover {
+  color: $font-black-60;
+}
+
+.trip__change-button:active {
+  color: $font-black-10;
+}
