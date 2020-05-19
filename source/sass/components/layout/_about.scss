@@ -2,6 +2,10 @@
   background: url("../../../img/about-mobile@1x.png") no-repeat 0% 100%;
   background-size: 292px 352px;
 
+  @include retina {
+    background-image: url("../../../img/about-mobile@2x.png");
+  }
+
   background-color: $bg-dark-blue-grey;
 
   padding: 312px 50px 70px 50px;
@@ -34,6 +38,11 @@
 
   @include tablet {
     background: url("../../../img/about-tablet@1x.png") no-repeat 100% 75%;
+
+    @include retina {
+      background-image: url("../../../img/about-tablet@2x.png");
+    }
+
     background-color: transparent;
     width: 376px;
     height: 548px;
@@ -46,6 +55,11 @@
 
   @include desktop {
     background: url("../../../img/about-desktop@1x.png") no-repeat 100% 75%;
+
+    @include retina {
+      background-image: url("../../../img/about-desktop@2x.png");
+    }
+
     background-color: transparent;
     width: 630px;
     height: 665px;
