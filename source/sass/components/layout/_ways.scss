@@ -8,9 +8,14 @@
 
   position: relative;
 
-  @include tablet {
+  @include common-tablet-desktop {
     background: url("../../../img/flags-back@1x.png") no-repeat 90% 72px;
     background-color: $bg-grey;
+
+    @include retina {
+      background-image: url("../../../img/flags-back@2x.png");
+      background-size: 289px 575px;
+    }
   }
 
   @include desktop {
@@ -18,9 +23,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-
-    background: url("../../../img/flags-back@1x.png") no-repeat 90% 72px;
-    background-color: $bg-grey;
   }
 }
 
@@ -169,16 +171,9 @@
 .way img {
   border-radius: 10px 10px 0 0;
 
-  @include tablet {
+  @include common-tablet-desktop {
     width: 186px;
-    height: auto;
-
-    border-radius: 0 10px 10px 0;
-  }
-
-  @include desktop {
-    width: 186px;
-    height: auto;
+    height: 140px;
 
     border-radius: 0 10px 10px 0;
   }
