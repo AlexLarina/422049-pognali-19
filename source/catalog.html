@@ -12,9 +12,17 @@
     <header class="header header--catalog container">
       <a href="index.html" class="header__logo">
         <picture>
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
-          <img src="img/logo-mobile-white@1x.png" width="100%" height="auto" alt="Логотип сервиса Погнали?">
+          <source media="(min-width: 1440px)"
+                  srcset="./img/logo-desktop-white@1x.png 1x,
+                          ./img/logo-desktop-white@2x.png 2x">
+          <source media="(min-width: 768px)"
+                  srcset="./img/logo-tablet-white@1x.png 1x,
+                          ./img/logo-tablet-white@2x.png 2x">
+          <img src="img/logo-mobile-white@1x.png"
+                width="100%"
+                height="auto"
+                alt="Логотип сервиса Погнали?"
+                srcset="./img/logo-mobile-white@2x.png 2x">
         </picture>
       </a>
 
@@ -546,7 +554,22 @@
           <h2 class="companions__title visually-hidden">Список попутчиков</h2>
 
           <article class="companions__item companion companion--catalog">
-            <img src="./img/firsova-mobile@1x.jpg" class="companion__avatar companion__avatar--catalog" width="77" height="77" alt="Аватар">
+            <picture>
+              <source media="(min-width: 1440px)"
+                      srcset="./img/firsova-desktop@1x.jpg 1x,
+                              ./img/firsova-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                      srcset="./img/firsova-tablet@1x.jpg 1x,
+                              ./img/firsova-tablet@2x.jpg 2x">
+              <img src="./img/firsova-mobile@1x.jpg"
+                class="companion__avatar companion__avatar--catalog"
+                width="77"
+                height="77"
+                alt="Аватар"
+                srcset="./img/firsova-mobile@2x.jpg 2x"
+              >
+            </picture>
+
             <span class="companion__likes companion__likes--catalog companion__likes--active">1.5 M</span>
             <div class="companion__personal-wrapper">
               <p class="companion__name companion__name--catalog">
@@ -600,7 +623,23 @@
           </article>
 
           <article class="companions__item companion companion--catalog">
-            <img src="./img/demin-mobile@1x.jpg" class="companion__avatar companion__avatar--catalog" width="77" height="77" alt="Аватар">
+
+            <picture>
+              <source media="(min-width: 1440px)"
+                      srcset="./img/demin-desktop@1x.jpg 1x,
+                              ./img/demin-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                      srcset="./img/demin-tablet@1x.jpg 1x,
+                              ./img/demin-tablet@2x.jpg 2x">
+              <img src="./img/demin-mobile@1x.jpg"
+                    class="companion__avatar companion__avatar--catalog"
+                    width="77"
+                    height="77"
+                    alt="Аватар"
+                    srcset="./img/demin-mobile@2x.jpg 2x"
+              >
+            </picture>
+
             <span class="companion__likes companion__likes--catalog">1500</span>
             <div class="companion__personal-wrapper">
               <p class="companion__name companion__name--catalog">
@@ -652,7 +691,23 @@
           </article>
 
           <article class="companions__item companion companion--catalog">
-            <img src="./img/smolov-mobile@1x.jpg" class="companion__avatar companion__avatar--catalog" width="77" height="77" alt="Аватар">
+
+            <picture>
+              <source media="(min-width: 1440px)"
+                      srcset="./img/smolov-desktop@1x.jpg 1x,
+                              ./img/smolov-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                      srcset="./img/smolov-tablet@1x.jpg 1x,
+                              ./img/smolov-tablet@2x.jpg 2x">
+              <img src="./img/smolov-mobile@1x.jpg"
+                  class="companion__avatar companion__avatar--catalog"
+                  width="77"
+                  height="77"
+                  alt="Аватар"
+                  srcset="./img/smolov-mobile@2x.jpg 2x"
+              >
+            </picture>
+
             <span class="companion__likes companion__likes--catalog">170</span>
             <div class="companion__personal-wrapper">
               <p class="companion__name companion__name--catalog">
@@ -704,7 +759,23 @@
           </article>
 
           <article class="companions__item companion companion--catalog">
-            <img src="./img/rogovaya-mobile@1x.jpg" class="companion__avatar companion__avatar--catalog" width="77" height="77" alt="Аватар">
+
+            <picture>
+              <source media="(min-width: 1440px)"
+                      srcset="./img/rogovaya-desktop@1x.jpg 1x,
+                              ./img/rogovaya-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                      srcset="./img/rogovaya-tablet@1x.jpg 1x,
+                              ./img/rogovaya-tablet@2x.jpg 2x">
+              <img src="./img/rogovaya-mobile@1x.jpg"
+                    class="companion__avatar companion__avatar--catalog"
+                    width="77"
+                    height="77"
+                    alt="Аватар"
+                    srcset="./img/rogovaya-mobile@2x.jpg 2x"
+              >
+            </picture>
+
             <span class="companion__likes companion__likes--catalog">23</span>
             <div class="companion__personal-wrapper">
               <p class="companion__name companion__name--catalog">
@@ -768,9 +839,17 @@
     <footer class="footer footer--catalog container">
       <a href="#" class="footer__logo">
         <picture>
-          <source media="(min-width: 768px)" srcset="./img/logo-tablet-white@1x.png">
-          <source media="(min-width: 1440px)" srcset="./img/logo-desktop-white@1x.png">
-          <img src="./img/logo-mobile-blue@1x.png" width="100%" height="auto" alt="Логотип сервиса Погнали?">
+          <source media="(min-width: 1440px)"
+                  srcset="./img/logo-desktop-blue@1x.png 1x,
+                          ./img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)"
+                  srcset="./img/logo-tablet-blue@1x.png 1x,
+                          ./img/logo-tablet-blue@2x.png 2x">
+          <img src="img/logo-mobile-blue@1x.png"
+                width="100%"
+                height="auto"
+                alt="Логотип сервиса Погнали?"
+                srcset="./img/logo-mobile-blue@2x.png 2x">
         </picture>
       </a>
       <div class="footer__social social">

@@ -3,6 +3,10 @@
   background-color: $bg-dark-blue;
   background-size: 320px 430px;
 
+  @include retina {
+    background-image: url("../../../img/globe-back-mobile@2x.jpg");
+  }
+
   padding-top: 50px;
   padding-bottom: 90px;
 
@@ -11,8 +15,14 @@
   //z-index: -2;
 
   @include tablet {
+    // проверить эту картинку, она самодельная
     background: url("../../../img/globe-back-tablet1x_768.jpg") no-repeat 50% 50%;
     background-color: $bg-globe-tablet-blue;
+
+    @include retina {
+      background-image: url("../../../img/globe-back-tablet@2x.jpg");
+      background-size: 768px auto;
+    }
   }
 
   @include desktop {
@@ -25,6 +35,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include retina {
+      background-image: url("../../../img/globe-back-desktop@2x.jpg");
+    }
   }
 }
 
@@ -54,6 +68,11 @@
   background-position-x: 50%;
   background-position-y: 30%;
 
+  @include retina {
+    background-image: url("../../../img/traveller-illustration-mobile@2x.png");
+    background-size: 192px 255px;
+  }
+
   // position: absolute;
   // top: 10px;
   // right: 0;
@@ -69,6 +88,10 @@
     position: absolute;
     top: 250px;
     right: 0;
+
+    @include retina {
+      background-image: url("../../../img/traveller-illustration-tablet@2x.png");
+    }
   }
 
   @include desktop {
@@ -78,6 +101,10 @@
     width: 431px;
     height: 640px;
     background-size: 431px 640px;
+
+    @include retina {
+      background-image: url("../../../img/traveller-illustration-desktop@2x.png");
+    }
 
     position: absolute;
     top: -75px;

@@ -52,10 +52,20 @@
   left: -30px;
   top: 200px;
 
+  @include retina {
+    background-image: url("../../../img/rogovaya-back-mobile@2x.png");
+    background-size: 71px 71px;
+  }
+
   @include common-tablet-desktop {
     background: url("../../../img/rogovaya-back-desktop@1x.png") no-repeat;
     width: 285px;
     height: 285px;
+
+    @include retina {
+      background-image: url("../../../img/rogovaya-back-desktop@2x.png");
+      background-size: 285px 285px;
+    }
   }
 
   @include tablet {
@@ -75,6 +85,11 @@
   height: 143px;
   right: 0;
   top: -30px;
+
+  @include retina {
+    background-image: url("../../../img/smolov-back-desktop@2x.png");
+    background-size: 143px 143px;
+  }
 
   @include tablet {
     right: unset;

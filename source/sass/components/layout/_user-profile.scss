@@ -66,6 +66,7 @@
   display: block;
   margin: auto;
   border-radius: 50%;
+  width: 100px;
 
   @include desktop {
     width: 190px;
