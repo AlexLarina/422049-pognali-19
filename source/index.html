@@ -5,14 +5,29 @@
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./js/thirdparty/picturefill.js" async></script>
   </head>
   <body>
     <header class="header header--main container">
       <a href="index.html" class="header__logo">
         <picture>
+          <source type="image/webp"
+                  media="(min-width: 1440px)"
+                  srcset="./img/webp/logo-desktop-white@1x.webp 1x,
+                          ./img/webp/logo-desktop-white@2x.webp 2x"
+          >
+          <source type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="./img/webp/logo-tablet-white@1x.webp 1x,
+                          ./img/webp/logo-tablet-white@2x.webp 2x"
+          >
+          <source type="image/webp"
+                  srcset="./img/webp/logo-mobile-white@1x.webp 1x,
+                          ./img/webp/logo-mobile-white@2x.webp 2x"
+          >
+
           <source media="(min-width: 1440px)"
                   srcset="./img/logo-desktop-white@1x.png 1x,
                           ./img/logo-desktop-white@2x.png 2x">
@@ -35,8 +50,25 @@
         <div class="menu__wrapper">
           <a href="index.html" class="menu__logo">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
-              <img src="img/logo-mobile-blue@1x.png" width="100%" height="auto" alt="Логотип сервиса Погнали?">
+              <source type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="./img/webp/logo-tablet-blue@1x.webp 1x,
+                              ./img/webp/logo-tablet-blue@2x.webp 2x"
+              >
+              <source type="image/webp"
+                      srcset="./img/webp/logo-mobile-blue@1x.webp 1x,
+                              ./img/webp/logo-mobile-blue@2x.webp 2x"
+              >
+
+              <source media="(min-width: 768px)"
+                      srcset="img/logo-tablet-blue@1x.png 1x,
+                              img/logo-tablet-blue@2x.png 2x">
+              <img src="img/logo-mobile-blue@1x.png"
+                  width="100%"
+                  height="auto"
+                  alt="Логотип сервиса Погнали?"
+                  srcset="img/logo-tablet-blue@2x.png 2x"
+              >
             </picture>
           </a>
           <nav class="menu__navigation navigation navigation--service">
@@ -104,6 +136,16 @@
           <ul class="ways__list">
           <li class="ways_item way way--thai">
             <picture>
+              <source type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="./img/webp/thailand-desktop@1x.webp 1x,
+                              ./img/webp/thailand-desktop@2x.webp 2x"
+              >
+              <source type="image/webp"
+                      srcset="./img/webp/thailand-mobile@1x.webp 1x,
+                              ./img/webp/thailand-mobile@2x.webp 2x"
+              >
+
               <source media="(min-width: 768px)"
                       srcset="./img/thailand-desktop@1x.jpg 1x,
                               ./img/thailand-desktop@2x.jpg 2x">
@@ -123,6 +165,15 @@
 
           <li class="ways_item way way--france">
             <picture>
+              <source type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="./img/webp/france-desktop@1x.webp 1x,
+                              ./img/webp/france-desktop@2x.webp 2x"
+              >
+              <source type="image/webp"
+                      srcset="./img/webp/france-mobile@1x.webp 1x,
+                              ./img/webp/france-mobile@2x.webp 2x"
+              >
               <source media="(min-width: 768px)"
                       srcset="./img/france-desktop@1x.jpg 1x,
                               ./img/france-desktop@2x.jpg 2x">
@@ -143,6 +194,15 @@
 
           <li class="ways_item way way--czech">
             <picture>
+              <source type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="./img/webp/czech-desktop@1x.webp 1x,
+                              ./img/webp/czech-desktop@2x.webp 2x"
+              >
+              <source type="image/webp"
+                      srcset="./img/webp/czech-mobile@1x.webp 1x,
+                              ./img/webp/czech-mobile@2x.webp 2x"
+              >
               <source media="(min-width: 768px)"
                       srcset="./img/czech-desktop@1x.jpg 1x,
                               ./img/czech-desktop@2x.jpg 2x">
@@ -322,6 +382,20 @@
         </div>
         <a href="#" class="map__interactive">
           <picture>
+            <source type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="./img/webp/map-desktop@1x.webp 1x,
+                            ./img/webp/map-desktop@2x.webp 2x"
+            >
+            <source type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="./img/webp/map-tablet@1x.webp 1x,
+                            ./img/webp/map-tablet@2x.webp 2x"
+            >
+            <source type="image/webp"
+                    srcset="./img/webp/map-mobile@1x.webp 1x,
+                            ./img/webp/map-mobile@2x.webp 2x"
+            >
             <source media="(min-width: 1440px)"
                     srcset="./img/map-desktop@1x.jpg 1x,
                             ./img/map-desktop@2x.jpg 2x">
@@ -368,6 +442,21 @@
     <footer class="footer container">
       <a href="#" class="footer__logo">
         <picture>
+          <source type="image/webp"
+                  media="(min-width: 1440px)"
+                  srcset="./img/webp/logo-desktop-blue@1x.webp 1x,
+                          ./img/webp/logo-desktop-blue@2x.webp 2x"
+          >
+          <source type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="./img/webp/logo-tablet-blue@1x.webp 1x,
+                          ./img/webp/logo-tablet-blue@2x.webp 2x"
+          >
+          <source type="image/webp"
+                  srcset="./img/webp/logo-mobile-blue@1x.webp 1x,
+                          ./img/webp/logo-mobile-blue@2x.webp 2x"
+          >
+
           <source media="(min-width: 1440px)"
                   srcset="./img/logo-desktop-blue@1x.png 1x,
                           ./img/logo-desktop-blue@2x.png 2x">
@@ -382,12 +471,32 @@
         </picture>
       </a>
       <div class="footer__social social">
-        <a href="#" title="Facebook страница сервиса Погнали" class="social__facebook"></a>
-        <a href="#" title="Страница ВКонтакте сервиса Погнали" class="social__vk"></a>
-        <a href="#" title="Instagram страница сервиса Погнали" class="social__instagram"></a>
+        <a href="#" title="Facebook страница сервиса Погнали" class="social__facebook">
+          <svg class="social__facebook-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 11 21" style="enable-background:new 0 0 11 21;" xml:space="preserve">
+            <use xlink:href="sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+        <a href="#" title="Страница ВКонтакте сервиса Погнали" class="social__vk">
+          <svg class="social__vk-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 30 15.8" style="enable-background:new 0 0 30 15.8;" xml:space="preserve">
+            <use xlink:href="#icon-vk"></use>
+          </svg>
+        </a>
+        <a href="#" title="Instagram страница сервиса Погнали" class="social__instagram">
+          <svg class="social__instagram-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve">
+            <use xlink:href="#icon-instagram"></use>
+          </svg>
+        </a>
       </div>
       <div class="footer__copyright">
-        <a href="#">Разработано</a>
+        <a href="#">Разработано
+          <svg class="footer__copyright-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 27 34" style="enable-background:new 0 0 27 34;" xml:space="preserve">
+              <use xlink:href="#icon-copyright"></use>
+          </svg>
+        </a>
       </div>
     </footer>
   </body>
