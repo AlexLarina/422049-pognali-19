@@ -24,10 +24,10 @@ trim_trailing_whitespace = false
 [*.svg]
 indent_style = unset
 
-[source/js/thirdparty/**]
+[./source/js/thirdparty/*.js]
 charset = utf-8
 end_of_line = none
 indent_size = none
 indent_style = none
-insert_final_newline = none
+insert_final_newline = false
 trim_trailing_whitespace = none
