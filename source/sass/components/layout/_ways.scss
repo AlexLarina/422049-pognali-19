@@ -145,27 +145,18 @@
 }
 
 .way--thai::before {
-  background: url("../../../img/flags/Thailand_mobile.png") no-repeat 0% 0%;
-
-  @include common-tablet-desktop {
-    background: url("../../../img/flags/Thailand_desktop.png") no-repeat 0% 0%;
-  }
+  background: url("../../../img/flags/flag-thailand.svg") no-repeat 0% 0%;
+  background-size: 35px 24px;
 }
 
 .way--france::before {
-  background: url("../../../img/flags/France_mobile.png") no-repeat 0% 0%;
-
-  @include common-tablet-desktop {
-    background: url("../../../img/flags/France_desktop.png") no-repeat 0% 0%;
-  }
+  background: url("../../../img/flags/flag-france.svg") no-repeat 0% 0%;
+  background-size: 35px 24px;
 }
 
 .way--czech::before {
-  background: url("../../../img/flags/Czech_mobile.png") no-repeat 0% 0%;
-
-  @include common-tablet-desktop {
-    background: url("../../../img/flags/Czech_desktop.png") no-repeat 0% 0%;
-  }
+  background: url("../../../img/flags/flag-czech.svg") no-repeat 0% 0%;
+  background-size: 35px 24px;
 }
 
 .way img {
