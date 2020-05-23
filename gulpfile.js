@@ -25,7 +25,7 @@ var server = require("browser-sync").create();
 /* clean build */
 var del = require("del");
 
-gulp.task("css", function () {
+gulp.task("style", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -38,6 +38,13 @@ gulp.task("css", function () {
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
+});
+
+gulp.task("normalize", function () {
+  return gulp.src("source/css/normalize.css")
+    .pipe(csso())
+    .pipe(rename("normalize.min.css"))
+    .pipe(gulp.dest("build/css"))
 });
 
 gulp.task("images", function () {
@@ -104,6 +111,11 @@ gulp.task("refresh", function (done) {
   done();
 });
 
+gulp.task("css", gulp.series(
+  "style",
+  "normalize"
+));
+
 gulp.task("build", gulp.series(
   "clean",
   "copy",
@@ -112,4 +124,7 @@ gulp.task("build", gulp.series(
   "html"
 ));
 
-gulp.task("start", gulp.series("build", "server"));
+gulp.task("start", gulp.series(
+  "build",
+  "server"
+));
