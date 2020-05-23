@@ -1,7 +1,7 @@
 .header {
   background-color: $bg-dark-blue;
 
-  padding-top: 27px;
+  padding-top: 29px;
 
   display: flex;
   flex-direction: row;
@@ -13,7 +13,7 @@
 
   @include tablet {
     flex-wrap: nowrap;
-    padding-top: 40px;
+    padding-top: 42px;
     align-items: center;
   }
 
@@ -26,6 +26,14 @@
 .header--main {
   @include tablet {
     background-color: $bg-globe-tablet-blue;
+  }
+}
+
+.header__logo {
+  margin-top: -2px;
+
+  @include tablet {
+    margin-top: 0;
   }
 }
 
@@ -302,6 +310,11 @@ input[type="checkbox"].menu__toggle:checked + .menu__hamburger-button {
   padding: 13px 37px;
   border-radius: 20px;
   background-color: $bg-light-gold;
+
+  @include common-tablet-desktop {
+    padding: 17px 30px 14px 30px;
+    border-radius: 25px;
+  }
 }
 
 .navigation__item--auth a:hover,
@@ -346,8 +359,8 @@ input[type="checkbox"].menu__toggle:checked + .menu__hamburger-button {
 }
 
 .navigation__item--tel a {
-  // background: url("../../../img/topmenu-phone.svg") no-repeat 50% 50%;
-  background: url("../img/topmenu-phone.svg") no-repeat 50% 50%;
+  background: url("../../../img/topmenu-phone.svg") no-repeat 50% 50%;
+  //background: url("../img/topmenu-phone.svg") no-repeat 50% 50%;
   background-color: $bg-orange;
   background-size: 18px;
 }
