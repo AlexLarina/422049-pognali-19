@@ -1,14 +1,21 @@
 .companions {
   background-color: $bg-blue;
 
-  padding-top: 72px;
+  padding-top: 52px;
   padding-bottom: 30px;
   border-radius: 0 0 30px 30px;
 
   position: relative;
 
+  @include tablet {
+    padding-top: 104px;
+    border-radius: 0 0 60px 60px;
+    padding-bottom: 88px;
+  }
+
   @include desktop {
-    padding-bottom: 135px;
+    padding-bottom: 134px;
+    padding-top: 92px;
   }
 }
 
@@ -70,12 +77,13 @@
 
   @include tablet {
     left: unset;
-    top: -30px;
-    right: 30px;
+    top: -60px;
+    right: 37px;
   }
 
   @include desktop {
-    left: 50px;
+    left: 132px;
+    top: 293px;
   }
 }
 
@@ -93,16 +101,16 @@
 
   @include tablet {
     right: unset;
-    left: -30px;
-    top: 226px;
-    // на проблемку напала, не отображается фотка
-    z-index: -1;
+    left: 0;
+    top: 285px;
+
+    z-index: 0;
   }
 
   @include desktop {
     right: unset;
-    left: 448px;
-    top: 0;
+    left: 488px;
+    top: 42px;
   }
 }
 
@@ -120,6 +128,14 @@
 
 .main__companions .companions__title {
   position: relative;
+
+  @include tablet {
+    padding-left: 33px;
+  }
+
+  @include desktop {
+    padding-left: 70px;
+  }
 }
 
 .companions__title::before {
@@ -138,6 +154,9 @@
     width: 213px;
     height: 213px;
     border-radius: 20px;
+
+    left: 0;
+    top: -60px;
   }
 
   @include desktop {
@@ -152,22 +171,42 @@
 
   @include tablet {
     max-width: 490px;
+    margin-top: 58px;
+    padding-left: 34px;
+    line-height: 1.2em;
   }
 
   @include desktop {
-    max-width: 490px;
+    max-width: 530px;
+    padding-left: 72px;
+  }
+}
+
+.companions__description:last-of-type {
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 40px;
   }
 }
 
 .companions__list {
   list-style: none;
   margin: 0;
+  margin-top: 56px;
   padding: 0;
 
   @include tablet {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    position: relative;
+    z-index: 1;
+
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 58px;
   }
 
   @include desktop {
@@ -176,6 +215,9 @@
     justify-content: space-between;
 
     width: 50%;
+    padding-left: 31px;
+    padding-right: 0;
+    margin-top: 41px;
   }
 }
 
@@ -186,11 +228,13 @@
 
   border-radius: 10px;
   margin-bottom: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
 
   @include tablet {
     max-width: 285px;
     margin-bottom: 0;
+    border-radius: 20px;
+    padding-bottom: 29px;
   }
 
   @include desktop {
@@ -269,11 +313,12 @@
 }
 
 .companion__avatar--main {
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 
   @include tablet {
     width: 285px;
     height: 285px;
+    border-radius: 20px 20px 0 0;
   }
 
   @include desktop {
@@ -292,7 +337,11 @@
 }
 
 .companion__tags--main {
-  margin: 15px 47px;
+  margin: 15px 47px 15px 37px;
+
+  @include tablet {
+    margin: 23px 47px 30px 30px;
+  }
 }
 
 .companion__tags--catalog {
@@ -419,10 +468,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include tablet {
+    top: 22px;
+    left: 22px;
+  }
 }
 
 .companion__name {
-  margin: 27px 0 15px 0;
+  margin: 22px 0 15px 0;
+
+  @include tablet {
+    margin-top: 26px;
+  }
+}
+
+.companion__name--main {
+  position: relative;
 }
 
 .companion__name--catalog,
@@ -554,6 +616,18 @@
   margin-right: 8px;
   line-height: 1em;
   vertical-align: middle;
+
+  position: absolute;
+  top: 6px;
+  left: 53px;
+
+  @include tablet {
+    width: 7px;
+    height: 7px;
+
+    top: 8px;
+    left: 50px;
+  }
 }
 
 .companion__status--offline {
@@ -573,12 +647,26 @@
 .companions__show-all {
   @include gold-button();
   margin-top: 20px;
+  padding: 24px 24px 20px 24px;
+
+  @include tablet {
+    max-width: 618px;
+    border-radius: 20px;
+    min-height: 81px;
+
+    margin-top: 80px;
+    margin-left: 35px;
+    padding-top: 30px;
+    padding-left: 33px;
+    background-position-x: 94%;
+  }
 
   @include desktop {
     max-width: 280px;
     height: 100%;
-    margin: -83px 360px auto 0;
+    margin: -81px 360px auto 72px;
     z-index: 1;
+    background-position-x: 87%;
   }
 }
 
@@ -1090,6 +1178,10 @@ input[name="transport--foot"]:checked + .transport__label--foot:hover {
   top: 258px;
   left: 50%;
   transform: translateX(-50%);
+
+  @include tablet {
+    top: 273px;
+  }
 }
 
 .countries__item:not(:last-of-type) {
