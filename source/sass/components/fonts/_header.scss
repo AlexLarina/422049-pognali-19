@@ -12,7 +12,7 @@
 
   @include desktop {
     @include font(500, $font-white);
-    @include font-size(16px, 1.5em);
+    @include font-size(20px, 1.5em);
   }
 }
 
