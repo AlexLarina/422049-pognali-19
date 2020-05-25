@@ -5,6 +5,15 @@
 
   border-radius: 0 0 30px 30px;
   position: relative;
+
+  @include tablet {
+    border-radius: 0 0 60px 60px;
+  }
+
+  @include desktop {
+    padding-top: 60px;
+    border-radius: 0 0 60px 60px;
+  }
 }
 
 .map__wrapper {
@@ -12,7 +21,9 @@
   padding-bottom: 35px;
 
   @include tablet {
+    padding-top: 35px;
     margin-bottom: 350px;
+    padding-bottom: 85px;
   }
 
   @include desktop {
@@ -21,6 +32,8 @@
     justify-content: space-around;
 
     margin-bottom: 420px;
+    padding-bottom: 59px;
+    padding-top: 0;
   }
 }
 
@@ -33,7 +46,8 @@
 
 .map__address {
   margin: 0;
-  padding-left: 50px;
+  padding-left: 60px;
+  max-width: 210px;
 
   display: flex;
   align-items: center;
@@ -41,14 +55,20 @@
   position: relative;
 
   @include tablet {
-    padding-left: 93px;
+    padding-left: 128px;
+    max-width: 100%;
+  }
+
+  @include desktop {
+    margin-left: 125px;
+    padding-left: 147px;
   }
 }
 
 .map__address::before {
   content: "";
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
 
   display: inline-block;
@@ -68,11 +88,16 @@
     height: 67px;
 
     background-size: 21px 31px;
+    left: 36px;
+    top: -23px;
   }
 
   @include desktop {
     width: 90px;
     height: 90px;
+
+    left: 25px;
+    top: -5px;
 
     background-size: 28px 43px;
   }
@@ -81,10 +106,31 @@
 .map__route {
   @include gold-button();
   border: 3px solid $bg-dark-blue-grey;
-  margin-top: 32px;
+  margin-top: 30px;
+  padding: 19px;
+  background-position-x: 92%;
+
+  @include tablet {
+    max-width: 618px;
+    min-height: 81px;
+    border-radius: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 61px;
+
+    padding-left: 32px;
+    padding-top: 27px;
+    background-position-x: 95%;
+  }
 
   @include desktop {
     max-width: 324px;
+    margin-top: 0;
+    border-radius: 20px;
+
+    margin-left: 0;
+    margin-right: 0;
+    background-position-x: 90%;
   }
 }
 
@@ -98,14 +144,28 @@
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 14' style='enable-background:new 0 0 10 14;' xml:space='preserve' fill='%23ffffff' opacity='0.3'%3E%3Cpolygon points='0,14 0,0.1 10,7.1 '/%3E%3C/svg%3E%0A");
 }
 
-.map__interactive iframe {
+.map__interactive::before {
+  content: "";
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-9 -9 54 54'%3E%3Ccircle cx='18' cy='18' r='27' fill='%23fff'/%3E%3Ccircle cx='18' cy='18' r='11.8' fill='%23192144'/%3E%3C/svg%3E");
+  background-size: 41px 41px;
+  width: 41px;
+  height: 41px;
+  position: absolute;
+  top: 310px;
+  left: 140px;
+
   @include tablet {
-    width: 768px;
-    height: 680px;
+    background-size: 57px 57px;
+    width: 57px;
+    height: 57px;
+
+    top: 513px;
+    left: 355px;
   }
 
   @include desktop {
-    width: 1439px;
-    height: 640px;
+    top: 343px;
+    left: 692px;
   }
 }
