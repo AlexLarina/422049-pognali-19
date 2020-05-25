@@ -439,7 +439,11 @@
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 27 27' style='enable-background:new 0 0 27 27;' xml:space='preserve'%3E%3Cpath fill='%231d2e5b' d='M25.5,12H15V1.5C15,0.7,14.3,0,13.5,0S12,0.7,12,1.5V12H1.5C0.7,12,0,12.7,0,13.5S0.7,15,1.5,15H12v10.5 c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5V15h10.5c0.8,0,1.5-0.7,1.5-1.5S26.3,12,25.5,12z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: 18px 18px;
-  background-position: 38% 40%;
+  background-position: 20% 40%;
+
+  @include common-tablet-desktop {
+    background-position: 35% 40%;
+  }
 }
 
 .companions__show-more:hover {

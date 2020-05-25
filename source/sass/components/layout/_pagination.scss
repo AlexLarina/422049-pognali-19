@@ -7,6 +7,7 @@
   justify-content: flex-start;
   background-color: $bg-white;
   border-radius: 20px;
+  min-height: 50px;
 
   @include common-tablet-desktop {
     padding: 25px 35px 25px 28px;
