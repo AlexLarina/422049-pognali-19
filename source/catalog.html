@@ -5,39 +5,30 @@
     <title>Каталог</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="./js/thirdparty/picturefill.js" async></script>
+
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+
+    <script src="./js/thirdparty/picturefill.js" async=""></script>
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header header--catalog container">
       <a href="index.html" class="header__logo">
         <picture>
-          <source type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset="./img/webp/logo-desktop-white@1x.webp 1x,
-                          ./img/webp/logo-desktop-white@2x.webp 2x"
-          >
-          <source type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset="./img/webp/logo-tablet-white@1x.webp 1x,
-                          ./img/webp/logo-tablet-white@2x.webp 2x"
-          >
-          <source type="image/webp"
-                  srcset="./img/webp/logo-mobile-white@1x.webp 1x,
-                          ./img/webp/logo-mobile-white@2x.webp 2x"
-          >
-          <source media="(min-width: 1440px)"
-                  srcset="./img/logo-desktop-white@1x.png 1x,
+          <source type="image/webp" media="(min-width: 1440px)" srcset="./img/webp/logo-desktop-white@1x.webp 1x,
+                          ./img/webp/logo-desktop-white@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/webp/logo-tablet-white@1x.webp 1x,
+                          ./img/webp/logo-tablet-white@2x.webp 2x">
+          <source type="image/webp" srcset="./img/webp/logo-mobile-white@1x.webp 1x,
+                          ./img/webp/logo-mobile-white@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="./img/logo-desktop-white@1x.png 1x,
                           ./img/logo-desktop-white@2x.png 2x">
-          <source media="(min-width: 768px)"
-                  srcset="./img/logo-tablet-white@1x.png 1x,
+          <source media="(min-width: 768px)" srcset="./img/logo-tablet-white@1x.png 1x,
                           ./img/logo-tablet-white@2x.png 2x">
-          <img src="img/logo-mobile-white@1x.png"
-                width="100%"
-                height="auto"
-                alt="Логотип сервиса Погнали?"
-                srcset="./img/logo-mobile-white@2x.png 2x">
+          <img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?" srcset="./img/logo-mobile-white@2x.png 2x">
         </picture>
       </a>
 
@@ -49,25 +40,14 @@
         <div class="menu__wrapper">
           <a href="index.html" class="menu__logo">
             <picture>
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./img/webp/logo-tablet-blue@1x.webp 1x,
-                              ./img/webp/logo-tablet-blue@2x.webp 2x"
-              >
-              <source type="image/webp"
-                      srcset="./img/webp/logo-mobile-blue@1x.webp 1x,
-                              ./img/webp/logo-mobile-blue@2x.webp 2x"
-              >
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/webp/logo-tablet-blue@1x.webp 1x,
+                              ./img/webp/logo-tablet-blue@2x.webp 2x">
+              <source type="image/webp" srcset="./img/webp/logo-mobile-blue@1x.webp 1x,
+                              ./img/webp/logo-mobile-blue@2x.webp 2x">
 
-              <source media="(min-width: 768px)"
-                      srcset="img/logo-tablet-blue@1x.png 1x,
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x,
                               img/logo-tablet-blue@2x.png 2x">
-              <img src="img/logo-mobile-blue@1x.png"
-                  width="100%"
-                  height="auto"
-                  alt="Логотип сервиса Погнали?"
-                  srcset="img/logo-tablet-blue@2x.png 2x"
-              >
+              <img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?" srcset="img/logo-tablet-blue@2x.png 2x">
             </picture>
           </a>
           <nav class="menu__navigation navigation navigation--service">
@@ -457,7 +437,7 @@
 
               <ul class="filter__list filter__list--checkbox">
                 <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="interest--gym" value="gym" id="interest--gym" checked>
+                  <input class="visually-hidden" type="checkbox" name="interest--gym" value="gym" id="interest--gym" checked="">
                   <label for="interest--gym" class="filter__checkbox">Спортзал</label>
                 </li>
 
@@ -476,22 +456,22 @@
             <fieldset class="search__filter filter">
               <legend class="visually-hidden">Музыка</legend>
 
-              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-music" checked>
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-music" checked="">
               <label for="open-fieldset-music" class="filter__open-fieldset">Музыка</label>
 
               <ul class="filter__list filter__list--checkbox">
                 <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="music--hard-rock" value="hard-rock" id="music--hard-rock" checked>
+                  <input class="visually-hidden" type="checkbox" name="music--hard-rock" value="hard-rock" id="music--hard-rock" checked="">
                   <label for="music--hard-rock" class="filter__checkbox">Тяжелый рок</label>
                 </li>
 
                 <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="music--russian-rap" value="russian-rap" id="music--russian-rap" checked>
+                  <input class="visually-hidden" type="checkbox" name="music--russian-rap" value="russian-rap" id="music--russian-rap" checked="">
                   <label for="music--russian-rap" class="filter__checkbox">Русский рэп</label>
                 </li>
 
                 <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="music--eurodance" value="eurodance" id="music--eurodance" checked>
+                  <input class="visually-hidden" type="checkbox" name="music--eurodance" value="eurodance" id="music--eurodance" checked="">
                   <label for="music--eurodance" class="filter__checkbox">Евроденс</label>
                 </li>
               </ul>
@@ -505,7 +485,7 @@
 
               <ul class="filter__list filter__list--checkbox">
                 <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="meal--meat" value="meat" id="meal--meat" checked>
+                  <input class="visually-hidden" type="checkbox" name="meal--meat" value="meat" id="meal--meat" checked="">
                   <label for="meal--meat" class="filter__checkbox">Мясоед</label>
                 </li>
 
@@ -524,17 +504,17 @@
             <fieldset class="search__filter filter filter--transport">
               <legend class="visually-hidden">Транспорт</legend>
 
-              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-transport" checked>
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-transport" checked="">
               <label for="open-fieldset-transport" class="filter__open-fieldset">Транспорт</label>
 
               <ul class="filter__list filter__list--checkbox filter__list--transport">
                 <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="transport--plane" value="plane" id="transport--plane" checked>
+                  <input class="visually-hidden" type="checkbox" name="transport--plane" value="plane" id="transport--plane" checked="">
                   <label for="transport--plane" class="filter__transport-label filter__transport-label--plane"></label>
                 </li>
 
                 <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="transport--bus" value="bus" id="transport--bus" checked>
+                  <input class="visually-hidden" type="checkbox" name="transport--bus" value="bus" id="transport--bus" checked="">
                   <label for="transport--bus" class="filter__transport-label filter__transport-label--bus"></label>
                 </li>
 
@@ -544,7 +524,7 @@
                 </li>
 
                 <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="transport--foot" value="foot" id="transport--foot" checked>
+                  <input class="visually-hidden" type="checkbox" name="transport--foot" value="foot" id="transport--foot" checked="">
                   <label for="transport--foot" class="filter__transport-label filter__transport-label--foot"></label>
                 </li>
               </ul>
@@ -553,7 +533,7 @@
             <fieldset class="search__filter filter">
               <legend class="visually-hidden">Левел</legend>
 
-              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-level" checked>
+              <input class="visually-hidden" type="checkbox" name="open-fieldset" id="open-fieldset-level" checked="">
               <label for="open-fieldset-level" class="filter__open-fieldset">Левел</label>
 
               <div class="filter__range range">
@@ -587,37 +567,23 @@
 
           <article class="companions__item companion companion--catalog">
             <picture>
-              <source type="image/webp"
-                      media="(min-width: 1440px)"
-                      srcset="./img/webp/firsova-desktop@1x.webp 1x,
-                              ./img/webp/firsova-desktop@2x.webp 2x"
-              >
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./img/webp/firsova-tablet@1x.webp 1x,
-                              ./img/webp/firsova-tablet@2x.webp 2x"
-              >
-              <source type="image/webp"
-                      srcset="./img/webp/firsova-mobile@1x.webp 1x,
-                              ./img/webp/firsova-mobile@2x.webp 2x"
-              >
+              <source type="image/webp" media="(min-width: 1440px)" srcset="./img/webp/firsova-desktop@1x.webp 1x,
+                              ./img/webp/firsova-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/webp/firsova-tablet@1x.webp 1x,
+                              ./img/webp/firsova-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/webp/firsova-mobile@1x.webp 1x,
+                              ./img/webp/firsova-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1440px)"
-                      srcset="./img/firsova-desktop@1x.jpg 1x,
+              <source media="(min-width: 1440px)" srcset="./img/firsova-desktop@1x.jpg 1x,
                               ./img/firsova-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                      srcset="./img/firsova-tablet@1x.jpg 1x,
+              <source media="(min-width: 768px)" srcset="./img/firsova-tablet@1x.jpg 1x,
                               ./img/firsova-tablet@2x.jpg 2x">
-              <img src="./img/firsova-mobile@1x.jpg"
-                class="companion__avatar companion__avatar--catalog"
-                width="77"
-                height="77"
-                alt="Аватар"
-                srcset="./img/firsova-mobile@2x.jpg 2x"
-              >
+              <img src="./img/firsova-mobile@1x.jpg" class="companion__avatar companion__avatar--catalog" width="77" height="77" alt="Аватар" srcset="./img/firsova-mobile@2x.jpg 2x">
             </picture>
 
-            <span class="companion__likes companion__likes--catalog companion__likes--active">1.5 M</span>
+            <span class="companion__likes companion__likes--catalog companion__likes--active">
+              1.5 M
+            </span>
             <div class="companion__personal-wrapper">
               <p class="companion__name companion__name--catalog">
                 <span class="companion__status companion__status--offline"></span>
@@ -631,6 +597,10 @@
               <li class="tags__item tags__item--catalog"><a href="#">#авокадо</a></li>
               <li class="tags__item tags__item--catalog"><a href="#">#смузи</a></li>
               </ul>
+              <div class="companion__actions">
+                <button class="companion__accept">Позвать!</button>
+                <span class="companion__likes companion__likes--catalog companion__likes--active">1.5 M</span>
+              </div>
             </div>
             <div class="companion__wish wish">
               <h4 class="wish__title">хочет посетить:</h4>
@@ -662,44 +632,31 @@
 
               <div class="companion__level level">
                 <h4 class="level__title">левел:</h4>
-                <span class="level__value">99</span>
+                <span class="level__value">
+                  99
+                  <span class="level__label">level</span>
+                </span>
               </div>
             </div>
 
-            <button class="companion__accept">Позвать</button>
+            <button class="companion__accept">Позвать!</button>
           </article>
 
           <article class="companions__item companion companion--catalog">
 
             <picture>
-              <source type="image/webp"
-                      media="(min-width: 1440px)"
-                      srcset="./img/webp/demin-desktop@1x.webp 1x,
-                              ./img/webp/demin-desktop@2x.webp 2x"
-              >
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./img/webp/demin-tablet@1x.webp 1x,
-                              ./img/webp/demin-tablet@2x.webp 2x"
-              >
-              <source type="image/webp"
-                      srcset="./img/webp/demin-mobile@1x.webp 1x,
-                              ./img/webp/demin-mobile@2x.webp 2x"
-              >
+              <source type="image/webp" media="(min-width: 1440px)" srcset="./img/webp/demin-desktop@1x.webp 1x,
+                              ./img/webp/demin-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/webp/demin-tablet@1x.webp 1x,
+                              ./img/webp/demin-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/webp/demin-mobile@1x.webp 1x,
+                              ./img/webp/demin-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1440px)"
-                      srcset="./img/demin-desktop@1x.jpg 1x,
+              <source media="(min-width: 1440px)" srcset="./img/demin-desktop@1x.jpg 1x,
                               ./img/demin-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                      srcset="./img/demin-tablet@1x.jpg 1x,
+              <source media="(min-width: 768px)" srcset="./img/demin-tablet@1x.jpg 1x,
                               ./img/demin-tablet@2x.jpg 2x">
-              <img src="./img/demin-mobile@1x.jpg"
-                    class="companion__avatar companion__avatar--catalog"
-                    width="77"
-                    height="77"
-                    alt="Аватар"
-                    srcset="./img/demin-mobile@2x.jpg 2x"
-              >
+              <img src="./img/demin-mobile@1x.jpg" class="companion__avatar companion__avatar--catalog" width="77" height="77" alt="Аватар" srcset="./img/demin-mobile@2x.jpg 2x">
             </picture>
 
             <span class="companion__likes companion__likes--catalog">1500</span>
@@ -709,13 +666,17 @@
                 <span>Петя Демин</span>
               </p>
               <ul class="companion__tags companion__tags--catalog tags">
-              <li class="tags__item tags__item--catalog"><a href="#">#бургер</a></li>
-              <li class="tags__item tags__item--catalog"><a href="#">#бар</a></li>
-              <li class="tags__item tags__item--catalog"><a href="#">#футбол</a></li>
-              <li class="tags__item tags__item--catalog"><a href="#">#пляж</a></li>
-              <li class="tags__item tags__item--catalog"><a href="#">#концерт</a></li>
-              <li class="tags__item tags__item--catalog"><a href="#">#крафт</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#бургер</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#бар</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#футбол</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#пляж</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#концерт</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#крафт</a></li>
               </ul>
+              <div class="companion__actions">
+                <button class="companion__accept">Позвать!</button>
+                <span class="companion__likes companion__likes--catalog">1500</span>
+              </div>
             </div>
             <div class="companion__wish wish">
               <h4 class="wish__title">хочет посетить:</h4>
@@ -740,48 +701,35 @@
                   </li>
                   <li class="transport__item transport__item--foot transport__item--foot-on">
                     <div class="transport__item-tooltip">Пешком</div>
-                </ul>
+                </li></ul>
               </div>
 
               <div class="companion__level level">
                 <h4 class="level__title">левел:</h4>
-                <span class="level__value">80</span>
+                <span class="level__value">
+                  80
+                  <span class="level__label">level</span>
+                </span>
               </div>
             </div>
 
-            <button class="companion__accept">Позвать</button>
+            <button class="companion__accept">Позвать!</button>
           </article>
 
           <article class="companions__item companion companion--catalog">
 
             <picture>
-              <source type="image/webp"
-                      media="(min-width: 1440px)"
-                      srcset="./img/webp/smolov-desktop@1x.webp 1x,
-                              ./img/webp/smolov-desktop@2x.webp 2x"
-              >
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./img/webp/smolov-tablet@1x.webp 1x,
-                              ./img/webp/smolov-tablet@2x.webp 2x"
-              >
-              <source type="image/webp"
-                      srcset="./img/webp/smolov-mobile@1x.webp 1x,
-                              ./img/webp/smolov-mobile@2x.webp 2x"
-              >
-              <source media="(min-width: 1440px)"
-                      srcset="./img/smolov-desktop@1x.jpg 1x,
+              <source type="image/webp" media="(min-width: 1440px)" srcset="./img/webp/smolov-desktop@1x.webp 1x,
+                              ./img/webp/smolov-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/webp/smolov-tablet@1x.webp 1x,
+                              ./img/webp/smolov-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/webp/smolov-mobile@1x.webp 1x,
+                              ./img/webp/smolov-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/smolov-desktop@1x.jpg 1x,
                               ./img/smolov-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                      srcset="./img/smolov-tablet@1x.jpg 1x,
+              <source media="(min-width: 768px)" srcset="./img/smolov-tablet@1x.jpg 1x,
                               ./img/smolov-tablet@2x.jpg 2x">
-              <img src="./img/smolov-mobile@1x.jpg"
-                  class="companion__avatar companion__avatar--catalog"
-                  width="77"
-                  height="77"
-                  alt="Аватар"
-                  srcset="./img/smolov-mobile@2x.jpg 2x"
-              >
+              <img src="./img/smolov-mobile@1x.jpg" class="companion__avatar companion__avatar--catalog" width="77" height="77" alt="Аватар" srcset="./img/smolov-mobile@2x.jpg 2x">
             </picture>
 
             <span class="companion__likes companion__likes--catalog">170</span>
@@ -791,12 +739,16 @@
                 <span>Марк Смолов</span>
               </p>
               <ul class="companion__tags companion__tags--catalog tags">
-              <li class="tags__item tags__item--catalog"><a href="#">#рэп</a></li>
-              <li class="tags__item tags__item--catalog"><a href="#">#тату</a></li>
-              <li class="tags__item tags__item--catalog"><a href="#">#хайпбист</a></li>
-              <li class="tags__item tags__item--catalog"><a href="#">#кроссовки</a></li>
-              <li class="tags__item tags__item--catalog"><a href="#">#суприм</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#рэп</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#тату</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#хайпбист</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#кроссовки</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#суприм</a></li>
               </ul>
+              <div class="companion__actions">
+                <button class="companion__accept">Позвать!</button>
+                <span class="companion__likes companion__likes--catalog">170</span>
+              </div>
             </div>
             <div class="companion__wish wish">
               <h4 class="wish__title">хочет посетить:</h4>
@@ -822,48 +774,35 @@
                   </li>
                   <li class="transport__item transport__item--foot">
                     <div class="transport__item-tooltip">Пешком</div>
-                </ul>
+                </li></ul>
               </div>
 
               <div class="companion__level level">
                 <h4 class="level__title">левел:</h4>
-                <span class="level__value">25</span>
+                <span class="level__value">
+                  25
+                  <span class="level__label">level</span>
+                </span>
               </div>
             </div>
 
-            <button class="companion__accept">Позвать</button>
+            <button class="companion__accept">Позвать!</button>
           </article>
 
           <article class="companions__item companion companion--catalog">
 
             <picture>
-              <source type="image/webp"
-                      media="(min-width: 1440px)"
-                      srcset="./img/webp/rogovaya-desktop@1x.webp 1x,
-                              ./img/webp/rogovaya-desktop@2x.webp 2x"
-              >
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./img/webp/rogovaya-tablet@1x.webp 1x,
-                              ./img/webp/rogovaya-tablet@2x.webp 2x"
-              >
-              <source type="image/webp"
-                      srcset="./img/webp/rogovaya-mobile@1x.webp 1x,
-                              ./img/webp/rogovaya-mobile@2x.webp 2x"
-              >
-              <source media="(min-width: 1440px)"
-                      srcset="./img/rogovaya-desktop@1x.jpg 1x,
+              <source type="image/webp" media="(min-width: 1440px)" srcset="./img/webp/rogovaya-desktop@1x.webp 1x,
+                              ./img/webp/rogovaya-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/webp/rogovaya-tablet@1x.webp 1x,
+                              ./img/webp/rogovaya-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/webp/rogovaya-mobile@1x.webp 1x,
+                              ./img/webp/rogovaya-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/rogovaya-desktop@1x.jpg 1x,
                               ./img/rogovaya-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                      srcset="./img/rogovaya-tablet@1x.jpg 1x,
+              <source media="(min-width: 768px)" srcset="./img/rogovaya-tablet@1x.jpg 1x,
                               ./img/rogovaya-tablet@2x.jpg 2x">
-              <img src="./img/rogovaya-mobile@1x.jpg"
-                    class="companion__avatar companion__avatar--catalog"
-                    width="77"
-                    height="77"
-                    alt="Аватар"
-                    srcset="./img/rogovaya-mobile@2x.jpg 2x"
-              >
+              <img src="./img/rogovaya-mobile@1x.jpg" class="companion__avatar companion__avatar--catalog" width="77" height="77" alt="Аватар" srcset="./img/rogovaya-mobile@2x.jpg 2x">
             </picture>
 
             <span class="companion__likes companion__likes--catalog">23</span>
@@ -873,11 +812,15 @@
                 <span>Лариса Роговая</span>
               </p>
               <ul class="companion__tags companion__tags--catalog tags">
-              <li class="tags__item tags__item--catalog"><a href="#">#образование</a></li>
-              <li class="tags__item tags__item--catalog"><a href="#">#карьера</a></li>
-              <li class="tags__item tags__item--catalog"><a href="#">#учеба</a></li>
-              <li class="tags__item tags__item--catalog"><a href="#">#линкедин</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#образование</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#карьера</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#учеба</a></li>
+                <li class="tags__item tags__item--catalog"><a href="#">#линкедин</a></li>
               </ul>
+              <div class="companion__actions">
+                <button class="companion__accept">Позвать!</button>
+                <span class="companion__likes companion__likes--catalog">23</span>
+              </div>
             </div>
             <div class="companion__wish wish">
               <h4 class="wish__title">хочет посетить:</h4>
@@ -902,16 +845,19 @@
                   </li>
                   <li class="transport__item transport__item--foot">
                     <div class="transport__item-tooltip">Пешком</div>
-                </ul>
+                </li></ul>
               </div>
 
               <div class="companion__level level">
                 <h4 class="level__title">левел:</h4>
-                <span class="level__value">50</span>
+                <span class="level__value">
+                  50
+                  <span class="level__label">level</span>
+                </span>
               </div>
             </div>
 
-            <button class="companion__accept">Позвать</button>
+            <button class="companion__accept">Позвать!</button>
           </article>
 
           <button class="companions__show-more">Показать еще</button>
@@ -929,41 +875,44 @@
     <footer class="footer footer--catalog container">
       <a href="#" class="footer__logo">
         <picture>
-          <source type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset="./img/webp/logo-desktop-blue@1x.webp 1x,
-                          ./img/webp/logo-desktop-blue@2x.webp 2x"
-          >
-          <source type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset="./img/webp/logo-tablet-blue@1x.webp 1x,
-                          ./img/webp/logo-tablet-blue@2x.webp 2x"
-          >
-          <source type="image/webp"
-                  srcset="./img/webp/logo-mobile-blue@1x.webp 1x,
-                          ./img/webp/logo-mobile-blue@2x.webp 2x"
-          >
+          <source type="image/webp" media="(min-width: 1440px)" srcset="./img/webp/logo-desktop-blue@1x.webp 1x,
+                          ./img/webp/logo-desktop-blue@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/webp/logo-tablet-blue@1x.webp 1x,
+                          ./img/webp/logo-tablet-blue@2x.webp 2x">
+          <source type="image/webp" srcset="./img/webp/logo-mobile-blue@1x.webp 1x,
+                          ./img/webp/logo-mobile-blue@2x.webp 2x">
 
-          <source media="(min-width: 1440px)"
-                  srcset="./img/logo-desktop-blue@1x.png 1x,
+          <source media="(min-width: 1440px)" srcset="./img/logo-desktop-blue@1x.png 1x,
                           ./img/logo-desktop-blue@2x.png 2x">
-          <source media="(min-width: 768px)"
-                  srcset="./img/logo-tablet-blue@1x.png 1x,
+          <source media="(min-width: 768px)" srcset="./img/logo-tablet-blue@1x.png 1x,
                           ./img/logo-tablet-blue@2x.png 2x">
-          <img src="img/logo-mobile-blue@1x.png"
-                width="100%"
-                height="auto"
-                alt="Логотип сервиса Погнали?"
-                srcset="./img/logo-mobile-blue@2x.png 2x">
+          <img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?" srcset="./img/logo-mobile-blue@2x.png 2x">
         </picture>
       </a>
       <div class="footer__social social">
-        <a href="#" title="Facebook страница сервиса Погнали" class="social__facebook"></a>
-        <a href="#" title="Страница ВКонтакте сервиса Погнали" class="social__vk"></a>
-        <a href="#" title="Instagram страница сервиса Погнали" class="social__instagram"></a>
+        <a href="#" title="Facebook страница сервиса Погнали" class="social__facebook">
+          <svg class="social__facebook-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 21" style="enable-background:new 0 0 11 21;" xml:space="preserve">
+            <use xlink:href="#icon-facebook"></use>
+          </svg>
+        </a>
+        <a href="#" title="Страница ВКонтакте сервиса Погнали" class="social__vk">
+          <svg class="social__vk-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8" style="enable-background:new 0 0 30 15.8;" xml:space="preserve">
+            <use xlink:href="#icon-vk"></use>
+          </svg>
+        </a>
+        <a href="#" title="Instagram страница сервиса Погнали" class="social__instagram">
+          <svg class="social__instagram-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve">
+            <use xlink:href="#icon-instagram"></use>
+          </svg>
+        </a>
       </div>
       <div class="footer__copyright">
-        <a href="#">Разработано</a>
+        <a href="https://up.htmlacademy.ru/adaptive/19">
+          Разработано
+          <svg class="footer__copyright-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 27 34" style="enable-background:new 0 0 27 34;" xml:space="preserve">
+            <use xlink:href="#icon-htmlacademy"></use>
+          </svg>
+        </a>
       </div>
     </footer>
   </body>

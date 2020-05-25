@@ -1,16 +1,24 @@
 .tariff {
   background-color: $bg-grey;
 
-  padding-top: 55px;
-  padding-bottom: 30px;
+  padding-top: 37px;
+  padding-bottom: 37px;
 
   border-radius: 0 0 30px 30px;
 
   position: relative;
 
+  @include tablet {
+    padding-top: 75px;
+    border-radius: 0 0 60px 60px;
+    padding-bottom: 62px;
+  }
+
   @include desktop {
+    padding-top: 107px;
     padding-left: 131px;
     padding-right: 131px;
+    padding-bottom: 162px;
   }
 }
 
@@ -33,12 +41,20 @@
   padding: 0;
   margin: 0;
   margin-left: 25px;
+  margin-top: 28px;
 
   position: relative;
   z-index: 0;
 
+  @include tablet {
+    margin-left: 0;
+    padding-right: 34px;
+    margin-top: 70px;
+  }
+
   @include desktop {
-    padding-right: 200px;
+    margin-top: 130px;
+    padding-right: 273px;
   }
 }
 
@@ -56,10 +72,10 @@
   height: 99px;
   position: absolute;
   right: 0;
-  top: -120px;
+  top: -130px;
 
   @include tablet {
-    bottom: -50px;
+    bottom: -105px;
     right: 46px;
     top: unset;
   }
@@ -68,7 +84,7 @@
     background-size: 198px 198px;
     width: 198px;
     height: 198px;
-    right: -50px;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -82,7 +98,7 @@
     height: 285px;
     position: absolute;
     right: 0;
-    top: 0;
+    top: -40px;
     z-index: -1;
     background-color: $bg-pale-grey-four;
     border-radius: 20px;
@@ -94,8 +110,8 @@
     width: 444px;
     height: 300px;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 114px;
+    top: -48px;
     z-index: -1;
     background-color: $bg-pale-grey-four;
     border-radius: 20px;
@@ -103,34 +119,60 @@
 }
 
 .tariff__item {
+  min-height: 65px;
   position: relative;
-  margin: 14px 0;
-  border-top: 1px solid $bg-pale-grey-four;
 
   @include tablet {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 20px 0;
+    align-items: center;
+    padding: 16px 0;
     margin: 0;
+    margin-left: 92px;
+
+    border-top: 1px solid $bg-grey;
+    border-bottom: 1px solid $bg-grey;
   }
 
   @include desktop {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 20px 0;
+    padding: 0;
     margin: 0;
+
+    margin-left: 92px;
+
+    border-top: 1px solid $bg-pale-grey-four;
+    border-bottom: 1px solid $bg-pale-grey-four;
+  }
+}
+
+.tariff__item .tariff__rate {
+  @include tablet {
+    margin-left: auto;
   }
 }
 
 .tariff__item:last-of-type {
+  @include desktop {
+    padding-bottom: 15px;
+  }
+}
+
+.tariff__item:last-of-type .tariff__rate {
   border-bottom: 1px solid $bg-pale-grey-four;
+  padding-bottom: 12px;
+
+  @include tablet {
+    border-bottom: none;
+  }
 }
 
 .tariff__item span {
   position: absolute;
-  top: 0;
+  top: 5px;
   right: 0;
   width: 34px;
   height: 34px;
@@ -140,18 +182,16 @@
   vertical-align: middle;
 
   @include tablet {
-    position: unset;
-    order: -1;
-    margin-right: 25px;
+    top: 0;
+    left: -92px;
     width: 67px;
     height: 67px;
     line-height: 67px;
   }
 
   @include desktop {
-    position: unset;
-    order: -1;
-    margin-right: 25px;
+    top: 0;
+    left: -92px;
     width: 67px;
     height: 67px;
     line-height: 67px;
@@ -159,12 +199,28 @@
 }
 
 .tariff__commercial {
+  max-width: 200px;
+  border-top: 1px solid $bg-pale-grey-four;
+  padding-top: 12px;
+
   @include tablet {
+    max-width: 320px;
+    margin-right: auto;
     flex-grow: 1;
+    border-top: none;
+    padding-top: 0;
   }
 
   @include desktop {
     flex-grow: 1;
+    max-width: 100%;
+    border-top: none;
+  }
+}
+
+.tariff__rate {
+  @include desktop {
+    padding-top: 12px;
   }
 }
 
@@ -194,12 +250,20 @@
   @include tablet {
     padding: 25px 0;
     position: relative;
+    max-width: 365px;
+    padding-left: 88px;
+    margin-top: 21px;
   }
 
   @include desktop {
     padding: 25px 0;
     position: relative;
     width: 50%;
+    padding-left: 88px;
+    margin-top: 29px;
+    margin-left: 26px;
+
+    text-align: left;
   }
 }
 

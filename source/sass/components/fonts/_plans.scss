@@ -22,6 +22,14 @@
   }
 }
 
+.plans__trip .trip__title {
+  text-transform: unset;
+
+  @include common-tablet-desktop {
+    @include font-size(24px, 2.08em);
+  }
+}
+
 .trip__companions,
 .trip__date {
   @include font(normal, $font-dark-slate-blue);

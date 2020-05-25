@@ -37,7 +37,7 @@
   }
 
   @include desktop {
-    @include font(300, $font-white);
+    @include font(bold, $font-white);
     @include font-size(21px, 1.18em);
   }
 }

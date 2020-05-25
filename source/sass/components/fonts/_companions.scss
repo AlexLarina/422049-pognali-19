@@ -100,6 +100,10 @@
 .companion__likes--catalog {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(14px, 1.5em);
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 1.5em);
+  }
 }
 
 .tags__item--catalog {
@@ -137,6 +141,15 @@
 .level__value {
   @include font(bold, $font-dark-slate-blue);
   @include font-size(24px, 0.75em);
+}
+
+.level__label {
+  font-size: 0;
+
+  @include common-tablet-desktop {
+    @include font(normal, $font-greyish-brown-40);
+    @include font-size(14px, 1em);
+  }
 }
 
 .companions__show-more {

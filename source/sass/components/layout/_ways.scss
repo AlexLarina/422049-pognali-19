@@ -9,7 +9,7 @@
   position: relative;
 
   @include common-tablet-desktop {
-    background: url("../../../img/flags-back@1x.png") no-repeat 90% 72px;
+    background: url("../../../img/flags-back@1x.png") no-repeat 92% 80px;
     background-color: $bg-grey;
 
     @include retina {
@@ -18,17 +18,29 @@
     }
   }
 
+  @include tablet {
+    border-radius: 0 0 60px 60px;
+    padding-bottom: 80px;
+  }
+
   @include desktop {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    padding-top: 161px;
+    padding-bottom: 139px;
+    background-position-x: 95%;
+    background-position-y: 87px;
   }
 }
 
 .ways__info-wrapper {
   @include desktop {
     width: 50%;
+    max-width: 550px;
+    padding-left: 110px;
   }
 }
 
@@ -40,24 +52,36 @@
 .ways__title,
 .ways__description {
   padding: 0 25px 0 25px;
+
+  @include tablet {
+    padding-left: 33px;
+  }
 }
 
 .ways__title {
   margin: 0;
-  padding-bottom: 23px;
+  padding-bottom: 18px;
+
+  @include tablet {
+    padding-bottom: 58px;
+  }
 
   @include desktop {
     width: 560px;
+    padding-top: 5px;
   }
 }
 
 .ways__description {
+  margin: 0;
+  max-width: 250px;
+
   @include tablet {
-    max-width: 390px;
+    max-width: 400px;
   }
 
   @include desktop {
-    max-width: 350px;
+    max-width: 400px;
     height: 100%;
     flex-grow: 1;
     margin: 0;
@@ -68,10 +92,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 66px;
+  margin-top: 60px;
 
   @include tablet {
-    margin-top: 113px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 105px;
     position: relative;
     z-index: 1;
   }
@@ -80,6 +106,8 @@
     order: -1;
     width: 50%;
     margin-top: 0;
+    padding-left: 73px;
+    padding-right: 29px;
   }
 }
 
@@ -92,9 +120,13 @@
     border-radius: 20px;
     background-color: $bg-pale-grey-four;
     position: absolute;
-    left: -30px;
-    top: -30px;
+    left: 0;
+    top: -39px;
     z-index: -1;
+  }
+
+  @include desktop {
+    top: -72px;
   }
 }
 
@@ -104,17 +136,22 @@
   border-radius: 10px;
 
   position: relative;
+  min-height: 190px;
 
   @include tablet {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    min-height: 140px;
+    border-radius: 20px;
   }
 
   @include desktop {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    min-height: unset;
+    border-radius: 20px;
   }
 }
 
@@ -124,6 +161,7 @@
   width: 35px;
   height: 24px;
   position: absolute;
+  z-index: 1;
 
   left: 25px;
   top: 87px;
@@ -144,27 +182,36 @@
   }
 }
 
+.way picture {
+  @include common-tablet-desktop {
+    max-height: 140px;
+  }
+}
+
 .way--thai::before {
-  background: url("../../../img/flags/Thailand_mobile.png") no-repeat 0% 0%;
+  background: url("../../../img/flags/flag-thailand.svg") no-repeat 0% 0%;
+  background-size: 35px 24px;
 
   @include common-tablet-desktop {
-    background: url("../../../img/flags/Thailand_desktop.png") no-repeat 0% 0%;
+    background-size: 70px 47px;
   }
 }
 
 .way--france::before {
-  background: url("../../../img/flags/France_mobile.png") no-repeat 0% 0%;
+  background: url("../../../img/flags/flag-france.svg") no-repeat 0% 0%;
+  background-size: 35px 24px;
 
   @include common-tablet-desktop {
-    background: url("../../../img/flags/France_desktop.png") no-repeat 0% 0%;
+    background-size: 70px 47px;
   }
 }
 
 .way--czech::before {
-  background: url("../../../img/flags/Czech_mobile.png") no-repeat 0% 0%;
+  background: url("../../../img/flags/flag-czech.svg") no-repeat 0% 0%;
+  background-size: 35px 24px;
 
   @include common-tablet-desktop {
-    background: url("../../../img/flags/Czech_desktop.png") no-repeat 0% 0%;
+    background-size: 70px 47px;
   }
 }
 
@@ -175,7 +222,7 @@
     width: 186px;
     height: 140px;
 
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 20px 20px 0;
   }
 }
 
@@ -187,6 +234,27 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: $bg-white;
+
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+
+  @include tablet {
+    padding-left: 30px;
+    padding-bottom: 16px;
+    padding-top: 30px;
+
+    position: static;
+    border-radius: 20px;
+  }
+
+  @include desktop {
+    flex-direction: column;
+    position: static;
+    padding-top: 24px;
+    border-radius: 20px;
+  }
 }
 
 .way__title,
@@ -199,7 +267,7 @@
   order: 1;
   width: 70%;
 
-  @include tablet {
+  @include common-tablet-desktop {
     order: unset;
   }
 }
@@ -208,7 +276,7 @@
   order: 3;
   width: 100%;
 
-  @include tablet {
+  @include common-tablet-desktop {
     order: unset;
   }
 }
@@ -219,6 +287,11 @@
   order: 2;
 
   @include tablet {
+    padding-top: 10px;
+    order: unset;
+  }
+
+  @include desktop {
     order: unset;
   }
 }
@@ -241,15 +314,29 @@
 
 .ways__show-all {
   @include gold-button();
+  padding-bottom: 20px;
+  margin-top: 13px;
+  min-height: 62px;
 
   @include tablet {
-    margin-top: 47px;
+    max-width: 618px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 37px;
+    border-radius: 20px;
+    min-height: 81px;
+
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 30px;
+    background-position-x: 94%;
   }
 
   @include desktop {
     width: 275px;
     height: 100%;
-    margin: -83px 360px 0 auto;
+    margin: -81px 240px 0 auto;
+    background-position-x: 86%;
   }
 }
 

@@ -12,7 +12,7 @@
 
   @include desktop {
     @include font(500, $font-white);
-    @include font-size(16px, 1.5em);
+    @include font-size(20px, 1.5em);
   }
 }
 
@@ -69,6 +69,10 @@
   @include font(bold, $font-dark-blue);
   @include font-size(17px, 1.76em);
   text-transform: uppercase;
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 1.5em);
+  }
 }
 
 .navigation__item--auth a:active {
