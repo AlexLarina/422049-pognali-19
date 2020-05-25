@@ -12,6 +12,9 @@
     <script src="./js/thirdparty/picturefill.js" async=""></script>
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header header--catalog container">
       <a href="index.html" class="header__logo">
         <picture>
@@ -887,12 +890,29 @@
         </picture>
       </a>
       <div class="footer__social social">
-        <a href="#" title="Facebook страница сервиса Погнали" class="social__facebook"></a>
-        <a href="#" title="Страница ВКонтакте сервиса Погнали" class="social__vk"></a>
-        <a href="#" title="Instagram страница сервиса Погнали" class="social__instagram"></a>
+        <a href="#" title="Facebook страница сервиса Погнали" class="social__facebook">
+          <svg class="social__facebook-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 21" style="enable-background:new 0 0 11 21;" xml:space="preserve">
+            <use xlink:href="#icon-facebook"></use>
+          </svg>
+        </a>
+        <a href="#" title="Страница ВКонтакте сервиса Погнали" class="social__vk">
+          <svg class="social__vk-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8" style="enable-background:new 0 0 30 15.8;" xml:space="preserve">
+            <use xlink:href="#icon-vk"></use>
+          </svg>
+        </a>
+        <a href="#" title="Instagram страница сервиса Погнали" class="social__instagram">
+          <svg class="social__instagram-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve">
+            <use xlink:href="#icon-instagram"></use>
+          </svg>
+        </a>
       </div>
       <div class="footer__copyright">
-        <a href="#">Разработано</a>
+        <a href="https://up.htmlacademy.ru/adaptive/19">
+          Разработано
+          <svg class="footer__copyright-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 27 34" style="enable-background:new 0 0 27 34;" xml:space="preserve">
+            <use xlink:href="#icon-htmlacademy"></use>
+          </svg>
+        </a>
       </div>
     </footer>
   </body>
