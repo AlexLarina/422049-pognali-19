@@ -62,6 +62,7 @@
   @include desktop {
     margin-left: 125px;
     padding-left: 147px;
+    max-width: 100%;
   }
 }
 
@@ -125,11 +126,14 @@
 
   @include desktop {
     max-width: 324px;
+    min-height: 81px;
     margin-top: 0;
     border-radius: 20px;
 
     margin-left: 0;
     margin-right: 0;
+    padding-left: 32px;
+    padding-top: 27px;
     background-position-x: 90%;
   }
 }

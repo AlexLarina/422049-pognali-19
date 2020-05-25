@@ -150,6 +150,8 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    min-height: unset;
+    border-radius: 20px;
   }
 }
 
@@ -181,7 +183,7 @@
 }
 
 .way picture {
-  @include tablet {
+  @include common-tablet-desktop {
     max-height: 140px;
   }
 }
@@ -248,7 +250,10 @@
   }
 
   @include desktop {
+    flex-direction: column;
+    position: static;
     padding-top: 24px;
+    border-radius: 20px;
   }
 }
 
@@ -262,7 +267,7 @@
   order: 1;
   width: 70%;
 
-  @include tablet {
+  @include common-tablet-desktop {
     order: unset;
   }
 }
@@ -271,7 +276,7 @@
   order: 3;
   width: 100%;
 
-  @include tablet {
+  @include common-tablet-desktop {
     order: unset;
   }
 }
@@ -283,6 +288,10 @@
 
   @include tablet {
     padding-top: 10px;
+    order: unset;
+  }
+
+  @include desktop {
     order: unset;
   }
 }
