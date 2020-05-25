@@ -209,6 +209,8 @@
   border: 1px solid $bg-cloudy-blue;
   border-radius: 4px;
 
+  appearance: textfield;
+
   @include tablet {
     margin-top: 25px;
     position: relative;
@@ -248,6 +250,7 @@
 .form__item--children input[type="checkbox"] {
   width: 0;
   height: 0;
+  display: none;
 }
 
 .form__item--children label::before {
