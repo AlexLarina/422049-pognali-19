@@ -219,7 +219,8 @@
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 30px 33px;
-    max-height: unset;
+    //max-height: unset;
+    max-height: 96px;
   }
 }
 

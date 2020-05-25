@@ -150,7 +150,7 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    min-height: unset;
+    min-height: 140px;
     border-radius: 20px;
   }
 }
@@ -169,16 +169,18 @@
   @include common-tablet-desktop {
     width: 70px;
     height: 47px;
+    //left: unset;
     right: 150px;
-    left: unset;
   }
 
   @include tablet {
     top: 16px;
+    right: 150px;
   }
 
   @include desktop {
     top: 23px;
+    right: 150px;
   }
 }
 
