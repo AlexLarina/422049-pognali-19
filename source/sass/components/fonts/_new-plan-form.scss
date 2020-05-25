@@ -145,6 +145,17 @@ label[for="trips__toggle"] {
   color: $font-white;
 }
 
+.form__item .days__event-date,
+.form__item .days__event {
+  color: $font-white;
+
+  @include desktop {
+    text-transform: unset;
+
+    @include font-size(18px, 1em);
+  }
+}
+
 .days__item--following {
   color: $font-greyish-brown;
 

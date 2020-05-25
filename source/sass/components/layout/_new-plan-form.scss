@@ -33,7 +33,10 @@
 
 .new-plan__title {
   margin: 0;
-  //margin-bottom: 31px;
+
+  @include desktop {
+    margin-left: 60px;
+  }
 }
 
 .new-plan form {
@@ -106,6 +109,7 @@
 
   @include desktop {
     width: 50%;
+    min-height: 70px;
   }
 }
 
@@ -135,6 +139,13 @@
   background-position: 50% 50%;
   background-size: 14px 2px;
 
+  @include tablet {
+    top: 50px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+  }
+
   @include desktop {
     top: unset;
   }
@@ -154,6 +165,7 @@
 
   @include desktop {
     left: 219px;
+    z-index: 1;
   }
 }
 
@@ -197,8 +209,18 @@
   border: 1px solid $bg-cloudy-blue;
   border-radius: 4px;
 
+  @include tablet {
+    margin-top: 25px;
+    position: relative;
+    min-height: 70px;
+  }
+
   @include desktop {
     max-width: 181px;
+    min-height: 70px;
+
+    position: absolute;
+    left: 219px;
   }
 }
 
@@ -391,25 +413,25 @@ input[name="children-allowed"]:checked + label::after {
 }
 
 .trip__country-flag--bosnia {
-  background-image: url("../../../img/flags/Bosnia_mobile.png");
+  background-image: url("../../../img/flags/flag-bosnia.svg");
   background-repeat: no-repeat;
   background-size: 35px 24px;
   background-position: 50% 50%;
 
   @include common-tablet-desktop {
-    background-image: url("../../../img/flags/Bosnia_tablet.png");
+    background-image: url("../../../img/flags/flag-bosnia.svg");
     background-size: 70px 47px;
   }
 }
 
 .trip__country-flag--czech {
-  background-image: url("../../../img/flags/Czech_mobile.png");
+  background-image: url("../../../img/flags/flag-czech.svg");
   background-repeat: no-repeat;
   background-size: 35px 24px;
   background-position: 50% 50%;
 
   @include common-tablet-desktop {
-    background-image: url("../../../img/flags/Czech_desktop.png");
+    background-image: url("../../../img/flags/flag-czech.svg");
     background-size: 70px 47px;
   }
 }
@@ -550,6 +572,10 @@ input[name="children-allowed"]:checked + label::after {
     background-size: 18px 18px;
     width: 18px;
     height: 18px;
+  }
+
+  @include tablet {
+    right: 32px;
   }
 }
 
@@ -693,12 +719,22 @@ input[name="children-allowed"]:checked + label::after {
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18 34' style='enable-background:new 0 0 18 34;' xml:space='preserve' fill='%23eeeded'%3E%3Cpath d='M14.4,17L0.4,2.6C-0.1,2-0.1,1,0.4,0.4c0.6-0.6,1.5-0.6,2.1,0l15.1,15.5c0.6,0.6,0.6,1.6,0,2.1L2.5,33.6 c-0.3,0.3-0.7,0.4-1,0.4s-0.8-0.1-1-0.4c-0.6-0.6-0.6-1.6,0-2.1L14.4,17z'/%3E%3C/svg%3E%0A");
 }
 
+.form__item.calendar {
+  @include tablet {
+    margin-top: 60px;
+  }
+}
+
 .calendar__weekdays {
   list-style: none;
   padding: 0 12px;
 
   display: flex;
   justify-content: space-between;
+
+  @include desktop {
+    padding: 0;
+  }
 }
 
 .calendar__days {
@@ -708,6 +744,17 @@ input[name="children-allowed"]:checked + label::after {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include tablet {
+    margin-top: 40px;
+  }
+}
+
+.weekdays__item {
+  @include desktop {
+    width: 140px;
+    padding-left: 16px;
+  }
 }
 
 .days__item {
@@ -754,6 +801,9 @@ input[name="children-allowed"]:checked + label::after {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
+    padding-left: 15px;
+    padding-top: 15px;
   }
 }
 
@@ -774,7 +824,7 @@ input[name="children-allowed"]:checked + label::after {
 }
 
 .days__event-date {
-  margin-bottom: auto;
+  margin-bottom: 10px;
 }
 
 .days__event {
@@ -821,6 +871,7 @@ label[for="trips__toggle"] {
 
   @include desktop {
     max-width: 730px;
+    background-position: 98% 50%;
   }
 }
 
@@ -933,12 +984,20 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   position: relative;
 }
 
+.form__trips-item--add-country .trip__delete {
+  @include tablet {
+    right: 0;
+  }
+}
+
 .form__trips-item .trips__toggle-button {
   position: relative;
 
   @include common-tablet-desktop {
     // check it
     height: 70px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -958,6 +1017,10 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
     background-size: 18px 18px;
     width: 18px;
     height: 18px;
+  }
+
+  @include tablet {
+    right: 32px;
   }
 }
 
@@ -1052,7 +1115,13 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   text-align: left;
   min-height: 220px;
 
+  @include tablet {
+    min-height: 142px;
+    max-width: 499px;
+  }
+
   @include desktop {
+    min-height: 142px;
     max-width: 730px;
   }
 }
@@ -1069,6 +1138,11 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   position: relative;
   padding-left: 15px;
   width: 100%;
+
+  @include common-tablet-desktop {
+    padding-left: 0;
+    margin-bottom: 35px;
+  }
 }
 
 .form--entertainment .trip__title::before,
@@ -1091,7 +1165,7 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
     width: 15px;
     height: 15px;
     left: unset;
-    right: -20px;
+    right: 214px;
   }
 }
 
@@ -1106,26 +1180,33 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   @include common-tablet-desktop {
     width: 70px;
     height: 47px;
+    right: 32px;
   }
 
   @include desktop {
-    right: -100px;
+    right: 110px;
   }
 }
 
 .form--entertainment .trip__title--bosnia::after {
-  background-image: url("../../../img/flags/Bosnia_mobile.png");
+  background-image: url("../../../img/flags/flag-bosnia.svg");
+  background-size: 35px 24px;
+  background-repeat: no-repeat;
 
   @include common-tablet-desktop {
-    background-image: url("../../../img/flags/Bosnia_tablet.png");
+    background-image: url("../../../img/flags/flag-bosnia.svg");
+    background-size: 70px 47px;
   }
 }
 
 .form--entertainment .trip__title--czech::after {
-  background-image: url("../../../img/flags/Czech_mobile.png");
+  background-image: url("../../../img/flags/flag-czech.svg");
+  background-size: 35px 24px;
+  background-repeat: no-repeat;
 
   @include common-tablet-desktop {
-    background-image: url("../../../img/flags/Czech_desktop.png");
+    background-image: url("../../../img/flags/flag-czech.svg");
+    background-size: 70px 47px;
   }
 }
 
@@ -1150,6 +1231,10 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
 
 .form--entertainment .form__trips-list {
   position: relative;
+
+  @include tablet {
+    margin-top: 75px;
+  }
 }
 
 .form--entertainment .form__trips-list::before {
@@ -1165,12 +1250,16 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   @include tablet {
     left: unset;
     width: 3px;
-    right: -14px;
+    right: 0;
+    max-height: 230px;
+    z-index: 1;
   }
 
   @include desktop {
     left: unset;
     width: 3px;
-    right: -14px;
+    right: 220px;
+    z-index: 1;
+    max-height: 225px;
   }
 }
