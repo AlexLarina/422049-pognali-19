@@ -20,6 +20,10 @@
   @include font(bold, $font-dark-blue);
   @include font-size(17px, 1.76em);
   text-transform: uppercase;
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 0.9em);
+  }
 }
 
 .user__change-avatar:active {
@@ -31,11 +35,19 @@
   @include font(bold, $font-dark-blue);
   @include font-size(16px, 1.13em);
   text-transform: uppercase;
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 0.9em);
+  }
 }
 
 .tags textarea {
   @include font(normal, $font-greyish-brown);
   @include font-size(16px, 1.38em);
+
+  @include common-tablet-desktop {
+    @include font-size(20px, 1.2em);
+  }
 }
 
 .tags textarea::placeholder,

@@ -43,10 +43,12 @@
 .form__item label[for="children-allowed"] {
   @include font(normal, $font-greyish-brown);
   @include font-size(15px, 1em);
-  text-transform: unset;
+  text-transform: none;
 
   @include common-tablet-desktop {
     @include font-size(20px, 0.9em);
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 }
 
@@ -59,6 +61,7 @@
   @include common-tablet-desktop {
     @include font-size(24px, 1em);
     text-align: left;
+    text-transform: none;
   }
 }
 
@@ -141,8 +144,23 @@ label[for="trips__toggle"] {
   }
 }
 
+.days__item button {
+  @include font(500, $font-greyish-brown);
+  @include font-size(14px, 1.29em);
+  line-height: 30px;
+
+  @include common-tablet-desktop {
+    @include font-size(18px, 1.67em);
+    line-height: 70px;
+  }
+}
+
 .days__item--selected {
   color: $font-white;
+}
+
+.days__item--selected span {
+  color: inherit;
 }
 
 .form__item .days__event-date,
@@ -150,7 +168,7 @@ label[for="trips__toggle"] {
   color: $font-white;
 
   @include desktop {
-    text-transform: unset;
+    text-transform: none;
 
     @include font-size(18px, 1em);
   }
@@ -164,6 +182,19 @@ label[for="trips__toggle"] {
   }
 }
 
+.days__item--following span {
+  color: inherit;
+}
+
 .form__trips-item input[id="trips__toggle"]:checked + label[for="trips__toggle"] {
   color: $font-white;
+}
+
+.form--entertainment textarea {
+  @include common-tablet-desktop {
+    color: $font-greyish-brown;
+
+    @include font-size(20px, 1.2em);
+    line-height: 1.2em;
+  }
 }

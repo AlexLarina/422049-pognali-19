@@ -1,5 +1,5 @@
 .companions__pagination {
-  margin-top: 50px;
+  margin-top: 66px;
 }
 
 .pagination {
@@ -74,6 +74,10 @@
     order: 1;
     margin-left: auto;
   }
+
+  @include desktop {
+    background-position: 90% 50%;
+  }
 }
 
 .pagination__item--forward {
@@ -86,5 +90,9 @@
 
   @include common-tablet-desktop {
     order: 2;
+  }
+
+  @include desktop {
+    background-position: 75% 50%;
   }
 }

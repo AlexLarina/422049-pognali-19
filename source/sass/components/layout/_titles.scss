@@ -26,6 +26,11 @@
     background-position: 100% 50%;
     padding-right: 60px;
   }
+
+  @include desktop {
+    padding-right: 124px;
+    background-position: 69% 5%;
+  }
 }
 
 .catalog-main__title .title__back:hover {

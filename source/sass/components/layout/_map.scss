@@ -31,9 +31,17 @@
     flex-direction: row;
     justify-content: space-around;
 
-    margin-bottom: 420px;
+    margin-bottom: 395px;
+    margin-left: 224px;
     padding-bottom: 59px;
     padding-top: 0;
+  }
+}
+
+:-ms-fullscreen,
+:root .map__wrapper {
+  @include desktop {
+    margin-left: 0;
   }
 }
 
@@ -60,8 +68,7 @@
   }
 
   @include desktop {
-    margin-left: 125px;
-    padding-left: 147px;
+    padding-left: 47px;
     max-width: 100%;
   }
 }
@@ -97,7 +104,7 @@
     width: 90px;
     height: 90px;
 
-    left: 25px;
+    left: -75px;
     top: -5px;
 
     background-size: 28px 43px;
@@ -169,6 +176,10 @@
   }
 
   @include desktop {
+    background-size: 57px 57px;
+    width: 57px;
+    height: 57px;
+
     top: 343px;
     left: 692px;
   }
