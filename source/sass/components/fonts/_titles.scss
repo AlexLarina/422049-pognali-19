@@ -2,6 +2,10 @@
 .form-main__title a {
   @include font(bold, $font-white);
   @include font-size(36px, 1.11em);
+
+  @include common-tablet-desktop {
+    @include font-size(60px, 1.17em);
+  }
 }
 
 .catalog-main__title .title__back {

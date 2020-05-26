@@ -12,6 +12,15 @@
   padding-top: 25px;
   padding-bottom: 25px;
   position: relative;
+
+  @include common-tablet-desktop {
+    border-radius: 60px 60px 0 0;
+  }
+
+  @include desktop {
+    padding-top: 45px;
+    padding-bottom: 73px;
+  }
 }
 
 .new-plan::before {
@@ -29,13 +38,17 @@
   @include tablet {
     margin-bottom: 60px;
   }
+
+  @include desktop {
+    margin-bottom: 53px;
+  }
 }
 
 .new-plan__title {
   margin: 0;
 
   @include desktop {
-    margin-left: 60px;
+    margin-left: 70px;
   }
 }
 
@@ -50,7 +63,7 @@
   }
 
   @include desktop {
-    padding: 100px 162px;
+    padding: 95px 162px 105px 162px;
     border-radius: 60px;
   }
 }
@@ -73,11 +86,16 @@
 
 .form__title span {
   display: block;
+
+  @include desktop {
+    display: inline;
+  }
 }
 
 .form__description {
   @include desktop {
     max-width: 576px;
+    margin-top: 35px;
   }
 }
 
@@ -92,12 +110,21 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    margin-top: 37px;
+    padding-top: 30px;
+
+    border-top: 1px solid $bg-light-blue-grey-two;
   }
 }
 
 .form__item {
   position: relative;
   margin-bottom: 20px;
+
+  @include desktop {
+    margin-bottom: 14px;
+  }
 }
 
 .form__item--amount {
@@ -116,6 +143,7 @@
 .form__item--duration {
   @include common-tablet-desktop {
     order: 1;
+    margin-bottom: 32px;
   }
 }
 
@@ -236,7 +264,8 @@
 
 .form__item--children {
   @include desktop {
-    max-width: 230px;
+    margin-top: 25px;
+    margin-bottom: 14px;
   }
 }
 
@@ -245,6 +274,10 @@
   position: relative;
   display: flex;
   align-items: center;
+
+  @include desktop {
+    padding-left: 60px;
+  }
 }
 
 .form__item--children input[type="checkbox"] {
@@ -264,6 +297,11 @@
 
   position: absolute;
   left: 0;
+
+  @include common-tablet-desktop {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .form__item--children label:hover::before {
@@ -285,6 +323,13 @@
   position: absolute;
   left: 9px;
   top: 4px;
+
+  @include desktop {
+    width: 12px;
+    height: 12px;
+    top: 5px;
+    left: 11px;
+  }
 }
 
 .form__item--children label:active::after {
@@ -327,12 +372,25 @@ input[name="children-allowed"]:checked + label::after {
   }
 }
 
+.form--route .form__trips-list {
+  @include desktop {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 17px;
+  }
+}
+
 .form--route .form__item {
   @include common-tablet-desktop {
     padding-top: 40px;
     border-top: 1px solid $bg-cloudy-blue;
 
     position: relative;
+  }
+
+  @include desktop {
+    margin-top: 37px;
+    margin-bottom: 55px;
   }
 }
 
@@ -351,7 +409,7 @@ input[name="children-allowed"]:checked + label::after {
   }
 
   @include desktop {
-    right: 211px;
+    right: 223px;
   }
 }
 
@@ -413,6 +471,10 @@ input[name="children-allowed"]:checked + label::after {
     height: 15px;
     z-index: 2;
   }
+
+  @include desktop {
+    left: -16px;
+  }
 }
 
 .trip__country-flag--bosnia {
@@ -424,6 +486,7 @@ input[name="children-allowed"]:checked + label::after {
   @include common-tablet-desktop {
     background-image: url("../../../img/flags/flag-bosnia.svg");
     background-size: 70px 47px;
+    background-position: 22% 50%;
   }
 }
 
@@ -436,6 +499,7 @@ input[name="children-allowed"]:checked + label::after {
   @include common-tablet-desktop {
     background-image: url("../../../img/flags/flag-czech.svg");
     background-size: 70px 47px;
+    background-position: 22% 50%;
   }
 }
 
@@ -462,6 +526,10 @@ input[name="children-allowed"]:checked + label::after {
     background-size: 17px 17px;
     background-color: inherit;
   }
+
+  @include desktop {
+    right: 5px;
+  }
 }
 
 .form__button-wrapper {
@@ -485,6 +553,8 @@ input[name="children-allowed"]:checked + label::after {
     border: none;
     max-width: 285px;
     padding: 28px 34px;
+    border-radius: 20px;
+    background-position-x: 86%;
   }
 }
 
@@ -544,6 +614,7 @@ input[name="children-allowed"]:checked + label::after {
     max-width: 730px;
     // check
     height: 70px;
+    padding: 15px 12px 15px 24px;
   }
 }
 
@@ -599,7 +670,7 @@ input[name="children-allowed"]:checked + label::after {
   }
 
   @include desktop {
-    right: -63px;
+    right: -50px;
   }
 }
 
@@ -619,8 +690,24 @@ input[name="children-allowed"]:checked + label::after {
   }
 }
 
+.form__steps .steps__item {
+  @include desktop {
+    padding-left: 25px;
+  }
+}
+
 .form__steps .steps__item:not(:last-of-type) {
   margin-bottom: 26px;
+
+  @include desktop {
+    margin-bottom: 31px;
+  }
+}
+
+.form__steps .steps__list {
+  @include desktop {
+    margin: 15px 63px 0 0;
+  }
 }
 
 .new-plan__steps .steps__list {
@@ -669,6 +756,10 @@ input[name="children-allowed"]:checked + label::after {
 
   border-top: 1px solid $bg-light-blue-grey-two;
   border-bottom: 1px solid $bg-light-blue-grey-two;
+
+  @include desktop {
+    padding: 25px 0;
+  }
 }
 
 .month button {
@@ -737,6 +828,7 @@ input[name="children-allowed"]:checked + label::after {
 
   @include desktop {
     padding: 0;
+    margin: 10px 0;
   }
 }
 
@@ -750,6 +842,10 @@ input[name="children-allowed"]:checked + label::after {
 
   @include tablet {
     margin-top: 40px;
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
   }
 }
 
@@ -776,7 +872,7 @@ input[name="children-allowed"]:checked + label::after {
 
   @include desktop {
     width: 140px;
-    height: 72px;
+    height: 70px;
 
     text-align: left;
     vertical-align: top;
@@ -805,8 +901,8 @@ input[name="children-allowed"]:checked + label::after {
     justify-content: flex-start;
     align-items: flex-start;
 
-    padding-left: 15px;
-    padding-top: 15px;
+    padding-left: 12px;
+    padding-top: 4px;
   }
 }
 
@@ -853,6 +949,10 @@ label[for="trips__toggle"] {
   padding: 13px 0 13px 12px;
   border: 1px solid $bg-cloudy-blue;
   border-radius: 4px;
+
+  @include desktop {
+    padding: 15px 0 13px 23px;
+  }
 }
 
 .form__trips-item select {
@@ -1049,7 +1149,7 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   }
 
   @include desktop {
-    right: -62px;
+    right: -50px;
   }
 }
 
@@ -1126,6 +1226,7 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   @include desktop {
     min-height: 142px;
     max-width: 730px;
+    padding: 23px 22px;
   }
 }
 
@@ -1144,7 +1245,7 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
 
   @include common-tablet-desktop {
     padding-left: 0;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1232,11 +1333,30 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   }
 }
 
+.form--entertainment .form__trips-item:not(:last-of-type) {
+  @include desktop {
+    margin-bottom: 60px;
+  }
+}
+
+.form--entertainment .form__introduction {
+  @include desktop {
+    border-bottom: 1px solid $bg-light-blue-grey-two;
+    padding-bottom: 39px;
+  }
+}
+
 .form--entertainment .form__trips-list {
   position: relative;
 
   @include tablet {
     margin-top: 75px;
+    padding-top: 35px;
+  }
+
+  @include desktop {
+    margin-top: 88px;
+    margin-bottom: 58px;
   }
 }
 
@@ -1261,8 +1381,8 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   @include desktop {
     left: unset;
     width: 3px;
-    right: 220px;
+    right: 222px;
     z-index: 1;
-    max-height: 225px;
+    max-height: 260px;
   }
 }

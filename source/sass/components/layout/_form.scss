@@ -2,6 +2,15 @@
   padding-top: 50px;
   border-radius: 0 0 30px 30px;
   position: relative;
+
+  @include common-tablet-desktop {
+    border-radius: 0 0 60px 60px;
+  }
+
+  @include desktop {
+    padding-top: 42px;
+    padding-left: 125px;
+  }
 }
 
 .form-main__title::before {
