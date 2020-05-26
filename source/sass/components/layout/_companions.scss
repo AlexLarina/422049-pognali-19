@@ -16,6 +16,7 @@
   @include desktop {
     padding-bottom: 134px;
     padding-top: 92px;
+    border-radius: 0 0 60px 60px;
   }
 }
 
@@ -135,6 +136,7 @@
 
   @include desktop {
     padding-left: 70px;
+    margin-bottom: 58px;
   }
 }
 
@@ -163,6 +165,9 @@
     width: 213px;
     height: 213px;
     border-radius: 20px;
+
+    left: 0;
+    top: -60px;
   }
 }
 
@@ -185,7 +190,7 @@
 .companions__description:last-of-type {
   margin-top: 20px;
 
-  @include tablet {
+  @include common-tablet-desktop {
     margin-top: 40px;
   }
 }
@@ -215,7 +220,7 @@
     justify-content: space-between;
 
     width: 50%;
-    padding-left: 31px;
+    padding-left: 29px;
     padding-right: 0;
     margin-top: 41px;
   }
@@ -230,16 +235,11 @@
   margin-bottom: 10px;
   padding-bottom: 22px;
 
-  @include tablet {
+  @include common-tablet-desktop {
     max-width: 285px;
     margin-bottom: 0;
     border-radius: 20px;
     padding-bottom: 29px;
-  }
-
-  @include desktop {
-    max-width: 285px;
-    margin-bottom: 0;
   }
 }
 
@@ -341,6 +341,10 @@
 
   @include tablet {
     margin: 23px 47px 30px 30px;
+  }
+
+  @include desktop {
+    margin: 23px 18px 30px 33px;
   }
 }
 
@@ -473,7 +477,7 @@
   justify-content: center;
   align-items: center;
 
-  @include tablet {
+  @include common-tablet-desktop {
     top: 22px;
     left: 22px;
   }
@@ -482,7 +486,7 @@
 .companion__name {
   margin: 22px 0 15px 0;
 
-  @include tablet {
+  @include common-tablet-desktop {
     margin-top: 26px;
   }
 }
@@ -628,7 +632,7 @@
   top: 6px;
   left: 53px;
 
-  @include tablet {
+  @include common-tablet-desktop {
     width: 7px;
     height: 7px;
 
@@ -686,9 +690,15 @@
   @include desktop {
     max-width: 280px;
     height: 100%;
-    margin: -81px 360px auto 72px;
+    margin: -81px 360px auto 70px;
     z-index: 1;
     background-position-x: 87%;
+
+    border-radius: 20px;
+    min-height: 81px;
+
+    padding-top: 30px;
+    padding-left: 33px;
   }
 }
 
@@ -1201,7 +1211,7 @@ input[name="transport--foot"]:checked + .transport__label--foot:hover {
   left: 50%;
   transform: translateX(-50%);
 
-  @include tablet {
+  @include common-tablet-desktop{
     top: 273px;
   }
 }

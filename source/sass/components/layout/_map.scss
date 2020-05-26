@@ -31,7 +31,7 @@
     flex-direction: row;
     justify-content: space-around;
 
-    margin-bottom: 420px;
+    margin-bottom: 395px;
     padding-bottom: 59px;
     padding-top: 0;
   }
@@ -169,6 +169,10 @@
   }
 
   @include desktop {
+    background-size: 57px 57px;
+    width: 57px;
+    height: 57px;
+
     top: 343px;
     left: 692px;
   }

@@ -26,6 +26,7 @@
     background-color: $bg-dark-blue-grey;
     padding-top: 133px;
     padding-bottom: 163px;
+    border-radius: 0 0 60px 60px;
   }
 }
 
@@ -70,7 +71,7 @@
 
     position: absolute;
     bottom: 0;
-    right: 60px;
+    right: 61px;
     z-index: 1;
   }
 }
@@ -149,7 +150,7 @@
 
   @include desktop {
     max-width: 500px;
-    margin-bottom: 51px;
+    margin-bottom: 86px;
   }
 }
 
@@ -175,6 +176,7 @@
     padding-left: 32px;
     border-radius: 20px;
     max-width: 275px;
-    margin-left: 82px;
+    margin-left: 80px;
+    min-height: 81px;
   }
 }

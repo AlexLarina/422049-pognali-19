@@ -18,15 +18,19 @@
 
     padding-top: 48px;
     padding-bottom: 46px;
+
+    border-radius: 60px 60px 0 0;
   }
 
   @include desktop {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
     padding-top: 51px;
     padding-bottom: 51px;
+
+    border-radius: 60px 60px 0 0;
   }
 }
 
@@ -40,6 +44,10 @@
 
 .footer__logo {
   display: inline-block;
+
+  @include desktop {
+    margin-right: 368px;
+  }
 }
 
 .social {
@@ -143,6 +151,8 @@
     border-top: none;
     padding-top: 0;
     align-self: center;
+
+    margin-left: auto;
   }
 }
 

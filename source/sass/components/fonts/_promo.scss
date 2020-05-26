@@ -44,7 +44,7 @@
   @include font(bold, $font-dark-blue);
   @include font-size(18px, 1em);
 
-  @include tablet {
+  @include common-tablet-desktop {
     @include font-size(24px, 1em);
   }
 }
