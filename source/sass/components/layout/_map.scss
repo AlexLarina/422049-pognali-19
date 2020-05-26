@@ -38,6 +38,13 @@
   }
 }
 
+:-ms-fullscreen,
+:root .map__wrapper {
+  @include desktop {
+    margin-left: 0;
+  }
+}
+
 .map__interactive {
   position: absolute;
   top: 0;

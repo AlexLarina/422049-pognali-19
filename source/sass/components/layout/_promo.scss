@@ -153,6 +153,14 @@
   }
 }
 
+:-ms-fullscreen,
+:root .promo__steps-list {
+  @include desktop {
+    position: static;
+    transform: none;
+  }
+}
+
 .promo__quote {
   margin: 0;
   background-color: $bg-dark-blue;
@@ -181,7 +189,7 @@
   margin-bottom: 20px;
 
   @include common-tablet-desktop {
-    max-width: unset;
+    max-width: none;
     margin-bottom: 45px;
   }
 }
