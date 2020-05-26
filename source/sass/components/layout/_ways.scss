@@ -174,7 +174,7 @@
   @include common-tablet-desktop {
     width: 70px;
     height: 47px;
-    left: unset;
+    left: auto;
     right: 150px;
   }
 
@@ -192,6 +192,10 @@
 .way picture {
   @include common-tablet-desktop {
     max-height: 140px;
+  }
+
+  @include desktop {
+    margin-left: auto;
   }
 }
 
