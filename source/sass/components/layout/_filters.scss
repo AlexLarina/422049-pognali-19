@@ -10,6 +10,11 @@
   background-color: $bg-pale-grey-four;
   position: relative;
   border-radius: 0 0 30px 30px;
+
+  @include desktop {
+    padding-top: 57px;
+    padding-bottom: 44px;
+  }
 }
 
 .filters::before {
@@ -25,6 +30,7 @@
 
   @include desktop {
     margin-right: 15px;
+    margin-left: 20px;
   }
 }
 
@@ -36,6 +42,13 @@
   width: 15px;
   height: 10px;
   margin-right: 12px;
+
+  @include desktop {
+    width: 23px;
+    height: 15px;
+
+    margin-right: 18px;
+  }
 }
 
 .filters__wrapper {
@@ -161,7 +174,17 @@ input[id="filters__alphabet-toggle"] {
 
   @include desktop {
     margin-left: auto;
-    margin-top: -25px;
+    margin-top: -35px;
+    background-size: 27px 27px;
+
+    padding-right: 45px;
+    max-width: 179px;
+  }
+}
+
+label[for="filters__alphabet-toggle"] {
+  @include desktop {
+    margin-right: 65px;
   }
 }
 
@@ -190,8 +213,12 @@ input[id="filters__alphabet-toggle"] {
   }
 
   @include desktop {
-    margin-left: 280px;
+    margin-left: 338px;
     margin-top: -25px;
+
+    justify-content: space-between;
+    width: 100%;
+    max-width: 375px;
   }
 }
 

@@ -15,6 +15,18 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @include desktop {
+    padding-top: 110px;
+  }
+}
+
+.catalog-main__title a {
+  @include desktop {
+    margin-left: 65px;
+    padding-bottom: 61px;
   }
 }
 

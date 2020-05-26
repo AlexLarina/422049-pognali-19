@@ -14,7 +14,7 @@
   }
 
   @include desktop {
-    padding-bottom: 134px;
+    padding-bottom: 76px;
     padding-top: 92px;
     border-radius: 0 0 60px 60px;
   }
@@ -370,6 +370,8 @@
 
   @include desktop {
     margin-left: 52px;
+    margin-bottom: 64px;
+    margin-top: 0;
   }
 }
 
@@ -427,7 +429,7 @@
   }
 
   @include desktop {
-    margin-left: 50px;
+    margin-left: 57px;
   }
 }
 
@@ -455,6 +457,12 @@
 
   @include common-tablet-desktop {
     background-position: 35% 40%;
+  }
+
+  @include desktop {
+    margin-top: 63px;
+    background-size: 27px 27px;
+    background-position: 37% 40%;
   }
 }
 
@@ -649,6 +657,7 @@
     margin-left: 52px;
 
     position: relative;
+    white-space: nowrap;
   }
 }
 
@@ -922,7 +931,7 @@
 
   @include desktop {
     height: auto;
-    margin-top: 48px;
+    margin-top: 45px;
   }
 }
 

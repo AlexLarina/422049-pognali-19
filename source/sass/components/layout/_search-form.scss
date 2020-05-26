@@ -36,6 +36,11 @@
     max-width: 688px;
     padding: 35px;
   }
+
+  @include desktop {
+    max-width: 285px;
+    padding: 45px 49px 47px 46px;
+  }
 }
 
 .search__title {
@@ -55,8 +60,15 @@
 
   border-top: 2px solid $bg-macaroni-and-cheese;
 
-  @include tablet {
+  @include common-tablet-desktop {
     border-top: none;
+    //margin: 0;
+  }
+}
+
+.filter--level {
+  @include desktop {
+    margin-top: -20px;
   }
 }
 
@@ -176,6 +188,11 @@
   border-radius: 20px;
   padding: 5px 0;
   cursor: pointer;
+
+  @include desktop {
+    margin-top: 30px;
+    min-height: 50px;
+  }
 }
 
 .search__submit:hover {
@@ -203,6 +220,10 @@
     flex-direction: row;
     justify-content: flex-end;
     margin-top: -30px;
+  }
+
+  @include desktop {
+    margin-top: 13px;
   }
 }
 
@@ -266,6 +287,10 @@
   @include tablet {
     width: 280px;
   }
+
+  @include desktop {
+    margin-top: 35px;
+  }
 }
 
 .range__scale {
@@ -279,6 +304,10 @@
   height: 2px;
   background-color: $bg-dark-slate-blue;
   width: 55%;
+
+  @include desktop {
+    width: 65%;
+  }
 }
 
 .range__toggle {
@@ -290,6 +319,11 @@
   background: $bg-dark-slate-blue;
   border-radius: 50%;
   cursor: pointer;
+
+  @include common-tablet-desktop {
+    width: 13px;
+    height: 13px;
+  }
 }
 
 .range__toggle:hover,
@@ -309,6 +343,10 @@
   @include tablet {
     left: 120px;
   }
+
+  @include desktop {
+    left: 60px;
+  }
 }
 
 .range__toggle--min:hover,
@@ -322,6 +360,10 @@
 
 .range__toggle--max {
   right: -5px;
+
+  @include desktop {
+    right: -3px;
+  }
 }
 
 .range__toggle--max:hover,
@@ -341,6 +383,12 @@
   @include tablet {
     display: inline-block;
     width: 125px;
+  }
+}
+
+label[for="open-fieldset-music"] {
+  @include desktop {
+    padding-top: 6px;
   }
 }
 

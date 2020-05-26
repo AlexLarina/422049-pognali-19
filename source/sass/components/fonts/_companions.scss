@@ -95,6 +95,17 @@
   @include font(bold, $font-dark-slate-blue);
   @include font-size(20px, 1em);
   text-align: left;
+
+  @include desktop {
+    @include font-size(30px, 1em);
+  }
+}
+
+.companion__tags--catalog {
+  @include desktop {
+    @include font(normal, $font-greyish-brown);
+    @include font-size(20px, 1.2em);
+  }
 }
 
 .companion__likes--catalog {
