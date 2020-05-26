@@ -478,7 +478,7 @@
   border-radius: 50%;
 
   background-color: rgba(0, 0, 0, 0.5);
-  border: 3px solid $bg-orange;
+  //border: 3px solid $bg-orange;
 
   display: flex;
   flex-direction: column;
@@ -489,6 +489,47 @@
     top: 22px;
     left: 22px;
   }
+}
+
+.companion__level-progress-bar,
+.level-progress-bar {
+  @include size(60px, 60px);
+  clip: rect(0, 60px, 60px, 30px);
+  left: 0;
+  position: absolute;
+  top: 0;
+
+  .half-circle {
+    @include size(100%, 100%);
+    border: 3px solid $bg-orange;
+    border-radius: 50%;
+    clip: rect(0, 30px, 60px, 0);
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.level-progress-bar {
+  left: auto;
+}
+
+.companion__level--99,
+.level__value--99 {
+  @include draw-progress(99, $bg-orange);
+}
+
+.companion__level--80,
+.level__value--80 {
+  @include draw-progress(80, $bg-orange);
+}
+
+.level__value--25 {
+  @include draw-progress(25, $bg-orange);
+}
+
+.level__value--50 {
+  @include draw-progress(50, $bg-orange);
 }
 
 .companion__name {
@@ -846,7 +887,7 @@
   line-height: 45px;
   vertical-align: middle;
   text-align: center;
-  border: 3px solid $bg-orange;
+  //border: 3px solid $bg-orange;
   border-radius: 50%;
   margin-left: 7px;
 
@@ -1219,7 +1260,7 @@ input[name="transport--foot"]:checked + .transport__label--foot:hover {
   left: 50%;
   transform: translateX(-50%);
 
-  @include common-tablet-desktop{
+  @include common-tablet-desktop {
     top: 273px;
   }
 }
