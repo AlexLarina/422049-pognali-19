@@ -243,6 +243,14 @@
   }
 }
 
+:-ms-fullscreen,
+:root .companion {
+  @include desktop {
+    width: 285px;
+  }
+}
+
+
 .companion:hover {
   box-shadow: 0 6px 21px 0 $bg-card-hover;
 }
