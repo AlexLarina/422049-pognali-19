@@ -193,6 +193,7 @@ label[for="trips__toggle"] {
 .form--entertainment textarea {
   @include common-tablet-desktop {
     color: $font-greyish-brown;
+
     @include font-size(20px, 1.2em);
     line-height: 1.2em;
   }
