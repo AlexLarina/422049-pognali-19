@@ -439,7 +439,7 @@ input[name="children-allowed"]:checked + label::after {
   }
 }
 
-.trip__delete {
+.country__delete {
   width: 21px;
   height: 21px;
   border-radius: 50%;
@@ -900,11 +900,11 @@ label[for="trips__toggle"] {
   }
 }
 
-.trip__dropdown {
+.country__dropdown {
   display: none;
 }
 
-.form__trips-item input[id="trips__toggle"]:checked ~ .trip__dropdown {
+.form__trips-item input[id="trips__toggle"]:checked ~ .country__dropdown {
   display: block;
   box-shadow: 0 20px 50px 0 $bg-dark-slate-blue-10;
   border: 1px solid $bg-cloudy-blue;
@@ -987,13 +987,13 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   position: relative;
 }
 
-.form__trips-item--add-country .trip__delete {
+.form__trips-item--add-country .country__delete {
   @include tablet {
     right: 0;
   }
 }
 
-.form__trips-item .trips__toggle-button {
+.form__trips-item .country__toggle-button {
   position: relative;
 
   @include common-tablet-desktop {
@@ -1004,7 +1004,7 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   }
 }
 
-.form__trips-item .trips__toggle-button::before {
+.form__trips-item .country__toggle-button::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1027,7 +1027,7 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   }
 }
 
-.form__trips-item .trips__toggle-button::after {
+.form__trips-item .country__toggle-button::after {
   content: "";
   display: inline-block;
   position: absolute;
