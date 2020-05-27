@@ -267,6 +267,7 @@
 .form__item--children {
   @include desktop {
     margin-bottom: 14px;
+    margin-top: 10px;
   }
 }
 
@@ -282,8 +283,8 @@
 }
 
 .form__item--children input[type="checkbox"] {
-  width: 0;
-  height: 0;
+  //width: 0;
+  //height: 0;
 }
 
 .form__item--children label::before {
@@ -310,7 +311,8 @@
   border-color: $bg-bluey-grey;
 }
 
-.form__item--children label:active::before {
+.form__item--children label:active::before,
+.form__item--children input:focus + label::before {
   border-color: $bg-pale-grey-three;
   background-color: $bg-pale-grey-three;
 }

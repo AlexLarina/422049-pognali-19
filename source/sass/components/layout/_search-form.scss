@@ -140,7 +140,8 @@
   opacity: 0.6;
 }
 
-.filter__checkbox:active::before {
+.filter__checkbox:active::before,
+.filter__item input[type="checkbox"]:focus + .filter__checkbox::before {
   opacity: 0.3;
 }
 
@@ -164,7 +165,7 @@
 }
 
 .filter--transport input[type="checkbox"] {
-  display: none;
+  //display: none;
 }
 
 .filter__transport-label {
