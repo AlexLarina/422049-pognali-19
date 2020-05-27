@@ -266,7 +266,6 @@
 
 .form__item--children {
   @include desktop {
-    margin-top: 25px;
     margin-bottom: 14px;
   }
 }
@@ -285,7 +284,6 @@
 .form__item--children input[type="checkbox"] {
   width: 0;
   height: 0;
-  display: none;
 }
 
 .form__item--children label::before {
@@ -303,6 +301,8 @@
   @include common-tablet-desktop {
     width: 36px;
     height: 36px;
+
+    top: -10px;
   }
 }
 
@@ -329,8 +329,8 @@
   @include desktop {
     width: 12px;
     height: 12px;
-    top: 5px;
-    left: 11px;
+    top: 2px;
+    left: 13px;
   }
 }
 
@@ -1273,7 +1273,7 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   @include common-tablet-desktop {
     width: 15px;
     height: 15px;
-    left: unset;
+    left: auto;
     right: 214px;
   }
 }
@@ -1376,7 +1376,7 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   max-height: 285px;
 
   @include tablet {
-    left: unset;
+    left: auto;
     width: 3px;
     right: 0;
     max-height: 230px;
@@ -1384,9 +1384,9 @@ input[id="trips__toggle"]:checked + label[for="trips__toggle"]:active::before {
   }
 
   @include desktop {
-    left: unset;
+    left: auto;
     width: 3px;
-    right: 222px;
+    right: 220px;
     z-index: 1;
     max-height: 260px;
   }
