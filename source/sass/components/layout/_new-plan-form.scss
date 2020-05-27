@@ -983,6 +983,10 @@ label[for="trips__toggle"] {
   }
 }
 
+.form__trips-item select::-ms-expand {
+  display: none;
+}
+
 .form__trips-item select:hover,
 label[for="trips__toggle"]:hover {
   border-color: $bg-bluey-grey;
