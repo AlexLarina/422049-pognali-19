@@ -961,6 +961,12 @@
   justify-content: flex-start;
 }
 
+.transport--form {
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
 .transport__item,
 .filter__transport-label,
 .transport__label {

@@ -90,7 +90,7 @@
     position: relative;
     margin-top: -190px;
     margin-right: 96px;
-    border-radius: unset;
+    border-radius: 0;
   }
 }
 
@@ -188,6 +188,9 @@
 
   @include desktop {
     padding: 33px;
+    background-color: $bg-grey;
+    border-radius: 10px;
+    max-height: 92px;
   }
 }
 
