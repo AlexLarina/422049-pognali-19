@@ -17,6 +17,8 @@
     padding-bottom: 76px;
     padding-top: 92px;
     border-radius: 0 0 60px 60px;
+
+    width: 950px;
   }
 }
 
@@ -267,6 +269,8 @@
     margin-bottom: 30px;
     border-radius: 20px;
     padding-bottom: 0;
+
+    width: 100%;
   }
 }
 
@@ -506,6 +510,10 @@
   left: 0;
   position: absolute;
   top: 0;
+
+  @include desktop {
+    right: 0;
+  }
 
   .half-circle {
     @include size(100%, 100%);

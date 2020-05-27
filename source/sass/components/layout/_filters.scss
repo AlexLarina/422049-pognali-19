@@ -14,6 +14,8 @@
   @include desktop {
     padding-top: 57px;
     padding-bottom: 44px;
+
+    justify-content: flex-start;
   }
 }
 
@@ -226,6 +228,10 @@ label[for="filters__alphabet-toggle"] {
   border: none;
   background-color: inherit;
   cursor: pointer;
+
+  @include desktop {
+    background-color: $bg-pale-grey-four;
+  }
 }
 
 .continents__item:not(:last-of-type) {
