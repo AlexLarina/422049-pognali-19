@@ -175,7 +175,8 @@
   }
 
   @include desktop {
-    top: unset;
+    top: 15px;
+    background-color: $bg-white;
   }
 }
 
@@ -192,7 +193,7 @@
   }
 
   @include desktop {
-    left: 219px;
+    left: 220px;
     z-index: 1;
   }
 }
@@ -247,10 +248,11 @@
 
   @include desktop {
     max-width: 181px;
-    min-height: 70px;
-
+    //min-height: 70px;
+    height: 70px;
     position: absolute;
     left: 219px;
+    top: 0;
   }
 }
 
@@ -583,6 +585,8 @@ input[name="children-allowed"]:checked + label::after {
     background-repeat: no-repeat;
     background-position: 0% 50%;
     background-size: 10px 14px;
+
+    background-color: $bg-white;
   }
 }
 
@@ -784,6 +788,7 @@ input[name="children-allowed"]:checked + label::after {
     background-size: 18px 34px;
     width: 18px;
     height: 34px;
+    background-color: $bg-white;
   }
 }
 
